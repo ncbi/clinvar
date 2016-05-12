@@ -114,7 +114,7 @@
                   </xs:sequence>
                </xs:complexType>
             </xs:element>
-            <xs:element name="InterpretedVariantionList" minOccurs="1" maxOccurs="1">
+            <xs:element name="InterpretedVariationList" minOccurs="1" maxOccurs="1">
 
                <xs:complexType>
                   <xs:sequence>

@@ -1585,9 +1585,9 @@
       <SubmittedInterpretationList>
         <SCV>SCV000054516</SCV>
       </SubmittedInterpretationList>
-      <InterpretedVariantionList>
+      <InterpretedVariationList>
         <VariationID>38336</VariationID>
-      </InterpretedVariantionList>
+      </InterpretedVariationList>
     </IncludedRecord>
   </VariationArchive>
   <VariationArchive VariationID="38336" VariationType="haplotype" DateCreated="2012-11-29" Accession="ACV000038336" Version="1" SubmitterCount="1" RecordType="Included">
@@ -1653,9 +1653,9 @@
       <SubmittedInterpretationList>
         <SCV>SCV000054516</SCV>
       </SubmittedInterpretationList>
-      <InterpretedVariantionList>
+      <InterpretedVariationList>
         <VariationID>38336</VariationID>
-      </InterpretedVariantionList>
+      </InterpretedVariationList>
     </IncludedRecord>
   </VariationArchive>
 </ClinVarVariationRelease>
