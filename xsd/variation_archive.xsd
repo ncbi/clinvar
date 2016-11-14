@@ -53,6 +53,7 @@
 
                </xs:complexType>
             </xs:element>
+            <xs:element name="Interpretations" type="typeInterpretationSet" minOccurs="1"/>
             <xs:element name="InterpretationHistoryList" minOccurs="1" maxOccurs="1">
                <xs:complexType>
                   <xs:sequence>
@@ -1400,7 +1401,7 @@
       </xs:sequence>
       <xs:attribute name="DateLastEvaluated" type="xs:date" use="optional"/>
       <xs:attribute name="AlleleOrigin" type="xs:string" use="optional" default="germline"/>
-      <xs:attribute name="Type" type="xs:string"/>
+      <xs:attribute name="Type" type="typeInterpretation" use="required"/>
    </xs:complexType>
 
 
@@ -1493,10 +1494,7 @@
    </xs:complexType>
 
 
-   <xs:complexType name="ReleaseType">
-      <xs:sequence>
-         <xs:element name="VariationArchive" minOccurs="1" maxOccurs="unbounded">
-            <xs:complexType>
+   <xs:complexType name="VariationArchiveType">
                <xs:sequence>
                   <xs:element name="RecordStatus" default="current" minOccurs="1" maxOccurs="1">
                      <xs:simpleType>
@@ -1569,8 +1567,11 @@
                <xs:attribute name="Version" type="xs:int" use="required"/>
                <xs:attribute name="SubmitterCount" type="xs:positiveInteger" use="required"/>
                <xs:attribute name="RecordType" type="xs:string" use="required"/>
-            </xs:complexType>
-         </xs:element>
+   </xs:complexType>
+   
+   <xs:complexType name="ReleaseType">
+      <xs:sequence>
+         <xs:element name="VariationArchive" type="VariationArchiveType" minOccurs="1" maxOccurs="unbounded" />
       </xs:sequence>
       <xs:attribute name="Type" type="xs:string" use="required"/>
       <xs:attribute name="Dated" type="xs:date" use="required"/>
