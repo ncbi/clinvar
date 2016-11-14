@@ -541,6 +541,12 @@
 										<xs:restriction base="xs:string">
 											<xs:enumeration value="variant in gene"/>
 											<xs:enumeration value="co-occurring variant"/>
+										    <xs:enumeration value="within single gene"/>
+										    <xs:enumeration value="within multiple genes by overlap"/>
+										    <xs:enumeration value="genes overlapped by variant"/>
+										    <xs:enumeration value="near gene, upstream"/>
+										    <xs:enumeration value="near gene, downstream"/>
+										    <xs:enumeration value="asserted, but not computed"/>
 										</xs:restriction>
 									</xs:simpleType>
 								</xs:attribute>
@@ -569,7 +575,7 @@
 								<xs:enumeration value="protein only"/>
 								<xs:enumeration value="Microsatellite"/>
 								<xs:enumeration value="fusion"/>
-								<xs:enumeration value="inversion"/>
+								<xs:enumeration value="Inversion"/>
 								<xs:enumeration value="Translocation"/>
 								<xs:enumeration value="QTL"/>
 								<xs:enumeration value="Complex"/>
@@ -638,6 +644,7 @@
 					<!--for complex variants on different named chromosomes  (i.e. not homologs)-->
 					<xs:enumeration value="Distinct chromosomes"/>
 					<xs:enumeration value="CompoundHeterozygote"/>
+					<xs:enumeration value="Diplotype"/>
 				</xs:restriction>
 			</xs:simpleType>
 		</xs:attribute>
@@ -1274,7 +1281,7 @@
 			</xs:element>
 			<xs:element name="FamilyData" type="FamilyInfo" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="Proband" type="xs:string" minOccurs="0" maxOccurs="1"/>
-			<xs:element maxOccurs="unbounded" minOccurs="0" name="Indication" type="IndicationType"/>
+			<xs:element maxOccurs="1" minOccurs="0" name="Indication" type="IndicationType"/>
 			<xs:element name="Citation" type="CitationType" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="XRef" type="XrefType" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="Comment" type="CommentType" minOccurs="0" maxOccurs="unbounded"/>
@@ -1362,7 +1369,7 @@
 	
 	<xs:complexType name="IndicationType">
 		<xs:sequence>
-			<xs:element maxOccurs="1" minOccurs="1" name="Trait" type="ClinAsserTraitType">
+			<xs:element maxOccurs="unbounded" minOccurs="1" name="Trait" type="ClinAsserTraitType">
 				<xs:annotation>
 					<xs:documentation>Represent the value for the test indication as a name of a
 						trait.                     </xs:documentation>
@@ -1428,6 +1435,7 @@
 			<xs:enumeration value="MissingFromAssembly"/>
 			<xs:enumeration value="GenomicLocationNotEstablished"/>
 			<xs:enumeration value="LocationOnGenomeAndProductNotAligned"/>
+			<xs:enumeration value="DeletionComment"></xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 
