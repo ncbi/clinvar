@@ -34,7 +34,7 @@
             <xs:element name="RCVList" minOccurs="1" maxOccurs="1">
                <xs:complexType>
                   <xs:sequence>
-                     <xs:element name="RCV" type="typeRCV" minOccurs="1" maxOccurs="unbounded">
+                     <xs:element name="ClinVarAccession" type="typeRCV" minOccurs="1" maxOccurs="unbounded">
                         <xs:annotation>
                            <xs:documentation>Maintains the list of RCV accessions and titles to
                               support indexing and retrieval This structure does not report RCV/SCV
@@ -53,21 +53,19 @@
 
                </xs:complexType>
             </xs:element>
-            <xs:element name="Interpretations" type="typeInterpretationSet" minOccurs="1"/>
-            <xs:element name="InterpretationHistoryList" minOccurs="1" maxOccurs="1">
-               <xs:complexType>
-                  <xs:sequence>
-                     <xs:element name="InterpretationHistory"
-                        type="typeSubmitterInterpretationSummary" minOccurs="1"
-                        maxOccurs="unbounded"/>
-                  </xs:sequence>
-               </xs:complexType>
-            </xs:element>
+            <xs:element name="Interpretations" type="typeAggregatedInterpretationSet" minOccurs="1"/>
             <xs:element name="ClinicalAssertionList" minOccurs="1" maxOccurs="1">
                <xs:complexType>
                   <xs:sequence>
                      <xs:element name="ClinicalAssertion" type="MeasureTraitType" minOccurs="1"
                         maxOccurs="unbounded"> </xs:element>
+                  </xs:sequence>
+               </xs:complexType>
+            </xs:element>
+            <xs:element name="DeletedSCVList" minOccurs="0">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element name="SCV" type="typeDeletedSCV" minOccurs="1" maxOccurs="unbounded"/>
                   </xs:sequence>
                </xs:complexType>
             </xs:element>
@@ -151,6 +149,13 @@
          <xs:enumeration value="gene overlapped by variant"/>
          <xs:enumeration value="variant near gene, upstream"/>
          <xs:enumeration value="variant near gene, downstream"/>
+         <xs:enumeration value="asserted, but not computed"/>
+         <xs:enumeration value="within multiple genes by overlap"/>
+         <xs:enumeration value="within single gene"/>
+         <!-- those are here for back-compatibility and should be removed in the future once clinvar_public.xml is updated -->
+         <xs:enumeration value="genes overlapped by variant"/>
+         <xs:enumeration value="near gene, downstream"/>
+         <xs:enumeration value="near gene, upstream"/>
       </xs:restriction>
    </xs:simpleType>
 
@@ -183,7 +188,14 @@
          <xs:enumeration value="criteria provided, single submitter"/>
          <xs:enumeration value="reviewed by expert panel"/>
          <xs:enumeration value="practice guideline"/>
-
+ 
+         <!--The following values are added for backward compatibility from clinvar_public.xsd-->
+         <xs:enumeration value="criteria provided, multiple submitters, no conflicts"/>
+         <xs:enumeration value="criteria provided, conflicting interpretations"/>
+         <xs:enumeration value="classified by single submitter"/>
+         <xs:enumeration value="reviewed by professional society"/>
+         <xs:enumeration value="not classified by submitter"/>
+         <xs:enumeration value="classified by multiple submitters"/>
       </xs:restriction>
    </xs:simpleType>
 
@@ -207,6 +219,7 @@
          <xs:enumeration value="variant to named protein"/>
       </xs:restriction>
    </xs:simpleType>
+
 
    <xs:simpleType name="typeAggregateReviewStatusValue">
       <xs:restriction base="xs:string">
@@ -244,6 +257,7 @@
          <xs:enumeration value="Y"/>
          <xs:enumeration value="MT"/>
          <xs:enumeration value="PAR"/>
+         <xs:enumeration value="Un"/>
       </xs:restriction>
    </xs:simpleType>
    <xs:simpleType name="typeChromosomeNr">
@@ -262,6 +276,9 @@
          <xs:enumeration value="MissingFromAssembly"/>
          <xs:enumeration value="GenomicLocationNotEstablished"/>
          <xs:enumeration value="LocationOnGenomeAndProductNotAligned"/>
+         <xs:enumeration value="DeletionComment"/>
+         <xs:enumeration value="AssemblySpecificAlleleDefinition"></xs:enumeration>
+         <xs:enumeration value="AlignmentGapMakesAppearInconsistent"></xs:enumeration>
       </xs:restriction>
    </xs:simpleType>
 
@@ -295,15 +312,12 @@
       </xs:restriction>
    </xs:simpleType>
 
-
-   <xs:simpleType name="typeAlleleType">
+   <xs:simpleType name="typeVariationType">
       <xs:restriction base="xs:string">
-         <xs:enumeration value="simple"/>
-         <xs:enumeration value="genotype"/>
-         <xs:enumeration value="haplotype"/>
+         <xs:enumeration value="Diplotype"/>
+         <xs:enumeration value="CompoundHeterozygote"/>
       </xs:restriction>
    </xs:simpleType>
-
 
    <xs:simpleType name="typeEvidencetype">
       <xs:restriction base="xs:string">
@@ -362,6 +376,8 @@
          <xs:enumeration value="research"/>
          <xs:enumeration value="curation"/>
          <xs:enumeration value="not provided"/>
+         <xs:enumeration value="provider interpretation"/>
+         <xs:enumeration value="phenotyping only"/>
       </xs:restriction>
    </xs:simpleType>
 
@@ -372,6 +388,12 @@
       <xs:sequence>
          <xs:element name="SimpleAllele" type="typeAllele" minOccurs="1" maxOccurs="unbounded"/>
          <xs:element name="Name" type="xs:string" minOccurs="1" maxOccurs="1">
+         </xs:element>
+         <xs:element name="VariationType" type="typeHaplotypeVariationType" minOccurs="1" maxOccurs="1">
+           <xs:annotation>
+             <xs:documentation>For Allele in compound het, the VaritionType is "Variation", otherwise derived from clinvar.mset.set_type
+             </xs:documentation>
+           </xs:annotation>
          </xs:element>
          <xs:element name="OtherNameList" type="typeNames" minOccurs="0">
             <xs:annotation>
@@ -389,7 +411,7 @@
                </xs:sequence>
             </xs:complexType>
          </xs:element>
-         <xs:element name="Interpretations" type="typeInterpretationSet" minOccurs="0"/>
+         <xs:element name="Interpretations" type="typeAggregatedInterpretationSet" minOccurs="0"/>
          <xs:element name="FunctionalConsequence" type="typeFunctionalConsequence" minOccurs="0"
             maxOccurs="unbounded"/>
          <xs:element name="XRefList" minOccurs="0">
@@ -419,15 +441,7 @@
                <xs:documentation>Other names used for the haplotype</xs:documentation>
             </xs:annotation>
          </xs:element>
-         <xs:element name="HGVSlist" minOccurs="0">
-            <xs:complexType>
-               <xs:sequence>
-                  <xs:element name="HGVS" type="typeHGVSExpression" minOccurs="0"
-                     maxOccurs="unbounded"/>
-               </xs:sequence>
-            </xs:complexType>
-         </xs:element>
-         <xs:element name="Interpretations" type="typeInterpretationSet" minOccurs="0"/>
+         <xs:element name="Interpretations" type="typeAggregatedInterpretationSet" minOccurs="0"/>
          <xs:element name="FunctionalConsequence" type="typeFunctionalConsequence" minOccurs="0"
             maxOccurs="unbounded"/>
          <xs:element name="XRefList" minOccurs="0">
@@ -437,10 +451,17 @@
                </xs:sequence>
             </xs:complexType>
          </xs:element>
+         <xs:element name="CitationList" minOccurs="0">
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element name="Citation" type="typeCitation" maxOccurs="unbounded"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
          <xs:element name="Comment" type="typeComment" minOccurs="0" maxOccurs="unbounded"/>
+         <xs:element name="AttributeSet" type="typeAttributeSet" minOccurs="0" maxOccurs="unbounded"/>
       </xs:sequence>
       <xs:attribute name="VariationID" type="xs:int" use="optional"/>
-      <xs:attribute name="AlleleRegistryID" type="xs:string" use="optional"/>
       <xs:attribute name="NumberOfCopies" type="xs:int" default="1"/>
    </xs:complexType>
    <xs:complexType name="typeAttribute">
@@ -478,8 +499,7 @@
             </xs:simpleType>
          </xs:element>
          <xs:element name="Zygosity" type="typeZygosity" minOccurs="0" maxOccurs="1"/>
-         <xs:element name="ClinicalSignificance" type="typeInterpretation" minOccurs="0"
-            maxOccurs="1"/>
+         <xs:element name="ClinicalSignificance" type="ClinicalSignificanceType" minOccurs="0" maxOccurs="1" />
       </xs:sequence>
    </xs:complexType>
 
@@ -504,6 +524,7 @@
                   consistent with HGVS location data</xs:documentation>
             </xs:annotation>
             <xs:complexType>
+               <xs:attribute name="forDisplay" type="xs:boolean" use="optional"/>
                <xs:attribute name="Assembly" type="xs:string" use="required"/>
                <xs:attribute name="Chr" type="typeChromosome" use="required"/>
                <xs:attribute name="Accession" type="xs:string" use="optional"/>
@@ -528,6 +549,10 @@
                      </xs:restriction>
                   </xs:simpleType>
                </xs:attribute>
+               <xs:attribute name="positionVCF" type="xs:nonNegativeInteger" use="optional" />
+               <xs:attribute name="referenceAlleleVCF" type="xs:string" use="optional" />
+               <xs:attribute name="alternateAlleleVCF" type="xs:string" use="optional" />
+               <xs:attribute name="forDisplayLength" type="xs:boolean" use="optional" />
             </xs:complexType>
          </xs:element>
          <xs:element name="GeneLocation" type="xs:string" minOccurs="0" maxOccurs="unbounded">
@@ -556,6 +581,7 @@
                   <xs:element name="Gene" minOccurs="0" maxOccurs="unbounded">
                      <xs:complexType>
                         <xs:sequence>
+                           <xs:element name="Location" type="typeLocation" minOccurs="0"/>
                            <xs:element name="OMIM" type="xs:positiveInteger" minOccurs="0"
                               maxOccurs="unbounded">
                              </xs:element>
@@ -565,7 +591,6 @@
                                     <xs:extension base="xs:string">
                                        <xs:attribute name="last_evaluated" type="xs:date"
                                           use="optional"/>
-                                       <xs:attribute name="ISCA" type="xs:anyURI" use="optional"/>
                                        <xs:attribute name="ClinGen" type="xs:anyURI" use="optional"
                                        />
                                     </xs:extension>
@@ -579,7 +604,6 @@
                                     <xs:extension base="xs:string">
                                        <xs:attribute name="last_evaluated" type="xs:date"
                                           use="optional"/>
-                                       <xs:attribute name="ISCA" type="xs:anyURI" use="optional"/>
                                        <xs:attribute name="ClinGen" type="xs:anyURI" use="optional"
                                        />
                                     </xs:extension>
@@ -601,7 +625,6 @@
                         </xs:attribute>
                         <xs:attribute name="GeneID" type="xs:positiveInteger" use="required"/>
                         <xs:attribute name="HGNC_ID" type="xs:string" use="optional"/>
-                        <xs:attribute name="strand" type="xs:string"/>
                         <xs:attribute name="Source" type="xs:string" use="required">
                            <xs:annotation>
                               <xs:documentation>calculated or submitted</xs:documentation>
@@ -621,7 +644,7 @@
          <xs:element name="VariantType" type="xs:string" minOccurs="0">
                     </xs:element>
 
-         <xs:element name="Location" type="typeLocation"/>
+         <xs:element name="Location" type="typeLocation" minOccurs="0"/>
 
          <xs:element name="OtherNameList" type="typeNames" minOccurs="0">
          </xs:element>
@@ -639,6 +662,7 @@
                </xs:sequence>
             </xs:complexType>
          </xs:element>
+         <xs:element name="Interpretations" type="typeAggregatedInterpretationSet" minOccurs="0"/>
          <xs:element name="XRefList" minOccurs="0">
             <xs:annotation>
                <xs:documentation>Cross referencing data here will include accessions and versions of
@@ -691,6 +715,7 @@
          </xs:element>
       </xs:sequence>
       <xs:attribute name="AlleleID" type="xs:int" use="required"/>
+      <xs:attribute name="VariationID" type="xs:positiveInteger" use="required"/>
    </xs:complexType>
    <xs:complexType name="typeAlleleSCV">
       <xs:annotation>
@@ -707,9 +732,9 @@
             <xs:complexType>
                <xs:sequence>
                   <xs:element name="Gene" minOccurs="0" maxOccurs="unbounded">
-                    
                      <xs:complexType>
                         <xs:sequence>
+                           <xs:element name="Name" type="xs:string" minOccurs="0"/>
                            <xs:element name="Property" type="xs:string" minOccurs="0"
                               maxOccurs="unbounded">
                               <xs:annotation>
@@ -727,7 +752,6 @@
                            </xs:element>
                         </xs:sequence>
                         <xs:attribute name="Symbol" use="optional"/>
-                        <xs:attribute name="strand" type="xs:string"/>
                         <xs:attribute name="RelationshipType" type="typeGeneVariant" use="optional"
                         />
                      </xs:complexType>
@@ -761,15 +785,6 @@
                <xs:documentation>Single letter representation of the amino acid change</xs:documentation>
             </xs:annotation>
          </xs:element>
-         <xs:element name="HGVSlist" minOccurs="0">
-          
-            <xs:complexType>
-               <xs:sequence>
-                  <xs:element name="HGVS" type="typeHGVSExpression" minOccurs="0"
-                     maxOccurs="unbounded"/>
-               </xs:sequence>
-            </xs:complexType>
-         </xs:element>
          <xs:element name="XRefList" minOccurs="0">
             <xs:annotation>
                <xs:documentation>Cross referencing data here will include accessions and versions of
@@ -783,8 +798,15 @@
                </xs:sequence>
             </xs:complexType>
          </xs:element>
+         <xs:element name="CitationList" minOccurs="0">
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element name="Citation" type="typeCitation" maxOccurs="unbounded"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
          <xs:element name="Comment" type="typeComment" minOccurs="0" maxOccurs="unbounded"/>
-         <xs:element name="MolecularConsequenceList" minOccurs="0">
+           <xs:element name="MolecularConsequenceList" minOccurs="0">
             <xs:annotation>
                <xs:documentation>Currently redundant with the MolecularConsequence element of 
                   the HGVS element?</xs:documentation>
@@ -793,12 +815,16 @@
                <xs:sequence>
                   <xs:element name="MolecularConsequence" maxOccurs="unbounded">
                      <xs:complexType>
+                        <xs:sequence>
+                           <xs:element name="XRef" type="typeXref" minOccurs="0" maxOccurs="unbounded"/>
+                           <xs:element name="Citation" type="typeCitation" minOccurs="0" maxOccurs="unbounded"/>
+                           <xs:element name="Comment" type="typeComment" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
                         <xs:attribute name="RS" type="xs:positiveInteger" use="optional"/>
                         <!-- optional because will calculate consequence from HGVS-->
-                        <xs:attribute name="HGVS" type="xs:string" use="required"/>
-                        <xs:attribute name="SOid" type="xs:string" use="required"/>
+                        <xs:attribute name="HGVS" type="xs:string" use="optional"/>
+                        <xs:attribute name="SOid" type="xs:string" use="optional"/>
                         <xs:attribute name="Function" type="xs:string">
-                          
                         </xs:attribute>
                      </xs:complexType>
                   </xs:element>
@@ -807,40 +833,7 @@
          </xs:element>
          <xs:element name="FunctionalConsequence" type="typeFunctionalConsequence" minOccurs="0"
             maxOccurs="unbounded"/>
-         <xs:element name="AlleleFrequencyList" minOccurs="0">
-          
-            <xs:complexType>
-               <xs:sequence>
-                  <xs:element name="AlleleFrequency" maxOccurs="unbounded">
-                     <xs:complexType>
-                        <xs:attribute name="Value" type="xs:double"/>
-                        <xs:attribute name="Type" type="xs:string"/>
-                        <xs:attribute name="MinorAllele" type="xs:string" use="optional"/>
-                        <xs:attribute name="URL" type="xs:anyURI" use="optional"/>
-                     </xs:complexType>
-                  </xs:element>
-               </xs:sequence>
-            </xs:complexType>
-         </xs:element>
-         <xs:element name="SuspectList" minOccurs="0">
-            <xs:annotation>
-               <xs:documentation>Variant call calculated by dbSNP to be suspect because of
-                  paralogy</xs:documentation>
-            </xs:annotation>
-            <xs:complexType>
-               <xs:sequence>
-                  <xs:element name="Suspect" maxOccurs="unbounded">
-                     <xs:complexType>
-                        <xs:sequence>
-                           <xs:element name="XRef" type="typeXref" minOccurs="0"
-                              maxOccurs="unbounded"/>
-                        </xs:sequence>
-                        <xs:attribute name="Value" type="xs:string"/>
-                     </xs:complexType>
-                  </xs:element>
-               </xs:sequence>
-            </xs:complexType>
-         </xs:element>
+         <xs:element name="AttributeSet" type="typeAttributeSet" minOccurs="0" maxOccurs="unbounded"/>
       </xs:sequence>
       <xs:attribute name="AlleleID" type="xs:int" use="optional"/>
    </xs:complexType>
@@ -852,11 +845,25 @@
             diplotypes.</xs:documentation>
       </xs:annotation>
       <xs:sequence>
+         <xs:choice minOccurs="1" maxOccurs="unbounded">
+           <xs:element name="SimpleAllele" type="typeAllele" minOccurs="1" maxOccurs="1">
+             <xs:annotation>
+               <xs:documentation> Describes a single sequence change relative to a contiguous region of a chromosome or the mitochondrion.
+               </xs:documentation>
+             </xs:annotation>
+           </xs:element>
+           <xs:element name="Haplotype" type="typeHaplotype" minOccurs="1" maxOccurs="1">
+              <xs:annotation>
+                 <xs:documentation>Allow more than 2 haplotypes per genotype to support representation
+                    of ploidy.</xs:documentation>
+              </xs:annotation>
+           </xs:element>
+         </xs:choice>
          <xs:element name="Name" type="xs:string" minOccurs="1" maxOccurs="1"/>
-         <xs:element name="Haplotype" type="typeHaplotype" minOccurs="1" maxOccurs="unbounded">
+         <xs:element name="VariationType" type="typeVariationType" minOccurs="1" maxOccurs="1">
             <xs:annotation>
-               <xs:documentation>Allow more than 2 haplotypes per genotype to support representation
-                  of ploidy.</xs:documentation>
+               <xs:documentation>Derived from clinvar.mset.set_type. for compound het, diplotype
+               </xs:documentation>
             </xs:annotation>
          </xs:element>
          <xs:element name="HGVSlist" minOccurs="0">
@@ -880,7 +887,7 @@
                <xs:attribute name="Value" type="xs:string" use="required"/>
             </xs:complexType>
          </xs:element>
-         <xs:element name="Interpretations" type="typeInterpretationSet" minOccurs="1"
+         <xs:element name="Interpretations" type="typeAggregatedInterpretationSet" minOccurs="0"
             maxOccurs="unbounded"/>
          <xs:element name="XRefList" minOccurs="0">
             <xs:complexType>
@@ -889,8 +896,17 @@
                </xs:sequence>
             </xs:complexType>
          </xs:element>
+         <xs:element name="CitationList" minOccurs="0">
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element name="Citation" type="typeCitation" maxOccurs="unbounded"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
          <xs:element name="Comment" type="typeComment" minOccurs="0" maxOccurs="unbounded"/>
+         <xs:element name="AttributeSet" type="typeAttributeSet" minOccurs="0" maxOccurs="unbounded"/>
       </xs:sequence>
+      <xs:attribute name="VariationID" type="xs:int" use="required"/>
    </xs:complexType>
 
    <xs:complexType name="typeXref">
@@ -928,33 +944,29 @@
       <xs:attributeGroup ref="SubmitterIdentifiers"/>
    </xs:complexType>
 
+ 
    <xs:complexType name="typeNames">
-      <xs:sequence>
-         <xs:element name="Name" type="xs:string" nillable="false" maxOccurs="unbounded"/>
+         <xs:sequence>
+            <xs:element name="Name" nillable="false" maxOccurs="unbounded">
+               <xs:complexType>
+                  <xs:simpleContent>
+                     <xs:extension base="xs:string">
+                        <xs:attribute name="Type" type="xs:string" use="optional"/>
+                     </xs:extension>
+                  </xs:simpleContent>
+               </xs:complexType>
+            </xs:element>
       </xs:sequence>
    </xs:complexType>
 
 
-
-
    <xs:simpleType name="typeHGVS">
       <xs:restriction base="xs:string">
-         <xs:enumeration value="HGVS, genomic, RefSeqGene"/>
-         <xs:enumeration value="HGVS, genomic, LRG"/>
-         <xs:enumeration value="HGVS, coding, RefSeq"/>
-         <xs:enumeration value="HGVS, coding, LRG"/>
-         <xs:enumeration value="HGVS, coding"/>
-         <xs:enumeration value="HGVS, genomic"/>
-         <xs:enumeration value="HGVS, protein"/>
-         <xs:enumeration value="HGVS, previous"/>
-         <xs:enumeration value="HGVS, genomic, top level"/>
-         <xs:enumeration value="HGVS, uncertain"/>
-         <xs:enumeration value="HGVS, non-coding"/>
-         <xs:enumeration value="HGVS, protein, RefSeq"/>
-         <xs:enumeration value="HGVS, genomic, top level, previous"/>
-         <xs:enumeration value="HGVS, non-validated"/>
-         <xs:enumeration value="HGVS, RNA"/>
-         <xs:enumeration value="HGVS, genomic, top level, other"/>
+         <xs:enumeration value="coding"/>
+         <xs:enumeration value="genomic"/>
+         <xs:enumeration value="genomic, top-level"/>
+         <xs:enumeration value="non-coding"/>
+         <xs:enumeration value="protein"/>
       </xs:restriction>
    </xs:simpleType>
 
@@ -1003,7 +1015,7 @@
    </xs:complexType>
    <xs:complexType name="typeCitation">
       <xs:sequence>
-         <xs:element name="ID" minOccurs="0" maxOccurs="1">
+         <xs:element name="ID" minOccurs="0" maxOccurs="unbounded">
             <xs:complexType>
                <xs:simpleContent>
                   <xs:extension base="xs:string">
@@ -1044,6 +1056,7 @@
       <xs:attribute name="sequenceVersion" use="optional"/>
       <xs:attribute name="change" use="optional"/>
       <xs:attribute name="Assembly" use="optional"/>
+      <xs:attribute name="Submitted" use="optional"/>
 
    </xs:complexType>
 
@@ -1060,21 +1073,9 @@
    </xs:complexType>
 
 
-   <xs:complexType name="typeSubmitterInterpretationSummary">
+   <xs:complexType name="typeConditionList">
       <xs:sequence>
-
-         <xs:element name="Interpretation" minOccurs="1" maxOccurs="1"/>
-         <xs:element name="PhenotypeList" type="PhenotypeListType" minOccurs="1" maxOccurs="1"/>
-      </xs:sequence>
-      <xs:attributeGroup ref="SubmitterIdentifiers"/>
-      <xs:attribute name="DateLastEvaluated" type="xs:date"/>
-      <xs:attribute name="DateLastUpdated" type="xs:date"/>
-      <xs:attribute name="AccessionVersion" type="xs:string" use="required"/>
-   </xs:complexType>
-
-   <xs:complexType name="PhenotypeListType">
-      <xs:sequence>
-         <xs:element name="Phenotype" maxOccurs="unbounded">
+         <xs:element name="Condition" maxOccurs="unbounded">
             <xs:annotation>
                <xs:documentation>This is to replace the phenotype attribute, because a submitter may
                   have traitset.</xs:documentation>
@@ -1097,7 +1098,6 @@
          </xs:element>
 
       </xs:sequence>
-      <xs:attribute name="PhenotypeSetType" type="typePhenotypeSet"/>
    </xs:complexType>
 
 
@@ -1271,9 +1271,11 @@
                         <xs:simpleType>
                            <xs:restriction base="xs:string">
                               <xs:enumeration value="days"/>
+                              <xs:enumeration value="weeks"/>
                               <xs:enumeration value="months"/>
                               <xs:enumeration value="years"/>
                               <xs:enumeration value="weeks gestation"/>
+                              <xs:enumeration value="months gestation"/>
                            </xs:restriction>
                         </xs:simpleType>
                      </xs:attribute>
@@ -1342,7 +1344,7 @@
          </xs:element>
          <xs:element name="FamilyData" type="FamilyInfo" minOccurs="0" maxOccurs="1"/>
          <xs:element name="Proband" type="xs:string" minOccurs="0" maxOccurs="1"/>
-         <xs:element maxOccurs="1" minOccurs="0" name="Indication" type="IndicationListType"/>
+         <xs:element maxOccurs="1" minOccurs="0" name="Indication" type="IndicationType"/>
          <xs:element name="Citation" type="typeCitation" minOccurs="0" maxOccurs="unbounded"/>
          <xs:element name="XRef" type="typeXref" minOccurs="0" maxOccurs="unbounded"/>
          <xs:element name="Comment" type="typeComment" minOccurs="0" maxOccurs="unbounded"/>
@@ -1401,46 +1403,38 @@
       </xs:sequence>
       <xs:attribute name="DateLastEvaluated" type="xs:date" use="optional"/>
       <xs:attribute name="AlleleOrigin" type="xs:string" use="optional" default="germline"/>
-      <xs:attribute name="Type" type="typeInterpretation" use="required"/>
+      <xs:attribute name="Type" type="typeInterpretation" use="optional"/> <!--missing change required to optional-->
    </xs:complexType>
 
 
-   <xs:complexType name="typeDetailedInterpretation">
+   <xs:complexType name="typeAggregatedInterpretationSet">
+      <xs:annotation>
+         <xs:documentation>Used to bundle different types of interpretation (benign , somatic??) ; Clinical significance
+            with assertion criteria, clinical significance without, reported effects, other.
+            Supports summary as well as submission details</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="Interpretation" type="typeAggregatedInterpretation" minOccurs="1"
+            maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+
+   <xs:complexType name="typeAggregatedInterpretation">
       <xs:complexContent>
          <xs:extension base="typeSingleInterpretation">
             <xs:sequence>
                <xs:element name="DescriptionHistory" type="typeDescriptionHistory" minOccurs="0"
                   maxOccurs="unbounded"/>
 
-               <xs:element name="PhenotypeList" type="PhenotypeListType" minOccurs="0"/>
-               <xs:element name="Method" type="xs:string" minOccurs="0" maxOccurs="1"/>
-               <xs:element name="AssertionMethod" type="typeAssertionMethod" minOccurs="0"
-                  maxOccurs="1"/>
+               <xs:element name="ConditionList" type="typeConditionList" minOccurs="0"/>
             </xs:sequence>
-            <xs:attribute name="NumberOfSubmitters" type="xs:int" use="required"/>
-
+            <xs:attribute name="NumberOfSubmitters" type="xs:nonNegativeInteger" use="required"/>
+            <xs:attribute name="NumberOfSubmissions" type="xs:nonNegativeInteger" use="required"/>
          </xs:extension>
 
       </xs:complexContent>
 
    </xs:complexType>
-
-
-   <xs:complexType name="typeInterpretationSet">
-      <xs:annotation>
-         <xs:documentation>Used to bundle different types of interpretation; Clinical significance
-            with assertion criteria, clinical significance without, reported effects, other.
-            Supports summary as well as submission details</xs:documentation>
-      </xs:annotation>
-      <xs:sequence>
-         <xs:element name="Interpretation" type="typeDetailedInterpretation" minOccurs="1"
-            maxOccurs="unbounded"/>
-
-      </xs:sequence>
-      <xs:attribute name="NumberOfSubmissions" type="xs:int"/>
-   </xs:complexType>
-
-
 
 
 
@@ -1451,11 +1445,14 @@
       <xs:attribute name="Dated" type="xs:date" use="optional"/>
    </xs:complexType>
    <xs:complexType name="typeRCV">
-      <xs:simpleContent>
-         <xs:extension base="xs:string">
             <xs:attribute name="Title" type="xs:string" use="optional"/>
-         </xs:extension>
-      </xs:simpleContent>
+            <xs:attribute name="DateLastEvaluated" type="xs:date" use="optional"/>
+            <xs:attribute name="InterpretedCondition" type="xs:string" use="required"/>
+            <xs:attribute name="Interpretation" type="xs:string" use="optional"/>
+            <xs:attribute name="SubmissionCount" type="xs:positiveInteger" use="required"/>
+            <xs:attribute name="ReviewStatus" type="xs:string" use="required"/>
+            <xs:attribute name="Accession" type="xs:string" use="required"/>
+            <xs:attribute name="Version" type="xs:integer" use="required"/>
    </xs:complexType>
    <xs:complexType name="typeSCV">
       <xs:simpleContent>
@@ -1493,7 +1490,6 @@
       <xs:attribute name="DateLastUpdated"/>
    </xs:complexType>
 
-
    <xs:complexType name="VariationArchiveType">
                <xs:sequence>
                   <xs:element name="RecordStatus" default="current" minOccurs="1" maxOccurs="1">
@@ -1506,8 +1502,15 @@
 
                      </xs:simpleType>
                   </xs:element>
-                  <xs:element name="ReplacedBy" type="xs:string" minOccurs="0" maxOccurs="1"/>
-                  <xs:element name="Replaces" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                  <xs:element name="ReplacedBy" type="typeRecordHistory" minOccurs="0" maxOccurs="1"/>
+                  <xs:element name="ReplacedList" minOccurs="0">
+                     <xs:complexType>
+                        <xs:sequence>
+                           <xs:element name="Replaced" type="typeRecordHistory" minOccurs="1" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                     </xs:complexType>
+                  </xs:element>
+                  <xs:element name="DeletionComment" type="typeComment" minOccurs="0" maxOccurs="1"/>
                   <xs:element name="Species" minOccurs="1" maxOccurs="1">
                      <xs:complexType>
                         <xs:simpleContent>
@@ -1541,42 +1544,32 @@
                      </xs:element>
                   </xs:choice>
                </xs:sequence>
-               <xs:attribute name="VariationID" type="xs:positiveInteger" use="required">
-               </xs:attribute>
+               <xs:attribute name="VariationID" type="xs:positiveInteger" use="required"/>
                <xs:attribute name="VariationName" type="xs:string">
                   <xs:annotation>
-                     <xs:documentation>This is the preferred name for the haplotype. Either
-                        VariationName OR VariationHGVS must be provided to build the title of the
-                        record</xs:documentation>
+                     <xs:documentation>This is ClinVar's name for the variant. ClinVar uses this term in its web displays.
+                     </xs:documentation>
                   </xs:annotation>
                </xs:attribute>
-               <xs:attribute name="VariationHGVS" type="xs:string">
-                  <xs:annotation>
-                     <xs:documentation>The preferred HGVS for the record</xs:documentation>
-                  </xs:annotation>
-               </xs:attribute>
-               <xs:attribute name="VariationType" type="typeAlleleType" use="required">
-                  <xs:annotation>
-                     <xs:documentation>Derived from clinvar.mset.set_type and set
-                        size</xs:documentation>
-                  </xs:annotation>
-               </xs:attribute>
+               <xs:attribute name="VariationType" type="xs:string" use="required"/>
                <xs:attribute name="DateCreated" type="xs:date" use="required"/>
                <xs:attribute name="DateLastUpdated" type="xs:date" use="optional"/>
                <xs:attribute name="Accession" type="xs:string" use="required"/>
                <xs:attribute name="Version" type="xs:int" use="required"/>
-               <xs:attribute name="SubmitterCount" type="xs:positiveInteger" use="required"/>
+               <xs:attribute name="NumberOfSubmitters" type="xs:nonNegativeInteger" use="required"/>
+               <xs:attribute name="NumberOfSubmissions" type="xs:nonNegativeInteger" use="required"/>
                <xs:attribute name="RecordType" type="xs:string" use="required"/>
    </xs:complexType>
+   
    
    <xs:complexType name="ReleaseType">
       <xs:sequence>
          <xs:element name="VariationArchive" type="VariationArchiveType" minOccurs="1" maxOccurs="unbounded" />
       </xs:sequence>
-      <xs:attribute name="Type" type="xs:string" use="required"/>
-      <xs:attribute name="Dated" type="xs:date" use="required"/>
+      <xs:attribute name="ReleaseDate" type="xs:date" use="required"/>
    </xs:complexType>
 
+   <xs:element name="VariationArchive" type="VariationArchiveType" />
    <xs:complexType name="Co-occurrenceType">
       <xs:sequence>
          <xs:annotation>
@@ -1589,7 +1582,25 @@
       </xs:sequence>
    </xs:complexType>
 
-
+   <xs:complexType name="typeDeletedSCV">
+      <xs:annotation>
+         <xs:documentation>A structure to support reporting of an accession, its version, the date is was deleted and description of deletion</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="Accession" minOccurs="1" maxOccurs="1">
+            <xs:complexType>
+               <xs:simpleContent>
+                  <xs:extension base="xs:string">
+                     <xs:attribute name="Version" type="xs:nonNegativeInteger" use="required"/>
+                     <xs:attribute name="DateDeleted" type="xs:date" use="required"/>
+                  </xs:extension>
+               </xs:simpleContent>
+            </xs:complexType>
+         </xs:element> 
+         <xs:element name="Description" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      </xs:sequence>
+   </xs:complexType>
+   
    <xs:complexType name="MeasureTraitType">
       <xs:sequence>
          <xs:element name="ClinVarSubmissionID" minOccurs="1" maxOccurs="1">
@@ -1603,7 +1614,9 @@
                         localKeyIsSubmitted. </xs:documentation>
                   </xs:annotation>
                </xs:attribute>
+               <xs:attribute name="title" type="xs:string" use="optional"/>
                <xs:attribute name="localKeyIsSubmitted" use="optional"/>
+               <xs:attribute name="submittedAssembly" type="xs:string" use="optional"/>
             </xs:complexType>
          </xs:element>
          <xs:element name="ClinVarAccession" minOccurs="1" maxOccurs="1">
@@ -1649,6 +1662,7 @@
                </xs:restriction>
             </xs:simpleType>
          </xs:element>
+         <xs:element name="ReviewStatus" type="typeSubmitterReviewStatusValue" minOccurs="0" maxOccurs="1"/>
          <xs:element name="Interpretation" type="typeSingleInterpretation" minOccurs="1"/>
          <xs:element name="CustomAssertionScore" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
@@ -1688,8 +1702,7 @@
                                        <xs:enumeration value="ClinicalSignificanceHistory"/>
                                        <xs:enumeration value="SeverityDescription"/>
                                        <xs:enumeration value="AssertionMethod"/>
-                                       <xs:enumeration value="TestingLaboratory"/>
-                                    </xs:restriction>
+                                     </xs:restriction>
                                  </xs:simpleType>
                               </xs:attribute>
                            </xs:extension>
@@ -1727,7 +1740,7 @@
                      data from one chromosome (in cis)</xs:documentation>
                </xs:annotation>
             </xs:element>
-            <xs:element maxOccurs="1" minOccurs="1" name="Genotype" type="typeGenotype">
+            <xs:element maxOccurs="1" minOccurs="1" name="Genotype" type="typeGenotypeSCV">
           
             </xs:element>
          </xs:choice>
@@ -1737,7 +1750,13 @@
          <xs:element name="StudyDescription" type="xs:string" minOccurs="0" maxOccurs="1"/>
          <xs:element name="Comment" type="typeComment" minOccurs="0" maxOccurs="unbounded"/>
       </xs:sequence>
-      <xs:attribute name="DateCreated" type="xs:date"/>
+      <xs:attribute name="DateCreated" type="xs:date">
+        <xs:annotation>
+            <xs:documentation>
+              DateCreated is when ClinVar processed the submission and created the records
+            </xs:documentation>
+         </xs:annotation>
+      </xs:attribute>
       <xs:attribute name="DateLastUpdated" type="xs:date">
          <xs:annotation>
             <xs:documentation>A modification date is independent of a version change. Content
@@ -1745,8 +1764,15 @@
             </xs:documentation>
          </xs:annotation>
       </xs:attribute>
-      <xs:attribute name="SubmissionDate" type="xs:date"/>
+      <xs:attribute name="SubmissionDate" type="xs:date">
+         <xs:annotation>
+            <xs:documentation>
+              SubmissionDate is when ClinVar received the submission
+            </xs:documentation>
+         </xs:annotation>
+      </xs:attribute>  
       <xs:attribute name="SubmissionName" type="xs:string" use="optional"/>
+      <xs:attribute name="ID" type="xs:positiveInteger" use="optional"/>
       <xs:attributeGroup ref="SubmitterIdentifiers"/>
    </xs:complexType>
    <xs:complexType name="MethodType">
@@ -1807,6 +1833,7 @@
                                        <xs:enumeration value="MethodAppropriate"/>
                                        <xs:enumeration value="TestName"/>
                                        <xs:enumeration value="StructVarMethodType"/>
+                                       <xs:enumeration value="ProbeAccession"/>
                                     </xs:restriction>
                                  </xs:simpleType>
                               </xs:attribute>
@@ -1817,13 +1844,34 @@
                </xs:sequence>
             </xs:complexType>
          </xs:element>
-         <xs:element name="MethodResult" type="typeAttribute" minOccurs="0" maxOccurs="unbounded">
+
+         <xs:element name="ObsMethodAttribute" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
-               <xs:documentation> MethodResult is used to represent results specific to a particular
-                  method. An example is a method used to validate the the variant call; the
-                  MethodResult would be pass/fail/inconclusive</xs:documentation>
-            </xs:annotation>
-         </xs:element>
+               <xs:documentation> ObsMethodAttribute is used to indicate an attribute specific to a particular
+                  method in conjunction with a particular observation . </xs:documentation>
+            </xs:annotation>            
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element name="Attribute">
+                     <xs:complexType>
+                        <xs:simpleContent>
+                           <xs:extension base="typeAttribute">
+                              <xs:attribute name="Type" use="required">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:enumeration value="MethodResult"/>
+                                       <xs:enumeration value="TestingLaboratory"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:attribute>
+                           </xs:extension>
+                        </xs:simpleContent>
+                     </xs:complexType>
+                  </xs:element>
+                  <xs:element name="Comment" type="typeComment" minOccurs="0" maxOccurs="unbounded"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>         
       </xs:sequence>
    </xs:complexType>
 
@@ -1925,7 +1973,7 @@
          </xs:element>
          <xs:element name="Co-occurrenceSet" type="Co-occurrenceType" minOccurs="0"
             maxOccurs="unbounded"/>
-         <xs:element name="TraitSet" type="PhenotypeListDetailsType" minOccurs="0" maxOccurs="1"/>
+         <xs:element name="TraitSet" type="ClinAsserTraitSetType" minOccurs="0" maxOccurs="1"/>
          <xs:element name="Citation" type="typeCitation" minOccurs="0" maxOccurs="unbounded"/>
          <xs:element name="XRef" type="typeXref" minOccurs="0" maxOccurs="unbounded"/>
          <xs:element name="Comment" type="typeComment" minOccurs="0" maxOccurs="unbounded"/>
@@ -2089,4 +2137,155 @@
       <xs:attribute name="OrganizationCategory" type="xs:string" use="required"/>
       <xs:attribute name="OrgAbbreviation" type="xs:string" use="optional"/>
    </xs:attributeGroup>
+
+
+   <xs:complexType name="typeAttributeSet">
+      <xs:sequence>
+         <xs:element name="Attribute" minOccurs="1" maxOccurs="1">
+            <xs:complexType>
+               <xs:simpleContent>
+                  <xs:extension base="typeAttribute">
+                     <xs:attribute name="Type" type="xs:string" use="required"/>
+                  </xs:extension>
+               </xs:simpleContent>
+             </xs:complexType>
+         </xs:element>
+         <xs:element name="Citation" type="typeCitation" minOccurs="0" maxOccurs="unbounded"/>
+         <xs:element name="XRef" type="typeXref" minOccurs="0" maxOccurs="unbounded"/>
+         <xs:element name="Comment" type="typeComment" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+
+
+
+   <xs:complexType name="IndicationType">
+      <xs:sequence>
+         <xs:element maxOccurs="unbounded" minOccurs="1" name="Trait" type="ClinAsserTraitType">
+            <xs:annotation>
+               <xs:documentation>Represent the value for the test indication as a name of a trait.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element maxOccurs="unbounded" minOccurs="0" name="Name" type="SetElementSetType"/>
+         <xs:element maxOccurs="unbounded" minOccurs="0" name="Symbol" type="SetElementSetType"/>
+         <xs:element maxOccurs="unbounded" minOccurs="0" name="AttributeSet" type="typeAttributeSet"/>
+         <xs:element maxOccurs="unbounded" minOccurs="0" name="Citation" type="typeCitation"/>
+         <xs:element maxOccurs="unbounded" minOccurs="0" name="XRef" type="typeXref"/>
+         <xs:element maxOccurs="1" minOccurs="0" name="Comment" type="typeComment"/>
+      </xs:sequence>
+      <xs:attribute name="Type" use="required">
+         <xs:simpleType>
+            <xs:restriction base="xs:string">
+               <xs:enumeration value="Indication"/>
+            </xs:restriction>
+         </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="ID" type="xs:positiveInteger" use="optional"/>
+   </xs:complexType>
+   
+   
+   <xs:complexType name="ClinicalSignificanceType">
+      <xs:sequence>
+         <xs:element name="ReviewStatus" type="typeSubmitterReviewStatusValue" minOccurs="0" maxOccurs="1"/>
+         <xs:element name="Description" type="xs:string" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+            <xs:documentation>We are not providing an enumeration for the values we report for clinical significance within the xsd. 
+            The values are maintained here: ftp://ftp.ncbi.nlm.nih.gov/pub/GTR/standard_terms/Clinical_significance.txt. </xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="Explanation" type="typeComment" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+            <xs:documentation>Explanation is used only when the description is 'conflicting data from submitters'
+            The element summarizes the conflict.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="XRef" type="typeXref" minOccurs="0" maxOccurs="unbounded"/>
+         <xs:element name="Citation" type="typeCitation" minOccurs="0" maxOccurs="unbounded"/>
+         <xs:element name="Comment" type="typeComment" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="DateLastEvaluated" type="xs:date" use="optional"/>
+   </xs:complexType>
+
+   <xs:complexType name="typeRecordHistory">
+      <xs:annotation>
+         <xs:documentation>A structure to support reporting of an accession, its version, the date its status changed, and
+         text describing that change</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="Description" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      </xs:sequence>
+      <xs:attribute name="Accession" type="xs:string" use="required"/>
+      <xs:attribute name="Version" type="xs:nonNegativeInteger" use="required"/>
+      <xs:attribute name="DateChanged" type="xs:date" use="required"/>
+      <xs:attribute name="VariationID" type="xs:nonNegativeInteger" use="required"/>
+   </xs:complexType>
+ 
+
+   <xs:complexType name="typeGenotypeSCV">
+      <xs:annotation>
+         <xs:documentation>Used to report genotypes, be they simple or complex
+            diplotypes.</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:choice minOccurs="1" maxOccurs="unbounded">
+           <xs:element maxOccurs="1" minOccurs="1" name="SimpleAllele" type="typeAlleleSCV">
+             <xs:annotation>
+                <xs:documentation>The measure set describes the set of measures (analytes, genes,
+                   variants, etc.) indicated for this assertion. If variants, should represent
+                   data from one chromosome (in cis)</xs:documentation>
+             </xs:annotation>
+           </xs:element>
+           <xs:element name="Haplotype" type="typeHaplotypeSCV" minOccurs="1" maxOccurs="1">
+              <xs:annotation>
+                 <xs:documentation>Allow more than 2 haplotypes per genotype to support representation
+                    of ploidy.</xs:documentation>
+              </xs:annotation>
+           </xs:element>
+         </xs:choice>
+         <xs:element name="Name" type="xs:string" minOccurs="0" maxOccurs="1"/>
+         <xs:element name="VariationType" type="typeVariationType" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation>Derived from clinvar.mset.set_type. for compound het, diplotype
+               </xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="FunctionalConsequence" minOccurs="0" maxOccurs="unbounded">
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element name="XRef" type="typeXref" minOccurs="0" maxOccurs="unbounded"/>
+                  <xs:element name="Citation" type="typeCitation" minOccurs="0"
+                     maxOccurs="unbounded"/>
+                  <xs:element name="Comment" type="typeComment" minOccurs="0" maxOccurs="unbounded"
+                  />
+               </xs:sequence>
+               <xs:attribute name="Value" type="xs:string" use="required"/>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="Interpretations" type="typeAggregatedInterpretationSet" minOccurs="0"
+            maxOccurs="unbounded"/>
+         <xs:element name="XRefList" minOccurs="0">
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element name="XRef" type="typeXref" minOccurs="0" maxOccurs="unbounded"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="CitationList" minOccurs="0">
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element name="Citation" type="typeCitation" maxOccurs="unbounded"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="Comment" type="typeComment" minOccurs="0" maxOccurs="unbounded"/>
+         <xs:element name="AttributeSet" type="typeAttributeSet" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="VariationID" type="xs:int" use="optional"/>
+   </xs:complexType>
+
+    <xs:simpleType name="typeHaplotypeVariationType">
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="Haplotype"/>
+         <xs:enumeration value="Variation"/>
+      </xs:restriction>
+    </xs:simpleType> 
 </xs:schema>
