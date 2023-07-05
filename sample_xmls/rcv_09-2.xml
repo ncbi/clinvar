@@ -1,0 +1,337 @@
+<ClinVarSet ID="92399458">
+    <RecordStatus>current</RecordStatus>
+    <Title>NM_012433.4(SF3B1):c.1998G>T (p.Lys666Asn) AND Acute myeloid leukemia</Title>
+    <ReferenceClinVarAssertion ID="842698" DateLastUpdated="2022-04-23" DateCreated="2016-12-06">
+        <ClinVarAccession Acc="RCV000303947" Version="4" Type="RCV" DateUpdated="2022-04-23"
+            DateCreated="2016-12-06" />
+        <RecordStatus>current</RecordStatus>
+        <Classifications>
+            <SomaticClinicalImpact>
+                <ReviewStatus>criteria provided, multiple submitters, no conflicts</ReviewStatus>
+                <Description ClinicalImpactAssertionType="therapeutic"
+                    ClinicalImpactClinicalSignificance="sensitivity" SubmissionCount="1"
+                    DateLastEvaluated="2016-06-14">Tier II - Potential</Description>
+                <Description ClinicalImpactAssertionType="therapeutic"
+                    ClinicalImpactClinicalSignificance="resistance" SubmissionCount="1"
+                    DateLastEvaluated="2016-06-14">Tier II - Potential</Description>
+            </SomaticClinicalImpact>
+        </Classifications>
+        <Assertion Type="variation to disease" />
+        <ObservedIn>
+            <Sample>
+                <Origin>somatic</Origin>
+                <SomaticVariantInNormalTissue>present</SomaticVariantInNormalTissue>
+                <SomaticVariantAlleleFraction>25%</SomaticVariantAlleleFraction>
+                <Species TaxonomyId="9606">human</Species>
+                <AffectedStatus>unknown</AffectedStatus>
+            </Sample>
+            <Method>
+                <MethodType>clinical testing</MethodType>
+            </Method>
+            <ObservedData>
+                <Attribute Type="Description">not provided</Attribute>
+            </ObservedData>
+        </ObservedIn>
+        <ObservedIn>
+            <Sample>
+                <Origin>somatic</Origin>
+                <SomaticVariantInNormalTissue>present</SomaticVariantInNormalTissue>
+                <SomaticVariantAlleleFraction>10%</SomaticVariantAlleleFraction>
+                <Species TaxonomyId="9606">human</Species>
+                <AffectedStatus>yes</AffectedStatus>
+            </Sample>
+            <Method>
+                <MethodType>clinical testing</MethodType>
+            </Method>
+            <ObservedData>
+                <Attribute Type="Description">not provided</Attribute>
+            </ObservedData>
+        </ObservedIn>
+        <MeasureSet Type="Variant" ID="219098" Acc="VCV000219098" Version="3">
+            <Measure Type="single nucleotide variant" ID="216787">
+                <Name>
+                    <ElementValue Type="Preferred">NM_012433.4(SF3B1):c.1998G>T (p.Lys666Asn)</ElementValue>
+                </Name>
+                <CanonicalSPDI>NC_000002.12:197402634:C:A</CanonicalSPDI>
+                <AttributeSet>
+                    <Attribute Accession="LRG_624t2" Type="HGVS, coding, LRG">LRG_624t2:c.1998G>T</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NM_012433" Version="4" Change="c.1998G>T"
+                        Type="HGVS, coding, RefSeq" MANESelect="true">NM_012433.4:c.1998G>T</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="LRG_624" Type="HGVS, genomic, LRG">LRG_624:g.37413G>T</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NG_032903" Version="2" Change="g.37413G>T"
+                        Type="HGVS, genomic, RefSeqGene">NG_032903.2:g.37413G>T</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NC_000002" Version="12" Change="g.197402635C>A"
+                        Type="HGVS, genomic, top level" integerValue="38">
+                        NC_000002.12:g.197402635C>A</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NC_000002" Version="11" Change="g.198267359C>A"
+                        Type="HGVS, genomic, top level, previous" integerValue="37">
+                        NC_000002.11:g.198267359C>A</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NM_012433" Version="3" Change="c.1998G>T"
+                        Type="HGVS, previous">NM_012433.3:c.1998G>T</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Type="HGVS, protein" />
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Type="HGVS, protein">p.K666N</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="LRG_624p2" Change="p.Lys666Asn" Type="HGVS, protein">
+                        LRG_624p2:p.Lys666Asn</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NP_036565" Version="2" Change="p.Lys666Asn"
+                        Type="HGVS, protein, RefSeq">NP_036565.2:p.Lys666Asn</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NP_036565" Version="2" Change="p.Lys666Asn"
+                        Type="HGVS, protein, RefSeq">NP_036565.2:p.Lys666Asn</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Type="MolecularConsequence">missense variant</Attribute>
+                    <XRef ID="SO:0001583" DB="Sequence Ontology" />
+                    <XRef ID="NM_012433.4:c.1998G>T" DB="RefSeq" />
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Type="ProteinChange1LetterCode">K666N</Attribute>
+                </AttributeSet>
+                <CytogeneticLocation>2q33.1</CytogeneticLocation>
+                <SequenceLocation Assembly="GRCh38" AssemblyAccessionVersion="GCF_000001405.38"
+                    AssemblyStatus="current" Chr="2" Accession="NC_000002.12" start="197402635"
+                    stop="197402635" display_start="197402635" display_stop="197402635"
+                    variantLength="1" positionVCF="197402635" referenceAlleleVCF="C"
+                    alternateAlleleVCF="A" />
+                <SequenceLocation Assembly="GRCh37" AssemblyAccessionVersion="GCF_000001405.25"
+                    AssemblyStatus="previous" Chr="2" Accession="NC_000002.11" start="198267359"
+                    stop="198267359" display_start="198267359" display_stop="198267359"
+                    variantLength="1" positionVCF="198267359" referenceAlleleVCF="C"
+                    alternateAlleleVCF="A" />
+                <MeasureRelationship Type="within single gene">
+                    <Name>
+                        <ElementValue Type="Preferred">splicing factor 3b subunit 1</ElementValue>
+                    </Name>
+                    <Symbol>
+                        <ElementValue Type="Preferred">SF3B1</ElementValue>
+                    </Symbol>
+                    <SequenceLocation Assembly="GRCh38" AssemblyAccessionVersion="GCF_000001405.38"
+                        AssemblyStatus="current" Chr="2" Accession="NC_000002.12" start="197389784"
+                        stop="197435093" display_start="197389784" display_stop="197435093"
+                        Strand="-" />
+                    <SequenceLocation Assembly="GRCh37" AssemblyAccessionVersion="GCF_000001405.25"
+                        AssemblyStatus="previous" Chr="2" Accession="NC_000002.11" start="198256697"
+                        stop="198299770" display_start="198256697" display_stop="198299770"
+                        variantLength="43074" Strand="-" />
+                    <XRef ID="23451" DB="Gene" />
+                    <XRef Type="MIM" ID="605590" DB="OMIM" />
+                    <XRef ID="HGNC:10768" DB="HGNC" />
+                </MeasureRelationship>
+                <XRef Type="rs" ID="377023736" DB="dbSNP" />
+            </Measure>
+            <Name>
+                <ElementValue Type="Preferred">NM_012433.4(SF3B1):c.1998G>T (p.Lys666Asn)</ElementValue>
+            </Name>
+            <Name>
+                <ElementValue Type="Preferred">NM_012433.4(SF3B1):c.1998G>T (p.Lys666Asn)</ElementValue>
+            </Name>
+            <Name>
+                <ElementValue Type="Preferred">NM_012433.4(SF3B1):c.1998G>T (p.Lys666Asn)</ElementValue>
+            </Name>
+            <XRef ID="CA280929" DB="ClinGen" />
+        </MeasureSet>
+        <TraitSet Type="Disease" ID="6288">
+            <Trait ID="15736" Type="Disease">
+                <Name>
+                    <ElementValue Type="Preferred">Acute myeloid leukemia</ElementValue>
+                    <XRef ID="HP:0004808" DB="Human Phenotype Ontology" />
+                    <XRef ID="MONDO:0018874" DB="MONDO" />
+                    <XRef ID="519" DB="Orphanet" />
+                    <XRef ID="17788007" DB="SNOMED CT" />
+                </Name>
+                <Name>
+                    <ElementValue Type="Alternate">Acute myeloid leukemia, adult</ElementValue>
+                </Name>
+                <Name>
+                    <ElementValue Type="Alternate">AML adult</ElementValue>
+                </Name>
+                <Name>
+                    <ElementValue Type="Alternate">Acute myelogenous leukemia</ElementValue>
+                    <XRef ID="Acute+Myeloid+Leukemia%2C+Adult/204" DB="Genetic Alliance" />
+                    <XRef ID="HP:0004808" DB="Human Phenotype Ontology" />
+                </Name>
+                <Name>
+                    <ElementValue Type="Alternate">Acute non-lymphocytic leukemia</ElementValue>
+                </Name>
+                <Name>
+                    <ElementValue Type="Alternate">Acute granulocytic leukemia</ElementValue>
+                </Name>
+                <Name>
+                    <ElementValue Type="Alternate">Leukemia, acute myeloid, somatic</ElementValue>
+                </Name>
+                <Name>
+                    <ElementValue Type="Alternate">Leukemia, acute myelogenous, somatic</ElementValue>
+                </Name>
+                <Symbol>
+                    <ElementValue Type="Preferred">AML</ElementValue>
+                    <XRef ID="GTR000500636" DB="Genetic Testing Registry (GTR)" />
+                    <XRef Type="MIM" ID="601626" DB="OMIM" />
+                </Symbol>
+                <AttributeSet>
+                    <Attribute Type="public definition">CEBPA-associated familial acute myeloid
+                        leukemia (AML) is defined as the presence of a heterozygous germline CEBPA
+                        pathogenic variant in an individual with AML and/or family in which more
+                        than one individual has AML. In contrast, sporadic CEBPA-associated AML is
+                        defined as AML in which a CEBPA pathogenic variant(s) is identified in
+                        leukemic cells but not in the non-leukemic cells. In the majority of
+                        individuals, the age of onset of familial AML appears to be earlier than
+                        sporadic AML; disease onset has been reported in persons as young as age 1.8
+                        years and up to age 50 years. The prognosis of CEBPA-associated familial AML
+                        appears to be favorable compared with sporadic CEBPA-associated AML.
+                        Individuals with CEBPA-associated familial AML who have been cured of their
+                        initial disease may be at greater risk of developing additional independent
+                        leukemic episodes, in addition to the risk of relapse from preexisting
+                        clones.</Attribute>
+                    <XRef ID="NBK47457" DB="GeneReviews" />
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Type="disease mechanism">Constitutively activated FLT3</Attribute>
+                    <XRef ID="GTR000552464" DB="Genetic Testing Registry (GTR)" />
+                </AttributeSet>
+                <Citation Type="review" Abbrev="GeneReviews">
+                    <ID Source="PubMed">20963938</ID>
+                    <ID Source="BookShelf">NBK47457</ID>
+                </Citation>
+                <Citation Type="Translational/Evidence-based" Abbrev="NCCN, 2011">
+                    <ID Source="PubMed">22138009</ID>
+                </Citation>
+                <Citation Type="practice guideline" Abbrev="ESMO, 2013">
+                    <ID Source="PubMed">23970018</ID>
+                </Citation>
+                <Citation Type="review" Abbrev="GeneReviews">
+                    <ID Source="PubMed">33226740</ID>
+                    <ID Source="BookShelf">NBK564234</ID>
+                </Citation>
+                <Citation Type="practice guideline" Abbrev="ESMO, 2020">
+                    <ID Source="PubMed">32171751</ID>
+                </Citation>
+                <XRef ID="MONDO:0018874" DB="MONDO" />
+                <XRef ID="D015470" DB="MeSH" />
+                <XRef ID="C0023467" DB="MedGen" />
+                <XRef ID="519" DB="Orphanet" />
+                <XRef Type="MIM" ID="601626" DB="OMIM" />
+                <XRef Type="primary" ID="HP:0004808" DB="Human Phenotype Ontology" />
+                <XRef Type="secondary" ID="HP:0001914" DB="Human Phenotype Ontology" />
+                <XRef Type="secondary" ID="HP:0004843" DB="Human Phenotype Ontology" />
+                <XRef Type="secondary" ID="HP:0005516" DB="Human Phenotype Ontology" />
+                <XRef Type="secondary" ID="HP:0006724" DB="Human Phenotype Ontology" />
+                <XRef Type="secondary" ID="HP:0006728" DB="Human Phenotype Ontology" />
+            </Trait>
+        </TraitSet>
+    </ReferenceClinVarAssertion>
+    <ClinVarAssertion ID="717590" SubmissionName="DCM_2016Q4">
+        <ClinVarSubmissionID localKey="562510-1" submittedAssembly="GRCh37"
+            submitter="COSMIC: Catalogue of somatic mutations in cancer" submitterDate="2016-10-18" />
+        <ClinVarAccession Acc="SCV000404069" DateCreated="2016-12-06" DateUpdated="2016-12-06"
+            Version="2" Type="SCV" OrgID="505269"
+            OrganizationCategory="resource"
+            OrgType="primary" />
+        <RecordStatus>current</RecordStatus>
+        <Classification DateLastEvaluated="2016-06-14">
+            <ReviewStatus>criteria provided, single submitter</ReviewStatus>
+            <SomaticClinicalImpact ClinicalImpactAssertionType="therapeutic"
+                ClinicalImpactClinicalSignificance="sensitivity"
+                DrugForTherapeuticAssertion="Enzalutamide">Tier II - Potential</SomaticClinicalImpact>
+        </Classification>
+        <Assertion Type="variation to disease" />
+        <AttributeSet>
+            <Attribute Type="AssertionMethod">AMP Guidelines, 2017</Attribute>
+            <Citation>
+                <ID Source="PubMed">27993330</ID>
+            </Citation>
+        </AttributeSet>
+        <ObservedIn>
+            <Sample>
+                <Origin>somatic</Origin>
+                <SomaticVariantInNormalTissue>present</SomaticVariantInNormalTissue>
+                <SomaticVariantAlleleFraction>25%</SomaticVariantAlleleFraction>
+                <Species TaxonomyId="9606">human</Species>
+                <AffectedStatus>unknown</AffectedStatus>
+            </Sample>
+            <Method>
+                <MethodType>clinical testing</MethodType>
+            </Method>
+            <ObservedData>
+                <Attribute Type="Description">not provided</Attribute>
+            </ObservedData>
+        </ObservedIn>
+        <MeasureSet Type="Variant">
+            <Measure Type="Variation">
+                <SequenceLocation Assembly="GRCh37" Chr="2" alternateAllele="A" referenceAllele="C"
+                    start="198267359" stop="198267359" variantLength="1" />
+            </Measure>
+        </MeasureSet>
+        <TraitSet Type="Disease">
+            <Trait Type="Disease">
+                <XRef DB="MeSH" ID="D015470" />
+            </Trait>
+        </TraitSet>
+    </ClinVarAssertion>
+    <ClinVarAssertion ID="717595" SubmissionName="ICMLK_2016Q4">
+        <ClinVarSubmissionID localKey="800692-2" submittedAssembly="GRCh37"
+            submitter="ClinVar" submitterDate="2016-10-18" />
+        <ClinVarAccession Acc="SCV000404074" DateCreated="2016-12-06" DateUpdated="2016-12-06"
+            Version="2" Type="SCV" OrgID="500139"
+            OrganizationCategory="other" OrgType="primary" />
+        <RecordStatus>current</RecordStatus>
+        <Classification DateLastEvaluated="2016-06-14">
+            <ReviewStatus>criteria provided, single submitter</ReviewStatus>
+            <SomaticClinicalImpact ClinicalImpactAssertionType="therapeutic"
+                ClinicalImpactClinicalSignificance="resistance"
+                DrugForTherapeuticAssertion="SpliceostatinA">Tier II - Potential</SomaticClinicalImpact>
+        </Classification>
+        <Assertion Type="variation to disease" />
+        <AttributeSet>
+            <Attribute Type="AssertionMethod">AMP Guidelines, 2017</Attribute>
+            <Citation>
+                <ID Source="PubMed">27993330</ID>
+            </Citation>
+        </AttributeSet>
+        <ObservedIn>
+            <Sample>
+                <Origin>somatic</Origin>
+                <SomaticVariantInNormalTissue>present</SomaticVariantInNormalTissue>
+                <SomaticVariantAlleleFraction>10%</SomaticVariantAlleleFraction>
+                <Species TaxonomyId="9606">human</Species>
+                <AffectedStatus>yes</AffectedStatus>
+            </Sample>
+            <Method>
+                <MethodType>clinical testing</MethodType>
+            </Method>
+            <ObservedData>
+                <Attribute Type="Description">not provided</Attribute>
+            </ObservedData>
+        </ObservedIn>
+        <MeasureSet Type="Variant">
+            <Measure Type="Variation">
+                <SequenceLocation Assembly="GRCh37" Chr="2" alternateAllele="A" referenceAllele="C"
+                    start="198267359" stop="198267359" variantLength="1" />
+            </Measure>
+        </MeasureSet>
+        <TraitSet Type="Disease">
+            <Trait Type="Disease">
+                <XRef DB="MeSH" ID="D015470" />
+            </Trait>
+        </TraitSet>
+    </ClinVarAssertion>
+</ClinVarSet>

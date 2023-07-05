@@ -1,0 +1,386 @@
+<ClinVarSet ID="129186924">
+    <RecordStatus>current</RecordStatus>
+    <Title>NM_001382430.1(AKT1):c.49G>A (p.Glu17Lys) AND Malignant melanoma of skin</Title>
+    <ReferenceClinVarAssertion ID="1011079" DateLastUpdated="2022-08-23" DateCreated="2016-12-06">
+        <ClinVarAccession Acc="RCV000426386" Version="1" Type="RCV" DateUpdated="2022-08-23"
+            DateCreated="2016-12-06" />
+        <RecordStatus>current</RecordStatus>
+        <Classifications>
+            <SomaticClinicalImpact>
+                <ReviewStatus>reviewed by expert panel</ReviewStatus>
+                <Description ClinicalImpactAssertionType="diagnostic"
+                    ClinicalImpactClinicalSignificance="supports diagnosis" SubmissionCount="1"
+                    DateLastEvaluated="2016-06-14">Tier I - Strong</Description>
+            </SomaticClinicalImpact>
+        </Classifications>
+        <Assertion Type="variation to disease" />
+        <ObservedIn>
+            <Sample>
+                <Origin>somatic</Origin>
+                <SomaticVariantInNormalTissue>present</SomaticVariantInNormalTissue>
+                <SomaticVariantAlleleFraction>15%</SomaticVariantAlleleFraction>
+                <Species TaxonomyId="9606">human</Species>
+                <AffectedStatus>yes</AffectedStatus>
+            </Sample>
+            <Method>
+                <MethodType>literature only</MethodType>
+            </Method>
+            <ObservedData ID="99274384">
+                <Attribute Type="Description">not provided</Attribute>
+            </ObservedData>
+        </ObservedIn>
+        <MeasureSet Type="Variant" ID="13983" Acc="VCV000013983" Version="11">
+            <Measure Type="single nucleotide variant" ID="29022">
+                <Name>
+                    <ElementValue Type="Preferred">NM_001382430.1(AKT1):c.49G>A (p.Glu17Lys)</ElementValue>
+                </Name>
+                <CanonicalSPDI>NC_000014.9:104780213:C:T</CanonicalSPDI>
+                <AttributeSet>
+                    <Attribute Accession="LRG_721t2" Type="HGVS, coding, LRG">LRG_721t2:c.49G>A</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NM_001014431" Version="2" Change="c.49G>A"
+                        Type="HGVS, coding, RefSeq">NM_001014431.2:c.49G>A</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NM_001014432" Version="2" Change="c.49G>A"
+                        Type="HGVS, coding, RefSeq">NM_001014432.2:c.49G>A</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NM_001382430" Version="1" Change="c.49G>A"
+                        Type="HGVS, coding, RefSeq" MANESelect="true">NM_001382430.1:c.49G>A</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NM_001382431" Version="1" Change="c.49G>A"
+                        Type="HGVS, coding, RefSeq">NM_001382431.1:c.49G>A</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NM_001382432" Version="1" Change="c.49G>A"
+                        Type="HGVS, coding, RefSeq">NM_001382432.1:c.49G>A</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NM_001382433" Version="1" Change="c.49G>A"
+                        Type="HGVS, coding, RefSeq">NM_001382433.1:c.49G>A</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NM_005163" Version="2" Change="c.49G>A"
+                        Type="HGVS, coding, RefSeq">NM_005163.2:c.49G>A</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="LRG_721" Type="HGVS, genomic, LRG">LRG_721:g.20531G>A</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NG_012188" Version="1" Change="g.20531G>A"
+                        Type="HGVS, genomic, RefSeqGene">NG_012188.1:g.20531G>A</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NC_000014" Version="9" Change="g.104780214C>T"
+                        Type="HGVS, genomic, top level" integerValue="38">NC_000014.9:g.104780214C>T</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NC_000014" Version="8" Change="g.105246551C>T"
+                        Type="HGVS, genomic, top level, previous" integerValue="37">
+                        NC_000014.8:g.105246551C>T</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Type="HGVS, protein" />
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="LRG_721p2" Change="p.Glu17Lys" Type="HGVS, protein">
+                        LRG_721p2:p.Glu17Lys</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="P31749" Change="p.Glu17Lys" Type="HGVS, protein">
+                        P31749:p.Glu17Lys</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NP_001014431" Version="1" Change="p.Glu17Lys"
+                        Type="HGVS, protein, RefSeq">NP_001014431.1:p.Glu17Lys</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NP_001014432" Version="1" Change="p.Glu17Lys"
+                        Type="HGVS, protein, RefSeq">NP_001014432.1:p.Glu17Lys</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NP_001369359" Version="1" Change="p.Glu17Lys"
+                        Type="HGVS, protein, RefSeq">NP_001369359.1:p.Glu17Lys</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NP_001369360" Version="1" Change="p.Glu17Lys"
+                        Type="HGVS, protein, RefSeq">NP_001369360.1:p.Glu17Lys</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NP_001369361" Version="1" Change="p.Glu17Lys"
+                        Type="HGVS, protein, RefSeq">NP_001369361.1:p.Glu17Lys</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NP_001369362" Version="1" Change="p.Glu17Lys"
+                        Type="HGVS, protein, RefSeq">NP_001369362.1:p.Glu17Lys</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NP_005154" Version="2" Change="p.Glu17Lys"
+                        Type="HGVS, protein, RefSeq">NP_005154.2:p.Glu17Lys</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Type="MolecularConsequence">missense variant</Attribute>
+                    <XRef ID="SO:0001583" DB="Sequence Ontology" />
+                    <XRef ID="NM_001014431.2:c.49G>A" DB="RefSeq" />
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Type="MolecularConsequence">missense variant</Attribute>
+                    <XRef ID="SO:0001583" DB="Sequence Ontology" />
+                    <XRef ID="NM_001014432.2:c.49G>A" DB="RefSeq" />
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Type="MolecularConsequence">missense variant</Attribute>
+                    <XRef ID="SO:0001583" DB="Sequence Ontology" />
+                    <XRef ID="NM_001382430.1:c.49G>A" DB="RefSeq" />
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Type="MolecularConsequence">missense variant</Attribute>
+                    <XRef ID="SO:0001583" DB="Sequence Ontology" />
+                    <XRef ID="NM_001382431.1:c.49G>A" DB="RefSeq" />
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Type="MolecularConsequence">missense variant</Attribute>
+                    <XRef ID="SO:0001583" DB="Sequence Ontology" />
+                    <XRef ID="NM_001382432.1:c.49G>A" DB="RefSeq" />
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Type="MolecularConsequence">missense variant</Attribute>
+                    <XRef ID="SO:0001583" DB="Sequence Ontology" />
+                    <XRef ID="NM_001382433.1:c.49G>A" DB="RefSeq" />
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Type="MolecularConsequence">missense variant</Attribute>
+                    <XRef ID="SO:0001583" DB="Sequence Ontology" />
+                    <XRef ID="NM_005163.2:c.49G>A" DB="RefSeq" />
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Type="ProteinChange1LetterCode">E17K</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Type="ProteinChange3LetterCode">GLU17LYS</Attribute>
+                </AttributeSet>
+                <AlleleFrequencyList>
+                    <AlleleFrequency Value="0.00001" Source="Exome Aggregation Consortium (ExAC)" />
+                    <AlleleFrequency Value="0.00000"
+                        Source="The Genome Aggregation Database (gnomAD), exomes" />
+                </AlleleFrequencyList>
+                <CytogeneticLocation>14q32.33</CytogeneticLocation>
+                <SequenceLocation Assembly="GRCh38" AssemblyAccessionVersion="GCF_000001405.38"
+                    AssemblyStatus="current" Chr="14" Accession="NC_000014.9" start="104780214"
+                    stop="104780214" display_start="104780214" display_stop="104780214"
+                    variantLength="1" positionVCF="104780214" referenceAlleleVCF="C"
+                    alternateAlleleVCF="T" />
+                <SequenceLocation Assembly="GRCh37" AssemblyAccessionVersion="GCF_000001405.25"
+                    AssemblyStatus="previous" Chr="14" Accession="NC_000014.8" start="105246551"
+                    stop="105246551" display_start="105246551" display_stop="105246551"
+                    variantLength="1" positionVCF="105246551" referenceAlleleVCF="C"
+                    alternateAlleleVCF="T" />
+                <MeasureRelationship Type="within single gene">
+                    <Name>
+                        <ElementValue Type="Preferred">AKT serine/threonine kinase 1</ElementValue>
+                    </Name>
+                    <Symbol>
+                        <ElementValue Type="Preferred">AKT1</ElementValue>
+                    </Symbol>
+                    <AttributeSet>
+                        <Attribute dateValue="2022-01-25" Type="Haploinsufficiency">No evidence
+                            available</Attribute>
+                        <Citation>
+                            <URL>
+                                https://www.ncbi.nlm.nih.gov/projects/dbvar/ISCA/isca_gene.cgi?sym=AKT1</URL>
+                        </Citation>
+                    </AttributeSet>
+                    <AttributeSet>
+                        <Attribute dateValue="2022-01-25" Type="Triplosensitivity">No evidence
+                            available</Attribute>
+                        <Citation>
+                            <URL>
+                                https://www.ncbi.nlm.nih.gov/projects/dbvar/ISCA/isca_gene.cgi?sym=AKT1</URL>
+                        </Citation>
+                    </AttributeSet>
+                    <SequenceLocation Assembly="GRCh38" AssemblyAccessionVersion="GCF_000001405.38"
+                        AssemblyStatus="current" Chr="14" Accession="NC_000014.9" start="104769349"
+                        stop="104795748" display_start="104769349" display_stop="104795748"
+                        Strand="-" />
+                    <SequenceLocation Assembly="GRCh37" AssemblyAccessionVersion="GCF_000001405.25"
+                        AssemblyStatus="previous" Chr="14" Accession="NC_000014.8" start="105235685"
+                        stop="105262079" display_start="105235685" display_stop="105262079"
+                        variantLength="26395" Strand="-" />
+                    <XRef ID="207" DB="Gene" />
+                    <XRef Type="MIM" ID="164730" DB="OMIM" />
+                    <XRef ID="HGNC:391" DB="HGNC" />
+                </MeasureRelationship>
+                <XRef ID="P31749#VAR_055422" DB="UniProtKB" />
+                <XRef Type="Allelic variant" ID="164730.0001" DB="OMIM" />
+                <XRef Type="rs" ID="121434592" DB="dbSNP" />
+            </Measure>
+            <Name>
+                <ElementValue Type="Preferred">NM_001382430.1(AKT1):c.49G>A (p.Glu17Lys)</ElementValue>
+            </Name>
+            <Name>
+                <ElementValue Type="Preferred">NM_001382430.1(AKT1):c.49G>A (p.Glu17Lys)</ElementValue>
+            </Name>
+            <Name>
+                <ElementValue Type="Preferred">NM_001382430.1(AKT1):c.49G>A (p.Glu17Lys)</ElementValue>
+            </Name>
+            <Name>
+                <ElementValue Type="Preferred">NM_001382430.1(AKT1):c.49G>A (p.Glu17Lys)</ElementValue>
+            </Name>
+            <Name>
+                <ElementValue Type="Preferred">NM_001382430.1(AKT1):c.49G>A (p.Glu17Lys)</ElementValue>
+            </Name>
+            <Name>
+                <ElementValue Type="Preferred">NM_001382430.1(AKT1):c.49G>A (p.Glu17Lys)</ElementValue>
+            </Name>
+            <Name>
+                <ElementValue Type="Preferred">NM_001382430.1(AKT1):c.49G>A (p.Glu17Lys)</ElementValue>
+            </Name>
+            <Name>
+                <ElementValue Type="Preferred">NM_001382430.1(AKT1):c.49G>A (p.Glu17Lys)</ElementValue>
+            </Name>
+            <Name>
+                <ElementValue Type="Preferred">NM_001382430.1(AKT1):c.49G>A (p.Glu17Lys)</ElementValue>
+            </Name>
+            <Name>
+                <ElementValue Type="Preferred">NM_001382430.1(AKT1):c.49G>A (p.Glu17Lys)</ElementValue>
+            </Name>
+            <Name>
+                <ElementValue Type="Preferred">NM_001382430.1(AKT1):c.49G>A (p.Glu17Lys)</ElementValue>
+            </Name>
+            <Name>
+                <ElementValue Type="Preferred">NM_001382430.1(AKT1):c.49G>A (p.Glu17Lys)</ElementValue>
+            </Name>
+            <Name>
+                <ElementValue Type="Preferred">NM_001382430.1(AKT1):c.49G>A (p.Glu17Lys)</ElementValue>
+            </Name>
+            <Name>
+                <ElementValue Type="Preferred">NM_001382430.1(AKT1):c.49G>A (p.Glu17Lys)</ElementValue>
+            </Name>
+            <Name>
+                <ElementValue Type="Preferred">NM_001382430.1(AKT1):c.49G>A (p.Glu17Lys)</ElementValue>
+            </Name>
+            <Name>
+                <ElementValue Type="Preferred">NM_001382430.1(AKT1):c.49G>A (p.Glu17Lys)</ElementValue>
+            </Name>
+            <Name>
+                <ElementValue Type="Preferred">NM_001382430.1(AKT1):c.49G>A (p.Glu17Lys)</ElementValue>
+            </Name>
+            <Name>
+                <ElementValue Type="Preferred">NM_001382430.1(AKT1):c.49G>A (p.Glu17Lys)</ElementValue>
+            </Name>
+            <Name>
+                <ElementValue Type="Preferred">NM_001382430.1(AKT1):c.49G>A (p.Glu17Lys)</ElementValue>
+            </Name>
+            <Name>
+                <ElementValue Type="Preferred">NM_001382430.1(AKT1):c.49G>A (p.Glu17Lys)</ElementValue>
+            </Name>
+            <Name>
+                <ElementValue Type="Preferred">NM_001382430.1(AKT1):c.49G>A (p.Glu17Lys)</ElementValue>
+            </Name>
+            <Name>
+                <ElementValue Type="Preferred">NM_001382430.1(AKT1):c.49G>A (p.Glu17Lys)</ElementValue>
+            </Name>
+            <Name>
+                <ElementValue Type="Preferred">NM_001382430.1(AKT1):c.49G>A (p.Glu17Lys)</ElementValue>
+            </Name>
+            <Name>
+                <ElementValue Type="Preferred">NM_001382430.1(AKT1):c.49G>A (p.Glu17Lys)</ElementValue>
+            </Name>
+            <AttributeSet>
+                <Attribute Type="SubmitterVariantId">GDX:1581375</Attribute>
+            </AttributeSet>
+            <XRef ID="CA123660" DB="ClinGen" />
+        </MeasureSet>
+        <TraitSet Type="Disease" ID="6369">
+            <Trait ID="2880" Type="Disease">
+                <Name>
+                    <ElementValue Type="Preferred">Malignant melanoma of skin</ElementValue>
+                    <XRef ID="Malignant+melanoma+of+skin/8784" DB="Genetic Alliance" />
+                    <XRef ID="93655004" DB="SNOMED CT" />
+                </Name>
+                <Name>
+                    <ElementValue Type="Alternate">Malignant melanoma, somatic</ElementValue>
+                </Name>
+                <Name>
+                    <ElementValue Type="Alternate">Cutaneous melanoma</ElementValue>
+                    <XRef ID="HP:0012056" DB="Human Phenotype Ontology" />
+                    <XRef ID="MONDO:0005012" DB="MONDO" />
+                </Name>
+                <Symbol>
+                    <ElementValue Type="Preferred">CMM</ElementValue>
+                </Symbol>
+                <Citation Type="practice guideline" Abbrev="NICE, 2015">
+                    <URL>http://www.nice.org.uk/guidance/ta269/chapter/guidance</URL>
+                    <CitationText>Vemurafenib for treating locally advanced or metastatic BRAF V600
+                        mutation-positive malignant melanoma (Updated 1 January 2015)</CitationText>
+                </Citation>
+                <Citation Type="general" Abbrev="ASCO, 2014">
+                    <ID Source="PubMed">24493721</ID>
+                </Citation>
+                <Citation Type="general" Abbrev="SEOM, 2021">
+                    <ID Source="PubMed">33651321</ID>
+                    <ID Source="pmc">8057998</ID>
+                </Citation>
+                <Citation Type="practice guideline" Abbrev="UK NICE, 2022">
+                    <URL>https://www.nice.org.uk/guidance/ng14</URL>
+                    <CitationText>UK NICE Guideline NG14, Melanoma: assessment and management, 2022</CitationText>
+                </Citation>
+                <XRef ID="MONDO:0005012" DB="MONDO" />
+                <XRef ID="C562393" DB="MeSH" />
+                <XRef ID="C0151779" DB="MedGen" />
+                <XRef Type="primary" ID="HP:0012056" DB="Human Phenotype Ontology" />
+            </Trait>
+        </TraitSet>
+    </ReferenceClinVarAssertion>
+    <ClinVarAssertion ID="969803" SubmissionName="DoCM_7-13-16">
+        <ClinVarSubmissionID localKey="ENST00000349310:c.49G>A|MeSH:C562393"
+            submittedAssembly="GRCh37" submitter="Database of Curated Mutations (DoCM)"
+            submitterDate="2016-10-18" />
+        <ClinVarAccession Acc="SCV000504527" Version="1" Type="SCV" OrgID="505871"
+            OrganizationCategory="resource" OrgType="primary" DateCreated="2016-12-06"
+            DateUpdated="2016-12-06" />
+        <RecordStatus>current</RecordStatus>
+        <Classification DateLastEvaluated="2016-06-14">
+            <ReviewStatus>reviewed by expert panel</ReviewStatus>
+            <SomaticClinicalImpact ClinicalImpactAssertionType="diagnostic"
+                ClinicalImpactClinicalSignificance="supports diagnosis">Tier I - Strong</SomaticClinicalImpact>
+        </Classification>
+        <Assertion Type="variation to disease" />
+        <ExternalID DB="Database of Curated Mutations" ID="ENST00000349310:c.49G>A" />
+        <AttributeSet>
+            <Attribute Type="AssertionMethod">AMP Guidelines, 2017</Attribute>
+            <Citation>
+                <ID Source="PubMed">27993330</ID>
+            </Citation>
+        </AttributeSet>
+        <ObservedIn>
+            <Sample>
+                <Origin>somatic</Origin>
+                <SomaticVariantInNormalTissue>present</SomaticVariantInNormalTissue>
+                <SomaticVariantAlleleFraction>15%</SomaticVariantAlleleFraction>
+                <Species TaxonomyId="9606">human</Species>
+                <AffectedStatus>yes</AffectedStatus>
+            </Sample>
+            <Method>
+                <MethodType>literature only</MethodType>
+            </Method>
+            <ObservedData>
+                <Attribute Type="Description">not provided</Attribute>
+            </ObservedData>
+        </ObservedIn>
+        <MeasureSet Type="Variant">
+            <Measure Type="Variation">
+                <SequenceLocation Assembly="GRCh37" Chr="14" alternateAllele="T" referenceAllele="C"
+                    start="105246551" stop="105246551" variantLength="1" />
+            </Measure>
+        </MeasureSet>
+        <TraitSet Type="Disease">
+            <Trait Type="Disease">
+                <XRef DB="MeSH" ID="C562393" />
+            </Trait>
+        </TraitSet>
+    </ClinVarAssertion>
+</ClinVarSet>

@@ -1,5 +1,19 @@
-# clinvar
-ClinVar aggregates information about genomic variation and its relationship to human health.
+# ClinVar
+[ClinVar](https://www.ncbi.nlm.nih.gov/clinvar/) [GitHub](https://github.com/ncbi/clinvar)
 
-Directories:
-xsd: XSD's for ClinVar, includes full release and proposed variation archive.
+We anticipate changes to the ClinVar XML files and our submission spreadsheet templates in the fall of 2023 to improve support for classifications of somatic variants in ClinVar.
+
+To help file submitters prepare for this change, we are making the updated spreadsheet templates available for review. 
+([SubmissionTemplate.xlsx](submission_templates/SubmissionTemplate.xlsx), [SubmissionTemplateLite.xlsx](submission_templates/SubmissionTemplateLite.xlsx) and [SubmissionTemplateSomatic.xlsx](submission_templates/SubmissionTemplateSomatic.xlsx))
+
+Submission of somatic variants through the API and the submission wizard will be added in 2024.
+
+To help our XML users prepare for this change, we are providing documentation before we release this feature. The documentation includes:
+- a preview of the updated XSDs for both [RCV](xsds_preview/clinvar_public.xsd) and [VCV](xsds_preview/variation_archive.xsd) XMLs
+- a list of [changes](xsds_preview/xsd_change_highlights.xlsx) to both XSDs 
+- [sample XMLs](sample_xmls/) for both RCV and VCV
+- a [note](ClassificationOnClinVar.md) explaining Classification on ClinVar aggregated records
+
+*IMPORTANT*: The sample XML is fake data, for testing purposes only! All of the data in the sample XML is fake, including the submitters, the variants, the tumor types, and all supporting data. It is dummy data only to demonstrate what kind of data would be in each field and so that you have test data to use when updating your code. Do NOT incorporate this data into your production system.
+
+Once the new XML format is available, we will support the old XML format through the end of 2023. We encourage our XML users to start the transition to the new XML format as soon as you can, and to contact us at clinvar@ncbi.nlm.nih.gov with any questions.

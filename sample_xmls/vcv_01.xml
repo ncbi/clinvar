@@ -1,0 +1,314 @@
+<VariationArchive VariationID="12624" VariationName="NM_005157.6(ABL1):c.944C>T (p.Thr315Ile)"
+    VariationType="single nucleotide variant" Accession="VCV000012624" Version="2"
+    RecordType="classified" NumberOfSubmissions="2" NumberOfSubmitters="2"
+    DateLastUpdated="2022-11-05" DateCreated="2014-04-19" MostRecentSubmission="2022-05-16">
+    <RecordStatus>current</RecordStatus>
+    <Species>Homo sapiens</Species>
+    <ClassifiedRecord>
+        <SimpleAllele AlleleID="27663" VariationID="12624">
+            <GeneList>
+                <Gene Symbol="ABL1" FullName="ABL proto-oncogene 1, non-receptor tyrosine kinase"
+                    GeneID="25" HGNC_ID="HGNC:76" Source="submitted"
+                    RelationshipType="within single gene">
+                    <Location>
+                        <CytogeneticLocation>9q34.12</CytogeneticLocation>
+                        <SequenceLocation Assembly="GRCh38"
+                            AssemblyAccessionVersion="GCF_000001405.38" AssemblyStatus="current"
+                            Chr="9" Accession="NC_000009.12" start="130713043" stop="130887675"
+                            display_start="130713043" display_stop="130887675" Strand="+" />
+                        <SequenceLocation Assembly="GRCh37"
+                            AssemblyAccessionVersion="GCF_000001405.25" AssemblyStatus="previous"
+                            Chr="9" Accession="NC_000009.11" start="133589267" stop="133763061"
+                            display_start="133589267" display_stop="133763061" Strand="+" />
+                    </Location>
+                    <OMIM>189980</OMIM>
+                </Gene>
+            </GeneList>
+            <Name>NM_005157.6(ABL1):c.944C>T (p.Thr315Ile)</Name>
+            <CanonicalSPDI>NC_000009.12:130872895:C:T</CanonicalSPDI>
+            <VariantType>single nucleotide variant</VariantType>
+            <Location>
+                <CytogeneticLocation>9q34.12</CytogeneticLocation>
+                <SequenceLocation Assembly="GRCh38" AssemblyAccessionVersion="GCF_000001405.38"
+                    forDisplay="true" AssemblyStatus="current" Chr="9" Accession="NC_000009.12"
+                    start="130872896" stop="130872896" display_start="130872896"
+                    display_stop="130872896" variantLength="1" positionVCF="130872896"
+                    referenceAlleleVCF="C" alternateAlleleVCF="T" />
+                <SequenceLocation Assembly="GRCh37" AssemblyAccessionVersion="GCF_000001405.25"
+                    AssemblyStatus="previous" Chr="9" Accession="NC_000009.11" start="133748283"
+                    stop="133748283" display_start="133748283" display_stop="133748283"
+                    variantLength="1" positionVCF="133748283" referenceAlleleVCF="C"
+                    alternateAlleleVCF="T" />
+            </Location>
+            <ProteinChange>T315I</ProteinChange>
+            <ProteinChange>T334I</ProteinChange>
+            <HGVSlist>
+                <HGVS Type="genomic">
+                    <NucleotideExpression sequenceAccessionVersion="LRG_769"
+                        sequenceAccession="LRG_769">
+                        <Expression>LRG_769:g.164016C>T</Expression>
+                    </NucleotideExpression>
+                </HGVS>
+                <HGVS Type="coding">
+                    <NucleotideExpression sequenceAccessionVersion="LRG_769t1"
+                        sequenceAccession="LRG_769t1">
+                        <Expression>LRG_769t1:c.944C>T</Expression>
+                    </NucleotideExpression>
+                    <ProteinExpression sequenceAccessionVersion="LRG_769p1"
+                        sequenceAccession="LRG_769p1" change="p.Thr315Ile">
+                        <Expression>LRG_769p1:p.Thr315Ile</Expression>
+                    </ProteinExpression>
+                </HGVS>
+                <HGVS Type="coding">
+                    <NucleotideExpression sequenceAccessionVersion="LRG_769t2"
+                        sequenceAccession="LRG_769t2">
+                        <Expression>LRG_769t2:c.1001C>T</Expression>
+                    </NucleotideExpression>
+                    <ProteinExpression sequenceAccessionVersion="LRG_769p2"
+                        sequenceAccession="LRG_769p2" change="p.Thr334Ile">
+                        <Expression>LRG_769p2:p.Thr334Ile</Expression>
+                    </ProteinExpression>
+                </HGVS>
+                <HGVS Assembly="GRCh37" Type="genomic, top-level">
+                    <NucleotideExpression sequenceAccessionVersion="NC_000009.11"
+                        sequenceAccession="NC_000009" sequenceVersion="11" change="g.133748283C>T"
+                        Assembly="GRCh37">
+                        <Expression>NC_000009.11:g.133748283C>T</Expression>
+                    </NucleotideExpression>
+                </HGVS>
+                <HGVS Assembly="GRCh38" Type="genomic, top-level">
+                    <NucleotideExpression sequenceAccessionVersion="NC_000009.12"
+                        sequenceAccession="NC_000009" sequenceVersion="12" change="g.130872896C>T"
+                        Assembly="GRCh38">
+                        <Expression>NC_000009.12:g.130872896C>T</Expression>
+                    </NucleotideExpression>
+                </HGVS>
+                <HGVS Type="genomic">
+                    <NucleotideExpression sequenceAccessionVersion="NG_012034.1"
+                        sequenceAccession="NG_012034" sequenceVersion="1" change="g.164016C>T">
+                        <Expression>NG_012034.1:g.164016C>T</Expression>
+                    </NucleotideExpression>
+                </HGVS>
+                <HGVS Type="coding">
+                    <NucleotideExpression sequenceAccessionVersion="NM_005157.6"
+                        sequenceAccession="NM_005157" sequenceVersion="6" change="c.944C>T"
+                        MANESelect="true">
+                        <Expression>NM_005157.6:c.944C>T</Expression>
+                    </NucleotideExpression>
+                    <ProteinExpression sequenceAccessionVersion="NP_005148.2"
+                        sequenceAccession="NP_005148" sequenceVersion="2" change="p.Thr315Ile">
+                        <Expression>NP_005148.2:p.Thr315Ile</Expression>
+                    </ProteinExpression>
+                    <MolecularConsequence ID="SO:0001583" Type="missense variant" DB="SO" />
+                </HGVS>
+                <HGVS Type="coding">
+                    <NucleotideExpression sequenceAccessionVersion="NM_007313.3"
+                        sequenceAccession="NM_007313" sequenceVersion="3" change="c.1001C>T">
+                        <Expression>NM_007313.3:c.1001C>T</Expression>
+                    </NucleotideExpression>
+                    <ProteinExpression sequenceAccessionVersion="NP_009297.2"
+                        sequenceAccession="NP_009297" sequenceVersion="2" change="p.Thr334Ile">
+                        <Expression>NP_009297.2:p.Thr334Ile</Expression>
+                    </ProteinExpression>
+                    <MolecularConsequence ID="SO:0001583" Type="missense variant" DB="SO" />
+                </HGVS>
+            </HGVSlist>
+            <XRefList>
+                <XRef Type="rs" ID="121913459" DB="dbSNP" />
+                <XRef ID="CA122575" DB="ClinGen" />
+                <XRef Type="Allelic variant" ID="189980.0001" DB="OMIM" />
+            </XRefList>
+        </SimpleAllele>
+        <RCVList>
+            <RCVAccession
+                Title="NM_005157.6(ABL1):c.944C>T (p.Thr315Ile) AND Chronic myelogenous leukemia, BCR-ABL1 positive"
+                Accession="RCV000432136" Version="2">
+                <ClassifiedConditionList TraitSetID="6635">
+                    <ClassifiedCondition DB="MedGen" ID="C0023473">Chronic myelogenous leukemia,
+                        BCR-ABL1 positive</ClassifiedCondition>
+                </ClassifiedConditionList>
+                <RCVClassifications>
+                    <SomaticClinicalImpact>
+                        <ReviewStatus>reviewed by expert panel</ReviewStatus>
+                        <Description ClinicalImpactAssertionType="diagnostic"
+                            ClinicalImpactClinicalSignificance="supports diagnosis"
+                            SubmissionCount="1" DateLastEvaluated="2021-08-30">Tier II - Potential</Description>
+                        <Description ClinicalImpactAssertionType="prognostic"
+                            ClinicalImpactClinicalSignificance="poor outcome" SubmissionCount="1"
+                            DateLastEvaluated="2013-09-16">Tier I - Strong</Description>
+                    </SomaticClinicalImpact>
+                </RCVClassifications>
+            </RCVAccession>
+        </RCVList>
+        <Classifications>
+            <SomaticClinicalImpact DateLastEvaluated="2021-08-30" DateCreated="2014-04-19"
+                MostRecentSubmission="2022-05-16" NumberOfSubmitters="2" NumberOfSubmissions="2">
+                <ReviewStatus>reviewed by expert panel</ReviewStatus>
+                <Description>Tier II - Potential</Description>
+                <ConditionList>
+                    <TraitSet ID="6635" Type="Disease" ContributesToAggregateClinsig="true">
+                        <Trait ID="2683" Type="Disease">
+                            <Name>
+                                <ElementValue Type="Preferred">Chronic myelogenous leukemia,
+                                    BCR-ABL1 positive</ElementValue>
+                                <XRef ID="MONDO:0011996" DB="MONDO" />
+                            </Name>
+                            <Name>
+                                <ElementValue Type="Alternate">Chronic myeloid leukemia</ElementValue>
+                                <XRef ID="Chronic+Myeloid+Leukemia/1622" DB="Genetic Alliance" />
+                                <XRef ID="HP:0005506" DB="Human Phenotype Ontology" />
+                            </Name>
+                            <Name>
+                                <ElementValue Type="Alternate">Chronic granulocytic leukemia</ElementValue>
+                            </Name>
+                            <Name>
+                                <ElementValue Type="Alternate">Chronic myelogenous leukemia</ElementValue>
+                                <XRef ID="HP:0005506" DB="Human Phenotype Ontology" />
+                            </Name>
+                            <Symbol>
+                                <ElementValue Type="Preferred">CML</ElementValue>
+                                <XRef Type="MIM" ID="608232" DB="OMIM" />
+                            </Symbol>
+                            <AttributeSet>
+                                <Attribute Type="GARD id" integerValue="6105" />
+                                <XRef ID="6105" DB="Office of Rare Diseases" />
+                            </AttributeSet>
+                            <Citation Type="Recommendation" Abbrev="IBFM, 2014">
+                                <ID Source="PubMed">24976289</ID>
+                            </Citation>
+                            <XRef ID="521" DB="Orphanet" />
+                            <XRef ID="C0023473" DB="MedGen" />
+                            <XRef ID="D015464" DB="MeSH" />
+                            <XRef ID="MONDO:0011996" DB="MONDO" />
+                            <XRef Type="MIM" ID="608232" DB="OMIM" />
+                            <XRef Type="primary" ID="HP:0005506" DB="Human Phenotype Ontology" />
+                            <XRef Type="secondary" ID="HP:0005544" DB="Human Phenotype Ontology" />
+                        </Trait>
+                    </TraitSet>
+                </ConditionList>
+            </SomaticClinicalImpact>
+        </Classifications>
+        <ClinicalAssertionList>
+            <ClinicalAssertion ID="970362" SubmissionDate="2014-04-11" DateLastUpdated="2014-04-19"
+                DateCreated="2014-04-19">
+                <ClinVarSubmissionID localKey="ENST00000372348:c.1001C>T|MeSH:D015464"
+                    submittedAssembly="GRCh37" />
+                <ClinVarAccession Accession="SCV000505087" DateUpdated="2014-04-19"
+                    DateCreated="2014-04-19" Type="SCV" Version="1"
+                    SubmitterName="Database of Curated Mutations (DoCM)" OrgID="505871"
+                    OrganizationCategory="resource" OrgAbbreviation="DoCM" />
+                <RecordStatus>current</RecordStatus>
+                <Classification DateLastEvaluated="2013-09-16">
+                    <ReviewStatus>criteria provided, single submitter</ReviewStatus>
+                    <SomaticClinicalImpact ClinicalImpactAssertionType="prognostic"
+                        ClinicalImpactClinicalSignificance="poor outcome">Tier I - Strong</SomaticClinicalImpact>
+                </Classification>
+                <Assertion>variation to disease</Assertion>
+                <AttributeSet>
+                    <Attribute Type="AssertionMethod">AMP Guidelines, 2017</Attribute>
+                    <Citation>
+                        <ID Source="PubMed">27993330</ID>
+                    </Citation>
+                </AttributeSet>
+                <ObservedInList>
+                    <ObservedIn>
+                        <Sample>
+                            <Origin>somatic</Origin>
+                            <SomaticVariantInNormalTissue>present</SomaticVariantInNormalTissue>
+                            <SomaticVariantAlleleFraction>20%</SomaticVariantAlleleFraction>
+                            <Species TaxonomyId="9606">human</Species>
+                            <AffectedStatus>yes</AffectedStatus>
+                        </Sample>
+                        <Method>
+                            <MethodType>literature only</MethodType>
+                        </Method>
+                        <ObservedData>
+                            <Attribute Type="Description">not provided</Attribute>
+                        </ObservedData>
+                    </ObservedIn>
+                </ObservedInList>
+                <SimpleAllele>
+                    <VariantType>Variation</VariantType>
+                    <Location>
+                        <SequenceLocation Assembly="GRCh37" Chr="9" alternateAllele="T"
+                            referenceAllele="C" start="133748283" stop="133748283" variantLength="1" />
+                    </Location>
+                </SimpleAllele>
+                <TraitSet Type="Disease">
+                    <Trait Type="Disease">
+                        <XRef DB="MeSH" ID="D015464" />
+                    </Trait>
+                </TraitSet>
+            </ClinicalAssertion>
+            <ClinicalAssertion ID="4538433" SubmissionDate="2022-05-04" DateLastUpdated="2022-05-16"
+                DateCreated="2020-07-16">
+                <ClinVarSubmissionID localKey="9-133748283-C-T" localKeyIsSubmitted="1"
+                    submittedAssembly="GRCh37" />
+                <ClinVarAccession Accession="SCV002318661" DateUpdated="2022-05-16"
+                    DateCreated="2020-07-16" Type="SCV" Version="1" SubmitterName="ClinVar"
+                    OrgID="500139" OrganizationCategory="other" />
+                <RecordStatus>current</RecordStatus>
+                <Classification DateLastEvaluated="2021-08-30">
+                    <ReviewStatus>reviewed by expert panel</ReviewStatus>
+                    <SomaticClinicalImpact ClinicalImpactAssertionType="diagnostic"
+                        ClinicalImpactClinicalSignificance="supports diagnosis">Tier II - Potential</SomaticClinicalImpact>
+                </Classification>
+                <Assertion>variation to disease</Assertion>
+                <AttributeSet>
+                    <Attribute Type="AssertionMethod">AMP Guidelines, 2017</Attribute>
+                    <Citation>
+                        <ID Source="PubMed">27993330</ID>
+                    </Citation>
+                </AttributeSet>
+                <ObservedInList>
+                    <ObservedIn>
+                        <Sample>
+                            <Origin>somatic</Origin>
+                            <SomaticVariantInNormalTissue>present</SomaticVariantInNormalTissue>
+                            <SomaticVariantAlleleFraction>20%</SomaticVariantAlleleFraction>
+                            <Species TaxonomyId="9606">human</Species>
+                            <AffectedStatus>yes</AffectedStatus>
+                        </Sample>
+                        <Method>
+                            <MethodType>clinical testing</MethodType>
+                        </Method>
+                        <ObservedData>
+                            <Attribute Type="Description">not provided</Attribute>
+                        </ObservedData>
+                    </ObservedIn>
+                </ObservedInList>
+                <SimpleAllele>
+                    <GeneList>
+                        <Gene Symbol="ABL1" />
+                    </GeneList>
+                    <VariantType>Variation</VariantType>
+                    <AttributeSet>
+                        <Attribute Type="HGVS">NM_005157.6:c.944C>T</Attribute>
+                    </AttributeSet>
+                </SimpleAllele>
+                <TraitSet Type="Disease">
+                    <Trait Type="Disease">
+                        <XRef DB="OMIM" ID="608232" Type="MIM" />
+                    </Trait>
+                </TraitSet>
+                <SubmissionNameList>
+                    <SubmissionName>SUB11208158</SubmissionName>
+                </SubmissionNameList>
+            </ClinicalAssertion>
+        </ClinicalAssertionList>
+        <TraitMappingList>
+            <TraitMapping ClinicalAssertionID="970362" TraitType="Disease" MappingType="XRef"
+                MappingValue="D015464" MappingRef="MeSH">
+                <MedGen CUI="C0023473" Name="Chronic myelogenous leukemia, BCR-ABL1 positive" />
+            </TraitMapping>
+            <TraitMapping ClinicalAssertionID="4538433" TraitType="Disease" MappingType="XRef"
+                MappingValue="608232" MappingRef="OMIM">
+                <MedGen CUI="C0023473" Name="Chronic myelogenous leukemia, BCR-ABL1 positive" />
+            </TraitMapping>
+            <TraitMapping ClinicalAssertionID="4538433" TraitType="Finding" MappingType="XRef"
+                MappingValue="HP:0005506" MappingRef="HP">
+                <MedGen CUI="C0023473" Name="Chronic myelogenous leukemia, BCR-ABL1 positive" />
+            </TraitMapping>
+        </TraitMappingList>
+    </ClassifiedRecord>
+</VariationArchive>

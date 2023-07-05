@@ -1,0 +1,720 @@
+<VariationArchive VariationID="219098" VariationName="NM_012433.4(SF3B1):c.1998G>T (p.Lys666Asn)"
+    VariationType="single nucleotide variant" Accession="VCV000219098" Version="3"
+    RecordType="classified" DateCreated="2016-12-02" DateLastUpdated="2020-06-27"
+    NumberOfSubmissions="6" NumberOfSubmitters="5">
+    <RecordStatus>current</RecordStatus>
+    <Species>Homo sapiens</Species>
+    <ClassifiedRecord>
+        <SimpleAllele AlleleID="216787" VariationID="219098">
+            <GeneList>
+                <Gene Symbol="SF3B1" FullName="splicing factor 3b subunit 1" GeneID="23451"
+                    HGNC_ID="HGNC:10768" Source="submitted" RelationshipType="within single gene">
+                    <Location>
+                        <CytogeneticLocation>2q33.1</CytogeneticLocation>
+                        <SequenceLocation Assembly="GRCh38"
+                            AssemblyAccessionVersion="GCF_000001405.38" AssemblyStatus="current"
+                            Chr="2" Accession="NC_000002.12" start="197389784" stop="197435093"
+                            display_start="197389784" display_stop="197435093" Strand="-" />
+                        <SequenceLocation Assembly="GRCh37"
+                            AssemblyAccessionVersion="GCF_000001405.25" AssemblyStatus="previous"
+                            Chr="2" Accession="NC_000002.11" start="198256697" stop="198299770"
+                            display_start="198256697" display_stop="198299770" Strand="-" />
+                    </Location>
+                    <OMIM>605590</OMIM>
+                </Gene>
+            </GeneList>
+            <Name>NM_012433.4(SF3B1):c.1998G>T (p.Lys666Asn)</Name>
+            <CanonicalSPDI>NC_000002.12:197402634:C:A</CanonicalSPDI>
+            <VariantType>single nucleotide variant</VariantType>
+            <Location>
+                <CytogeneticLocation>2q33.1</CytogeneticLocation>
+                <SequenceLocation Assembly="GRCh38" AssemblyAccessionVersion="GCF_000001405.38"
+                    forDisplay="true" AssemblyStatus="current" Chr="2" Accession="NC_000002.12"
+                    start="197402635" stop="197402635" display_start="197402635"
+                    display_stop="197402635" variantLength="1" positionVCF="197402635"
+                    referenceAlleleVCF="C" alternateAlleleVCF="A" />
+                <SequenceLocation Assembly="GRCh37" AssemblyAccessionVersion="GCF_000001405.25"
+                    AssemblyStatus="previous" Chr="2" Accession="NC_000002.11" start="198267359"
+                    stop="198267359" display_start="198267359" display_stop="198267359"
+                    variantLength="1" positionVCF="198267359" referenceAlleleVCF="C"
+                    alternateAlleleVCF="A" />
+            </Location>
+            <ProteinChange>K666N</ProteinChange>
+            <HGVSlist>
+                <HGVS Type="genomic">
+                    <NucleotideExpression sequenceAccessionVersion="LRG_624"
+                        sequenceAccession="LRG_624">
+                        <Expression>LRG_624:g.37413G>T</Expression>
+                    </NucleotideExpression>
+                </HGVS>
+                <HGVS Type="coding">
+                    <NucleotideExpression sequenceAccessionVersion="LRG_624t2"
+                        sequenceAccession="LRG_624t2">
+                        <Expression>LRG_624t2:c.1998G>T</Expression>
+                    </NucleotideExpression>
+                    <ProteinExpression sequenceAccessionVersion="LRG_624p2"
+                        sequenceAccession="LRG_624p2" change="p.Lys666Asn">
+                        <Expression>LRG_624p2:p.Lys666Asn</Expression>
+                    </ProteinExpression>
+                </HGVS>
+                <HGVS Assembly="GRCh37" Type="genomic, top-level">
+                    <NucleotideExpression sequenceAccessionVersion="NC_000002.11"
+                        sequenceAccession="NC_000002" sequenceVersion="11" change="g.198267359C>A"
+                        Assembly="GRCh37">
+                        <Expression>NC_000002.11:g.198267359C>A</Expression>
+                    </NucleotideExpression>
+                </HGVS>
+                <HGVS Assembly="GRCh38" Type="genomic, top-level">
+                    <NucleotideExpression sequenceAccessionVersion="NC_000002.12"
+                        sequenceAccession="NC_000002" sequenceVersion="12" change="g.197402635C>A"
+                        Assembly="GRCh38">
+                        <Expression>NC_000002.12:g.197402635C>A</Expression>
+                    </NucleotideExpression>
+                </HGVS>
+                <HGVS Type="genomic">
+                    <NucleotideExpression sequenceAccessionVersion="NG_032903.2"
+                        sequenceAccession="NG_032903" sequenceVersion="2" change="g.37413G>T">
+                        <Expression>NG_032903.2:g.37413G>T</Expression>
+                    </NucleotideExpression>
+                </HGVS>
+                <HGVS Type="coding">
+                    <NucleotideExpression sequenceAccessionVersion="NM_012433.4"
+                        sequenceAccession="NM_012433" sequenceVersion="4" change="c.1998G>T"
+                        MANESelect="true">
+                        <Expression>NM_012433.4:c.1998G>T</Expression>
+                    </NucleotideExpression>
+                    <ProteinExpression sequenceAccessionVersion="NP_036565.2"
+                        sequenceAccession="NP_036565" sequenceVersion="2" change="p.Lys666Asn">
+                        <Expression>NP_036565.2:p.Lys666Asn</Expression>
+                    </ProteinExpression>
+                    <MolecularConsequence ID="SO:0001583" Type="missense variant" DB="SO" />
+                </HGVS>
+            </HGVSlist>
+            <XRefList>
+                <XRef ID="CA280929" DB="ClinGen" />
+                <XRef Type="rs" ID="377023736" DB="dbSNP" />
+            </XRefList>
+        </SimpleAllele>
+        <RCVList>
+            <RCVAccession
+                Title="NM_012433.4(SF3B1):c.1998G>T (p.Lys666Asn) AND Breast adenocarcinoma"
+                Accession="RCV000287776" Version="1">
+                <ClassifiedConditionList TraitSetID="1088">
+                    <ClassifiedCondition DB="MedGen" ID="C0858252">Breast adenocarcinoma</ClassifiedCondition>
+                </ClassifiedConditionList>
+                <RCVClassifications>
+                    <SomaticClinicalImpact>
+                        <ReviewStatus>criteria provided, single submitter</ReviewStatus>
+                        <Description ClinicalImpactAssertionType="diagnostic"
+                            ClinicalImpactClinicalSignificance="supports diagnosis"
+                            SubmissionCount="1"
+                            DateLastEvaluated="2016-06-14">Tier I - Strong</Description>
+                    </SomaticClinicalImpact>
+                    <OncogenicityClassification>
+                        <ReviewStatus>reviewed by expert panel</ReviewStatus>
+                        <Description DateLastEvaluated="2016-06-14" SubmissionCount="2">Oncogenic</Description>
+                    </OncogenicityClassification>
+                </RCVClassifications>
+            </RCVAccession>
+            <RCVAccession
+                Title="NM_012433.4(SF3B1):c.1998G>T (p.Lys666Asn) AND Acute myeloid leukemia"
+                Accession="RCV000303947" Version="1">
+                <ClassifiedConditionList TraitSetID="6288">
+                    <ClassifiedCondition DB="MedGen" ID="C0023467">Acute myeloid leukemia</ClassifiedCondition>
+                </ClassifiedConditionList>
+                <RCVClassifications>
+                    <SomaticClinicalImpact>
+                        <ReviewStatus>criteria provided, multiple submitters</ReviewStatus>
+                        <Description ClinicalImpactAssertionType="therapeutic"
+                            ClinicalImpactClinicalSignificance="sensitivity"
+                            SubmissionCount="1" DateLastEvaluated="2016-06-14">Tier II - Potential</Description>
+                        <Description ClinicalImpactAssertionType="therapeutic"
+                            ClinicalImpactClinicalSignificance="resistance"
+                            SubmissionCount="1" DateLastEvaluated="2016-06-14">Tier II - Potential</Description>
+                    </SomaticClinicalImpact>
+                </RCVClassifications>
+            </RCVAccession>
+            <RCVAccession
+                Title="NM_012433.4(SF3B1):c.1998G>T (p.Lys666Asn) AND Carcinoma of pancreas"
+                Accession="RCV000383398" Version="1">
+                <ClassifiedConditionList TraitSetID="6482">
+                    <ClassifiedCondition DB="MedGen" ID="C0235974">Carcinoma of pancreas</ClassifiedCondition>
+                </ClassifiedConditionList>
+                <RCVClassifications>
+                    <SomaticClinicalImpact>
+                        <ReviewStatus>criteria provided, single submitter</ReviewStatus>
+                        <Description ClinicalImpactAssertionType="diagnostic"
+                            ClinicalImpactClinicalSignificance="supports diagnosis"
+                            SubmissionCount="1"
+                            DateLastEvaluated="2016-06-14">Tier II - Potential</Description>
+                    </SomaticClinicalImpact>
+                </RCVClassifications>
+            </RCVAccession>
+        </RCVList>
+        <Classifications>
+            <SomaticClinicalImpact DateLastEvaluated="2016-06-14" DateCreated="2016-12-02"
+                MostRecentSubmission="2019-03-31" NumberOfSubmitters="4" NumberOfSubmissions="3">
+                <ReviewStatus>criteria provided, multiple submitters</ReviewStatus>
+                <Description>Tier I - Strong</Description>
+                <ConditionList>
+                    <TraitSet ID="1088" Type="Disease" ContributesToAggregateClinsig="true">
+                        <Trait ID="18584" Type="Disease">
+                            <Name>
+                                <ElementValue Type="Alternate">Breast cancer, somatic</ElementValue>
+                            </Name>
+                            <Name>
+                                <ElementValue Type="Alternate">Breast adenocarcinoma, somatic</ElementValue>
+                            </Name>
+                            <Name>
+                                <ElementValue Type="Preferred">Breast adenocarcinoma</ElementValue>
+                                <XRef ID="MONDO:0004988" DB="MONDO" />
+                            </Name>
+                            <XRef ID="C0858252" DB="MedGen" />
+                            <XRef ID="MONDO:0004988" DB="MONDO" />
+                        </Trait>
+                    </TraitSet>
+                    <TraitSet ID="6288" Type="Disease" ContributesToAggregateClinsig="false">
+                        <Trait ID="15736" Type="Disease">
+                            <Name>
+                                <ElementValue Type="Alternate">Leukemia, acute myelogenous, somatic</ElementValue>
+                            </Name>
+                            <Name>
+                                <ElementValue Type="Preferred">Acute myeloid leukemia</ElementValue>
+                                <XRef ID="HP:0004808" DB="Human Phenotype Ontology" />
+                                <XRef ID="MONDO:0018874" DB="MONDO" />
+                                <XRef ID="519" DB="Orphanet" />
+                                <XRef ID="17788007" DB="SNOMED CT" />
+                            </Name>
+                            <Name>
+                                <ElementValue Type="Alternate">Leukemia, acute myeloid, somatic</ElementValue>
+                            </Name>
+                            <Name>
+                                <ElementValue Type="Alternate">Acute myeloid leukemia, adult</ElementValue>
+                            </Name>
+                            <Name>
+                                <ElementValue Type="Alternate">AML adult</ElementValue>
+                            </Name>
+                            <Name>
+                                <ElementValue Type="Alternate">Acute myelogenous leukemia</ElementValue>
+                                <XRef ID="Acute+Myeloid+Leukemia%2C+Adult/204" DB="Genetic Alliance" />
+                                <XRef ID="HP:0004808" DB="Human Phenotype Ontology" />
+                            </Name>
+                            <Name>
+                                <ElementValue Type="Alternate">Acute non-lymphocytic leukemia</ElementValue>
+                            </Name>
+                            <Name>
+                                <ElementValue Type="Alternate">Acute granulocytic leukemia</ElementValue>
+                            </Name>
+                            <Symbol>
+                                <ElementValue Type="Preferred">AML</ElementValue>
+                                <XRef ID="GTR000500636" DB="Genetic Testing Registry (GTR)" />
+                                <XRef Type="MIM" ID="601626" DB="OMIM" />
+                            </Symbol>
+                            <AttributeSet>
+                                <Attribute Type="public definition">CEBPA-associated familial acute
+                                    myeloid leukemia (AML) is defined as the presence of a
+                                    heterozygous germline CEBPA pathogenic variant in an individual
+                                    with AML and/or family in which more than one individual has
+                                    AML. In contrast, sporadic CEBPA-associated AML is defined as
+                                    AML in which a CEBPA pathogenic variant(s) is identified in
+                                    leukemic cells but not in the non-leukemic cells. In the
+                                    majority of individuals, the age of onset of familial AML
+                                    appears to be earlier than sporadic AML; disease onset has been
+                                    reported in persons as young as age 1.8 years and up to age 50
+                                    years. The prognosis of CEBPA-associated familial AML appears to
+                                    be favorable compared with sporadic CEBPA-associated AML.
+                                    Individuals with CEBPA-associated familial AML who have been
+                                    cured of their initial disease may be at greater risk of
+                                    developing additional independent leukemic episodes, in addition
+                                    to the risk of relapse from preexisting clones.</Attribute>
+                                <XRef ID="NBK47457" DB="GeneReviews" />
+                            </AttributeSet>
+                            <AttributeSet>
+                                <Attribute Type="disease mechanism">Constitutively activated FLT3</Attribute>
+                                <XRef ID="GTR000552464" DB="Genetic Testing Registry (GTR)" />
+                            </AttributeSet>
+                            <Citation Type="review" Abbrev="GeneReviews">
+                                <ID Source="PubMed">20963938</ID>
+                                <ID Source="BookShelf">NBK47457</ID>
+                            </Citation>
+                            <Citation Type="Translational/Evidence-based" Abbrev="NCCN, 2011">
+                                <ID Source="PubMed">22138009</ID>
+                            </Citation>
+                            <Citation Type="practice guideline" Abbrev="ESMO, 2013">
+                                <ID Source="PubMed">23970018</ID>
+                            </Citation>
+                            <Citation Type="review" Abbrev="GeneReviews">
+                                <ID Source="PubMed">33226740</ID>
+                                <ID Source="BookShelf">NBK564234</ID>
+                            </Citation>
+                            <Citation Type="practice guideline" Abbrev="ESMO, 2020">
+                                <ID Source="PubMed">32171751</ID>
+                            </Citation>
+                            <XRef ID="519" DB="Orphanet" />
+                            <XRef ID="C0023467" DB="MedGen" />
+                            <XRef ID="D015470" DB="MeSH" />
+                            <XRef ID="MONDO:0018874" DB="MONDO" />
+                            <XRef Type="MIM" ID="601626" DB="OMIM" />
+                            <XRef Type="primary" ID="HP:0004808" DB="Human Phenotype Ontology" />
+                            <XRef Type="secondary" ID="HP:0001914" DB="Human Phenotype Ontology" />
+                            <XRef Type="secondary" ID="HP:0004843" DB="Human Phenotype Ontology" />
+                            <XRef Type="secondary" ID="HP:0005516" DB="Human Phenotype Ontology" />
+                            <XRef Type="secondary" ID="HP:0006724" DB="Human Phenotype Ontology" />
+                            <XRef Type="secondary" ID="HP:0006728" DB="Human Phenotype Ontology" />
+                        </Trait>
+                    </TraitSet>
+                    <TraitSet ID="6482" Type="Disease" ContributesToAggregateClinsig="false">
+                        <Trait ID="5725" Type="Disease">
+                            <Name>
+                                <ElementValue Type="Alternate">PANCREATIC ACINAR CARCINOMA</ElementValue>
+                                <XRef Type="MIM" ID="260350" DB="OMIM" />
+                            </Name>
+                            <Name>
+                                <ElementValue Type="Alternate">PANCREATIC CARCINOMA</ElementValue>
+                                <XRef Type="MIM" ID="260350" DB="OMIM" />
+                            </Name>
+                            <Name>
+                                <ElementValue Type="Preferred">Carcinoma of pancreas</ElementValue>
+                                <XRef ID="372142002" DB="SNOMED CT" />
+                            </Name>
+                            <Name>
+                                <ElementValue Type="Alternate">Pancreatic cancer, somatic</ElementValue>
+                            </Name>
+                            <Name>
+                                <ElementValue Type="Alternate">Pancreatic carcinoma, somatic</ElementValue>
+                            </Name>
+                            <AttributeSet>
+                                <Attribute Type="disease mechanism" integerValue="273">loss of
+                                    function</Attribute>
+                                <XRef ID="GTR000012368" DB="Genetic Testing Registry (GTR)" />
+                                <XRef ID="GTR000509790" DB="Genetic Testing Registry (GTR)" />
+                                <XRef ID="GTR000514885" DB="Genetic Testing Registry (GTR)" />
+                                <XRef ID="GTR000520869" DB="Genetic Testing Registry (GTR)" />
+                                <XRef ID="GTR000520871" DB="Genetic Testing Registry (GTR)" />
+                                <XRef ID="GTR000523331" DB="Genetic Testing Registry (GTR)" />
+                                <XRef ID="GTR000523332" DB="Genetic Testing Registry (GTR)" />
+                                <XRef ID="GTR000528055" DB="Genetic Testing Registry (GTR)" />
+                                <XRef ID="GTR000569881" DB="Genetic Testing Registry (GTR)" />
+                                <XRef ID="GTR000569885" DB="Genetic Testing Registry (GTR)" />
+                                <XRef ID="GTR000592354" DB="Genetic Testing Registry (GTR)" />
+                                <XRef ID="GTR000593406" DB="Genetic Testing Registry (GTR)" />
+                                <XRef ID="GTR000520069" DB="Genetic Testing Registry (GTR)" />
+                                <XRef ID="GTR000520865" DB="Genetic Testing Registry (GTR)" />
+                                <XRef ID="GTR000528054" DB="Genetic Testing Registry (GTR)" />
+                                <XRef ID="GTR000552440" DB="Genetic Testing Registry (GTR)" />
+                                <XRef ID="GTR000592353" DB="Genetic Testing Registry (GTR)" />
+                                <XRef ID="GTR000512726" DB="Genetic Testing Registry (GTR)" />
+                                <XRef ID="GTR000520394" DB="Genetic Testing Registry (GTR)" />
+                                <XRef ID="GTR000520866" DB="Genetic Testing Registry (GTR)" />
+                                <XRef ID="GTR000520867" DB="Genetic Testing Registry (GTR)" />
+                                <XRef ID="GTR000520870" DB="Genetic Testing Registry (GTR)" />
+                                <XRef ID="GTR000523334" DB="Genetic Testing Registry (GTR)" />
+                                <XRef ID="GTR000530120" DB="Genetic Testing Registry (GTR)" />
+                                <XRef ID="GTR000593404" DB="Genetic Testing Registry (GTR)" />
+                                <XRef ID="GTR000593405" DB="Genetic Testing Registry (GTR)" />
+                                <XRef ID="GTR000597429" DB="Genetic Testing Registry (GTR)" />
+                                <XRef ID="GTR000520868" DB="Genetic Testing Registry (GTR)" />
+                                <XRef ID="GTR000520872" DB="Genetic Testing Registry (GTR)" />
+                                <XRef ID="GTR000525919" DB="Genetic Testing Registry (GTR)" />
+                            </AttributeSet>
+                            <Citation Type="practice guideline" Abbrev="AHRQ, 2013">
+                                <URL>
+                                    https://www.cms.gov/Medicare/Coverage/DeterminationProcess/downloads/id90TA.pdf</URL>
+                                <CitationText>Technology Assessment on Genetic Testing or Molecular
+                                    Pathology Testing of Cancers with Unknown Primary Site to
+                                    Determine Origin (ARCHIVED)</CitationText>
+                            </Citation>
+                            <Citation Type="general" Abbrev="ASCO, 2006">
+                                <ID Source="PubMed">17060676</ID>
+                            </Citation>
+                            <Citation Type="general" Abbrev="ASCO, 2014">
+                                <ID Source="PubMed">24493721</ID>
+                            </Citation>
+                            <Citation Type="general" Abbrev="ACMG/NSGC, 2015">
+                                <ID Source="PubMed">25394175</ID>
+                            </Citation>
+                            <XRef ID="1333" DB="Orphanet" />
+                            <XRef ID="217074" DB="Orphanet" />
+                            <XRef ID="C0235974" DB="MedGen" />
+                            <XRef ID="C562463" DB="MeSH" />
+                            <XRef ID="MONDO:0005192" DB="MONDO" />
+                            <XRef Type="MIM" ID="260350" DB="OMIM" />
+                        </Trait>
+                    </TraitSet>
+                </ConditionList>
+            </SomaticClinicalImpact>
+            <OncogenicityClassification DateLastEvaluated="2016-06-14" DateCreated="2016-12-02"
+                MostRecentSubmission="2019-03-31" NumberOfSubmitters="2" NumberOfSubmissions="2">
+                <ReviewStatus>reviewed by expert panel</ReviewStatus>
+                <Description>Oncogenic</Description>
+                <ConditionList>
+                    <TraitSet ID="1088" Type="Disease" ContributesToAggregateClinsig="true">
+                        <Trait ID="18584" Type="Disease">
+                            <Name>
+                                <ElementValue Type="Alternate">Breast cancer, somatic</ElementValue>
+                            </Name>
+                            <Name>
+                                <ElementValue Type="Alternate">Breast adenocarcinoma, somatic</ElementValue>
+                            </Name>
+                            <Name>
+                                <ElementValue Type="Preferred">Breast adenocarcinoma</ElementValue>
+                                <XRef ID="MONDO:0004988" DB="MONDO" />
+                            </Name>
+                            <XRef ID="C0858252" DB="MedGen" />
+                            <XRef ID="MONDO:0004988" DB="MONDO" />
+                        </Trait>
+                    </TraitSet>
+                </ConditionList>
+            </OncogenicityClassification>
+        </Classifications>
+        <ClinicalAssertionList>
+            <ClinicalAssertion ID="717591" DateCreated="2016-12-02" DateLastUpdated="2019-03-31"
+                SubmissionDate="2016-10-18">
+                <ClinVarSubmissionID localKey="562510-3" submittedAssembly="GRCh37" />
+                <ClinVarAccession Accession="SCV000404070" Type="SCV" Version="2"
+                    SubmitterName="Database of Curated Mutations (DoCM)" OrgID="505871"
+                    OrganizationCategory="resource" OrgAbbreviation="DoCM" />
+                <RecordStatus>current</RecordStatus>
+                <Classification DateLastEvaluated="2016-06-14">
+                    <ReviewStatus>reviewed by expert panel</ReviewStatus>
+                    <OncogenicityClassification>Oncogenic</OncogenicityClassification>
+                </Classification>
+                <Assertion>variation to disease</Assertion>
+                <AttributeSet>
+                    <Attribute Type="AssertionMethod">Oncogenicity SOP (ClinGen, CGC, VICC guidelines) 2022</Attribute>
+                    <Citation>
+                        <ID Source="PubMed">35101336</ID>
+                    </Citation>
+                </AttributeSet>
+                <ObservedInList>
+                    <ObservedIn>
+                        <Sample>
+                            <Origin>somatic</Origin>
+                            <SomaticVariantInNormalTissue>present</SomaticVariantInNormalTissue>
+                            <SomaticVariantAlleleFraction>25%</SomaticVariantAlleleFraction>
+                            <Species TaxonomyId="9606">human</Species>
+                            <AffectedStatus>unknown</AffectedStatus>
+                        </Sample>
+                        <Method>
+                            <MethodType>clinical testing</MethodType>
+                        </Method>
+                        <ObservedData>
+                            <Attribute Type="Description">not provided</Attribute>
+                        </ObservedData>
+                    </ObservedIn>
+                </ObservedInList>
+                <SimpleAllele>
+                    <VariantType>Variation</VariantType>
+                    <Location>
+                        <SequenceLocation Assembly="GRCh37" Chr="2" alternateAllele="A"
+                            referenceAllele="C" start="198267359" stop="198267359" variantLength="1" />
+                    </Location>
+                </SimpleAllele>
+                <TraitSet Type="Disease">
+                    <Trait Type="Disease">
+                        <Name>
+                            <ElementValue Type="Preferred">BREAST CANCER, SOMATIC</ElementValue>
+                        </Name>
+                    </Trait>
+                </TraitSet>
+                <SubmissionNameList>
+                    <SubmissionName>ICSL_2016Q4</SubmissionName>
+                </SubmissionNameList>
+            </ClinicalAssertion>
+            <ClinicalAssertion ID="717597" DateCreated="2016-12-02" DateLastUpdated="2019-03-31"
+                SubmissionDate="2016-10-18">
+                <ClinVarSubmissionID localKey="800692-1" submittedAssembly="GRCh37" />
+                <ClinVarAccession Accession="SCV000404076" Type="SCV" Version="2"
+                    SubmitterName="ClinVar" OrgID="500139"
+                    OrganizationCategory="other" />
+                <RecordStatus>current</RecordStatus>
+                <Classification DateLastEvaluated="2016-06-14">
+                    <ReviewStatus>criteria provided, single submitter</ReviewStatus>
+                    <SomaticClinicalImpact ClinicalImpactAssertionType="diagnostic"
+                        ClinicalImpactClinicalSignificance="supports diagnosis">Tier II - Potential</SomaticClinicalImpact>
+                </Classification>
+                <Assertion>variation to disease</Assertion>
+                <AttributeSet>
+                    <Attribute Type="AssertionMethod">AMP Guidelines, 2017</Attribute>
+                    <Citation>
+                        <ID Source="PubMed">27993330</ID>
+                    </Citation>
+                </AttributeSet>
+                <ObservedInList>
+                    <ObservedIn>
+                        <Sample>
+                            <Origin>somatic</Origin>
+                            <SomaticVariantInNormalTissue>present</SomaticVariantInNormalTissue>
+                            <SomaticVariantAlleleFraction>15%</SomaticVariantAlleleFraction>
+                            <Species TaxonomyId="9606">human</Species>
+                            <AffectedStatus>unknown</AffectedStatus>
+                        </Sample>
+                        <Method>
+                            <MethodType>clinical testing</MethodType>
+                        </Method>
+                        <ObservedData>
+                            <Attribute Type="Description">not provided</Attribute>
+                        </ObservedData>
+                    </ObservedIn>
+                </ObservedInList>
+                <SimpleAllele>
+                    <VariantType>Variation</VariantType>
+                    <Location>
+                        <SequenceLocation Assembly="GRCh37" Chr="2" alternateAllele="A"
+                            referenceAllele="C" start="198267359" stop="198267359" variantLength="1" />
+                    </Location>
+                </SimpleAllele>
+                <TraitSet Type="Disease">
+                    <Trait Type="Disease">
+                        <Name>
+                            <ElementValue Type="Preferred">Pancreatic Cancer</ElementValue>
+                        </Name>
+                    </Trait>
+                </TraitSet>
+                <SubmissionNameList>
+                    <SubmissionName>ICSL_2017Q1</SubmissionName>
+                </SubmissionNameList>
+            </ClinicalAssertion>
+            <ClinicalAssertion ID="717596" DateCreated="2016-12-02" DateLastUpdated="2019-03-31"
+                SubmissionDate="2016-10-18">
+                <ClinVarSubmissionID localKey="800692-3"
+                    submittedAssembly="GRCh37" />
+                <ClinVarAccession Accession="SCV000404075" Type="SCV" Version="2"
+                    SubmitterName="OMIM" OrgID="3" OrganizationCategory="resource" />
+                <RecordStatus>current</RecordStatus>
+                <Classification DateLastEvaluated="2016-06-14">
+                    <ReviewStatus>criteria provided, single submitter</ReviewStatus>
+                    <SomaticClinicalImpact ClinicalImpactAssertionType="diagnostic"
+                        ClinicalImpactClinicalSignificance="supports diagnosis">Tier I - Strong</SomaticClinicalImpact>
+                </Classification>
+                <Assertion>variation to disease</Assertion>
+                <AttributeSet>
+                    <Attribute Type="AssertionMethod">AMP Guidelines, 2017</Attribute>
+                    <Citation>
+                        <ID Source="PubMed">27993330</ID>
+                    </Citation>
+                </AttributeSet>
+                <ObservedInList>
+                    <ObservedIn>
+                        <Sample>
+                            <Origin>somatic</Origin>
+                            <SomaticVariantInNormalTissue>present</SomaticVariantInNormalTissue>
+                            <SomaticVariantAlleleFraction>15%</SomaticVariantAlleleFraction>
+                            <Species TaxonomyId="9606">human</Species>
+                            <AffectedStatus>unknown</AffectedStatus>
+                        </Sample>
+                        <Method>
+                            <MethodType>clinical testing</MethodType>
+                        </Method>
+                        <ObservedData>
+                            <Attribute Type="Description">not provided</Attribute>
+                        </ObservedData>
+                    </ObservedIn>
+                </ObservedInList>
+                <SimpleAllele>
+                    <VariantType>Variation</VariantType>
+                    <Location>
+                        <SequenceLocation Assembly="GRCh37" Chr="2" alternateAllele="A"
+                            referenceAllele="C" start="198267359" stop="198267359" variantLength="1" />
+                    </Location>
+                </SimpleAllele>
+                <TraitSet Type="Disease">
+                    <Trait Type="Disease">
+                        <Name>
+                            <ElementValue Type="Preferred">BREAST CANCER, SOMATIC</ElementValue>
+                        </Name>
+                    </Trait>
+                </TraitSet>
+                <SubmissionNameList>
+                    <SubmissionName>ICSL_2017Q2</SubmissionName>
+                </SubmissionNameList>
+            </ClinicalAssertion>
+            <ClinicalAssertion ID="717590" DateCreated="2016-12-02" DateLastUpdated="2019-03-31"
+                SubmissionDate="2016-10-18">
+                <ClinVarSubmissionID localKey="562510-1" submittedAssembly="GRCh37" />
+                <ClinVarAccession Accession="SCV000404069" Type="SCV" Version="2"
+                    SubmitterName="COSMIC: Catalogue of somatic mutations in cancer" OrgID="505269"
+                    OrganizationCategory="resource" />
+                <RecordStatus>current</RecordStatus>
+                <Classification DateLastEvaluated="2016-06-14">
+                    <ReviewStatus>criteria provided, single submitter</ReviewStatus>
+                    <SomaticClinicalImpact ClinicalImpactAssertionType="therapeutic"
+                        ClinicalImpactClinicalSignificance="sensitivity"
+                        DrugForTherapeuticAssertion="Enzalutamide">Tier II - Potential</SomaticClinicalImpact>
+                </Classification>
+                <Assertion>variation to disease</Assertion>
+                <AttributeSet>
+                    <Attribute Type="AssertionMethod">AMP Guidelines, 2017</Attribute>
+                    <Citation>
+                        <ID Source="PubMed">27993330</ID>
+                    </Citation>
+                </AttributeSet>
+                <ObservedInList>
+                    <ObservedIn>
+                        <Sample>
+                            <Origin>somatic</Origin>
+                            <SomaticVariantInNormalTissue>present</SomaticVariantInNormalTissue>
+                            <SomaticVariantAlleleFraction>25%</SomaticVariantAlleleFraction>
+                            <Species TaxonomyId="9606">human</Species>
+                            <AffectedStatus>unknown</AffectedStatus>
+                        </Sample>
+                        <Method>
+                            <MethodType>clinical testing</MethodType>
+                        </Method>
+                        <ObservedData>
+                            <Attribute Type="Description">not provided</Attribute>
+                        </ObservedData>
+                    </ObservedIn>
+                </ObservedInList>
+                <SimpleAllele>
+                    <VariantType>Variation</VariantType>
+                    <Location>
+                        <SequenceLocation Assembly="GRCh37" Chr="2" alternateAllele="A"
+                            referenceAllele="C" start="198267359" stop="198267359" variantLength="1" />
+                    </Location>
+                </SimpleAllele>
+                <TraitSet Type="Disease">
+                    <Trait Type="Disease">
+                        <XRef DB="MeSH" ID="D015470" />
+                    </Trait>
+                </TraitSet>
+                <SubmissionNameList>
+                    <SubmissionName>DCM_2016Q4</SubmissionName>
+                </SubmissionNameList>
+            </ClinicalAssertion>
+            <ClinicalAssertion ID="717595" DateCreated="2016-12-02" DateLastUpdated="2019-03-31"
+                SubmissionDate="2016-10-18">
+                <ClinVarSubmissionID localKey="800692-2" submittedAssembly="GRCh37" />
+                <ClinVarAccession Accession="SCV000404074" Type="SCV" Version="2"
+                    SubmitterName="ClinVar" OrgID="500139"
+                    OrganizationCategory="other" />
+                <RecordStatus>current</RecordStatus>
+                <Classification DateLastEvaluated="2016-06-14">
+                    <ReviewStatus>criteria provided, single submitter</ReviewStatus>
+                    <SomaticClinicalImpact ClinicalImpactAssertionType="therapeutic"
+                        ClinicalImpactClinicalSignificance="resistance"
+                        DrugForTherapeuticAssertion="SpliceostatinA">Tier II - Potential</SomaticClinicalImpact>
+                </Classification>
+                <Assertion>variation to disease</Assertion>
+                <AttributeSet>
+                    <Attribute Type="AssertionMethod">AMP Guidelines, 2017</Attribute>
+                    <Citation>
+                        <ID Source="PubMed">27993330</ID>
+                    </Citation>
+                </AttributeSet>
+                <ObservedInList>
+                    <ObservedIn>
+                        <Sample>
+                            <Origin>somatic</Origin>
+                            <SomaticVariantInNormalTissue>present</SomaticVariantInNormalTissue>
+                            <SomaticVariantAlleleFraction>10%</SomaticVariantAlleleFraction>
+                            <Species TaxonomyId="9606">human</Species>
+                            <AffectedStatus>yes</AffectedStatus>
+                        </Sample>
+                        <Method>
+                            <MethodType>clinical testing</MethodType>
+                        </Method>
+                        <ObservedData>
+                            <Attribute Type="Description">not provided</Attribute>
+                        </ObservedData>
+                    </ObservedIn>
+                </ObservedInList>
+                <SimpleAllele>
+                    <VariantType>Variation</VariantType>
+                    <Location>
+                        <SequenceLocation Assembly="GRCh37" Chr="2" alternateAllele="A"
+                            referenceAllele="C" start="198267359" stop="198267359" variantLength="1" />
+                    </Location>
+                </SimpleAllele>
+                <TraitSet Type="Disease">
+                    <Trait Type="Disease">
+                        <XRef DB="MeSH" ID="D015470" />
+                    </Trait>
+                </TraitSet>
+                <SubmissionNameList>
+                    <SubmissionName>ICMLK_2016Q4</SubmissionName>
+                </SubmissionNameList>
+            </ClinicalAssertion>
+            <ClinicalAssertion ID="717589" DateCreated="2016-12-02" DateLastUpdated="2019-03-31"
+                SubmissionDate="2016-10-18">
+                <ClinVarSubmissionID localKey="562510-3"
+                    submittedAssembly="GRCh37" />
+                <ClinVarAccession Accession="SCV000404068" Type="SCV" Version="2"
+                    SubmitterName="CIViC knowledgebase" OrgID="506594"
+                    OrganizationCategory="resource" />
+                <RecordStatus>current</RecordStatus>
+                <Classification DateLastEvaluated="2016-06-14">
+                    <ReviewStatus>criteria provided, single submitter</ReviewStatus>
+                    <OncogenicityClassification>Likely oncogenic</OncogenicityClassification>
+                </Classification>
+                <Assertion>variation to disease</Assertion>
+                <AttributeSet>
+                    <Attribute Type="AssertionMethod">Oncogenicity SOP (ClinGen, CGC, VICC guidelines) 2022</Attribute>
+                    <Citation>
+                        <ID Source="PubMed">35101336</ID>
+                    </Citation>
+                </AttributeSet>
+                <ObservedInList>
+                    <ObservedIn>
+                        <Sample>
+                            <Origin>somatic</Origin>
+                            <SomaticVariantInNormalTissue>present</SomaticVariantInNormalTissue>
+                            <SomaticVariantAlleleFraction>15%</SomaticVariantAlleleFraction>
+                            <Species TaxonomyId="9606">human</Species>
+                            <AffectedStatus>unknown</AffectedStatus>
+                        </Sample>
+                        <Method>
+                            <MethodType>clinical testing</MethodType>
+                        </Method>
+                        <ObservedData>
+                            <Attribute Type="Description">not provided</Attribute>
+                        </ObservedData>
+                    </ObservedIn>
+                </ObservedInList>
+                <SimpleAllele>
+                    <VariantType>Variation</VariantType>
+                    <Location>
+                        <SequenceLocation Assembly="GRCh37" Chr="2" alternateAllele="A"
+                            referenceAllele="C" start="198267359" stop="198267359" variantLength="1" />
+                    </Location>
+                </SimpleAllele>
+                <TraitSet Type="Disease">
+                    <Trait Type="Disease">
+                        <Name>
+                            <ElementValue Type="Preferred">BREAST CANCER, SOMATIC</ElementValue>
+                        </Name>
+                    </Trait>
+                </TraitSet>
+                <SubmissionNameList>
+                    <SubmissionName>ILFI_2016Q4</SubmissionName>
+                </SubmissionNameList>
+            </ClinicalAssertion>
+        </ClinicalAssertionList>
+        <TraitMappingList>
+            <TraitMapping ClinicalAssertionID="717596" TraitType="Disease" MappingType="Name"
+                MappingValue="BREAST CANCER, SOMATIC" MappingRef="Preferred">
+                <MedGen CUI="C0858252" Name="Breast adenocarcinoma" />
+            </TraitMapping>
+            <TraitMapping ClinicalAssertionID="717589" TraitType="Disease" MappingType="Name"
+                MappingValue="BREAST CANCER, SOMATIC" MappingRef="Preferred">
+                <MedGen CUI="C0858252" Name="Breast adenocarcinoma" />
+            </TraitMapping>
+            <TraitMapping ClinicalAssertionID="717591" TraitType="Disease" MappingType="Name"
+                MappingValue="BREAST CANCER, SOMATIC" MappingRef="Preferred">
+                <MedGen CUI="C0858252" Name="Breast adenocarcinoma" />
+            </TraitMapping>
+            <TraitMapping ClinicalAssertionID="717590" TraitType="Disease" MappingType="XRef"
+                MappingValue="D015470" MappingRef="MeSH">
+                <MedGen CUI="C0023467" Name="Acute myeloid leukemia" />
+            </TraitMapping>
+            <TraitMapping ClinicalAssertionID="717595" TraitType="Disease" MappingType="XRef"
+                MappingValue="D015470" MappingRef="MeSH">
+                <MedGen CUI="C0023467" Name="Acute myeloid leukemia" />
+            </TraitMapping>
+            <TraitMapping ClinicalAssertionID="717597" TraitType="Disease" MappingType="Name"
+                MappingValue="Pancreatic Cancer" MappingRef="Preferred">
+                <MedGen CUI="C0346647" Name="Cancer of the pancreas" />
+            </TraitMapping>
+        </TraitMappingList>
+    </ClassifiedRecord>
+</VariationArchive>

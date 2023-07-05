@@ -1,0 +1,413 @@
+<ClinVarSet ID="141419692">
+    <RecordStatus>current</RecordStatus>
+    <Title>NM_005228.5(EGFR):c.2369C>T (p.Thr790Met) AND Malignant tumor of breast</Title>
+    <ReferenceClinVarAssertion ID="1010110" DateLastUpdated="2022-07-02" DateCreated="2017-03-08">
+        <ClinVarAccession Acc="RCV000425417" Version="2" Type="RCV" DateUpdated="2022-07-02"
+            DateCreated="2017-03-08" />
+        <RecordStatus>current</RecordStatus>
+        <Classifications>
+            <SomaticClinicalImpact>
+                <ReviewStatus>criteria provided, single submitter</ReviewStatus>
+                <Description ClinicalImpactAssertionType="prognostic"
+                    ClinicalImpactClinicalSignificance="poor outcome" SubmissionCount="1"
+                    DateLastEvaluated="2016-05-13">Tier II - Potential</Description>
+            </SomaticClinicalImpact>
+        </Classifications>
+        <Assertion Type="variation to disease" />
+        <ObservedIn>
+            <Sample>
+                <Origin>somatic</Origin>
+                <SomaticVariantInNormalTissue>present</SomaticVariantInNormalTissue>
+                <SomaticVariantAlleleFraction>20%</SomaticVariantAlleleFraction>
+                <Species TaxonomyId="9606">human</Species>
+                <AffectedStatus>yes</AffectedStatus>
+            </Sample>
+            <Method>
+                <MethodType>literature only</MethodType>
+            </Method>
+            <ObservedData>
+                <Attribute Type="Description">not provided</Attribute>
+            </ObservedData>
+        </ObservedIn>
+        <MeasureSet Type="Variant" ID="16613" Acc="VCV000016613" Version="24">
+            <Measure Type="single nucleotide variant" ID="31652">
+                <Name>
+                    <ElementValue Type="Preferred">NM_005228.5(EGFR):c.2369C>T (p.Thr790Met)</ElementValue>
+                </Name>
+                <Name>
+                    <ElementValue Type="Alternate">NP_005219.2:p.Thr790Met</ElementValue>
+                </Name>
+                <CanonicalSPDI>NC_000007.14:55181377:C:T</CanonicalSPDI>
+                <AttributeSet>
+                    <Attribute Accession="NM_005228" Version="4" Change="c.2369C>T"
+                        Type="HGVS, coding">NM_005228.4:c.2369C>T</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NM_005228" Version="4" Change="c.[2369C>T]"
+                        Type="HGVS, coding">NM_005228.4:c.[2369C>T]</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="LRG_304t1" Type="HGVS, coding, LRG">LRG_304t1:c.2369C>T</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NM_001346941" Version="2" Change="c.1568C>T"
+                        Type="HGVS, coding, RefSeq">NM_001346941.2:c.1568C>T</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NM_001346900" Version="2" Change="c.2210C>T"
+                        Type="HGVS, coding, RefSeq">NM_001346900.2:c.2210C>T</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NM_001346897" Version="2" Change="c.2234C>T"
+                        Type="HGVS, coding, RefSeq">NM_001346897.2:c.2234C>T</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NM_001346899" Version="2" Change="c.2234C>T"
+                        Type="HGVS, coding, RefSeq">NM_001346899.2:c.2234C>T</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NM_001346898" Version="2" Change="c.2369C>T"
+                        Type="HGVS, coding, RefSeq">NM_001346898.2:c.2369C>T</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NM_005228" Version="5" Change="c.2369C>T"
+                        Type="HGVS, coding, RefSeq" MANESelect="true">NM_005228.5:c.2369C>T</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="LRG_304" Type="HGVS, genomic, LRG">LRG_304:g.167347C>T</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NG_007726" Version="3" Change="g.167347C>T"
+                        Type="HGVS, genomic, RefSeqGene">NG_007726.3:g.167347C>T</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NC_000007" Version="14" Change="g.55181378C>T"
+                        Type="HGVS, genomic, top level" integerValue="38">NC_000007.14:g.55181378C>T</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NC_000007" Version="13" Change="g.55249071C>T"
+                        Type="HGVS, genomic, top level, previous" integerValue="37">
+                        NC_000007.13:g.55249071C>T</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NR_047551" Version="1" Change="n.1193G>A"
+                        Type="HGVS, non-coding">NR_047551.1:n.1193G>A</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NM_005228" Version="3" Change="c.2369C>T"
+                        Type="HGVS, previous">NM_005228.3:c.2369C>T</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Type="HGVS, protein" />
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Type="HGVS, protein" />
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="P00533" Change="p.Thr790Met" Type="HGVS, protein">
+                        P00533:p.Thr790Met</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NP_001333870" Version="1" Change="p.Thr523Met"
+                        Type="HGVS, protein, RefSeq">NP_001333870.1:p.Thr523Met</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NP_001333829" Version="1" Change="p.Thr737Met"
+                        Type="HGVS, protein, RefSeq">NP_001333829.1:p.Thr737Met</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NP_001333826" Version="1" Change="p.Thr745Met"
+                        Type="HGVS, protein, RefSeq">NP_001333826.1:p.Thr745Met</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NP_001333828" Version="1" Change="p.Thr745Met"
+                        Type="HGVS, protein, RefSeq">NP_001333828.1:p.Thr745Met</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NP_001333827" Version="1" Change="p.Thr790Met"
+                        Type="HGVS, protein, RefSeq">NP_001333827.1:p.Thr790Met</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NP_005219" Version="2" Change="p.Thr790Met"
+                        Type="HGVS, protein, RefSeq">NP_005219.2:p.Thr790Met</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Type="Location">NM_005228.3:exon 20</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Type="Location">NM_005228.5:exon 20</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Type="MolecularConsequence">missense variant</Attribute>
+                    <XRef ID="SO:0001583" DB="Sequence Ontology" />
+                    <XRef ID="NM_001346897.2:c.2234C>T" DB="RefSeq" />
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Type="MolecularConsequence">missense variant</Attribute>
+                    <XRef ID="SO:0001583" DB="Sequence Ontology" />
+                    <XRef ID="NM_001346898.2:c.2369C>T" DB="RefSeq" />
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Type="MolecularConsequence">missense variant</Attribute>
+                    <XRef ID="SO:0001583" DB="Sequence Ontology" />
+                    <XRef ID="NM_001346899.2:c.2234C>T" DB="RefSeq" />
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Type="MolecularConsequence">missense variant</Attribute>
+                    <XRef ID="SO:0001583" DB="Sequence Ontology" />
+                    <XRef ID="NM_001346900.2:c.2210C>T" DB="RefSeq" />
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Type="MolecularConsequence">missense variant</Attribute>
+                    <XRef ID="SO:0001583" DB="Sequence Ontology" />
+                    <XRef ID="NM_001346941.2:c.1568C>T" DB="RefSeq" />
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Type="MolecularConsequence">missense variant</Attribute>
+                    <XRef ID="SO:0001583" DB="Sequence Ontology" />
+                    <XRef ID="NM_005228.5:c.2369C>T" DB="RefSeq" />
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Type="MolecularConsequence">non-coding transcript variant</Attribute>
+                    <XRef ID="SO:0001619" DB="Sequence Ontology" />
+                    <XRef ID="NR_047551.1:n.1193G>A" DB="RefSeq" />
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Type="ProteinChange1LetterCode">T523M</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Type="ProteinChange1LetterCode">T737M</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Type="ProteinChange1LetterCode">T745M</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Type="ProteinChange1LetterCode">T790M</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Type="ProteinChange3LetterCode">THR790MET</Attribute>
+                </AttributeSet>
+                <AlleleFrequencyList>
+                    <AlleleFrequency Value="0.00004" Source="Exome Aggregation Consortium (ExAC)" />
+                    <AlleleFrequency Value="0.00010"
+                        Source="The Genome Aggregation Database (gnomAD)" />
+                    <AlleleFrequency Value="0.00003"
+                        Source="The Genome Aggregation Database (gnomAD), exomes" />
+                    <AlleleFrequency Value="0.00003"
+                        Source="Trans-Omics for Precision Medicine (TOPMed)" />
+                </AlleleFrequencyList>
+                <CytogeneticLocation>7p11.2</CytogeneticLocation>
+                <SequenceLocation Assembly="GRCh38" AssemblyAccessionVersion="GCF_000001405.38"
+                    AssemblyStatus="current" Chr="7" Accession="NC_000007.14" start="55181378"
+                    stop="55181378" display_start="55181378" display_stop="55181378"
+                    variantLength="1" positionVCF="55181378" referenceAlleleVCF="C"
+                    alternateAlleleVCF="T" />
+                <SequenceLocation Assembly="GRCh37" AssemblyAccessionVersion="GCF_000001405.25"
+                    AssemblyStatus="previous" Chr="7" Accession="NC_000007.13" start="55249071"
+                    stop="55249071" display_start="55249071" display_stop="55249071"
+                    variantLength="1" positionVCF="55249071" referenceAlleleVCF="C"
+                    alternateAlleleVCF="T" />
+                <MeasureRelationship Type="within multiple genes by overlap">
+                    <Name>
+                        <ElementValue Type="Preferred">EGFR antisense RNA 1</ElementValue>
+                    </Name>
+                    <Symbol>
+                        <ElementValue Type="Preferred">EGFR-AS1</ElementValue>
+                    </Symbol>
+                    <SequenceLocation Assembly="GRCh38" AssemblyAccessionVersion="GCF_000001405.38"
+                        AssemblyStatus="current" Chr="7" Accession="NC_000007.14" start="55179750"
+                        stop="55188949" display_start="55179750" display_stop="55188949" Strand="-" />
+                    <XRef ID="100507500" DB="Gene" />
+                    <XRef ID="HGNC:40207" DB="HGNC" />
+                </MeasureRelationship>
+                <MeasureRelationship Type="within multiple genes by overlap">
+                    <Name>
+                        <ElementValue Type="Preferred">epidermal growth factor receptor</ElementValue>
+                    </Name>
+                    <Symbol>
+                        <ElementValue Type="Preferred">EGFR</ElementValue>
+                    </Symbol>
+                    <AttributeSet>
+                        <Attribute dateValue="2022-05-11" Type="Haploinsufficiency">No evidence
+                            available</Attribute>
+                        <Citation>
+                            <URL>
+                                https://www.ncbi.nlm.nih.gov/projects/dbvar/ISCA/isca_gene.cgi?sym=EGFR</URL>
+                        </Citation>
+                    </AttributeSet>
+                    <AttributeSet>
+                        <Attribute dateValue="2022-05-11" Type="Triplosensitivity">No evidence
+                            available</Attribute>
+                        <Citation>
+                            <URL>
+                                https://www.ncbi.nlm.nih.gov/projects/dbvar/ISCA/isca_gene.cgi?sym=EGFR</URL>
+                        </Citation>
+                    </AttributeSet>
+                    <SequenceLocation Assembly="GRCh38" AssemblyAccessionVersion="GCF_000001405.38"
+                        AssemblyStatus="current" Chr="7" Accession="NC_000007.14" start="55019017"
+                        stop="55211628" display_start="55019017" display_stop="55211628" Strand="+" />
+                    <SequenceLocation Assembly="GRCh37" AssemblyAccessionVersion="GCF_000001405.25"
+                        AssemblyStatus="previous" Chr="7" Accession="NC_000007.13" start="55086724"
+                        stop="55275030" display_start="55086724" display_stop="55275030"
+                        variantLength="188307" Strand="+" />
+                    <XRef ID="1956" DB="Gene" />
+                    <XRef Type="MIM" ID="131550" DB="OMIM" />
+                    <XRef ID="HGNC:3236" DB="HGNC" />
+                </MeasureRelationship>
+                <Citation Type="general" Abbrev="CAP/IASLC/AMP, 2013">
+                    <ID Source="PubMed">23562183</ID>
+                </Citation>
+                <XRef ID="981475450" DB="PharmGKB" />
+                <XRef ID="981475450PA131301952" DB="PharmGKB" />
+                <XRef ID="981475450PA134687924" DB="PharmGKB" />
+                <XRef ID="981475450" DB="PharmGKB Clinical Annotation" />
+                <XRef ID="P00533#VAR_026098" DB="UniProtKB" />
+                <XRef Type="Allelic variant" ID="131550.0006" DB="OMIM" />
+                <XRef Type="rs" ID="121434569" DB="dbSNP" />
+            </Measure>
+            <Name>
+                <ElementValue Type="Preferred">NM_005228.5(EGFR):c.2369C>T (p.Thr790Met)</ElementValue>
+            </Name>
+            <Name>
+                <ElementValue Type="Preferred">NM_005228.5(EGFR):c.2369C>T (p.Thr790Met)</ElementValue>
+            </Name>
+            <Name>
+                <ElementValue Type="Preferred">NM_005228.5(EGFR):c.2369C>T (p.Thr790Met)</ElementValue>
+            </Name>
+            <Name>
+                <ElementValue Type="Preferred">NM_005228.5(EGFR):c.2369C>T (p.Thr790Met)</ElementValue>
+            </Name>
+            <Name>
+                <ElementValue Type="Preferred">NM_005228.5(EGFR):c.2369C>T (p.Thr790Met)</ElementValue>
+            </Name>
+            <Name>
+                <ElementValue Type="Preferred">NM_005228.5(EGFR):c.2369C>T (p.Thr790Met)</ElementValue>
+            </Name>
+            <Name>
+                <ElementValue Type="Preferred">NM_005228.5(EGFR):c.2369C>T (p.Thr790Met)</ElementValue>
+            </Name>
+            <Name>
+                <ElementValue Type="Preferred">NM_005228.5(EGFR):c.2369C>T (p.Thr790Met)</ElementValue>
+            </Name>
+            <Name>
+                <ElementValue Type="Preferred">NM_005228.5(EGFR):c.2369C>T (p.Thr790Met)</ElementValue>
+            </Name>
+            <Name>
+                <ElementValue Type="Preferred">NM_005228.5(EGFR):c.2369C>T (p.Thr790Met)</ElementValue>
+            </Name>
+            <AttributeSet>
+                <Attribute Type="SubmitterVariantId">GDX:749618</Attribute>
+            </AttributeSet>
+            <XRef ID="CA090928" DB="ClinGen" />
+        </MeasureSet>
+        <TraitSet Type="Finding" ID="25616">
+            <Trait ID="34847" Type="Finding">
+                <Name>
+                    <ElementValue Type="Preferred">Malignant tumor of breast</ElementValue>
+                    <XRef ID="254837009" DB="SNOMED CT" />
+                </Name>
+                <Name>
+                    <ElementValue Type="Alternate">Malignant breast neoplasm</ElementValue>
+                    <XRef ID="C9335" DB="NCI" />
+                </Name>
+                <Name>
+                    <ElementValue Type="Alternate">Cancer breast</ElementValue>
+                </Name>
+                <AttributeSet>
+                    <Attribute Type="disease mechanism" integerValue="273">loss of function</Attribute>
+                    <XRef ID="GTR000569423" DB="Genetic Testing Registry (GTR)" />
+                    <XRef ID="GTR000570011" DB="Genetic Testing Registry (GTR)" />
+                    <XRef ID="GTR000604264" DB="Genetic Testing Registry (GTR)" />
+                </AttributeSet>
+                <Citation Type="general" Abbrev="ASCO, 2010">
+                    <ID Source="pmc">2936467</ID>
+                </Citation>
+                <Citation Type="Suggested Reading" Abbrev="NCI PDQ, Breast and Gynecologic Cancers">
+                    <ID Source="PubMed">26389210</ID>
+                </Citation>
+                <Citation Type="Suggested Reading" Abbrev="NCI PDQ, Cancer Genetics Counseling">
+                    <ID Source="PubMed">26389258</ID>
+                </Citation>
+                <Citation Type="general" Abbrev="ASCO, 2018">
+                    <ID Source="PubMed">29939840</ID>
+                </Citation>
+                <Citation Type="general" Abbrev="USPSTF, 2019">
+                    <ID Source="PubMed">31479144</ID>
+                </Citation>
+                <Citation Type="general" Abbrev="ASCO, 2019">
+                    <ID Source="PubMed">30452337</ID>
+                </Citation>
+                <Citation Type="practice guideline" Abbrev="NICE, 2018">
+                    <URL>https://www.nice.org.uk/guidance/dg34</URL>
+                    <CitationText>Tumour profiling tests to guide adjuvant chemotherapy decisions in
+                        early breast cancer (DG34)</CitationText>
+                </Citation>
+                <XRef ID="MONDO:0007254" DB="MONDO" />
+                <XRef ID="C0006142" DB="MedGen" />
+            </Trait>
+        </TraitSet>
+    </ReferenceClinVarAssertion>
+    <ClinVarAssertion ID="5398980" SubmissionName="SUB12291484">
+        <ClinVarSubmissionID localKey="SUB12291484" submittedAssembly="GRCh37"
+            submitter="ClinVar"
+            submitterDate="2016-07-18" />
+        <ClinVarAccession Acc="SCV002759858" Version="1" Type="SCV" OrgID="500139"
+            OrganizationCategory="other" OrgType="primary" DateCreated="2017-03-08"
+            DateUpdated="2017-03-08" />
+        <RecordStatus>current</RecordStatus>
+        <Classification DateLastEvaluated="2016-05-13">
+            <ReviewStatus>criteria provided, single submitter</ReviewStatus>
+            <SomaticClinicalImpact ClinicalImpactAssertionType="prognostic"
+                ClinicalImpactClinicalSignificance="poor outcome">Tier II - Potential</SomaticClinicalImpact>
+            <Citation>
+                <ID Source="PubMed">18397343</ID>
+            </Citation>
+        </Classification>
+        <Assertion Type="variation to disease" />
+        <Assertion>variation to disease</Assertion>
+        <AttributeSet>
+            <Attribute Type="AssertionMethod">AMP Guidelines, 2017</Attribute>
+            <Citation>
+                <ID Source="PubMed">27993330</ID>
+            </Citation>
+        </AttributeSet>
+
+        <ObservedIn>
+            <Sample>
+                <Origin>somatic</Origin>
+                <SomaticVariantInNormalTissue>present</SomaticVariantInNormalTissue>
+                <SomaticVariantAlleleFraction>20%</SomaticVariantAlleleFraction>
+                <Species TaxonomyId="9606">human</Species>
+                <AffectedStatus>yes</AffectedStatus>
+            </Sample>
+            <Method>
+                <MethodType>literature only</MethodType>
+            </Method>
+            <ObservedData>
+                <Attribute Type="Description">not provided</Attribute>
+            </ObservedData>
+        </ObservedIn>
+        <MeasureSet Type="Variant">
+            <Measure Type="Variation">
+                <Name>
+                    <ElementValue Type="Alternate">NP_005219.2:p.Thr790Met</ElementValue>
+                </Name>
+                <AttributeSet>
+                    <Attribute Type="HGVS">NM_005228.4:c.2369C>T</Attribute>
+                </AttributeSet>
+                <MeasureRelationship Type="variant in gene">
+                    <Symbol>
+                        <ElementValue Type="Preferred">EGFR</ElementValue>
+                    </Symbol>
+                </MeasureRelationship>
+            </Measure>
+        </MeasureSet>
+        <TraitSet Type="Disease">
+            <Trait Type="Disease">
+                <Name>
+                    <ElementValue Type="Preferred">Breast Cancer</ElementValue>
+                </Name>
+            </Trait>
+        </TraitSet>
+    </ClinVarAssertion>
+</ClinVarSet>

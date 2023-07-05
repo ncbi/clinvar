@@ -1,0 +1,614 @@
+<VariationArchive VariationID="12578" VariationName="NM_004985.5(KRAS):c.34G>T (p.Gly12Cys)"
+    VariationType="single nucleotide variant" Accession="VCV000012578" Version="22"
+    RecordType="classified" DateCreated="2016-07-26" DateLastUpdated="2020-06-25"
+    NumberOfSubmissions="4" NumberOfSubmitters="4">
+    <RecordStatus>current</RecordStatus>
+    <Species>Homo sapiens</Species>
+    <ClassifiedRecord>
+        <SimpleAllele AlleleID="27617" VariationID="12578">
+            <GeneList>
+                <Gene Symbol="KRAS" FullName="KRAS proto-oncogene, GTPase" GeneID="3845"
+                    HGNC_ID="HGNC:6407" Source="submitted" RelationshipType="within single gene">
+                    <Location>
+                        <CytogeneticLocation>12p12.1</CytogeneticLocation>
+                        <SequenceLocation Assembly="GRCh38"
+                            AssemblyAccessionVersion="GCF_000001405.38" AssemblyStatus="current"
+                            Chr="12" Accession="NC_000012.12" start="25205246" stop="25250929"
+                            display_start="25205246" display_stop="25250929" Strand="-" />
+                        <SequenceLocation Assembly="GRCh37"
+                            AssemblyAccessionVersion="GCF_000001405.25" AssemblyStatus="previous"
+                            Chr="12" Accession="NC_000012.11" start="25358179" stop="25403853"
+                            display_start="25358179" display_stop="25403853" Strand="-" />
+                    </Location>
+                    <OMIM>190070</OMIM>
+                    <Haploinsufficiency last_evaluated="2015-10-08"
+                        ClinGen="https://www.ncbi.nlm.nih.gov/projects/dbvar/ISCA/isca_gene.cgi?sym=KRAS">No
+                        evidence available</Haploinsufficiency>
+                    <Triplosensitivity last_evaluated="2015-10-08"
+                        ClinGen="https://www.ncbi.nlm.nih.gov/projects/dbvar/ISCA/isca_gene.cgi?sym=KRAS">No
+                        evidence available</Triplosensitivity>
+                </Gene>
+            </GeneList>
+            <Name>NM_004985.5(KRAS):c.34G>T (p.Gly12Cys)</Name>
+            <CanonicalSPDI>NC_000012.12:25245350:C:A</CanonicalSPDI>
+            <VariantType>single nucleotide variant</VariantType>
+            <Location>
+                <CytogeneticLocation>12p12.1</CytogeneticLocation>
+                <SequenceLocation Assembly="GRCh38" AssemblyAccessionVersion="GCF_000001405.38"
+                    forDisplay="true" AssemblyStatus="current" Chr="12" Accession="NC_000012.12"
+                    start="25245351" stop="25245351" display_start="25245351"
+                    display_stop="25245351" variantLength="1" positionVCF="25245351"
+                    referenceAlleleVCF="C" alternateAlleleVCF="A" />
+                <SequenceLocation Assembly="GRCh37" AssemblyAccessionVersion="GCF_000001405.25"
+                    AssemblyStatus="previous" Chr="12" Accession="NC_000012.11" start="25398285"
+                    stop="25398285" display_start="25398285" display_stop="25398285"
+                    variantLength="1" positionVCF="25398285" referenceAlleleVCF="C"
+                    alternateAlleleVCF="A" />
+            </Location>
+            <OtherNameList>
+                <Name>NP_004976.2:p.Gly12Cys</Name>
+            </OtherNameList>
+            <ProteinChange>G12C</ProteinChange>
+            <HGVSlist>
+                <HGVS Type="protein">
+                    <ProteinExpression sequenceAccessionVersion="P01116" sequenceAccession="P01116"
+                        change="p.Gly12Cys">
+                        <Expression>P01116:p.Gly12Cys</Expression>
+                    </ProteinExpression>
+                </HGVS>
+                <HGVS Assembly="GRCh37" Type="genomic, top-level">
+                    <NucleotideExpression sequenceAccessionVersion="NC_000012.11"
+                        sequenceAccession="NC_000012" sequenceVersion="11" change="g.25398285C>A"
+                        Assembly="GRCh37">
+                        <Expression>NC_000012.11:g.25398285C>A</Expression>
+                    </NucleotideExpression>
+                </HGVS>
+                <HGVS Assembly="GRCh38" Type="genomic, top-level">
+                    <NucleotideExpression sequenceAccessionVersion="NC_000012.12"
+                        sequenceAccession="NC_000012" sequenceVersion="12" change="g.25245351C>A"
+                        Assembly="GRCh38">
+                        <Expression>NC_000012.12:g.25245351C>A</Expression>
+                    </NucleotideExpression>
+                </HGVS>
+                <HGVS Type="genomic">
+                    <NucleotideExpression sequenceAccessionVersion="NG_007524.2"
+                        sequenceAccession="NG_007524" sequenceVersion="2" change="g.10653G>T">
+                        <Expression>NG_007524.2:g.10653G>T</Expression>
+                    </NucleotideExpression>
+                </HGVS>
+                <HGVS Type="coding">
+                    <NucleotideExpression sequenceAccessionVersion="NM_001369786.1"
+                        sequenceAccession="NM_001369786" sequenceVersion="1" change="c.34G>T">
+                        <Expression>NM_001369786.1:c.34G>T</Expression>
+                    </NucleotideExpression>
+                    <ProteinExpression sequenceAccessionVersion="NP_001356715.1"
+                        sequenceAccession="NP_001356715" sequenceVersion="1" change="p.Gly12Cys">
+                        <Expression>NP_001356715.1:p.Gly12Cys</Expression>
+                    </ProteinExpression>
+                    <MolecularConsequence ID="SO:0001583" Type="missense variant" DB="SO" />
+                </HGVS>
+                <HGVS Type="coding">
+                    <NucleotideExpression sequenceAccessionVersion="NM_001369787.1"
+                        sequenceAccession="NM_001369787" sequenceVersion="1" change="c.34G>T">
+                        <Expression>NM_001369787.1:c.34G>T</Expression>
+                    </NucleotideExpression>
+                    <ProteinExpression sequenceAccessionVersion="NP_001356716.1"
+                        sequenceAccession="NP_001356716" sequenceVersion="1" change="p.Gly12Cys">
+                        <Expression>NP_001356716.1:p.Gly12Cys</Expression>
+                    </ProteinExpression>
+                    <MolecularConsequence ID="SO:0001583" Type="missense variant" DB="SO" />
+                </HGVS>
+                <HGVS Type="coding">
+                    <NucleotideExpression sequenceAccessionVersion="NM_004985.5"
+                        sequenceAccession="NM_004985" sequenceVersion="5" change="c.34G>T"
+                        MANESelect="true">
+                        <Expression>NM_004985.5:c.34G>T</Expression>
+                    </NucleotideExpression>
+                    <ProteinExpression sequenceAccessionVersion="NP_004976.2"
+                        sequenceAccession="NP_004976" sequenceVersion="2" change="p.Gly12Cys">
+                        <Expression>NP_004976.2:p.Gly12Cys</Expression>
+                    </ProteinExpression>
+                    <MolecularConsequence ID="SO:0001583" Type="missense variant" DB="SO" />
+                </HGVS>
+                <HGVS Type="coding">
+                    <NucleotideExpression sequenceAccessionVersion="NM_033360.4"
+                        sequenceAccession="NM_033360" sequenceVersion="4" change="c.34G>T"
+                        MANEPlusClinical="true">
+                        <Expression>NM_033360.4:c.34G>T</Expression>
+                    </NucleotideExpression>
+                    <ProteinExpression sequenceAccessionVersion="NP_203524.1"
+                        sequenceAccession="NP_203524" sequenceVersion="1" change="p.Gly12Cys">
+                        <Expression>NP_203524.1:p.Gly12Cys</Expression>
+                    </ProteinExpression>
+                    <MolecularConsequence ID="SO:0001583" Type="missense variant" DB="SO" />
+                </HGVS>
+                <HGVS Type="genomic">
+                    <NucleotideExpression sequenceAccessionVersion="LRG_344"
+                        sequenceAccession="LRG_344">
+                        <Expression>LRG_344:g.10653G>T</Expression>
+                    </NucleotideExpression>
+                </HGVS>
+                <HGVS Type="coding">
+                    <NucleotideExpression sequenceAccessionVersion="LRG_344t1"
+                        sequenceAccession="LRG_344t1">
+                        <Expression>LRG_344t1:c.34G>T</Expression>
+                    </NucleotideExpression>
+                    <ProteinExpression sequenceAccessionVersion="LRG_344p1"
+                        sequenceAccession="LRG_344p1" change="p.Gly12Cys">
+                        <Expression>LRG_344p1:p.Gly12Cys</Expression>
+                    </ProteinExpression>
+                </HGVS>
+                <HGVS Type="coding">
+                    <NucleotideExpression sequenceAccessionVersion="LRG_344t2"
+                        sequenceAccession="LRG_344t2">
+                        <Expression>LRG_344t2:c.34G>T</Expression>
+                    </NucleotideExpression>
+                    <ProteinExpression sequenceAccessionVersion="LRG_344p2"
+                        sequenceAccession="LRG_344p2" change="p.Gly12Cys">
+                        <Expression>LRG_344p2:p.Gly12Cys</Expression>
+                    </ProteinExpression>
+                </HGVS>
+            </HGVSlist>
+            <XRefList>
+                <XRef ID="CA122528" DB="ClinGen" />
+                <XRef ID="P01116#VAR_006839" DB="UniProtKB" />
+                <XRef Type="Allelic variant" ID="190070.0001" DB="OMIM" />
+                <XRef Type="rs" ID="121913530" DB="dbSNP" />
+            </XRefList>
+            <AlleleFrequencyList>
+                <AlleleFrequency Value="0.00002" Source="Exome Aggregation Consortium (ExAC)" />
+            </AlleleFrequencyList>
+        </SimpleAllele>
+        <RCVList>
+            <RCVAccession
+                Title="NM_004985.5(KRAS):c.34G>T (p.Gly12Cys) AND Colorectal cancer"
+                Accession="RCV000435281" Version="1">
+                <ClassifiedConditionList TraitSetID="20218">
+                    <ClassifiedCondition DB="MedGen" ID="C0346629">Colorectal cancer</ClassifiedCondition>
+                </ClassifiedConditionList>
+                <RCVClassifications>
+                    <SomaticClinicalImpact>
+                        <ReviewStatus>criteria provided, multiple submitters</ReviewStatus>
+                        <Description ClinicalImpactAssertionType="diagnostic"
+                            ClinicalImpactClinicalSignificance="supports diagnosis"
+                            SubmissionCount="1"
+                            DateLastEvaluated="2016-11-05">Tier I - Strong</Description>
+                        <Description ClinicalImpactAssertionType="therapeutic"
+                            ClinicalImpactClinicalSignificance="resistance" SubmissionCount="1"
+                            DateLastEvaluated="2016-12-16">Tier II - Potential</Description>
+                    </SomaticClinicalImpact>
+                    <OncogenicityClassification>
+                        <ReviewStatus>reviewed by expert panel</ReviewStatus>
+                        <Description DateLastEvaluated="2016-03-01" SubmissionCount="1">Oncogenic</Description>
+                    </OncogenicityClassification>
+                </RCVClassifications>
+            </RCVAccession>
+            <RCVAccession
+                Title="NM_004985.5(KRAS):c.34G>T (p.Gly12Cys) AND Prostate cancer, hereditary, 1"
+                Accession="RCV001292543" Version="1">
+                <ClassifiedConditionList TraitSetID="3547">
+                    <ClassifiedCondition DB="MedGen" ID="C4722327">Prostate cancer, hereditary, 1</ClassifiedCondition>
+                </ClassifiedConditionList>
+                <RCVClassifications>
+                    <GermlineClassification>
+                        <ReviewStatus>criteria provided, single submitter</ReviewStatus>
+                        <Description DateLastEvaluated="2019-02-02" SubmissionCount="1">Pathogenic</Description>
+                    </GermlineClassification>
+                </RCVClassifications>
+            </RCVAccession>
+        </RCVList>
+        <Classifications>
+            <GermlineClassification DateLastEvaluated="2019-02-02" DateCreated="2017-09-29"
+                MostRecentSubmission="2019-03-31" NumberOfSubmitters="1" NumberOfSubmissions="1">
+                <ReviewStatus>criteria provided, single submitter</ReviewStatus>
+                <Description>Pathogenic</Description>
+                <ConditionList>
+                    <TraitSet ID="3547" Type="Disease" ContributesToAggregateClinsig="true">
+                        <Trait ID="3389" Type="Disease">
+                            <Name>
+                                <ElementValue Type="Preferred">Prostate cancer, hereditary, 1</ElementValue>
+                                <XRef ID="Prostate+cancer%2C+hereditary%2C+1/9176"
+                                    DB="Genetic Alliance" />
+                                <XRef ID="MONDO:0011098" DB="MONDO" />
+                            </Name>
+                            <Symbol>
+                                <ElementValue Type="Alternate">PRCA1</ElementValue>
+                                <XRef Type="MIM" ID="601518" DB="OMIM" />
+                            </Symbol>
+                            <Symbol>
+                                <ElementValue Type="Preferred">HPC1</ElementValue>
+                                <XRef Type="MIM" ID="601518" DB="OMIM" />
+                            </Symbol>
+                            <AttributeSet>
+                                <Attribute Type="keyword">Neoplasm</Attribute>
+                            </AttributeSet>
+                            <AttributeSet>
+                                <Attribute Type="keyword">Hereditary cancer syndrome</Attribute>
+                            </AttributeSet>
+                            <Citation Type="general" Abbrev="ACMG/NSGC, 2015">
+                                <ID Source="PubMed">25394175</ID>
+                            </Citation>
+                            <Citation Type="practice guideline" Abbrev="NCCN, 2022">
+                                <URL>
+                                    https://www.nccn.org/professionals/physician_gls/pdf/prostate.pdf</URL>
+                                <CitationText>NCCN Clinical Practice Guidelines in Oncology,
+                                    Prostate Cancer, Version 4.2022</CitationText>
+                            </Citation>
+                            <Citation Type="general" Abbrev="ASCO, 2019">
+                                <ID Source="PubMed">31829902</ID>
+                            </Citation>
+                            <Citation Type="general" Abbrev="HKUA/HKSU-O, 2022">
+                                <ID Source="PubMed">35924163</ID>
+                                <ID Source="pmc">9339641</ID>
+                            </Citation>
+                            <XRef ID="1331" DB="Orphanet" />
+                            <XRef ID="C4722327" DB="MedGen" />
+                            <XRef ID="MONDO:0011098" DB="MONDO" />
+                            <XRef Type="MIM" ID="601518" DB="OMIM" />
+                        </Trait>
+                    </TraitSet>
+                </ConditionList>
+            </GermlineClassification>
+            <SomaticClinicalImpact DateLastEvaluated="2016-12-16" DateCreated="2016-07-26"
+                MostRecentSubmission="2019-04-02" NumberOfSubmitters="2" NumberOfSubmissions="2">
+                <ReviewStatus>criteria provided, multiple submitters</ReviewStatus>
+                <Description>Tier I - Strong</Description>
+                <Citation>
+                    <ID Source="PubMed">11810272</ID>
+                </Citation>
+                <Citation>
+                    <ID Source="PubMed">17765246</ID>
+                </Citation>
+                <Citation>
+                    <ID Source="PubMed">26892515</ID>
+                </Citation>
+                <ConditionList>
+                    <TraitSet ID="20218" Type="Disease" ContributesToAggregateClinsig="true">
+                        <Trait ID="32349" Type="Disease">
+                            <Name>
+                                <ElementValue Type="Preferred">Colorectal cancer</ElementValue>
+                                <XRef ID="UWMG_7884717" DB="CSER _CC_NCGL, University of Washington" />
+                                <XRef ID="Colorectal+Cancer/1746" DB="Genetic Alliance" />
+                                <XRef ID="MONDO:0005575" DB="MONDO" />
+                            </Name>
+                            <Name>
+                                <ElementValue Type="Alternate">Malignant Colorectal Neoplasm</ElementValue>
+                            </Name>
+                            <Name>
+                                <ElementValue Type="Alternate">Colorectal cancer, somatic</ElementValue>
+                            </Name>
+                            <Symbol>
+                                <ElementValue Type="Alternate">CRC</ElementValue>
+                                <XRef ID="GTR000500646" DB="Genetic Testing Registry (GTR)" />
+                            </Symbol>
+                            <AttributeSet>
+                                <Attribute Type="public definition">Lynch syndrome is characterized
+                                    by an increased risk for colorectal cancer (CRC) and cancers of
+                                    the endometrium, ovary, stomach, small bowel, urinary tract,
+                                    biliary tract, brain (usually glioblastoma), skin (sebaceous
+                                    adenomas, sebaceous carcinomas, and keratoacanthomas), pancreas,
+                                    and prostate. Cancer risks and age of onset vary depending on
+                                    the associated gene. Several other cancer types have been
+                                    reported to occur in individuals with Lynch syndrome (e.g.,
+                                    breast, sarcomas, adrenocortical carcinoma). However, the data
+                                    are not sufficient to demonstrate that the risk of developing
+                                    these cancers is increased in individuals with Lynch syndrome.</Attribute>
+                                <XRef ID="NBK1211" DB="GeneReviews" />
+                            </AttributeSet>
+                            <Citation Type="review" Abbrev="GeneReviews">
+                                <ID Source="PubMed">20301390</ID>
+                                <ID Source="BookShelf">NBK1211</ID>
+                            </Citation>
+                            <Citation Type="Suggested Reading"
+                                Abbrev="NCI PDQ, Genetics of Colorectal Cancer">
+                                <ID Source="PubMed">26389505</ID>
+                            </Citation>
+                            <Citation Type="Suggested Reading"
+                                Abbrev="NCI PDQ, Cancer Genetics Counseling">
+                                <ID Source="PubMed">26389258</ID>
+                            </Citation>
+                            <Citation Type="general" Abbrev="EHTG/ESCP, 2021">
+                                <ID Source="PubMed">34043773</ID>
+                            </Citation>
+                            <XRef ID="466667" DB="Orphanet" />
+                            <XRef ID="C0346629" DB="MedGen" />
+                            <XRef ID="MONDO:0005575" DB="MONDO" />
+                            <XRef Type="MIM" ID="114500" DB="OMIM" />
+                        </Trait>
+                    </TraitSet>
+                </ConditionList>
+            </SomaticClinicalImpact>
+            <OncogenicityClassification DateLastEvaluated="2016-03-01" DateCreated="2016-10-14"
+                MostRecentSubmission="2019-03-31" NumberOfSubmitters="1" NumberOfSubmissions="1">
+                <ReviewStatus>reviewed by expert panel</ReviewStatus>
+                <Description>Oncogenic</Description>
+                <ConditionList>
+                    <TraitSet ID="20218" Type="Disease" ContributesToAggregateClinsig="true">
+                        <Trait ID="32349" Type="Disease">
+                            <Name>
+                                <ElementValue Type="Preferred">Colorectal cancer</ElementValue>
+                                <XRef ID="UWMG_7884717" DB="CSER _CC_NCGL, University of Washington" />
+                                <XRef ID="Colorectal+Cancer/1746" DB="Genetic Alliance" />
+                                <XRef ID="MONDO:0005575" DB="MONDO" />
+                            </Name>
+                            <Name>
+                                <ElementValue Type="Alternate">Malignant Colorectal Neoplasm</ElementValue>
+                            </Name>
+                            <Name>
+                                <ElementValue Type="Alternate">Colorectal cancer, somatic</ElementValue>
+                            </Name>
+                            <Symbol>
+                                <ElementValue Type="Alternate">CRC</ElementValue>
+                                <XRef ID="GTR000500646" DB="Genetic Testing Registry (GTR)" />
+                            </Symbol>
+                            <AttributeSet>
+                                <Attribute Type="public definition">Lynch syndrome is characterized
+                                    by an increased risk for colorectal cancer (CRC) and cancers of
+                                    the endometrium, ovary, stomach, small bowel, urinary tract,
+                                    biliary tract, brain (usually glioblastoma), skin (sebaceous
+                                    adenomas, sebaceous carcinomas, and keratoacanthomas), pancreas,
+                                    and prostate. Cancer risks and age of onset vary depending on
+                                    the associated gene. Several other cancer types have been
+                                    reported to occur in individuals with Lynch syndrome (e.g.,
+                                    breast, sarcomas, adrenocortical carcinoma). However, the data
+                                    are not sufficient to demonstrate that the risk of developing
+                                    these cancers is increased in individuals with Lynch syndrome.</Attribute>
+                                <XRef ID="NBK1211" DB="GeneReviews" />
+                            </AttributeSet>
+                            <Citation Type="review" Abbrev="GeneReviews">
+                                <ID Source="PubMed">20301390</ID>
+                                <ID Source="BookShelf">NBK1211</ID>
+                            </Citation>
+                            <Citation Type="Suggested Reading"
+                                Abbrev="NCI PDQ, Genetics of Colorectal Cancer">
+                                <ID Source="PubMed">26389505</ID>
+                            </Citation>
+                            <Citation Type="Suggested Reading"
+                                Abbrev="NCI PDQ, Cancer Genetics Counseling">
+                                <ID Source="PubMed">26389258</ID>
+                            </Citation>
+                            <Citation Type="general" Abbrev="EHTG/ESCP, 2021">
+                                <ID Source="PubMed">34043773</ID>
+                            </Citation>
+                            <XRef ID="466667" DB="Orphanet" />
+                            <XRef ID="C0346629" DB="MedGen" />
+                            <XRef ID="MONDO:0005575" DB="MONDO" />
+                            <XRef Type="MIM" ID="114500" DB="OMIM" />
+                        </Trait>
+                    </TraitSet>
+                </ConditionList>
+            </OncogenicityClassification>
+        </Classifications>
+        <ClinicalAssertionList>
+            <ClinicalAssertion ID="619372" DateCreated="2016-10-14" DateLastUpdated="2019-03-31"
+                SubmissionDate="2016-10-14">
+                <ClinVarSubmissionID localKey="g.27158del" localKeyIsSubmitted="1"
+                    submittedAssembly="GRCh37" />
+                <ClinVarAccession Accession="SCV000322931" Type="SCV" Version="1"
+                    SubmitterName="Database of Curated Mutations (DoCM)" OrgID="505871"
+                    OrganizationCategory="resource" OrgAbbreviation="DoCM" />
+                <RecordStatus>current</RecordStatus>
+                <Classification DateLastEvaluated="2016-03-01">
+                    <ReviewStatus>reviewed by expert panel</ReviewStatus>
+                    <OncogenicityClassification>Oncogenic</OncogenicityClassification>
+                </Classification>
+                <Assertion>variation to disease</Assertion>
+                <AttributeSet>
+                    <Attribute Type="AssertionMethod">Oncogenicity SOP (ClinGen, CGC, VICC guidelines) 2022</Attribute>
+                    <Citation>
+                        <ID Source="PubMed">35101336</ID>
+                    </Citation>
+                </AttributeSet>
+                <ObservedInList>
+                    <ObservedIn>
+                        <Sample>
+                            <Origin>somatic</Origin>
+                            <SomaticVariantInNormalTissue>present</SomaticVariantInNormalTissue>
+                            <SomaticVariantAlleleFraction>20%</SomaticVariantAlleleFraction>
+                            <Species TaxonomyId="9606">human</Species>
+                            <AffectedStatus>yes</AffectedStatus>
+                        </Sample>
+                        <Method>
+                            <MethodType>research</MethodType>
+                        </Method>
+                        <ObservedData>
+                            <Attribute Type="Description">not provided</Attribute>
+                        </ObservedData>
+                    </ObservedIn>
+                </ObservedInList>
+                <SimpleAllele>
+                    <VariantType>Variation</VariantType>
+                    <Location>
+                        <SequenceLocation Assembly="GRCh37" Chr="12" alternateAllele="A"
+                            referenceAllele="C" start="25398285" stop="25398285" variantLength="1" />
+                    </Location>
+                </SimpleAllele>
+                <TraitSet Type="Disease">
+                    <Trait Type="Disease">
+                        <Name>
+                            <ElementValue Type="Preferred">colorectal cancer</ElementValue>
+                        </Name>
+                    </Trait>
+                </TraitSet>
+            </ClinicalAssertion>
+            <ClinicalAssertion ID="968401" DateCreated="2017-03-01" DateLastUpdated="2019-03-31"
+                SubmissionDate="2017-01-23">
+                <ClinVarSubmissionID localKey="GHPS_LDLR_211"
+                    submittedAssembly="GRCh37" />
+                <ClinVarAccession Accession="SCV000503296" Type="SCV" Version="1"
+                    SubmitterName="ClinVar"
+                    OrgID="500139" OrganizationCategory="other" />
+                <RecordStatus>current</RecordStatus>
+                <Classification DateLastEvaluated="2016-12-16">
+                    <ReviewStatus>criteria provided, single submitter</ReviewStatus>
+                    <SomaticClinicalImpact ClinicalImpactAssertionType="therapeutic"
+                        ClinicalImpactClinicalSignificance="resistance"
+                        DrugForTherapeuticAssertion="Sotorasib">Tier II - Potential</SomaticClinicalImpact>
+                </Classification>
+                <Assertion>variation to disease</Assertion>
+                <AttributeSet>
+                    <Attribute Type="AssertionMethod">AMP Guidelines, 2017</Attribute>
+                    <Citation>
+                        <ID Source="PubMed">27993330</ID>
+                    </Citation>
+                </AttributeSet>
+                <ObservedInList>
+                    <ObservedIn>
+                        <Sample>
+                            <Origin>somatic</Origin>
+                            <SomaticVariantInNormalTissue>present</SomaticVariantInNormalTissue>
+                            <SomaticVariantAlleleFraction>20%</SomaticVariantAlleleFraction>
+                            <Species TaxonomyId="9606">human</Species>
+                            <AffectedStatus>yes</AffectedStatus>
+                        </Sample>
+                        <Method>
+                            <MethodType>clinical testing</MethodType>
+                        </Method>
+                        <ObservedData>
+                            <Attribute Type="Description">not provided</Attribute>
+                        </ObservedData>
+                    </ObservedIn>
+                </ObservedInList>
+                <SimpleAllele>
+                    <VariantType>Variation</VariantType>
+                    <Location>
+                        <SequenceLocation Assembly="GRCh37" Chr="12" alternateAllele="A"
+                            referenceAllele="C" start="25398285" stop="25398285" variantLength="1" />
+                    </Location>
+                </SimpleAllele>
+                <TraitSet Type="Disease">
+                    <Trait Type="Disease">
+                        <Name>
+                            <ElementValue Type="Preferred">colorectal cancer</ElementValue>
+                        </Name>
+                    </Trait>
+                </TraitSet>
+                <SubmissionNameList>
+                    <SubmissionName>CGMC_UFGOD_20170123</SubmissionName>
+                </SubmissionNameList>
+            </ClinicalAssertion>
+            <ClinicalAssertion ID="1051854" DateCreated="2017-04-07" DateLastUpdated="2019-03-31"
+                SubmissionDate="2017-03-30">
+                <ClinVarSubmissionID localKey="Czech#084" localKeyIsSubmitted="1"
+                    submittedAssembly="GRCh37" />
+                <ClinVarAccession Accession="SCV000540791" Type="SCV" Version="1"
+                    SubmitterName="OMIM" OrgID="3" OrganizationCategory="resource" />
+                <RecordStatus>current</RecordStatus>
+                <Classification DateLastEvaluated="2016-11-05">
+                    <ReviewStatus>criteria provided, single submitter</ReviewStatus>
+                    <SomaticClinicalImpact ClinicalImpactAssertionType="diagnostic"
+                        ClinicalImpactClinicalSignificance="supports diagnosis">Tier I - Strong</SomaticClinicalImpact>
+                </Classification>
+                <Assertion>variation to disease</Assertion>
+                <AttributeSet>
+                    <Attribute Type="AssertionMethod">AMP Guidelines, 2017</Attribute>
+                    <Citation>
+                        <ID Source="PubMed">27993330</ID>
+                    </Citation>
+                </AttributeSet>
+                <ObservedInList>
+                    <ObservedIn>
+                        <Sample>
+                            <Origin>somatic</Origin>
+                            <SomaticVariantInNormalTissue>present</SomaticVariantInNormalTissue>
+                            <SomaticVariantAlleleFraction>20%</SomaticVariantAlleleFraction>
+                            <Species TaxonomyId="9606">human</Species>
+                            <AffectedStatus>yes</AffectedStatus>
+                        </Sample>
+                        <Method>
+                            <MethodType>literature only</MethodType>
+                        </Method>
+                        <ObservedData>
+                            <Attribute Type="Description">not provided</Attribute>
+                        </ObservedData>
+                    </ObservedIn>
+                </ObservedInList>
+                <SimpleAllele>
+                    <VariantType>Variation</VariantType>
+                    <Location>
+                        <SequenceLocation Assembly="GRCh37" Chr="12" alternateAllele="A"
+                            referenceAllele="C" start="25398285" stop="25398285" variantLength="1" />
+                    </Location>
+                </SimpleAllele>
+                <TraitSet Type="Disease">
+                    <Trait Type="Disease">
+                        <Name>
+                            <ElementValue Type="Preferred">colorectal cancer</ElementValue>
+                        </Name>
+                    </Trait>
+                </TraitSet>
+                <SubmissionNameList>
+                    <SubmissionName>FH_LDLR_Czech1</SubmissionName>
+                </SubmissionNameList>
+            </ClinicalAssertion>
+            <ClinicalAssertion ID="1172888" DateCreated="2017-09-29" DateLastUpdated="2019-03-31"
+                SubmissionDate="2017-04-25">
+                <ClinVarSubmissionID localKey="lvmdv1"
+                    submittedAssembly="GRCh37" />
+                <ClinVarAccession Accession="SCV000606324" Type="SCV" Version="1"
+                    SubmitterName="Database of Genomic Variants archive"
+                    OrgID="505764"
+                    OrganizationCategory="resource" />
+                <RecordStatus>current</RecordStatus>
+                <Classification DateLastEvaluated="2019-02-02">
+                    <ReviewStatus>criteria provided, single submitter</ReviewStatus>
+                    <GermlineClassification>Pathogenic</GermlineClassification>
+                </Classification>
+                <Assertion>variation to disease</Assertion>
+                <AttributeSet>
+                    <Attribute Type="AssertionMethod">ACMG Guidelines, 2015</Attribute>
+                    <Citation>
+                        <ID Source="PubMed">25741868</ID>
+                    </Citation>
+                </AttributeSet>
+                <ObservedInList>
+                    <ObservedIn>
+                        <Sample>
+                            <Origin>germline</Origin>
+                            <Species TaxonomyId="9606">human</Species>
+                            <AffectedStatus>unknown</AffectedStatus>
+                        </Sample>
+                        <Method>
+                            <MethodType>research</MethodType>
+                        </Method>
+                        <ObservedData>
+                            <Attribute Type="Description">not provided</Attribute>
+                        </ObservedData>
+                    </ObservedIn>
+                </ObservedInList>
+                <SimpleAllele>
+                    <VariantType>Variation</VariantType>
+                    <AttributeSet>
+                        <Attribute Type="HGVS">NG_007524.1:g.10570G>T</Attribute>
+                    </AttributeSet>
+                </SimpleAllele>
+                <TraitSet Type="Disease">
+                    <Trait Type="Disease">
+                        <XRef DB="MedGen" ID="C4722327" Type="CUI" />
+                    </Trait>
+                </TraitSet>
+                <SubmissionNameList>
+                    <SubmissionName>SUB2605339</SubmissionName>
+                </SubmissionNameList>
+            </ClinicalAssertion>
+        </ClinicalAssertionList>
+        <TraitMappingList>
+            <TraitMapping ClinicalAssertionID="619372" TraitType="Disease" MappingType="Name"
+                MappingValue="colorectal cancer" MappingRef="Preferred">
+                <MedGen CUI="C0346629" Name="Colorectal cancer" />
+            </TraitMapping>
+            <TraitMapping ClinicalAssertionID="968401" TraitType="Disease" MappingType="Name"
+                MappingValue="colorectal cancer" MappingRef="Preferred">
+                <MedGen CUI="C0346629" Name="Colorectal cancer" />
+            </TraitMapping>
+            <TraitMapping ClinicalAssertionID="1051854" TraitType="Disease" MappingType="Name"
+                MappingValue="colorectal cancer" MappingRef="Preferred">
+                <MedGen CUI="C0346629" Name="Colorectal cancer" />
+            </TraitMapping>
+            <TraitMapping ClinicalAssertionID="1172888" TraitType="Disease" MappingType="XRef"
+                MappingValue="C4722327" MappingRef="MedGen">
+                <MedGen CUI="C4722327" Name="Prostate cancer, hereditary, 1" />
+            </TraitMapping>
+        </TraitMappingList>
+    </ClassifiedRecord>
+</VariationArchive>

@@ -1,0 +1,260 @@
+<ClinVarSet ID="92469937">
+    <RecordStatus>current</RecordStatus>
+    <Title>NM_012433.4(SF3B1):c.1998G>T (p.Lys666Asn) AND Carcinoma of pancreas</Title>
+    <ReferenceClinVarAssertion ID="922149" DateLastUpdated="2022-04-23" DateCreated="2016-12-06">
+        <ClinVarAccession Acc="RCV000383398" Version="4" Type="RCV" DateUpdated="2022-04-23"
+            DateCreated="2016-12-06" />
+        <RecordStatus>current</RecordStatus>
+        <Classifications>
+            <SomaticClinicalImpact>
+                <ReviewStatus>criteria provided, single submitter</ReviewStatus>
+                <Description ClinicalImpactAssertionType="diagnostic"
+                    ClinicalImpactClinicalSignificance="supports diagnosis" SubmissionCount="1"
+                    DateLastEvaluated="2016-06-14">Tier II - Potential</Description>
+            </SomaticClinicalImpact>
+        </Classifications>
+        <Assertion Type="variation to disease" />
+        <ObservedIn>
+            <Sample>
+                <Origin>somatic</Origin>
+                <SomaticVariantInNormalTissue>present</SomaticVariantInNormalTissue>
+                <SomaticVariantAlleleFraction>15%</SomaticVariantAlleleFraction>
+                <Species TaxonomyId="9606">human</Species>
+                <AffectedStatus>unknown</AffectedStatus>
+            </Sample>
+            <Method>
+                <MethodType>clinical testing</MethodType>
+            </Method>
+            <ObservedData>
+                <Attribute Type="Description">not provided</Attribute>
+            </ObservedData>
+        </ObservedIn>
+        <MeasureSet Type="Variant" ID="219098" Acc="VCV000219098" Version="3">
+            <Measure Type="single nucleotide variant" ID="216787">
+                <Name>
+                    <ElementValue Type="Preferred">NM_012433.4(SF3B1):c.1998G>T (p.Lys666Asn)</ElementValue>
+                </Name>
+                <CanonicalSPDI>NC_000002.12:197402634:C:A</CanonicalSPDI>
+                <AttributeSet>
+                    <Attribute Accession="LRG_624t2" Type="HGVS, coding, LRG">LRG_624t2:c.1998G>T</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NM_012433" Version="4" Change="c.1998G>T"
+                        Type="HGVS, coding, RefSeq" MANESelect="true">NM_012433.4:c.1998G>T</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="LRG_624" Type="HGVS, genomic, LRG">LRG_624:g.37413G>T</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NG_032903" Version="2" Change="g.37413G>T"
+                        Type="HGVS, genomic, RefSeqGene">NG_032903.2:g.37413G>T</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NC_000002" Version="12" Change="g.197402635C>A"
+                        Type="HGVS, genomic, top level" integerValue="38">
+                        NC_000002.12:g.197402635C>A</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NC_000002" Version="11" Change="g.198267359C>A"
+                        Type="HGVS, genomic, top level, previous" integerValue="37">
+                        NC_000002.11:g.198267359C>A</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NM_012433" Version="3" Change="c.1998G>T"
+                        Type="HGVS, previous">NM_012433.3:c.1998G>T</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Type="HGVS, protein" />
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Type="HGVS, protein">p.K666N</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="LRG_624p2" Change="p.Lys666Asn" Type="HGVS, protein">
+                        LRG_624p2:p.Lys666Asn</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NP_036565" Version="2" Change="p.Lys666Asn"
+                        Type="HGVS, protein, RefSeq">NP_036565.2:p.Lys666Asn</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Accession="NP_036565" Version="2" Change="p.Lys666Asn"
+                        Type="HGVS, protein, RefSeq">NP_036565.2:p.Lys666Asn</Attribute>
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Type="MolecularConsequence">missense variant</Attribute>
+                    <XRef ID="SO:0001583" DB="Sequence Ontology" />
+                    <XRef ID="NM_012433.4:c.1998G>T" DB="RefSeq" />
+                </AttributeSet>
+                <AttributeSet>
+                    <Attribute Type="ProteinChange1LetterCode">K666N</Attribute>
+                </AttributeSet>
+                <CytogeneticLocation>2q33.1</CytogeneticLocation>
+                <SequenceLocation Assembly="GRCh38" AssemblyAccessionVersion="GCF_000001405.38"
+                    AssemblyStatus="current" Chr="2" Accession="NC_000002.12" start="197402635"
+                    stop="197402635" display_start="197402635" display_stop="197402635"
+                    variantLength="1" positionVCF="197402635" referenceAlleleVCF="C"
+                    alternateAlleleVCF="A" />
+                <SequenceLocation Assembly="GRCh37" AssemblyAccessionVersion="GCF_000001405.25"
+                    AssemblyStatus="previous" Chr="2" Accession="NC_000002.11" start="198267359"
+                    stop="198267359" display_start="198267359" display_stop="198267359"
+                    variantLength="1" positionVCF="198267359" referenceAlleleVCF="C"
+                    alternateAlleleVCF="A" />
+                <MeasureRelationship Type="within single gene">
+                    <Name>
+                        <ElementValue Type="Preferred">splicing factor 3b subunit 1</ElementValue>
+                    </Name>
+                    <Symbol>
+                        <ElementValue Type="Preferred">SF3B1</ElementValue>
+                    </Symbol>
+                    <SequenceLocation Assembly="GRCh38" AssemblyAccessionVersion="GCF_000001405.38"
+                        AssemblyStatus="current" Chr="2" Accession="NC_000002.12" start="197389784"
+                        stop="197435093" display_start="197389784" display_stop="197435093"
+                        Strand="-" />
+                    <SequenceLocation Assembly="GRCh37" AssemblyAccessionVersion="GCF_000001405.25"
+                        AssemblyStatus="previous" Chr="2" Accession="NC_000002.11" start="198256697"
+                        stop="198299770" display_start="198256697" display_stop="198299770"
+                        variantLength="43074" Strand="-" />
+                    <XRef ID="23451" DB="Gene" />
+                    <XRef Type="MIM" ID="605590" DB="OMIM" />
+                    <XRef ID="HGNC:10768" DB="HGNC" />
+                </MeasureRelationship>
+                <XRef Type="rs" ID="377023736" DB="dbSNP" />
+            </Measure>
+            <Name>
+                <ElementValue Type="Preferred">NM_012433.4(SF3B1):c.1998G>T (p.Lys666Asn)</ElementValue>
+            </Name>
+            <Name>
+                <ElementValue Type="Preferred">NM_012433.4(SF3B1):c.1998G>T (p.Lys666Asn)</ElementValue>
+            </Name>
+            <Name>
+                <ElementValue Type="Preferred">NM_012433.4(SF3B1):c.1998G>T (p.Lys666Asn)</ElementValue>
+            </Name>
+            <XRef ID="CA280929" DB="ClinGen" />
+        </MeasureSet>
+        <TraitSet Type="Disease" ID="6482">
+            <Trait ID="5725" Type="Disease">
+                <Name>
+                    <ElementValue Type="Preferred">Carcinoma of pancreas</ElementValue>
+                    <XRef ID="372142002" DB="SNOMED CT" />
+                </Name>
+                <Name>
+                    <ElementValue Type="Alternate">PANCREATIC ACINAR CARCINOMA</ElementValue>
+                    <XRef Type="MIM" ID="260350" DB="OMIM" />
+                </Name>
+                <Name>
+                    <ElementValue Type="Alternate">PANCREATIC CARCINOMA</ElementValue>
+                    <XRef Type="MIM" ID="260350" DB="OMIM" />
+                </Name>
+                <Name>
+                    <ElementValue Type="Alternate">Pancreatic cancer, somatic</ElementValue>
+                </Name>
+                <Name>
+                    <ElementValue Type="Alternate">Pancreatic carcinoma, somatic</ElementValue>
+                </Name>
+                <AttributeSet>
+                    <Attribute Type="disease mechanism" integerValue="273">loss of function</Attribute>
+                    <XRef ID="GTR000012368" DB="Genetic Testing Registry (GTR)" />
+                    <XRef ID="GTR000509790" DB="Genetic Testing Registry (GTR)" />
+                    <XRef ID="GTR000512726" DB="Genetic Testing Registry (GTR)" />
+                    <XRef ID="GTR000514885" DB="Genetic Testing Registry (GTR)" />
+                    <XRef ID="GTR000520069" DB="Genetic Testing Registry (GTR)" />
+                    <XRef ID="GTR000520394" DB="Genetic Testing Registry (GTR)" />
+                    <XRef ID="GTR000520865" DB="Genetic Testing Registry (GTR)" />
+                    <XRef ID="GTR000520866" DB="Genetic Testing Registry (GTR)" />
+                    <XRef ID="GTR000520867" DB="Genetic Testing Registry (GTR)" />
+                    <XRef ID="GTR000520868" DB="Genetic Testing Registry (GTR)" />
+                    <XRef ID="GTR000520869" DB="Genetic Testing Registry (GTR)" />
+                    <XRef ID="GTR000520870" DB="Genetic Testing Registry (GTR)" />
+                    <XRef ID="GTR000520871" DB="Genetic Testing Registry (GTR)" />
+                    <XRef ID="GTR000520872" DB="Genetic Testing Registry (GTR)" />
+                    <XRef ID="GTR000523331" DB="Genetic Testing Registry (GTR)" />
+                    <XRef ID="GTR000523332" DB="Genetic Testing Registry (GTR)" />
+                    <XRef ID="GTR000523334" DB="Genetic Testing Registry (GTR)" />
+                    <XRef ID="GTR000525919" DB="Genetic Testing Registry (GTR)" />
+                    <XRef ID="GTR000528054" DB="Genetic Testing Registry (GTR)" />
+                    <XRef ID="GTR000528055" DB="Genetic Testing Registry (GTR)" />
+                    <XRef ID="GTR000530120" DB="Genetic Testing Registry (GTR)" />
+                    <XRef ID="GTR000552440" DB="Genetic Testing Registry (GTR)" />
+                    <XRef ID="GTR000569881" DB="Genetic Testing Registry (GTR)" />
+                    <XRef ID="GTR000569885" DB="Genetic Testing Registry (GTR)" />
+                    <XRef ID="GTR000592353" DB="Genetic Testing Registry (GTR)" />
+                    <XRef ID="GTR000592354" DB="Genetic Testing Registry (GTR)" />
+                    <XRef ID="GTR000593404" DB="Genetic Testing Registry (GTR)" />
+                    <XRef ID="GTR000593405" DB="Genetic Testing Registry (GTR)" />
+                    <XRef ID="GTR000593406" DB="Genetic Testing Registry (GTR)" />
+                    <XRef ID="GTR000597429" DB="Genetic Testing Registry (GTR)" />
+                </AttributeSet>
+                <Citation Type="practice guideline" Abbrev="AHRQ, 2013">
+                    <URL>
+                        https://www.cms.gov/Medicare/Coverage/DeterminationProcess/downloads/id90TA.pdf</URL>
+                    <CitationText>Technology Assessment on Genetic Testing or Molecular Pathology
+                        Testing of Cancers with Unknown Primary Site to Determine Origin (ARCHIVED)</CitationText>
+                </Citation>
+                <Citation Type="general" Abbrev="ASCO, 2006">
+                    <ID Source="PubMed">17060676</ID>
+                </Citation>
+                <Citation Type="general" Abbrev="ASCO, 2014">
+                    <ID Source="PubMed">24493721</ID>
+                </Citation>
+                <Citation Type="general" Abbrev="ACMG/NSGC, 2015">
+                    <ID Source="PubMed">25394175</ID>
+                </Citation>
+                <XRef ID="MONDO:0005192" DB="MONDO" />
+                <XRef ID="C562463" DB="MeSH" />
+                <XRef ID="C0235974" DB="MedGen" />
+                <XRef ID="1333" DB="Orphanet" />
+                <XRef Type="MIM" ID="260350" DB="OMIM" />
+            </Trait>
+        </TraitSet>
+    </ReferenceClinVarAssertion>
+    <ClinVarAssertion ID="717597" SubmissionName="ICSL_2017Q1">
+        <ClinVarSubmissionID localKey="800692-1" submittedAssembly="GRCh37"
+            submitter="ClinVar" submitterDate="2016-10-18" />
+        <ClinVarAccession Acc="SCV000404076" DateCreated="2016-12-06" DateUpdated="2016-12-06"
+            Version="2" Type="SCV" OrgID="500139"
+            OrganizationCategory="other"
+            OrgType="primary" />
+        <RecordStatus>current</RecordStatus>
+        <Classification DateLastEvaluated="2016-06-14">
+            <ReviewStatus>criteria provided, single submitter</ReviewStatus>
+            <SomaticClinicalImpact ClinicalImpactAssertionType="diagnostic"
+                ClinicalImpactClinicalSignificance="supports diagnosis">Tier II - Potential</SomaticClinicalImpact>
+        </Classification>
+        <Assertion Type="variation to disease" />
+        <AttributeSet>
+            <Attribute Type="AssertionMethod">AMP Guidelines, 2017</Attribute>
+            <Citation>
+                <ID Source="PubMed">27993330</ID>
+            </Citation>
+        </AttributeSet>
+        <ObservedIn>
+            <Sample>
+                <Origin>somatic</Origin>
+                <SomaticVariantInNormalTissue>present</SomaticVariantInNormalTissue>
+                <SomaticVariantAlleleFraction>15%</SomaticVariantAlleleFraction>
+                <Species TaxonomyId="9606">human</Species>
+                <AffectedStatus>unknown</AffectedStatus>
+            </Sample>
+            <Method>
+                <MethodType>clinical testing</MethodType>
+            </Method>
+            <ObservedData>
+                <Attribute Type="Description">not provided</Attribute>
+            </ObservedData>
+        </ObservedIn>
+        <MeasureSet Type="Variant">
+            <Measure Type="Variation">
+                <SequenceLocation Assembly="GRCh37" Chr="2" alternateAllele="A" referenceAllele="C"
+                    start="198267359" stop="198267359" variantLength="1" />
+            </Measure>
+        </MeasureSet>
+        <TraitSet Type="Disease">
+            <Trait Type="Disease">
+                <Name>
+                    <ElementValue Type="Preferred">Pancreatic Cancer</ElementValue>
+                </Name>
+            </Trait>
+        </TraitSet>
+    </ClinVarAssertion>
+</ClinVarSet>
