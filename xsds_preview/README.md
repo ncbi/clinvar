@@ -1,0 +1,4 @@
+## Notes
+
+* Files clinvar_public_current.xsd, variation_archive_current.xsd are the current xsds that ClinVar uses for public xmls i.e. ClinVarFullRelease_.xml, ClinVarVariationRelease_.xml where as clinvar_public_proposed.xsd, variation_archive_proposed.xsd are proposed xsds for public xmls to support Classifications of somatic variants in ClinVar.
+* File clinvar_public_diff.html provides diff between clinvar_public_current.xsd and clinvar_public_proposed.xsd. Similarly varriation_archive_diff.html provides diff between variation_archive_current.xsd and variation_archive_proposed.xsd. xsd_change_highlights.xlsx provides the list of key changes. 
