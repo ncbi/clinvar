@@ -56,7 +56,32 @@ append the term that indicates the level of significance, i.e.
 The aggregate somatic clinical impact will be calculated as the highest tier that has been submitted for the variant, using review status of SCVs as described above.
 
 
-Conflicts will not be calculated for somatic clinical impact. It is anticipated that it will be common to have multiple classifications for different tumor types and that these should not be considered conflicts. Therefore only the highest tier is reported for the aggregate classification. In addition, on the variant (VCV) web pages, we will show additional information in the aggregate section, including the tumor type or number of tumor types reported for the variant and if there are also SCVs with lower tiers of evidence submitted.
+Conflicts will not be calculated for somatic clinical impact. It is anticipated that it will be common to have multiple classifications for different tumor types and that these should not be considered conflicts. Therefore only the highest tier is reported for the aggregate classification. 
+
+In addition, on the variant (VCV) web pages, we will show additional information in the aggregate section, including the tumor type or number of tumor types reported for the variant and if there are also SCVs with lower tiers of evidence submitted. This additional information will only be reported for submitted records that contribute to the review status.
+
+In the XML:
+-	conditions for the highest reported tier are represented as Classifications/SomaticClinicalImpact/ConditionList/TraitSet/@ContributestoAggregateClassification
+-	conditions reported for lower tiers are represented as Classifications/SomaticClinicalImpact/ConditionList/TraitSet/@LowerLevelsofEvidence
+### Examples:
+
+One-star submitters, multiple tumor types
+-	A variant has submitted records from three one-star submitters.
+-	The review status for the VCV record will be “criteria provided, multiple submitters”.
+-	One submitter classified the variant as Tier 1 for breast cancer; one as Tier 1 for prostate cancer; and one as Tier 1 for lung cancer.
+-	The top of the VCV page will report “Tier 1 for 3 tumor types”.
+
+One-star submitters, multiple tiers
+-	A variant has submitted records from three one-star submitters.
+-	The review status for the VCV record will be “criteria provided, multiple submitters”.
+-	One submitter classified the variant as Tier 1 for breast cancer; one as Tier 2 for prostate cancer; and one as Tier 3 for lung cancer.
+-	The top of the VCV page will report “Tier 1 for breast cancer and lower levels of evidence for two other tumor types”.
+
+Expert panel submitters
+-	A variant has submitted records from two expert panels and three other submitters.
+-	The review status for the VCV record will be “reviewed by expert panel”.
+-	The expert panels classified the variant as Tier 1 for breast cancer. The other submitters classified the variant for breast cancer and prostate cancer.
+-	The top of the VCV page will report “Tier 1 for breast cancer”. It will not mention other levels of evidence and other tumor types reported in submissions that do not contribute to the review status of “reviewed by expert panel”.
 
 
 ## Oncogenicity

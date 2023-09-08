@@ -259,6 +259,7 @@
             <xs:enumeration value="criteria provided, single submitter"/>
             <xs:enumeration value="reviewed by expert panel"/>
             <xs:enumeration value="practice guideline"/>
+            <xs:enumeration value="flagged submission"/>
             <!--The following values are added for backward compatibility from clinvar_public.xsd-->
             <xs:enumeration value="criteria provided, multiple submitters, no conflicts"/>
             <xs:enumeration value="criteria provided, conflicting interpretations"/>
@@ -296,6 +297,7 @@
             <xs:enumeration value="criteria provided, conflicting interpretations"/>
             <xs:enumeration value="reviewed by expert panel"/>
             <xs:enumeration value="practice guideline"/>
+            <xs:enumeration value="no classifications from unflagged records"/>
         </xs:restriction>
     </xs:simpleType>
     <xs:simpleType name="typeIncludedRecordReviewStatusValue">
@@ -351,6 +353,7 @@
             <xs:enumeration value="AssemblySpecificAlleleDefinition"/>
             <xs:enumeration value="AlignmentGapMakesAppearInconsistent"/>
             <xs:enumeration value="ExplanationOfInterpretation"/>
+            <xs:enumeration value="ClinGenComment"/>
         </xs:restriction>
     </xs:simpleType>
     <xs:simpleType name="typeNucleotideSequence">

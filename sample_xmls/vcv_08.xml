@@ -203,7 +203,7 @@
                 <ReviewStatus>criteria provided, single submitter</ReviewStatus>
                 <Description>Pathogenic</Description>
                 <ConditionList>
-                    <TraitSet ID="3547" Type="Disease" ContributesToAggregateClinsig="true">
+                    <TraitSet ID="3547" Type="Disease" ContributesToAggregateClassification="true" LowerLevelOfEvidence="true">
                         <Trait ID="3389" Type="Disease">
                             <Name>
                                 <ElementValue Type="Preferred">Prostate cancer, hereditary, 1</ElementValue>
@@ -263,7 +263,7 @@
                     <ID Source="PubMed">26892515</ID>
                 </Citation>
                 <ConditionList>
-                    <TraitSet ID="20218" Type="Disease" ContributesToAggregateClinsig="true">
+                    <TraitSet ID="20218" Type="Disease" ContributesToAggregateClassification="true">
                         <Trait ID="32349" Type="Disease">
                             <Name>
                                 <ElementValue Type="Preferred">Colorectal cancer</ElementValue>
@@ -323,7 +323,7 @@
                 <ReviewStatus>reviewed by expert panel</ReviewStatus>
                 <Description>Oncogenic</Description>
                 <ConditionList>
-                    <TraitSet ID="20218" Type="Disease" ContributesToAggregateClinsig="true">
+                    <TraitSet ID="20218" Type="Disease" ContributesToAggregateClassification="true">
                         <Trait ID="32349" Type="Disease">
                             <Name>
                                 <ElementValue Type="Preferred">Colorectal cancer</ElementValue>

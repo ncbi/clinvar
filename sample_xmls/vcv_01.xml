@@ -146,7 +146,7 @@
                 <ReviewStatus>reviewed by expert panel</ReviewStatus>
                 <Description>Tier II - Potential</Description>
                 <ConditionList>
-                    <TraitSet ID="6635" Type="Disease" ContributesToAggregateClinsig="true">
+                    <TraitSet ID="6635" Type="Disease" ContributesToAggregateClassification="true">
                         <Trait ID="2683" Type="Disease">
                             <Name>
                                 <ElementValue Type="Preferred">Chronic myelogenous leukemia,

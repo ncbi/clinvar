@@ -1,4 +1,4 @@
-<xs:schema version="1.13" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema version="1.13; December 7, 2014" xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:element name="ReleaseSet" type="ReleaseType"/>
     <xs:element name="ClinVarSet" type="PublicSetType">
         <xs:annotation>
@@ -1650,6 +1650,8 @@
             <xs:enumeration value="criteria provided, conflicting interpretations"/>
             <xs:enumeration value="reviewed by expert panel"/>
             <xs:enumeration value="practice guideline"/>
+            <xs:enumeration value="flagged submission"/>
+            <xs:enumeration value="no classifications from unflagged records"/>
             <!--The following values are for backward compatibility, before changing values review status based on assertion criteria. TODO: To remove-->
             <xs:enumeration value="classified by single submitter"/>
             <xs:enumeration value="reviewed by professional society"/>
@@ -1678,6 +1680,7 @@
             <xs:enumeration value="AssemblySpecificAlleleDefinition"/>
             <xs:enumeration value="AlignmentGapMakesAppearInconsistent"/>
             <xs:enumeration value="ExplanationOfInterpretation"/>
+            <xs:enumeration value="ClinGenComment"/>
         </xs:restriction>
     </xs:simpleType>
     <xs:simpleType name="SeverityType">

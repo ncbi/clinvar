@@ -221,7 +221,7 @@
                 <Description>Tier I - Strong</Description>
                 <ConditionList>
 
-                    <TraitSet ID="3348" Type="Disease" ContributesToAggregateClinsig="true">
+                    <TraitSet ID="3348" Type="Disease" ContributesToAggregateClassification="true">
                         <Trait ID="3682" Type="Disease">
                             <Name>
                                 <ElementValue Type="Preferred">Bone osteosarcoma</ElementValue>
@@ -241,7 +241,7 @@
                         </Trait>
                     </TraitSet>
 
-                    <TraitSet ID="6369" Type="Disease" ContributesToAggregateClinsig="true">
+                    <TraitSet ID="6369" Type="Disease" ContributesToAggregateClassification="true">
                         <Trait ID="2880" Type="Disease">
                             <Name>
                                 <ElementValue Type="Preferred">Malignant melanoma of skin</ElementValue>

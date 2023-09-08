@@ -250,7 +250,7 @@
                     <ID Source="PubMed">18397343</ID>
                 </Citation>
                 <ConditionList>
-                    <TraitSet ID="4069" Type="Disease" ContributesToAggregateClinsig="true">
+                    <TraitSet ID="4069" Type="Disease" ContributesToAggregateClassification="true">
                         <Trait ID="7728" Type="Disease">
                             <Name>
                                 <ElementValue Type="Alternate">Non-small cell lung cancer</ElementValue>
@@ -317,7 +317,7 @@
                             <XRef Type="primary" ID="HP:0030358" DB="Human Phenotype Ontology" />
                         </Trait>
                     </TraitSet>
-                    <TraitSet ID="25616" Type="Finding" ContributesToAggregateClinsig="false">
+                    <TraitSet ID="25616" Type="Finding" ContributesToAggregateClassification="false" LowerLevelOfEvidence="true">
                         <Trait ID="34847" Type="Finding">
                             <Name>
                                 <ElementValue Type="Preferred">Malignant tumor of breast</ElementValue>

@@ -246,11 +246,12 @@
     </xs:simpleType>
     <xs:simpleType name="typeSubmitterReviewStatusValue">
         <xs:restriction base="xs:string">
-            <xs:enumeration value="no assertion provided"/>
+            <xs:enumeration value="no classification provided"/>
             <xs:enumeration value="no assertion criteria provided"/>
             <xs:enumeration value="criteria provided, single submitter"/>
             <xs:enumeration value="reviewed by expert panel"/>
             <xs:enumeration value="practice guideline"/>
+            <xs:enumeration value="flagged submission"/>
             <!--The following values are added for backward compatibility from clinvar_public.xsd-->
             <xs:enumeration value="criteria provided, multiple submitters, no conflicts"/>
             <xs:enumeration value="criteria provided, conflicting classifications"/>
@@ -281,35 +282,40 @@
     </xs:simpleType>
     <xs:simpleType name="typeAggregateGermlineReviewStatusValue">
         <xs:restriction base="xs:string">
-            <xs:enumeration value="no assertion provided"/>
+            <xs:enumeration value="no classification provided"/>
             <xs:enumeration value="no assertion criteria provided"/>
             <xs:enumeration value="criteria provided, single submitter"/>
             <xs:enumeration value="criteria provided, multiple submitters, no conflicts"/>
-            <xs:enumeration value="criteria provided, conflicting Classifications"/>
+            <xs:enumeration value="criteria provided, conflicting classifications"/>
             <xs:enumeration value="reviewed by expert panel"/>
             <xs:enumeration value="practice guideline"/>
+            <xs:enumeration value="no classifications from unflagged records"/>
             <xs:enumeration value="no classification for the single variant"/>
         </xs:restriction>
     </xs:simpleType>
     <xs:simpleType name="typeAggregateSomaticClinicalImpactReviewStatusValue">
         <xs:restriction base="xs:string">
-            <xs:enumeration value="no assertion provided"/>
+            <xs:enumeration value="no classification provided"/>
             <xs:enumeration value="no assertion criteria provided"/>
             <xs:enumeration value="criteria provided, single submitter"/>
             <xs:enumeration value="criteria provided, multiple submitters"/>
             <xs:enumeration value="reviewed by expert panel"/>
             <xs:enumeration value="practice guideline"/>
+            <xs:enumeration value="no classifications from unflagged records"/>
+            <xs:enumeration value="no classification for the single variant"/>
         </xs:restriction>
     </xs:simpleType>
     <xs:simpleType name="typeAggregateOncogenicityReviewStatusValue">
         <xs:restriction base="xs:string">
-            <xs:enumeration value="no assertion provided"/>
+            <xs:enumeration value="no classification provided"/>
             <xs:enumeration value="no assertion criteria provided"/>
             <xs:enumeration value="criteria provided, single submitter"/>
             <xs:enumeration value="criteria provided, multiple submitters, no conflicts"/>
-            <xs:enumeration value="criteria provided, conflicting Classifications"/>
+            <xs:enumeration value="criteria provided, conflicting classifications"/>
             <xs:enumeration value="reviewed by expert panel"/>
             <xs:enumeration value="practice guideline"/>
+            <xs:enumeration value="no classifications from unflagged records"/>
+            <xs:enumeration value="no classification for the single variant"/>
         </xs:restriction>
     </xs:simpleType>
     <xs:simpleType name="typeOrigin">
@@ -360,6 +366,7 @@
             <xs:enumeration value="AssemblySpecificAlleleDefinition"/>
             <xs:enumeration value="AlignmentGapMakesAppearInconsistent"/>
             <xs:enumeration value="ExplanationOfClassification"/>
+            <xs:enumeration value="ClinGenComment"/>
         </xs:restriction>
     </xs:simpleType>
     <xs:simpleType name="typeNucleotideSequence">
@@ -1405,15 +1412,6 @@
                         conflict.</xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element maxOccurs="unbounded" minOccurs="0" name="ClassificationScore">
-                <xs:complexType>
-                    <xs:simpleContent>
-                        <xs:extension base="xs:decimal">
-                            <xs:attribute name="type" type="xs:string" use="optional"/>
-                        </xs:extension>
-                    </xs:simpleContent>
-                </xs:complexType>
-            </xs:element>
             <xs:element maxOccurs="unbounded" minOccurs="0" name="XRef" type="typeXref"/>
             <xs:element maxOccurs="unbounded" minOccurs="0" name="Citation" type="typeCitation"/>
             <xs:element maxOccurs="unbounded" minOccurs="0" name="Comment" type="typeComment"/>
@@ -1434,15 +1432,6 @@
                     <xs:documentation>We are not providing an enumeration for the values we report for
                         somatic clinical impact classification within the xsd. Details are in https://github.com/ncbi/clinvar/ClassificationOnClinVar.md.</xs:documentation>
                 </xs:annotation>
-            </xs:element>
-            <xs:element maxOccurs="unbounded" minOccurs="0" name="ClassificationScore">
-                <xs:complexType>
-                    <xs:simpleContent>
-                        <xs:extension base="xs:decimal">
-                            <xs:attribute name="type" type="xs:string" use="optional"/>
-                        </xs:extension>
-                    </xs:simpleContent>
-                </xs:complexType>
             </xs:element>
             <xs:element maxOccurs="unbounded" minOccurs="0" name="XRef" type="typeXref"/>
             <xs:element maxOccurs="unbounded" minOccurs="0" name="Citation" type="typeCitation"/>
@@ -1471,15 +1460,6 @@
                         data                   from submitters' The element summarizes the
                         conflict.</xs:documentation>
                 </xs:annotation>
-            </xs:element>
-            <xs:element maxOccurs="unbounded" minOccurs="0" name="ClassificationScore">
-                <xs:complexType>
-                    <xs:simpleContent>
-                        <xs:extension base="xs:decimal">
-                            <xs:attribute name="type" type="xs:string" use="optional"/>
-                        </xs:extension>
-                    </xs:simpleContent>
-                </xs:complexType>
             </xs:element>
             <xs:element maxOccurs="unbounded" minOccurs="0" name="XRef" type="typeXref"/>
             <xs:element maxOccurs="unbounded" minOccurs="0" name="Citation" type="typeCitation"/>
@@ -1521,8 +1501,7 @@
                 <xs:attribute name="DateCreated" type="xs:date"/>
                 <xs:attribute name="MostRecentSubmission" type="xs:date"/>
                 <xs:attribute name="NumberOfSubmitters" type="xs:nonNegativeInteger" use="required"/>
-                <xs:attribute name="NumberOfSubmissions" type="xs:nonNegativeInteger" use="required"
-                />
+                <xs:attribute name="NumberOfSubmissions" type="xs:nonNegativeInteger" use="required"/>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
@@ -1545,8 +1524,8 @@
                 <xs:attribute name="DateCreated" type="xs:date"/>
                 <xs:attribute name="MostRecentSubmission" type="xs:date"/>
                 <xs:attribute name="NumberOfSubmitters" type="xs:nonNegativeInteger" use="required"/>
-                <xs:attribute name="NumberOfSubmissions" type="xs:nonNegativeInteger" use="required"/>
-                <xs:attribute name="LowerLevelOfEvidence" type="xs:boolean"/>
+                <xs:attribute name="NumberOfSubmissions" type="xs:nonNegativeInteger" use="required"
+                />
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
@@ -1585,7 +1564,7 @@
             <xs:element name="ClassifiedConditionList">
                 <xs:complexType>
                     <xs:sequence>
-                        <xs:element maxOccurs="unbounded" minOccurs="0" name="ClassifiiedCondition"
+                        <xs:element maxOccurs="unbounded" minOccurs="0" name="ClassifiedCondition"
                             type="typeRCVInterpretedCondition"/>
                     </xs:sequence>
                     <xs:attribute name="TraitSetID" type="xs:positiveInteger" use="required"/>
@@ -1620,7 +1599,7 @@
                                 </xs:sequence>
                             </xs:complexType>
                         </xs:element>
-                        <xs:element minOccurs="0" name="SomaticClinicalImpact">
+                        <xs:element maxOccurs="1" minOccurs="0" name="SomaticClinicalImpact">
                             <xs:complexType>
                                 <xs:sequence>
                                     <xs:element maxOccurs="1" name="ReviewStatus"
@@ -1813,7 +1792,14 @@
         <xs:attribute name="Version" type="xs:int" use="required"/>
         <xs:attribute name="NumberOfSubmitters" type="xs:nonNegativeInteger" use="required"/>
         <xs:attribute name="NumberOfSubmissions" type="xs:nonNegativeInteger" use="required"/>
-        <xs:attribute name="RecordType" type="xs:string" use="required"/>
+        <xs:attribute name="RecordType" use="required">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="included"/>
+                    <xs:enumeration value="classified"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
     </xs:complexType>
     <xs:complexType name="ReleaseType">
         <xs:sequence>
@@ -2329,7 +2315,8 @@
         </xs:attribute>
         <xs:attribute name="DateLastEvaluated" type="xs:date"/>
         <xs:attribute name="ID" type="xs:positiveInteger" use="optional"/>
-        <xs:attribute name="ContributesToAggregateClinsig" type="xs:boolean"/>
+        <xs:attribute name="ContributesToAggregateClassification" type="xs:boolean"/>
+        <xs:attribute name="LowerLevelOfEvidence" type="xs:boolean"/>
         <xs:attribute name="multipleConditionExplanation" type="xs:string"/>
     </xs:complexType>
     <xs:simpleType name="ClinicalFeaturesAffectedStatusType">

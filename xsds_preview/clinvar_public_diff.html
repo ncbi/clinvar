@@ -118,25 +118,25 @@
   </head>
 
   <body>
-    <label style="display:block; margin-bottom:10px"><b>Differences: 11 difference blocks, 44 differences in total</b></label>
+    <label style="display:block; margin-bottom:10px"><b>Differences: 12 difference blocks, 45 differences in total</b></label>
 
     <label style="margin-right:20px"><b><br/>Comparison details by difference blocks:</b></label>
     <input type="radio" class="tableFilter" name="filter" id="all" checked/>
     <label class="allLbl filterLbl" for="all" title="all difference blocks">&nbsp;&#10003;&nbsp;</label>
-    <label class="filterLblText" for="all">all (11)</label>
+    <label class="filterLblText" for="all">all (12)</label>
     <input type="radio" class="tableFilter" name="filter" id="incoming"/>
     <label class="incomingLbl filterLbl" for="incoming" title="added to 2nd file / deleted from 1st one">&nbsp;&#10003;&nbsp;</label>
     <label class="filterLblText" for="incoming">added (1)</label>
     <input type="radio" class="tableFilter" name="filter" id="modifications"/>
     <label class="modificationsLbl filterLbl" for="modifications" title="modified">&nbsp;&#10003;&nbsp;</label>
-    <label class="filterLblText" for="modifications">modified (10)</label>
+    <label class="filterLblText" for="modifications">modified (11)</label>
 
     <table style="margin-top:.6em">
       <tr class="file">
-        <td class="filePath"><a href="file://current/clinvar_public.xsd" target="_blank">File 1: current/clinvar_public_current.xsd</a></td>
+        <td class="filePath"><a href="file://clinvar_public_current.xsd" target="_blank">File 1: clinvar_public_current.xsd</a></td>
         <td class="detailsStatus" style="border-left:hidden"></td>
         <td class="detailsStatus" style="border-left:hidden; border-right:hidden"></td>
-        <td class="filePath"><a href="file://proposed/clinvar_public.xsd" target="_blank">File 2: proposed/clinvar_public_proposed.xsd</a></td>
+        <td class="filePath"><a href="file://clinvar_public_proposed.xsd" target="_blank">File 2: clinvar_public_proposed.xsd</a></td>
       </tr>
     </table>
 
@@ -144,7 +144,7 @@
       <tr class="detailsModified">
         <td class="details content">
           <div>
-            <label class="lineNoLeft">1</label><span class="modified">&lt;xs:schema&nbsp;version=<span class="modifiedLevel2">"1.13"</span>&nbsp;xmlns:xs="http://www.w3.org/2001/XMLSchema"><span class="modifiedLevel2">&nbsp;</span></span>
+            <label class="lineNoLeft">1</label><span class="modified">&lt;xs:schema&nbsp;version=<span class="modifiedLevel2">"1.13;&nbsp;December&nbsp;7,&nbsp;2014"</span>&nbsp;xmlns:xs="http://www.w3.org/2001/XMLSchema"><span class="modifiedLevel2">&nbsp;</span></span>
           </div>
         </td>
         <td class="details detailsStatus" title="modified">&#8727;</td>
@@ -210,7 +210,8 @@
         <td class="details detailsStatus" title="modified">&#8727;</td>
         <td class="details content">
           <div>
-            <label class="lineNoRight">617</label><span class="modified">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:documentation><span class="modifiedLevel2">Used</span>&nbsp;to&nbsp;<span class="modifiedLevel2">bundle</span>&nbsp;<span class="modifiedLevel2">different</span>&nbsp;<span class="modifiedLevel2">types</span>&nbsp;of&nbsp;<span class="modifiedLevel2">Classifications&nbsp;(germline</span>,&nbsp;<span class="modifiedLevel2">oncogenic,&nbsp;somatic</span>&nbsp;<span class="modifiedLevel2">clinical</span>&nbsp;<span class="modifiedLevel2">impact).</span>&lt;/xs:documentation></span>
+            <label class="lineNoRight">617</label><span class="modified">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:documentation><span class="modifiedLevel2">Used</span>&nbsp;to&nbsp;<span class="modifiedLevel2">bundle</span>&nbsp;<span class="modifiedLevel2">different</span>&nbsp;<span class="modifiedLevel2">types</span>&nbsp;of&nbsp;<span class="modifiedLevel2">Classifications&nbsp;(germline,<br>
+            <label class="lineNoRight">618</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;oncogenic</span>,&nbsp;<span class="modifiedLevel2">somatic</span>&nbsp;<span class="modifiedLevel2">clinical</span>&nbsp;<span class="modifiedLevel2">impact).</span>&lt;/xs:documentation></span>
           </div>
         </td>
       </tr>
@@ -224,27 +225,27 @@
         <td class="details detailsStatus" title="added to 2nd file / deleted from 1st one">+</td>
         <td class="details content">
           <div>
-            <label class="lineNoRight">1410</label><span class="incoming">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="incomingLevel2">&lt;xs:element&nbsp;maxOccurs="1"&nbsp;minOccurs="0"&nbsp;name="SomaticVariantInNormalTissue"><br>
-            <label class="lineNoRight">1411</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:simpleType><br>
-            <label class="lineNoRight">1412</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:restriction&nbsp;base="xs:string"><br>
-            <label class="lineNoRight">1413</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:enumeration&nbsp;value="present"/><br>
-            <label class="lineNoRight">1414</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:enumeration&nbsp;value="absent"/><br>
-            <label class="lineNoRight">1415</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:enumeration&nbsp;value="not&nbsp;tested"/><br>
-            <label class="lineNoRight">1416</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:restriction><br>
-            <label class="lineNoRight">1417</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:simpleType><br>
-            <label class="lineNoRight">1418</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:element><br>
-            <label class="lineNoRight">1419</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="1"&nbsp;minOccurs="0"&nbsp;name="SomaticVariantAlleleFraction"<br>
-            <label class="lineNoRight">1420</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type="xs:string"/><br>
-            <label class="lineNoRight">1421</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&lt;xs:element&nbsp;maxOccurs="1"&nbsp;minOccurs="0"&nbsp;name="CellLine"&nbsp;type="xs:string"/></span>
+            <label class="lineNoRight">1411</label><span class="incoming">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="incomingLevel2">&lt;xs:element&nbsp;maxOccurs="1"&nbsp;minOccurs="0"&nbsp;name="SomaticVariantInNormalTissue"><br>
+            <label class="lineNoRight">1412</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:simpleType><br>
+            <label class="lineNoRight">1413</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:restriction&nbsp;base="xs:string"><br>
+            <label class="lineNoRight">1414</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:enumeration&nbsp;value="present"/><br>
+            <label class="lineNoRight">1415</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:enumeration&nbsp;value="absent"/><br>
+            <label class="lineNoRight">1416</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:enumeration&nbsp;value="not&nbsp;tested"/><br>
+            <label class="lineNoRight">1417</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:restriction><br>
+            <label class="lineNoRight">1418</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:simpleType><br>
+            <label class="lineNoRight">1419</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:element><br>
+            <label class="lineNoRight">1420</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="1"&nbsp;minOccurs="0"&nbsp;name="SomaticVariantAlleleFraction"<br>
+            <label class="lineNoRight">1421</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type="xs:string"/><br>
+            <label class="lineNoRight">1422</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&lt;xs:element&nbsp;maxOccurs="1"&nbsp;minOccurs="0"&nbsp;name="CellLine"&nbsp;type="xs:string"/></span>
           </div>
         </td>
       </tr>
       <tr class="detailsModified">
         <td class="details content">
           <div>
-            <label class="lineNoLeft">1537</label><span class="modified">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:documentation><span class="modifiedLevel2">We</span>&nbsp;<span class="modifiedLevel2">are</span>&nbsp;<span class="modifiedLevel2">not</span>&nbsp;<span class="modifiedLevel2">providing</span>&nbsp;<span class="modifiedLevel2">an</span>&nbsp;<span class="modifiedLevel2">enumeration</span>&nbsp;<span class="modifiedLevel2">for</span>&nbsp;<span class="modifiedLevel2">the</span>&nbsp;<span class="outgoingLevel2">values&nbsp;we&nbsp;report<br>
-            <label class="lineNoLeft">1538</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;clinical&nbsp;significance&nbsp;</span>within<span class="outgoingLevel2">&nbsp;the&nbsp;xsd.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;values&nbsp;are&nbsp;maintained</span><br>
-            <label class="lineNoLeft">1539</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="modifiedLevel2">here:<br>
+            <label class="lineNoLeft">1537</label><span class="modified">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:documentation><span class="modifiedLevel2">We</span>&nbsp;<span class="modifiedLevel2">are</span>&nbsp;<span class="modifiedLevel2">not</span>&nbsp;<span class="modifiedLevel2">providing</span>&nbsp;<span class="modifiedLevel2">an</span>&nbsp;<span class="modifiedLevel2">enumeration</span>&nbsp;<span class="modifiedLevel2">for</span>&nbsp;<span class="modifiedLevel2">the&nbsp;values&nbsp;we&nbsp;report</span><br>
+            <label class="lineNoLeft">1538</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="outgoingLevel2">for&nbsp;clinical&nbsp;significance&nbsp;</span>within<span class="modifiedLevel2">&nbsp;the&nbsp;xsd.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;values&nbsp;are&nbsp;maintained<br>
+            <label class="lineNoLeft">1539</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;here:<br>
             <label class="lineNoLeft">1540</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ftp://ftp.ncbi.nlm.nih.gov/pub/GTR/standard_terms/Clinical_significance.txt.<br>
             <label class="lineNoLeft">1541</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&lt;/xs:documentation></span>
           </div>
@@ -253,8 +254,8 @@
         <td class="details detailsStatus" title="modified">&#8727;</td>
         <td class="details content">
           <div>
-            <label class="lineNoRight">1545</label><span class="modified">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:documentation><span class="modifiedLevel2">Structure</span>&nbsp;<span class="modifiedLevel2">used</span>&nbsp;<span class="modifiedLevel2">to</span>&nbsp;<span class="modifiedLevel2">support</span>&nbsp;<span class="modifiedLevel2">old</span>&nbsp;<span class="modifiedLevel2">data</span>&nbsp;<span class="modifiedLevel2">of</span>&nbsp;<span class="modifiedLevel2">AlleleDescriptionSet</span>&nbsp;within<br>
-            <label class="lineNoRight">1546</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="modifiedLevel2">Co-occurenceSet</span>&lt;/xs:documentation></span>
+            <label class="lineNoRight">1546</label><span class="modified">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:documentation><span class="modifiedLevel2">Structure</span>&nbsp;<span class="modifiedLevel2">used</span>&nbsp;<span class="modifiedLevel2">to</span>&nbsp;<span class="modifiedLevel2">support</span>&nbsp;<span class="modifiedLevel2">old</span>&nbsp;<span class="modifiedLevel2">data</span>&nbsp;<span class="modifiedLevel2">of</span>&nbsp;<span class="modifiedLevel2">AlleleDescriptionSet</span><br>
+            <label class="lineNoRight">1547</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;within<span class="modifiedLevel2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Co-occurenceSet</span>&lt;/xs:documentation></span>
           </div>
         </td>
       </tr>
@@ -268,7 +269,7 @@
         <td class="details detailsStatus" title="modified">&#8727;</td>
         <td class="details content">
           <div>
-            <label class="lineNoRight">1562</label><span class="modified">&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:complexType&nbsp;name=<span class="modifiedLevel2">"ClassificationType"</span>></span>
+            <label class="lineNoRight">1563</label><span class="modified">&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:complexType&nbsp;name=<span class="modifiedLevel2">"ClassificationType"</span>></span>
           </div>
         </td>
       </tr>
@@ -316,185 +317,206 @@
         <td class="details detailsStatus" title="modified">&#8727;</td>
         <td class="details content">
           <div>
-            <label class="lineNoRight">1564</label><span class="modified">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;minOccurs="0"&nbsp;name=<span class="modifiedLevel2">"GermlineClassification"<br>
-            <label class="lineNoRight">1565</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</span>=<span class="modifiedLevel2">"typeSingleGermlineClassification"</span>/><br>
-            <label class="lineNoRight">1566</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;minOccurs="0"&nbsp;name=<span class="modifiedLevel2">"SomaticClinicalImpact"<br>
-            <label class="lineNoRight">1567</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</span>=<span class="modifiedLevel2">"typeSingleSomaticClinicalImpact"/></span><br>
-            <label class="lineNoRight">1568</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;minOccurs="0"&nbsp;name=<span class="modifiedLevel2">"OncogenicityClassification"<br>
-            <label class="lineNoRight">1569</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</span>=<span class="modifiedLevel2">"typeSingleOncogenicityClassification"/></span><br>
-            <label class="lineNoRight">1570</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence><br>
-            <label class="lineNoRight">1571</label>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:complexType><br>
-            <label class="lineNoRight">1572</label>&nbsp;&nbsp;&nbsp;&nbsp;<span class="incomingLevel2">&lt;xs:complexType&nbsp;name="typeSingleGermlineClassification"><br>
-            <label class="lineNoRight">1573</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence><br>
-            <label class="lineNoRight">1574</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="1"&nbsp;minOccurs="0"&nbsp;name="ReviewStatus"&nbsp;type="ReviewStatusType"><br>
-            <label class="lineNoRight">1575</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:annotation><br>
-            <label class="lineNoRight">1576</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:documentation>The&nbsp;aggregate&nbsp;review&nbsp;status&nbsp;based&nbsp;on&nbsp;all&nbsp;germline&nbsp;submissions&nbsp;for&nbsp;this<br>
-            <label class="lineNoRight">1577</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;record.&lt;/xs:documentation><br>
-            <label class="lineNoRight">1578</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:annotation><br>
-            <label class="lineNoRight">1579</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:element><br>
-            <label class="lineNoRight">1580</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="1"&nbsp;minOccurs="0"&nbsp;name="Description"><br>
-            <label class="lineNoRight">1581</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:annotation><br>
-            <label class="lineNoRight">1582</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:documentation>We&nbsp;are&nbsp;not&nbsp;providing&nbsp;an&nbsp;enumeration&nbsp;for&nbsp;the&nbsp;values&nbsp;we&nbsp;report<br>
-            <label class="lineNoRight">1583</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;germline&nbsp;classification&nbsp;within&nbsp;the&nbsp;xsd.&nbsp;Details&nbsp;are&nbsp;in&nbsp;https://github.com/ncbi/clinvar/ClassificationOnClinVar.md.&lt;/xs:documentation><br>
-            <label class="lineNoRight">1584</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:annotation><br>
-            <label class="lineNoRight">1585</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:complexType><br>
-            <label class="lineNoRight">1586</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:simpleContent><br>
-            <label class="lineNoRight">1587</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:extension&nbsp;base="xs:string"><br>
-            <label class="lineNoRight">1588</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute&nbsp;name="DateLastEvaluated"&nbsp;type="xs:date"&nbsp;use="optional"/><br>
-            <label class="lineNoRight">1589</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute&nbsp;name="SubmissionCount"&nbsp;type="xs:nonNegativeInteger"/><br>
-            <label class="lineNoRight">1590</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:extension><br>
-            <label class="lineNoRight">1591</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:simpleContent><br>
-            <label class="lineNoRight">1592</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:complexType><br>
-            <label class="lineNoRight">1593</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:element><br>
-            <label class="lineNoRight">1594</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="1"&nbsp;minOccurs="0"&nbsp;name="Explanation"&nbsp;type="CommentType"><br>
-            <label class="lineNoRight">1595</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:annotation><br>
-            <label class="lineNoRight">1596</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:documentation>Explanation&nbsp;is&nbsp;used&nbsp;only&nbsp;when&nbsp;the&nbsp;description&nbsp;is&nbsp;'conflicting<br>
-            <label class="lineNoRight">1597</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from&nbsp;submitters'&nbsp;The&nbsp;element&nbsp;summarizes&nbsp;the<br>
-            <label class="lineNoRight">1598</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;conflict.&lt;/xs:documentation><br>
-            <label class="lineNoRight">1599</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:annotation><br>
-            <label class="lineNoRight">1600</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:element><br>
-            <label class="lineNoRight">1601</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="unbounded"&nbsp;minOccurs="0"&nbsp;name="XRef"&nbsp;type="XrefType"/><br>
-            <label class="lineNoRight">1602</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="unbounded"&nbsp;minOccurs="0"&nbsp;name="Citation"&nbsp;type="CitationType"/><br>
-            <label class="lineNoRight">1603</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="unbounded"&nbsp;minOccurs="0"&nbsp;name="Comment"&nbsp;type="CommentType"/><br>
-            <label class="lineNoRight">1604</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence><br>
-            <label class="lineNoRight">1605</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--missing&nbsp;change&nbsp;required&nbsp;to&nbsp;optional--><br>
-            <label class="lineNoRight">1606</label>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:complexType><br>
-            <label class="lineNoRight">1607</label>&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:complexType&nbsp;name="typeSingleSomaticClinicalImpact"><br>
-            <label class="lineNoRight">1608</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence><br>
-            <label class="lineNoRight">1609</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="1"&nbsp;minOccurs="0"&nbsp;name="ReviewStatus"&nbsp;type="ReviewStatusType"><br>
-            <label class="lineNoRight">1610</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:annotation><br>
-            <label class="lineNoRight">1611</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:documentation>The&nbsp;aggregate&nbsp;review&nbsp;status&nbsp;based&nbsp;on&nbsp;all&nbsp;somatic&nbsp;clinical&nbsp;impact&nbsp;submissions&nbsp;for&nbsp;this<br>
-            <label class="lineNoRight">1612</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;record.&lt;/xs:documentation><br>
-            <label class="lineNoRight">1613</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:annotation><br>
-            <label class="lineNoRight">1614</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:element><br>
-            <label class="lineNoRight">1615</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="unbounded"&nbsp;minOccurs="0"&nbsp;name="Description"><br>
-            <label class="lineNoRight">1616</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:annotation><br>
-            <label class="lineNoRight">1617</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:documentation>We&nbsp;are&nbsp;not&nbsp;providing&nbsp;an&nbsp;enumeration&nbsp;for&nbsp;the&nbsp;values&nbsp;we&nbsp;report<br>
-            <label class="lineNoRight">1618</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;somatic&nbsp;clinical&nbsp;impact&nbsp;within&nbsp;the&nbsp;xsd.&nbsp;Details&nbsp;are&nbsp;in&nbsp;https://github.com/ncbi/clinvar/ClassificationOnClinVar.md.&lt;/xs:documentation><br>
-            <label class="lineNoRight">1619</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:annotation><br>
-            <label class="lineNoRight">1620</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:complexType><br>
-            <label class="lineNoRight">1621</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:simpleContent><br>
-            <label class="lineNoRight">1622</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:extension&nbsp;base="xs:string"><br>
-            <label class="lineNoRight">1623</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute&nbsp;name="ClinicalImpactAssertionType"&nbsp;type="xs:string"<br>
-            <label class="lineNoRight">1624</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;use="optional"/><br>
-            <label class="lineNoRight">1625</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute&nbsp;name="ClinicalImpactClinicalSignificance"&nbsp;type="xs:string"<br>
-            <label class="lineNoRight">1626</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;use="optional"/><br>
-            <label class="lineNoRight">1627</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute&nbsp;name="DateLastEvaluated"&nbsp;type="xs:date"&nbsp;use="optional"/><br>
-            <label class="lineNoRight">1628</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute&nbsp;name="SubmissionCount"&nbsp;type="xs:nonNegativeInteger"/><br>
-            <label class="lineNoRight">1629</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:extension><br>
-            <label class="lineNoRight">1630</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:simpleContent><br>
-            <label class="lineNoRight">1631</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:complexType><br>
-            <label class="lineNoRight">1632</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:element><br>
-            <label class="lineNoRight">1633</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="unbounded"&nbsp;minOccurs="0"&nbsp;name="XRef"&nbsp;type="XrefType"/><br>
-            <label class="lineNoRight">1634</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="unbounded"&nbsp;minOccurs="0"&nbsp;name="Citation"&nbsp;type="CitationType"/><br>
-            <label class="lineNoRight">1635</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="unbounded"&nbsp;minOccurs="0"&nbsp;name="Comment"&nbsp;type="CommentType"/><br>
-            <label class="lineNoRight">1636</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence><br>
-            <label class="lineNoRight">1637</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--missing&nbsp;change&nbsp;required&nbsp;to&nbsp;optional--><br>
-            <label class="lineNoRight">1638</label>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:complexType><br>
-            <label class="lineNoRight">1639</label>&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:complexType&nbsp;name="typeSingleOncogenicityClassification"><br>
-            <label class="lineNoRight">1640</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence><br>
-            <label class="lineNoRight">1641</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="1"&nbsp;minOccurs="0"&nbsp;name="ReviewStatus"&nbsp;type="ReviewStatusType"><br>
-            <label class="lineNoRight">1642</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:annotation><br>
-            <label class="lineNoRight">1643</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:documentation>The&nbsp;aggregate&nbsp;review&nbsp;status&nbsp;based&nbsp;on&nbsp;all&nbsp;oncogenic&nbsp;submissions&nbsp;for&nbsp;this<br>
-            <label class="lineNoRight">1644</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;record.&lt;/xs:documentation><br>
-            <label class="lineNoRight">1645</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:annotation><br>
-            <label class="lineNoRight">1646</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:element><br>
-            <label class="lineNoRight">1647</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="1"&nbsp;minOccurs="0"&nbsp;name="Description"><br>
-            <label class="lineNoRight">1648</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:annotation><br>
-            <label class="lineNoRight">1649</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:documentation>We&nbsp;are&nbsp;not&nbsp;providing&nbsp;an&nbsp;enumeration&nbsp;for&nbsp;the&nbsp;values&nbsp;we&nbsp;report<br>
-            <label class="lineNoRight">1650</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;&nbsp;oncogenicity&nbsp;classification&nbsp;within&nbsp;the&nbsp;xsd.&nbsp;Details&nbsp;are&nbsp;in&nbsp;https://github.com/ncbi/clinvar/ClassificationOnClinVar.md.&lt;/xs:documentation><br>
-            <label class="lineNoRight">1651</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:annotation><br>
-            <label class="lineNoRight">1652</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:complexType><br>
-            <label class="lineNoRight">1653</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:simpleContent><br>
-            <label class="lineNoRight">1654</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:extension&nbsp;base="xs:string"><br>
-            <label class="lineNoRight">1655</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute&nbsp;name="DateLastEvaluated"&nbsp;type="xs:date"&nbsp;use="optional"/><br>
-            <label class="lineNoRight">1656</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute&nbsp;name="SubmissionCount"&nbsp;type="xs:nonNegativeInteger"/><br>
-            <label class="lineNoRight">1657</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:extension><br>
-            <label class="lineNoRight">1658</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:simpleContent><br>
-            <label class="lineNoRight">1659</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:complexType><br>
-            <label class="lineNoRight">1660</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:element><br>
-            <label class="lineNoRight">1661</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="1"&nbsp;minOccurs="0"&nbsp;name="Explanation"&nbsp;type="CommentType"><br>
-            <label class="lineNoRight">1662</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:annotation><br>
-            <label class="lineNoRight">1663</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:documentation>Explanation&nbsp;is&nbsp;used&nbsp;only&nbsp;when&nbsp;the&nbsp;description&nbsp;is&nbsp;'conflicting<br>
-            <label class="lineNoRight">1664</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from&nbsp;submitters'&nbsp;The&nbsp;element&nbsp;summarizes&nbsp;the<br>
-            <label class="lineNoRight">1665</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;conflict.&lt;/xs:documentation><br>
-            <label class="lineNoRight">1666</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:annotation><br>
-            <label class="lineNoRight">1667</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:element><br>
-            <label class="lineNoRight">1668</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="unbounded"&nbsp;minOccurs="0"&nbsp;name="XRef"&nbsp;type="XrefType"/><br>
-            <label class="lineNoRight">1669</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="unbounded"&nbsp;minOccurs="0"&nbsp;name="Citation"&nbsp;type="CitationType"/><br>
-            <label class="lineNoRight">1670</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="unbounded"&nbsp;minOccurs="0"&nbsp;name="Comment"&nbsp;type="CommentType"/><br>
-            <label class="lineNoRight">1671</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence><br>
-            <label class="lineNoRight">1672</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--missing&nbsp;change&nbsp;required&nbsp;to&nbsp;optional--><br>
-            <label class="lineNoRight">1673</label>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:complexType><br>
-            <label class="lineNoRight">1674</label>&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:complexType&nbsp;name="ClassificationTypeSCV"><br>
-            <label class="lineNoRight">1675</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence><br>
-            <label class="lineNoRight">1676</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="1"&nbsp;minOccurs="0"&nbsp;name="ReviewStatus"&nbsp;type="ReviewStatusType"/><br>
-            <label class="lineNoRight">1677</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:choice><br>
-            <label class="lineNoRight">1678</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="1"&nbsp;minOccurs="0"&nbsp;name="GermlineClassification"<br>
-            <label class="lineNoRight">1679</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type="xs:string"/><br>
-            <label class="lineNoRight">1680</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="1"&nbsp;minOccurs="0"&nbsp;name="SomaticClinicalImpact"><br>
-            <label class="lineNoRight">1681</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:complexType><br>
-            <label class="lineNoRight">1682</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:simpleContent><br>
-            <label class="lineNoRight">1683</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:extension&nbsp;base="xs:string"><br>
-            <label class="lineNoRight">1684</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute&nbsp;name="ClinicalImpactAssertionType"&nbsp;type="xs:string"<br>
-            <label class="lineNoRight">1685</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;use="optional"/><br>
-            <label class="lineNoRight">1686</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute&nbsp;name="ClinicalImpactClinicalSignificance"<br>
-            <label class="lineNoRight">1687</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type="xs:string"&nbsp;use="optional"/><br>
-            <label class="lineNoRight">1688</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute&nbsp;name="DrugForTherapeuticAssertion"&nbsp;type="xs:string"<br>
-            <label class="lineNoRight">1689</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;use="optional"/><br>
-            <label class="lineNoRight">1690</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:extension><br>
-            <label class="lineNoRight">1691</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:simpleContent><br>
-            <label class="lineNoRight">1692</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:complexType><br>
-            <label class="lineNoRight">1693</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:element><br>
-            <label class="lineNoRight">1694</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="1"&nbsp;minOccurs="0"&nbsp;name="OncogenicityClassification"<br>
-            <label class="lineNoRight">1695</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type="xs:string"/><br>
-            <label class="lineNoRight">1696</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:choice><br>
-            <label class="lineNoRight">1697</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="1"&nbsp;minOccurs="0"&nbsp;name="ExplanationOfClassification"<br>
-            <label class="lineNoRight">1698</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type="xs:string"/><br>
-            <label class="lineNoRight">1699</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="unbounded"&nbsp;minOccurs="0"&nbsp;name="ClassificationScore"><br>
-            <label class="lineNoRight">1700</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:complexType><br>
-            <label class="lineNoRight">1701</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:simpleContent><br>
-            <label class="lineNoRight">1702</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:extension&nbsp;base="xs:decimal"><br>
-            <label class="lineNoRight">1703</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute&nbsp;name="type"&nbsp;type="xs:string"&nbsp;use="optional"/><br>
-            <label class="lineNoRight">1704</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:extension><br>
-            <label class="lineNoRight">1705</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:simpleContent><br>
-            <label class="lineNoRight">1706</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:complexType><br>
-            <label class="lineNoRight">1707</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:element><br>
-            <label class="lineNoRight">1708</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="unbounded"&nbsp;minOccurs="0"&nbsp;name="XRef"&nbsp;type="XrefType"/><br>
-            <label class="lineNoRight">1709</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="unbounded"&nbsp;minOccurs="0"&nbsp;name="Citation"&nbsp;type="CitationType"/><br>
-            <label class="lineNoRight">1710</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="unbounded"&nbsp;minOccurs="0"&nbsp;name="Comment"&nbsp;type="CommentType"/><br>
-            <label class="lineNoRight">1711</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence><br>
-            <label class="lineNoRight">1712</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute&nbsp;name="DateLastEvaluated"&nbsp;type="xs:date"&nbsp;use="optional"/><br>
-            <label class="lineNoRight">1713</label>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:complexType><br>
-            <label class="lineNoRight">1714</label>&nbsp;&nbsp;&nbsp;&nbsp;</span>&lt;xs:complexType&nbsp;name="AlleleDescType"><span class="modifiedLevel2">&nbsp;</span></span>
+            <label class="lineNoRight">1565</label><span class="modified">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;minOccurs="0"&nbsp;name=<span class="modifiedLevel2">"GermlineClassification"<br>
+            <label class="lineNoRight">1566</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</span>=<span class="modifiedLevel2">"typeSingleGermlineClassification"</span>/><br>
+            <label class="lineNoRight">1567</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;minOccurs="0"&nbsp;name=<span class="modifiedLevel2">"SomaticClinicalImpact"<br>
+            <label class="lineNoRight">1568</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</span>=<span class="modifiedLevel2">"typeSingleSomaticClinicalImpact"/></span><br>
+            <label class="lineNoRight">1569</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;minOccurs="0"&nbsp;name=<span class="modifiedLevel2">"OncogenicityClassification"<br>
+            <label class="lineNoRight">1570</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</span>=<span class="modifiedLevel2">"typeSingleOncogenicityClassification"/></span><br>
+            <label class="lineNoRight">1571</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence><br>
+            <label class="lineNoRight">1572</label>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:complexType><br>
+            <label class="lineNoRight">1573</label>&nbsp;&nbsp;&nbsp;&nbsp;<span class="incomingLevel2">&lt;xs:complexType&nbsp;name="typeSingleGermlineClassification"><br>
+            <label class="lineNoRight">1574</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence><br>
+            <label class="lineNoRight">1575</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="1"&nbsp;minOccurs="0"&nbsp;name="ReviewStatus"&nbsp;type="ReviewStatusType"><br>
+            <label class="lineNoRight">1576</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:annotation><br>
+            <label class="lineNoRight">1577</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:documentation>The&nbsp;aggregate&nbsp;review&nbsp;status&nbsp;based&nbsp;on&nbsp;all&nbsp;germline&nbsp;submissions<br>
+            <label class="lineNoRight">1578</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;this&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;record.&lt;/xs:documentation><br>
+            <label class="lineNoRight">1579</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:annotation><br>
+            <label class="lineNoRight">1580</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:element><br>
+            <label class="lineNoRight">1581</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="1"&nbsp;minOccurs="0"&nbsp;name="Description"><br>
+            <label class="lineNoRight">1582</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:annotation><br>
+            <label class="lineNoRight">1583</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:documentation>We&nbsp;are&nbsp;not&nbsp;providing&nbsp;an&nbsp;enumeration&nbsp;for&nbsp;the&nbsp;values&nbsp;we&nbsp;report<br>
+            <label class="lineNoRight">1584</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;germline&nbsp;classification&nbsp;within&nbsp;the&nbsp;xsd.&nbsp;Details&nbsp;are&nbsp;in<br>
+            <label class="lineNoRight">1585</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://github.com/ncbi/clinvar/ClassificationOnClinVar.md.&lt;/xs:documentation><br>
+            <label class="lineNoRight">1586</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:annotation><br>
+            <label class="lineNoRight">1587</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:complexType><br>
+            <label class="lineNoRight">1588</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:simpleContent><br>
+            <label class="lineNoRight">1589</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:extension&nbsp;base="xs:string"><br>
+            <label class="lineNoRight">1590</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute&nbsp;name="DateLastEvaluated"&nbsp;type="xs:date"&nbsp;use="optional"/><br>
+            <label class="lineNoRight">1591</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute&nbsp;name="SubmissionCount"&nbsp;type="xs:nonNegativeInteger"/><br>
+            <label class="lineNoRight">1592</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:extension><br>
+            <label class="lineNoRight">1593</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:simpleContent><br>
+            <label class="lineNoRight">1594</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:complexType><br>
+            <label class="lineNoRight">1595</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:element><br>
+            <label class="lineNoRight">1596</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="1"&nbsp;minOccurs="0"&nbsp;name="Explanation"&nbsp;type="CommentType"><br>
+            <label class="lineNoRight">1597</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:annotation><br>
+            <label class="lineNoRight">1598</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:documentation>Explanation&nbsp;is&nbsp;used&nbsp;only&nbsp;when&nbsp;the&nbsp;description&nbsp;is&nbsp;'conflicting<br>
+            <label class="lineNoRight">1599</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from&nbsp;submitters'&nbsp;The&nbsp;element&nbsp;summarizes&nbsp;the<br>
+            <label class="lineNoRight">1600</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;conflict.&lt;/xs:documentation><br>
+            <label class="lineNoRight">1601</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:annotation><br>
+            <label class="lineNoRight">1602</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:element><br>
+            <label class="lineNoRight">1603</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="unbounded"&nbsp;minOccurs="0"&nbsp;name="XRef"&nbsp;type="XrefType"/><br>
+            <label class="lineNoRight">1604</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="unbounded"&nbsp;minOccurs="0"&nbsp;name="Citation"&nbsp;type="CitationType"/><br>
+            <label class="lineNoRight">1605</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="unbounded"&nbsp;minOccurs="0"&nbsp;name="Comment"&nbsp;type="CommentType"/><br>
+            <label class="lineNoRight">1606</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence><br>
+            <label class="lineNoRight">1607</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--missing&nbsp;change&nbsp;required&nbsp;to&nbsp;optional--><br>
+            <label class="lineNoRight">1608</label>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:complexType><br>
+            <label class="lineNoRight">1609</label>&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:complexType&nbsp;name="typeSingleSomaticClinicalImpact"><br>
+            <label class="lineNoRight">1610</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence><br>
+            <label class="lineNoRight">1611</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="1"&nbsp;minOccurs="0"&nbsp;name="ReviewStatus"&nbsp;type="ReviewStatusType"><br>
+            <label class="lineNoRight">1612</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:annotation><br>
+            <label class="lineNoRight">1613</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:documentation>The&nbsp;aggregate&nbsp;review&nbsp;status&nbsp;based&nbsp;on&nbsp;all&nbsp;somatic&nbsp;clinical<br>
+            <label class="lineNoRight">1614</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;impact&nbsp;submissions&nbsp;for&nbsp;this<br>
+            <label class="lineNoRight">1615</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;record.&lt;/xs:documentation><br>
+            <label class="lineNoRight">1616</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:annotation><br>
+            <label class="lineNoRight">1617</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:element><br>
+            <label class="lineNoRight">1618</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="unbounded"&nbsp;minOccurs="0"&nbsp;name="Description"><br>
+            <label class="lineNoRight">1619</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:annotation><br>
+            <label class="lineNoRight">1620</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:documentation>We&nbsp;are&nbsp;not&nbsp;providing&nbsp;an&nbsp;enumeration&nbsp;for&nbsp;the&nbsp;values&nbsp;we&nbsp;report<br>
+            <label class="lineNoRight">1621</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;somatic&nbsp;clinical&nbsp;impact&nbsp;within&nbsp;the&nbsp;xsd.&nbsp;Details&nbsp;are&nbsp;in<br>
+            <label class="lineNoRight">1622</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://github.com/ncbi/clinvar/ClassificationOnClinVar.md.&lt;/xs:documentation><br>
+            <label class="lineNoRight">1623</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:annotation><br>
+            <label class="lineNoRight">1624</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:complexType><br>
+            <label class="lineNoRight">1625</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:simpleContent><br>
+            <label class="lineNoRight">1626</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:extension&nbsp;base="xs:string"><br>
+            <label class="lineNoRight">1627</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute&nbsp;name="ClinicalImpactAssertionType"&nbsp;type="xs:string"<br>
+            <label class="lineNoRight">1628</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;use="optional"/><br>
+            <label class="lineNoRight">1629</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute&nbsp;name="ClinicalImpactClinicalSignificance"&nbsp;type="xs:string"<br>
+            <label class="lineNoRight">1630</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;use="optional"/><br>
+            <label class="lineNoRight">1631</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute&nbsp;name="DateLastEvaluated"&nbsp;type="xs:date"&nbsp;use="optional"/><br>
+            <label class="lineNoRight">1632</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute&nbsp;name="SubmissionCount"&nbsp;type="xs:nonNegativeInteger"/><br>
+            <label class="lineNoRight">1633</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:extension><br>
+            <label class="lineNoRight">1634</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:simpleContent><br>
+            <label class="lineNoRight">1635</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:complexType><br>
+            <label class="lineNoRight">1636</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:element><br>
+            <label class="lineNoRight">1637</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="unbounded"&nbsp;minOccurs="0"&nbsp;name="XRef"&nbsp;type="XrefType"/><br>
+            <label class="lineNoRight">1638</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="unbounded"&nbsp;minOccurs="0"&nbsp;name="Citation"&nbsp;type="CitationType"/><br>
+            <label class="lineNoRight">1639</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="unbounded"&nbsp;minOccurs="0"&nbsp;name="Comment"&nbsp;type="CommentType"/><br>
+            <label class="lineNoRight">1640</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence><br>
+            <label class="lineNoRight">1641</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--missing&nbsp;change&nbsp;required&nbsp;to&nbsp;optional--><br>
+            <label class="lineNoRight">1642</label>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:complexType><br>
+            <label class="lineNoRight">1643</label>&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:complexType&nbsp;name="typeSingleOncogenicityClassification"><br>
+            <label class="lineNoRight">1644</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence><br>
+            <label class="lineNoRight">1645</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="1"&nbsp;minOccurs="0"&nbsp;name="ReviewStatus"&nbsp;type="ReviewStatusType"><br>
+            <label class="lineNoRight">1646</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:annotation><br>
+            <label class="lineNoRight">1647</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:documentation>The&nbsp;aggregate&nbsp;review&nbsp;status&nbsp;based&nbsp;on&nbsp;all&nbsp;oncogenic&nbsp;submissions<br>
+            <label class="lineNoRight">1648</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;this&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;record.&lt;/xs:documentation><br>
+            <label class="lineNoRight">1649</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:annotation><br>
+            <label class="lineNoRight">1650</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:element><br>
+            <label class="lineNoRight">1651</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="1"&nbsp;minOccurs="0"&nbsp;name="Description"><br>
+            <label class="lineNoRight">1652</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:annotation><br>
+            <label class="lineNoRight">1653</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:documentation>We&nbsp;are&nbsp;not&nbsp;providing&nbsp;an&nbsp;enumeration&nbsp;for&nbsp;the&nbsp;values&nbsp;we&nbsp;report<br>
+            <label class="lineNoRight">1654</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;&nbsp;oncogenicity&nbsp;classification&nbsp;within&nbsp;the&nbsp;xsd.&nbsp;Details&nbsp;are&nbsp;in<br>
+            <label class="lineNoRight">1655</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://github.com/ncbi/clinvar/ClassificationOnClinVar.md.&lt;/xs:documentation><br>
+            <label class="lineNoRight">1656</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:annotation><br>
+            <label class="lineNoRight">1657</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:complexType><br>
+            <label class="lineNoRight">1658</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:simpleContent><br>
+            <label class="lineNoRight">1659</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:extension&nbsp;base="xs:string"><br>
+            <label class="lineNoRight">1660</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute&nbsp;name="DateLastEvaluated"&nbsp;type="xs:date"&nbsp;use="optional"/><br>
+            <label class="lineNoRight">1661</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute&nbsp;name="SubmissionCount"&nbsp;type="xs:nonNegativeInteger"/><br>
+            <label class="lineNoRight">1662</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:extension><br>
+            <label class="lineNoRight">1663</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:simpleContent><br>
+            <label class="lineNoRight">1664</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:complexType><br>
+            <label class="lineNoRight">1665</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:element><br>
+            <label class="lineNoRight">1666</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="1"&nbsp;minOccurs="0"&nbsp;name="Explanation"&nbsp;type="CommentType"><br>
+            <label class="lineNoRight">1667</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:annotation><br>
+            <label class="lineNoRight">1668</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:documentation>Explanation&nbsp;is&nbsp;used&nbsp;only&nbsp;when&nbsp;the&nbsp;description&nbsp;is&nbsp;'conflicting<br>
+            <label class="lineNoRight">1669</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from&nbsp;submitters'&nbsp;The&nbsp;element&nbsp;summarizes&nbsp;the<br>
+            <label class="lineNoRight">1670</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;conflict.&lt;/xs:documentation><br>
+            <label class="lineNoRight">1671</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:annotation><br>
+            <label class="lineNoRight">1672</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:element><br>
+            <label class="lineNoRight">1673</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="unbounded"&nbsp;minOccurs="0"&nbsp;name="XRef"&nbsp;type="XrefType"/><br>
+            <label class="lineNoRight">1674</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="unbounded"&nbsp;minOccurs="0"&nbsp;name="Citation"&nbsp;type="CitationType"/><br>
+            <label class="lineNoRight">1675</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="unbounded"&nbsp;minOccurs="0"&nbsp;name="Comment"&nbsp;type="CommentType"/><br>
+            <label class="lineNoRight">1676</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence><br>
+            <label class="lineNoRight">1677</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--missing&nbsp;change&nbsp;required&nbsp;to&nbsp;optional--><br>
+            <label class="lineNoRight">1678</label>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:complexType><br>
+            <label class="lineNoRight">1679</label>&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:complexType&nbsp;name="ClassificationTypeSCV"><br>
+            <label class="lineNoRight">1680</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence><br>
+            <label class="lineNoRight">1681</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="1"&nbsp;minOccurs="0"&nbsp;name="ReviewStatus"&nbsp;type="ReviewStatusType"/><br>
+            <label class="lineNoRight">1682</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:choice><br>
+            <label class="lineNoRight">1683</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="1"&nbsp;minOccurs="0"&nbsp;name="GermlineClassification"<br>
+            <label class="lineNoRight">1684</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type="xs:string"/><br>
+            <label class="lineNoRight">1685</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="1"&nbsp;minOccurs="0"&nbsp;name="SomaticClinicalImpact"><br>
+            <label class="lineNoRight">1686</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:complexType><br>
+            <label class="lineNoRight">1687</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:simpleContent><br>
+            <label class="lineNoRight">1688</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:extension&nbsp;base="xs:string"><br>
+            <label class="lineNoRight">1689</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute&nbsp;name="ClinicalImpactAssertionType"&nbsp;type="xs:string"<br>
+            <label class="lineNoRight">1690</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;use="optional"/><br>
+            <label class="lineNoRight">1691</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute&nbsp;name="ClinicalImpactClinicalSignificance"<br>
+            <label class="lineNoRight">1692</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type="xs:string"&nbsp;use="optional"/><br>
+            <label class="lineNoRight">1693</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute&nbsp;name="DrugForTherapeuticAssertion"&nbsp;type="xs:string"<br>
+            <label class="lineNoRight">1694</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;use="optional"/><br>
+            <label class="lineNoRight">1695</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:extension><br>
+            <label class="lineNoRight">1696</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:simpleContent><br>
+            <label class="lineNoRight">1697</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:complexType><br>
+            <label class="lineNoRight">1698</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:element><br>
+            <label class="lineNoRight">1699</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="1"&nbsp;minOccurs="0"&nbsp;name="OncogenicityClassification"<br>
+            <label class="lineNoRight">1700</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type="xs:string"/><br>
+            <label class="lineNoRight">1701</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:choice><br>
+            <label class="lineNoRight">1702</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="1"&nbsp;minOccurs="0"&nbsp;name="ExplanationOfClassification"<br>
+            <label class="lineNoRight">1703</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type="xs:string"/><br>
+            <label class="lineNoRight">1704</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="unbounded"&nbsp;minOccurs="0"&nbsp;name="ClassificationScore"><br>
+            <label class="lineNoRight">1705</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:complexType><br>
+            <label class="lineNoRight">1706</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:simpleContent><br>
+            <label class="lineNoRight">1707</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:extension&nbsp;base="xs:decimal"><br>
+            <label class="lineNoRight">1708</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute&nbsp;name="type"&nbsp;type="xs:string"&nbsp;use="optional"/><br>
+            <label class="lineNoRight">1709</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:extension><br>
+            <label class="lineNoRight">1710</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:simpleContent><br>
+            <label class="lineNoRight">1711</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:complexType><br>
+            <label class="lineNoRight">1712</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:element><br>
+            <label class="lineNoRight">1713</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="unbounded"&nbsp;minOccurs="0"&nbsp;name="XRef"&nbsp;type="XrefType"/><br>
+            <label class="lineNoRight">1714</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="unbounded"&nbsp;minOccurs="0"&nbsp;name="Citation"&nbsp;type="CitationType"/><br>
+            <label class="lineNoRight">1715</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element&nbsp;maxOccurs="unbounded"&nbsp;minOccurs="0"&nbsp;name="Comment"&nbsp;type="CommentType"/><br>
+            <label class="lineNoRight">1716</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence><br>
+            <label class="lineNoRight">1717</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute&nbsp;name="DateLastEvaluated"&nbsp;type="xs:date"&nbsp;use="optional"/><br>
+            <label class="lineNoRight">1718</label>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:complexType><br>
+            <label class="lineNoRight">1719</label>&nbsp;&nbsp;&nbsp;&nbsp;</span>&lt;xs:complexType&nbsp;name="AlleleDescType"><span class="modifiedLevel2">&nbsp;</span></span>
           </div>
         </td>
       </tr>
       <tr class="detailsModified">
         <td class="details content">
           <div>
-            <label class="lineNoLeft">1650</label><span class="modified">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:enumeration&nbsp;value=<span class="modifiedLevel2">"criteria&nbsp;provided,&nbsp;conflicting&nbsp;interpretations"</span>/></span>
+            <label class="lineNoLeft">1646</label><span class="modified">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:enumeration&nbsp;value=<span class="modifiedLevel2">"no&nbsp;assertion&nbsp;provided"</span>/></span>
           </div>
         </td>
         <td class="details detailsStatus" title="modified">&#8727;</td>
         <td class="details detailsStatus" title="modified">&#8727;</td>
         <td class="details content">
           <div>
-            <label class="lineNoRight">1771</label><span class="modified">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:enumeration&nbsp;value=<span class="modifiedLevel2">"criteria&nbsp;provided,&nbsp;conflicting&nbsp;classifications"</span>/></span>
+            <label class="lineNoRight">1772</label><span class="modified">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:enumeration&nbsp;value=<span class="modifiedLevel2">"no&nbsp;classification&nbsp;provided"</span>/></span>
           </div>
         </td>
       </tr>
       <tr class="detailsModified">
         <td class="details content">
           <div>
-            <label class="lineNoLeft">1680</label><span class="modified">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:enumeration&nbsp;value=<span class="modifiedLevel2">"ExplanationOfInterpretation"</span>/></span>
+            <label class="lineNoLeft">1650</label><span class="modified">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:enumeration&nbsp;value=<span class="modifiedLevel2">"criteria&nbsp;provided,&nbsp;conflicting&nbsp;interpretations"</span>/><br>
+            <label class="lineNoLeft">1651</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:enumeration&nbsp;value="reviewed&nbsp;by&nbsp;expert&nbsp;panel"/></span>
           </div>
         </td>
         <td class="details detailsStatus" title="modified">&#8727;</td>
         <td class="details detailsStatus" title="modified">&#8727;</td>
         <td class="details content">
           <div>
-            <label class="lineNoRight">1801</label><span class="modified">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:enumeration&nbsp;value=<span class="modifiedLevel2">"ExplanationOfClassification"</span>/></span>
+            <label class="lineNoRight">1776</label><span class="modified">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:enumeration&nbsp;value=<span class="modifiedLevel2">"criteria&nbsp;provided,&nbsp;multiple&nbsp;submitters"</span>/><br>
+            <label class="lineNoRight">1777</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="incomingLevel2">&lt;xs:enumeration&nbsp;value="criteria&nbsp;provided,&nbsp;conflicting&nbsp;classifications"/><br>
+            <label class="lineNoRight">1778</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&lt;xs:enumeration&nbsp;value="reviewed&nbsp;by&nbsp;expert&nbsp;panel"/></span>
+          </div>
+        </td>
+      </tr>
+      <tr class="detailsModified">
+        <td class="details content">
+          <div>
+            <label class="lineNoLeft">1682</label><span class="modified">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:enumeration&nbsp;value=<span class="modifiedLevel2">"ExplanationOfInterpretation"</span>/></span>
+          </div>
+        </td>
+        <td class="details detailsStatus" title="modified">&#8727;</td>
+        <td class="details detailsStatus" title="modified">&#8727;</td>
+        <td class="details content">
+          <div>
+            <label class="lineNoRight">1809</label><span class="modified">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:enumeration&nbsp;value=<span class="modifiedLevel2">"ExplanationOfClassification"</span>/></span>
           </div>
         </td>
       </tr>

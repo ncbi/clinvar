@@ -1764,13 +1764,16 @@
                 professional society</xs:documentation>
         </xs:annotation>
         <xs:restriction base="xs:string">
-            <xs:enumeration value="no assertion provided"/>
+            <xs:enumeration value="no classification provided"/>
             <xs:enumeration value="no assertion criteria provided"/>
             <xs:enumeration value="criteria provided, single submitter"/>
             <xs:enumeration value="criteria provided, multiple submitters, no conflicts"/>
+            <xs:enumeration value="criteria provided, multiple submitters"/>
             <xs:enumeration value="criteria provided, conflicting classifications"/>
             <xs:enumeration value="reviewed by expert panel"/>
             <xs:enumeration value="practice guideline"/>
+            <xs:enumeration value="flagged submission"/>
+            <xs:enumeration value="no classifications from unflagged records"/>
             <!--The following values are for backward compatibility, before changing values review status based on assertion criteria. TODO: To remove-->
             <xs:enumeration value="classified by single submitter"/>
             <xs:enumeration value="reviewed by professional society"/>
@@ -1799,6 +1802,7 @@
             <xs:enumeration value="AssemblySpecificAlleleDefinition"/>
             <xs:enumeration value="AlignmentGapMakesAppearInconsistent"/>
             <xs:enumeration value="ExplanationOfClassification"/>
+            <xs:enumeration value="ClinGenComment"/>
         </xs:restriction>
     </xs:simpleType>
     <xs:simpleType name="SeverityType">

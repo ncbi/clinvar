@@ -157,7 +157,7 @@
                 <ReviewStatus>criteria provided, multiple submitters</ReviewStatus>
                 <Description>Tier I - Strong</Description>
                 <ConditionList>
-                    <TraitSet ID="1088" Type="Disease" ContributesToAggregateClinsig="true">
+                    <TraitSet ID="1088" Type="Disease" ContributesToAggregateClassification="true">
                         <Trait ID="18584" Type="Disease">
                             <Name>
                                 <ElementValue Type="Alternate">Breast cancer, somatic</ElementValue>
@@ -173,7 +173,7 @@
                             <XRef ID="MONDO:0004988" DB="MONDO" />
                         </Trait>
                     </TraitSet>
-                    <TraitSet ID="6288" Type="Disease" ContributesToAggregateClinsig="false">
+                    <TraitSet ID="6288" Type="Disease" ContributesToAggregateClassification="false" LowerLevelOfEvidence="true">
                         <Trait ID="15736" Type="Disease">
                             <Name>
                                 <ElementValue Type="Alternate">Leukemia, acute myelogenous, somatic</ElementValue>
@@ -263,7 +263,7 @@
                             <XRef Type="secondary" ID="HP:0006728" DB="Human Phenotype Ontology" />
                         </Trait>
                     </TraitSet>
-                    <TraitSet ID="6482" Type="Disease" ContributesToAggregateClinsig="false">
+                    <TraitSet ID="6482" Type="Disease" ContributesToAggregateClassification="false" LowerLevelOfEvidence="true">
                         <Trait ID="5725" Type="Disease">
                             <Name>
                                 <ElementValue Type="Alternate">PANCREATIC ACINAR CARCINOMA</ElementValue>
@@ -348,7 +348,7 @@
                 <ReviewStatus>reviewed by expert panel</ReviewStatus>
                 <Description>Oncogenic</Description>
                 <ConditionList>
-                    <TraitSet ID="1088" Type="Disease" ContributesToAggregateClinsig="true">
+                    <TraitSet ID="1088" Type="Disease" ContributesToAggregateClassification="true">
                         <Trait ID="18584" Type="Disease">
                             <Name>
                                 <ElementValue Type="Alternate">Breast cancer, somatic</ElementValue>
