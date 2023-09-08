@@ -34,7 +34,7 @@ SCVs are used in this order of precedence:
     classification on the VCV and RCV records, if there is no SCV with higher precedence.
 
 
-SCVs with review statuses of "no assertion provided" and "no assertion for the individual variant" do not contribute to the aggregate classification because these SCVs are submitted with no classification.
+SCVs with review statuses of "no classification provided" do not contribute to the aggregate classification because these SCVs are submitted with no classification. Details about Review Status can be found [here](ReviewStatus.md)
 
 
 ## Germline classification
