@@ -1,7 +1,7 @@
 ## E-utilities
 
 
-With the change in the format of our XML to support somatic classifications, efetch commands in E-utilities will also be updated to support both old and new formats through the end of 2023.
+With the change in the format of our XML to support somatic classifications, efetch commands in E-utilities will also be updated to support both old and new formats at least through March 2024.
 
 * The existing queries will return the new XML.
     e.g. this query will return XML in the new format for VCV000014206:
