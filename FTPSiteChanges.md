@@ -29,8 +29,8 @@ Proposed FTP folder Structure for
 https://ftp.ncbi.nlm.nih.gov/pub/clinvar/xml/
 
 <pre>
-|   ClinVarVCVRelease_00-lastest.xml.gz
-|   ClinVarVCVRelease_00-lastest.xml.gz.md5
+|   ClinVarVCVRelease_00-latest.xml.gz
+|   ClinVarVCVRelease_00-latest.xml.gz.md5
 |   ClinVarVCVRelease_2023-11.xml.gz
 |   ClinVarVCVRelease_2023-11.xml.gz.md5
 |   ...
@@ -42,12 +42,12 @@ https://ftp.ncbi.nlm.nih.gov/pub/clinvar/xml/
 |   |   ClinVarVariationRelease_2023-11.xml.gz
 |   |   ...
 +---weekly_release
-|   |   ClinVarVCVRelease_00-lastest_weekly.xml.gz
-|   |   ClinVarVCVRelease_00-lastest_weekly.xml.md5
+|   |   ClinVarVCVRelease_00-latest_weekly.xml.gz
+|   |   ClinVarVCVRelease_00-latest_weekly.xml.md5
 |   |   ...
 +---RCV_release
-|   |   ClinVarRCVRelease_00-lastest.xml.gz
-|   |   ClinVarRCVRelease_00-lastest.xml.gz.md5
+|   |   ClinVarRCVRelease_00-latest.xml.gz
+|   |   ClinVarRCVRelease_00-latest.xml.gz.md5
 |   |   ClinVarRCVRelease_2023-11.xml.gz
 |   |   ClinVarRCVRelease_2023-11.xml.md5
 |   |   ...
@@ -56,8 +56,8 @@ https://ftp.ncbi.nlm.nih.gov/pub/clinvar/xml/
 |   |   |   ClinVarFullRelease_2023-11.xml.gz 
 |   |   |   ...
 |   \---weekly_release
-|       |   ClinVarRCVRelease_00-lastest_weekly.xml.gz
-|       |   ClinVarRCVRelease_00-lastest_weekly.xml.md5
+|       |   ClinVarRCVRelease_00-latest_weekly.xml.gz
+|       |   ClinVarRCVRelease_00-latest_weekly.xml.md5
 +---RCV_xml_old_format
 |   |   ClinVarFullRelease_00-latest.xml.gz
 |   |   ClinVarFullRelease_00-latest.xml.gz.md5
