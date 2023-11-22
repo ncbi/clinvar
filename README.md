@@ -12,6 +12,7 @@ To help our XML users prepare for this change, we are providing documentation be
 - a preview of the updated XSDs for both [RCV](xsds_preview/clinvar_public.xsd) and [VCV](xsds_preview/variation_archive.xsd) XMLs
 - a list of [changes](xsds_preview/xsd_change_highlights.xlsx) to both XSDs 
 - [sample XMLs](sample_xmls/) for both RCV and VCV
+- [sample variation web page snapshots](sample_web_snapshots/)
 - [sample_tab_delimited](sample_tab_delimited/) for tab-delimited FTP files
 - a [note](ClassificationOnClinVar.md) explaining Classification on ClinVar aggregated records
 - a [note](ReviewStatus.md) explaining Review Status on ClinVar records.
