@@ -1,19 +1,20 @@
-# Changes to the FTP site
+# Changes to the FTP site for XML files
 
 To support both the old format of our XML and the new format that includes changes for somatic classifications, we will update the FTP directory structure for our XML files.
 
-## File names
+## XML File names
 
 Files with the old format will retain the same names:
-    - ClinVarVariationRelease_YYYY-MM.xml.gz for VCV XML 
-    - ClinVarFullRelease_YYYY-MM.xml.gz for RCV XML
+   - ClinVarVariationRelease_YYYY-MM.xml.gz for VCV XML 
+   - ClinVarFullRelease_YYYY-MM.xml.gz for RCV XML
+
 However, the path for these files will change – see the proposed directory structure below. To continue using the old format, you only need to change the path to the file.
 
 Files with the new format will be named as follows:
-    - ClinVarVCVRelease_YYYY-MM.xml.gz for VCV XML
-    - ClinVarRCVRelease_YYYY-MM.xml.gz for RCV XML
+   - ClinVarVCVRelease_YYYY-MM.xml.gz for VCV XML
+   - ClinVarRCVRelease_YYYY-MM.xml.gz for RCV XML
 
-## Directory structure
+## XML Directory structure
 
 The major changes to the directory structure are:
 * We will make the new VCV XML available in the main directory /pub/clinvar/xml. 
@@ -25,12 +26,12 @@ The major changes to the directory structure are:
 
 
 
-Proposed FTP folder Structure for
+Proposed FTP folder Structure for XML files
 https://ftp.ncbi.nlm.nih.gov/pub/clinvar/xml/
 
 <pre>
-|   ClinVarVCVRelease_00-latest.xml.gz
-|   ClinVarVCVRelease_00-latest.xml.gz.md5
+|   ClinVarVCVRelease_00-lastest.xml.gz
+|   ClinVarVCVRelease_00-lastest.xml.gz.md5
 |   ClinVarVCVRelease_2023-11.xml.gz
 |   ClinVarVCVRelease_2023-11.xml.gz.md5
 |   ...
@@ -42,12 +43,12 @@ https://ftp.ncbi.nlm.nih.gov/pub/clinvar/xml/
 |   |   ClinVarVariationRelease_2023-11.xml.gz
 |   |   ...
 +---weekly_release
-|   |   ClinVarVCVRelease_00-latest_weekly.xml.gz
-|   |   ClinVarVCVRelease_00-latest_weekly.xml.md5
+|   |   ClinVarVCVRelease_00-lastest_weekly.xml.gz
+|   |   ClinVarVCVRelease_00-lastest_weekly.xml.md5
 |   |   ...
 +---RCV_release
-|   |   ClinVarRCVRelease_00-latest.xml.gz
-|   |   ClinVarRCVRelease_00-latest.xml.gz.md5
+|   |   ClinVarRCVRelease_00-lastest.xml.gz
+|   |   ClinVarRCVRelease_00-lastest.xml.gz.md5
 |   |   ClinVarRCVRelease_2023-11.xml.gz
 |   |   ClinVarRCVRelease_2023-11.xml.md5
 |   |   ...
@@ -56,8 +57,8 @@ https://ftp.ncbi.nlm.nih.gov/pub/clinvar/xml/
 |   |   |   ClinVarFullRelease_2023-11.xml.gz 
 |   |   |   ...
 |   \---weekly_release
-|       |   ClinVarRCVRelease_00-latest_weekly.xml.gz
-|       |   ClinVarRCVRelease_00-latest_weekly.xml.md5
+|       |   ClinVarRCVRelease_00-lastest_weekly.xml.gz
+|       |   ClinVarRCVRelease_00-lastest_weekly.xml.md5
 +---RCV_xml_old_format
 |   |   ClinVarFullRelease_00-latest.xml.gz
 |   |   ClinVarFullRelease_00-latest.xml.gz.md5
