@@ -14,10 +14,11 @@ To help our XML users prepare for this change, we are providing documentation be
 - [sample XMLs](sample_xmls/) for both RCV and VCV
 - [sample variation web page and search snapshots](sample_web_snapshots/)
 - [sample_tab_delimited](sample_tab_delimited/) for tab-delimited FTP files
+- [submission api schema](submission_api_schema/) for API schmea
 - a [note](ClassificationOnClinVar.md) explaining Classification on ClinVar aggregated records
 - a [note](ReviewStatus.md) explaining Review Status on ClinVar records.
-- a [note](FTPXmlSiteChanges.md) showing the preview of FTP folder structure and filenames for XML files.
-- a [note](FTPXsdSiteChanges.md) showing the preview of FTP folder structure and filenames for XSD files.
+- a [note](FTPSiteXmlChanges.md) showing the preview of FTP folder structure and filenames for XML files.
+- a [note](FTPSiteXsdChanges.md) showing the preview of FTP folder structure and filenames for XSD files.
 - a [note](E-utilities.md) providing details of efetch to access XML records in both new and old XML format.
 
 *IMPORTANT*: The sample XML is fake data, for testing purposes only! All of the data in the sample XML is fake, including the submitters, the variants, the tumor types, and all supporting data. It is dummy data only to demonstrate what kind of data would be in each field and so that you have test data to use when updating your code. Do NOT incorporate this data into your production system.

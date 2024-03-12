@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>File Comparison Report</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 1.5em;
+        z-index: 1;
+        font-size: 15px;
+        font-family: robotoregular, Arial, Helvetica, sans-serif;
+        line-height: 1.4em;
+        color: #5a5a5a;
+        background-color:#fff
+      }
+      table {
+        border-collapse: collapse;
+        table-layout: fixed;
+        width: 100%
+      }
+      td {
+        border: 1px solid #e5e5e5;
+        padding-left: 7px;
+        padding-right: 7px;
+        vertical-align: central
+      }
+
+      tr.file {
+        border-bottom:hidden;
+        background-color:#fafaef;
+        line-height:1.8em;
+        font-size:.9em
+      }
+      tr.file a {color:#555}
+
+      td.details {
+        padding-top:8px;
+        padding-bottom:8px;
+        color:#333
+      }
+
+      td.filePath {
+        word-break:break-all;
+        font-size:1.2em;
+      }
+      td.content {
+        word-break:break-all;
+        vertical-align:top
+      }
+      td.detailsStatus {
+        text-align:center;
+        padding:0px 0px 0px 0px;
+        width:25px;
+        overflow:hidden
+      }
+
+      .details tr {display:none}
+      .tableFilter {display:none}
+      .tableFilter + label ~ label {cursor:pointer}
+      .tableFilter:checked + label {color:black}
+
+      .filterLblText {margin-right:10px}
+      .filterLbl {
+        border:1px solid gray;
+        cursor:pointer
+      }
+      .allLbl {
+        background-color:#f5f5f5;
+        color:#f5f5f5
+      }
+      .outgoingLbl {
+        background-color:#dddddd;
+        color:#dddddd
+      }
+      .incomingLbl {
+        background-color:#d1edff;
+        color:#d1edff
+      }
+      .modificationsLbl {
+        background-color:#ffd1d1;
+        color:#ffd1d1;
+      }
+
+      div {line-height:1.1em}
+
+      span.incoming {background-color:#edf8ff}
+      span.outgoing {background-color:#f2f2f2}
+      span.modified {background-color:#ffeded}
+      span.incomingLevel2 {background-color:#d1edff}
+      span.outgoingLevel2 {background-color:#dddddd}
+      span.modifiedLevel2 {background-color:#ffd1d1}
+
+      label.lineNoLeft {
+        width:27px;
+        padding-right:5px;
+        float:left;
+        color:#a5a5a5;
+        text-align:right;
+      }
+      label.lineNoRight {
+        width:27px;
+        padding-left:0px;
+        padding-right:0px;
+        float:right;
+        color:#a5a5a5;
+        text-align:right;
+      }
+
+      a {text-decoration:none}
+
+      #outgoing.tableFilter:checked ~ table.details tr.detailsOutgoing,
+      #incoming.tableFilter:checked ~ table.details tr.detailsIncoming,
+      #modifications.tableFilter:checked ~ table.details tr.detailsModified,
+      #all.tableFilter:checked ~ table.details tr {
+        display:table-row
+      }
+    </style>
+  </head>
+
+  <body>
+    <label style="display:block; margin-bottom:10px"><b>Differences: 2 difference blocks, 2 differences in total</b></label>
+
+    <label style="margin-right:20px"><b><br/>Comparison details by difference blocks:</b></label>
+    <input type="radio" class="tableFilter" name="filter" id="all" checked/>
+    <label>2 of type 'modified'</label>
+
+    <table style="margin-top:.6em">
+      <tr class="file">
+        <td class="filePath"><a href="file://submission_api_schema.json" target="_blank">File 1: submission_api_schema.json</a></td>
+        <td class="detailsStatus" style="border-left:hidden"></td>
+        <td class="detailsStatus" style="border-left:hidden; border-right:hidden"></td>
+        <td class="filePath"><a href="file://submission_api_schema_proposed.json" target="_blank">File 2: submission_api_schema_proposed.json</a></td>
+      </tr>
+    </table>
+
+    <table class="details">
+      <tr class="detailsModified">
+        <td class="details content">
+          <div>
+            <label class="lineNoLeft">4</label><span class="modified"><span class="modifiedLevel2">&nbsp;&nbsp;"anyOf":&nbsp;[<br>
+            <label class="lineNoLeft">5</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"required":&nbsp;["clinvarSubmission"]},<br>
+            <label class="lineNoLeft">6</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"required":&nbsp;["clinvarDeletion"]}</span></span>
+          </div>
+        </td>
+        <td class="details detailsStatus" title="modified">&#8727;</td>
+        <td class="details detailsStatus" title="modified">&#8727;</td>
+        <td class="details content">
+          <div>
+            <label class="lineNoRight">4</label><span class="modified"><span class="modifiedLevel2">&nbsp;&nbsp;"allOf":&nbsp;[<br>
+            <label class="lineNoRight">5</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+            <label class="lineNoRight">6</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"if":&nbsp;{<br>
+            <label class="lineNoRight">7</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"required":&nbsp;["clinvarSubmission"]<br>
+            <label class="lineNoRight">8</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+            <label class="lineNoRight">9</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"then":&nbsp;{<br>
+            <label class="lineNoRight">10</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"allOf":&nbsp;[<br>
+            <label class="lineNoRight">11</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"not":&nbsp;&nbsp;{"required":&nbsp;["clinicalImpactSubmission"]},<br>
+            <label class="lineNoRight">12</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"errors":&nbsp;{"not":&nbsp;"old&nbsp;format&nbsp;clinvarSubmission&nbsp;and&nbsp;new&nbsp;format&nbsp;clinicalImpactSubmission&nbsp;cannot&nbsp;appear&nbsp;in&nbsp;a&nbsp;single&nbsp;submission"}<br>
+            <label class="lineNoRight">13</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+            <label class="lineNoRight">14</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"not":&nbsp;&nbsp;{"required":&nbsp;["oncogenicitySubmission"]},<br>
+            <label class="lineNoRight">15</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"errors":&nbsp;{"not":&nbsp;"old&nbsp;format&nbsp;clinvarSubmission&nbsp;and&nbsp;new&nbsp;format&nbsp;oncogenicitySubmission&nbsp;cannot&nbsp;appear&nbsp;in&nbsp;a&nbsp;single&nbsp;submission"}<br>
+            <label class="lineNoRight">16</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+            <label class="lineNoRight">17</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"not":&nbsp;&nbsp;{"required":&nbsp;["germlineSubmission"]},<br>
+            <label class="lineNoRight">18</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"errors":&nbsp;{"not":&nbsp;"old&nbsp;format&nbsp;clinvarSubmission&nbsp;and&nbsp;new&nbsp;format&nbsp;germlineSubmission&nbsp;cannot&nbsp;appear&nbsp;in&nbsp;a&nbsp;single&nbsp;submission"}<br>
+            <label class="lineNoRight">19</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            <label class="lineNoRight">20</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br>
+            <label class="lineNoRight">21</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+            <label class="lineNoRight">22</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"else":&nbsp;{<br>
+            <label class="lineNoRight">23</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"allOf":&nbsp;[<br>
+            <label class="lineNoRight">24</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"not":&nbsp;&nbsp;{"required":&nbsp;["clinicalImpactSubmission","oncogenicitySubmission"]},<br>
+            <label class="lineNoRight">25</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"errors":&nbsp;{"not":&nbsp;"clinicalImpactSubmission&nbsp;and&nbsp;oncogenicitySubmission&nbsp;cannot&nbsp;appear&nbsp;in&nbsp;a&nbsp;single&nbsp;submission"}<br>
+            <label class="lineNoRight">26</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+            <label class="lineNoRight">27</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"not":&nbsp;&nbsp;{"required":&nbsp;["oncogenicitySubmission",&nbsp;"germlineSubmission"]},<br>
+            <label class="lineNoRight">28</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"errors":&nbsp;{"not":&nbsp;"germlineSubmission&nbsp;and&nbsp;oncogenicitySubmission&nbsp;cannot&nbsp;appear&nbsp;in&nbsp;a&nbsp;single&nbsp;submission"}<br>
+            <label class="lineNoRight">29</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+            <label class="lineNoRight">30</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"not":&nbsp;&nbsp;{"required":&nbsp;["germlineSubmission",&nbsp;"clinicalImpactSubmission"]},<br>
+            <label class="lineNoRight">31</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"errors":&nbsp;{"not":&nbsp;"germlineSubmission&nbsp;and&nbsp;clinicalImpactSubmission&nbsp;cannot&nbsp;appear&nbsp;in&nbsp;a&nbsp;single&nbsp;submission"}<br>
+            <label class="lineNoRight">32</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            <label class="lineNoRight">33</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br>
+            <label class="lineNoRight">34</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            <label class="lineNoRight">35</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></span>
+          </div>
+        </td>
+      </tr>
+      <tr class="detailsModified">
+        <td class="details content">
+          <div>
+            <label class="lineNoLeft">205</label><span class="modified"><span class="modifiedLevel2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;</span></span>
+          </div>
+        </td>
+        <td class="details detailsStatus" title="modified">&#8727;</td>
+        <td class="details detailsStatus" title="modified">&#8727;</td>
+        <td class="details content">
+          <div>
+            <label class="lineNoRight">234</label><span class="modified"><span class="modifiedLevel2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            <label class="lineNoRight">235</label>&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+            <label class="lineNoRight">236</label>&nbsp;&nbsp;&nbsp;&nbsp;"germlineSubmission":&nbsp;{<br>
+            <label class="lineNoRight">237</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"title":&nbsp;"ClinVar&nbsp;Submission&nbsp;Set&nbsp;for&nbsp;germline&nbsp;variants",<br>
+            <label class="lineNoRight">238</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"description":&nbsp;"A&nbsp;set&nbsp;of&nbsp;germline&nbsp;variant&nbsp;submissions",<br>
+            <label class="lineNoRight">239</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type":&nbsp;"array",<br>
+            <label class="lineNoRight">240</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"minItems":&nbsp;1,<br>
+            <label class="lineNoRight">241</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"maxItems":&nbsp;10000,<br>
+            <label class="lineNoRight">242</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"items":<br>
+            <label class="lineNoRight">243</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+            <label class="lineNoRight">244</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type":&nbsp;"object",<br>
+            <label class="lineNoRight">245</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"title":&nbsp;"ClinVar&nbsp;Germline&nbsp;Submission",<br>
+            <label class="lineNoRight">246</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"description":&nbsp;"Submissions&nbsp;to&nbsp;ClinVar&nbsp;are&nbsp;considered&nbsp;'variant-level'&nbsp;(not&nbsp;case-level&nbsp;or&nbsp;patient-specific),&nbsp;because&nbsp;they&nbsp;are&nbsp;focused&nbsp;on&nbsp;the&nbsp;variant&nbsp;or&nbsp;set&nbsp;of&nbsp;variants&nbsp;that&nbsp;was&nbsp;classified.&nbsp;One&nbsp;of&nbsp;variantSet,&nbsp;haplotypeSet,&nbsp;haplotypeSingleVariantSet,&nbsp;phaseUnknownSet,&nbsp;distinctChromosomesSet,&nbsp;diplotypeSet,&nbsp;compoundHeterozygoteSet&nbsp;is&nbsp;required&nbsp;to&nbsp;define&nbsp;the&nbsp;variant&nbsp;or&nbsp;set&nbsp;of&nbsp;variants&nbsp;that&nbsp;was&nbsp;classified.",<br>
+            <label class="lineNoRight">247</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"required":&nbsp;[<br>
+            <label class="lineNoRight">248</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"germlineClassification",<br>
+            <label class="lineNoRight">249</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"observedIn",<br>
+            <label class="lineNoRight">250</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"conditionSet"<br>
+            <label class="lineNoRight">251</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;],<br>
+            <label class="lineNoRight">252</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"$ref":&nbsp;"#/definitions/baseSubmissionType",<br>
+            <label class="lineNoRight">253</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"properties":&nbsp;{<br>
+            <label class="lineNoRight">254</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"germlineClassification":&nbsp;{<br>
+            <label class="lineNoRight">255</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type":&nbsp;"object",<br>
+            <label class="lineNoRight">256</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"description":&nbsp;"Germline&nbsp;classification",<br>
+            <label class="lineNoRight">257</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"$ref":&nbsp;"#/definitions/baseClassificationType",<br>
+            <label class="lineNoRight">258</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"required":&nbsp;["germlineClassificationDescription"],<br>
+            <label class="lineNoRight">259</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"properties":&nbsp;{<br>
+            <label class="lineNoRight">260</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"germlineClassificationDescription":&nbsp;{<br>
+            <label class="lineNoRight">261</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type":&nbsp;"string",<br>
+            <label class="lineNoRight">262</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"description":&nbsp;"The&nbsp;Germline&nbsp;classification&nbsp;of&nbsp;the&nbsp;variant&nbsp;for&nbsp;the&nbsp;submitted&nbsp;condition,&nbsp;equivalent&nbsp;to&nbsp;Germline&nbsp;classification&nbsp;in&nbsp;the&nbsp;submission&nbsp;spreadsheet.",<br>
+            <label class="lineNoRight">263</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"enum":&nbsp;[<br>
+            <label class="lineNoRight">264</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Pathogenic",<br>
+            <label class="lineNoRight">265</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Likely&nbsp;pathogenic",<br>
+            <label class="lineNoRight">266</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Uncertain&nbsp;significance",<br>
+            <label class="lineNoRight">267</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Likely&nbsp;benign",<br>
+            <label class="lineNoRight">268</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Benign",<br>
+            <label class="lineNoRight">269</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Pathogenic,&nbsp;low&nbsp;penetrance",<br>
+            <label class="lineNoRight">270</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Uncertain&nbsp;risk&nbsp;allele",<br>
+            <label class="lineNoRight">271</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Likely&nbsp;pathogenic,&nbsp;low&nbsp;penetrance",<br>
+            <label class="lineNoRight">272</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Established&nbsp;risk&nbsp;allele",<br>
+            <label class="lineNoRight">273</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Likely&nbsp;risk&nbsp;allele",<br>
+            <label class="lineNoRight">274</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"affects",<br>
+            <label class="lineNoRight">275</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"association",<br>
+            <label class="lineNoRight">276</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"drug&nbsp;response",<br>
+            <label class="lineNoRight">277</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"confers&nbsp;sensitivity",<br>
+            <label class="lineNoRight">278</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"protective",<br>
+            <label class="lineNoRight">279</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"other",<br>
+            <label class="lineNoRight">280</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"not&nbsp;provided"<br>
+            <label class="lineNoRight">281</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br>
+            <label class="lineNoRight">282</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+            <label class="lineNoRight">283</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"modeOfInheritance":&nbsp;{<br>
+            <label class="lineNoRight">284</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type":&nbsp;"string",<br>
+            <label class="lineNoRight">285</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"description":&nbsp;"The&nbsp;mode&nbsp;of&nbsp;inheritance&nbsp;specific&nbsp;to&nbsp;the&nbsp;variant-disease&nbsp;pair,&nbsp;not&nbsp;generally&nbsp;for&nbsp;the&nbsp;disease.",<br>
+            <label class="lineNoRight">286</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"enum":&nbsp;[<br>
+            <label class="lineNoRight">287</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Autosomal&nbsp;dominant&nbsp;inheritance",<br>
+            <label class="lineNoRight">288</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Autosomal&nbsp;recessive&nbsp;inheritance",<br>
+            <label class="lineNoRight">289</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Mitochondrial&nbsp;inheritance",<br>
+            <label class="lineNoRight">290</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Genetic&nbsp;anticipation",<br>
+            <label class="lineNoRight">291</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Sporadic",<br>
+            <label class="lineNoRight">292</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Sex-limited&nbsp;autosomal&nbsp;dominant",<br>
+            <label class="lineNoRight">293</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"X-linked&nbsp;recessive&nbsp;inheritance",<br>
+            <label class="lineNoRight">294</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"X-linked&nbsp;dominant&nbsp;inheritance",<br>
+            <label class="lineNoRight">295</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Y-linked&nbsp;inheritance",<br>
+            <label class="lineNoRight">296</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Other",<br>
+            <label class="lineNoRight">297</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"X-linked&nbsp;inheritance",<br>
+            <label class="lineNoRight">298</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Codominant",<br>
+            <label class="lineNoRight">299</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Semidominant&nbsp;inheritance",<br>
+            <label class="lineNoRight">300</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Autosomal&nbsp;unknown",<br>
+            <label class="lineNoRight">301</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Autosomal&nbsp;dominant&nbsp;inheritance&nbsp;with&nbsp;maternal&nbsp;imprinting",<br>
+            <label class="lineNoRight">302</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Autosomal&nbsp;dominant&nbsp;inheritance&nbsp;with&nbsp;paternal&nbsp;imprinting",<br>
+            <label class="lineNoRight">303</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Multifactorial&nbsp;inheritance",<br>
+            <label class="lineNoRight">304</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Unknown&nbsp;mechanism",<br>
+            <label class="lineNoRight">305</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Oligogenic&nbsp;inheritance"<br>
+            <label class="lineNoRight">306</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br>
+            <label class="lineNoRight">307</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+            <label class="lineNoRight">308</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"customClassificationScore":&nbsp;{<br>
+            <label class="lineNoRight">309</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type":&nbsp;"number",<br>
+            <label class="lineNoRight">310</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"description":&nbsp;"The&nbsp;final&nbsp;score,&nbsp;or&nbsp;point&nbsp;value,&nbsp;calculated&nbsp;when&nbsp;the&nbsp;assertion&nbsp;method&nbsp;uses&nbsp;a&nbsp;point-based&nbsp;scoring&nbsp;system,&nbsp;e.g.&nbsp;ACMG/ClinGen&nbsp;CNV&nbsp;Guidelines,&nbsp;2019&nbsp;(PMID:&nbsp;31690835).&nbsp;&nbsp;The&nbsp;assertion&nbsp;method&nbsp;must&nbsp;also&nbsp;be&nbsp;provided.&nbsp;"<br>
+            <label class="lineNoRight">311</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+            <label class="lineNoRight">312</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"explanationOfDrugResponse":&nbsp;{<br>
+            <label class="lineNoRight">313</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type":&nbsp;"string",<br>
+            <label class="lineNoRight">314</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"description":&nbsp;"Required&nbsp;for&nbsp;a&nbsp;record&nbsp;with&nbsp;clinical&nbsp;significance&nbsp;of&nbsp;&nbsp;'drug&nbsp;response'.&nbsp;&nbsp;Please&nbsp;provide&nbsp;a&nbsp;value&nbsp;describing&nbsp;&nbsp;the&nbsp;drug&nbsp;response,&nbsp;e.g.&nbsp;'likely&nbsp;responsive'.&nbsp;This&nbsp;value&nbsp;must&nbsp;be&nbsp;short&nbsp;for&nbsp;display&nbsp;purposes.&nbsp;A&nbsp;longer&nbsp;explanation&nbsp;should&nbsp;be&nbsp;provided&nbsp;in&nbsp;the&nbsp;'Comment&nbsp;on&nbsp;clinical&nbsp;significance'."<br>
+            <label class="lineNoRight">315</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+            <label class="lineNoRight">316</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"explanationOfOtherClassification":&nbsp;{<br>
+            <label class="lineNoRight">317</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type":&nbsp;"string",<br>
+            <label class="lineNoRight">318</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"description":&nbsp;"Required&nbsp;if&nbsp;'other'&nbsp;is&nbsp;selected&nbsp;for&nbsp;clinical&nbsp;significance.&nbsp;Please&nbsp;provide&nbsp;the&nbsp;new&nbsp;value&nbsp;for&nbsp;clinical&nbsp;significance,&nbsp;e.g.&nbsp;pseudodeficiency&nbsp;allele.&nbsp;This&nbsp;value&nbsp;must&nbsp;be&nbsp;short&nbsp;for&nbsp;display&nbsp;purposes.&nbsp;A&nbsp;longer&nbsp;explanation&nbsp;should&nbsp;be&nbsp;provided&nbsp;in&nbsp;the&nbsp;'Comment&nbsp;on&nbsp;clinical&nbsp;significance'."<br>
+            <label class="lineNoRight">319</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            <label class="lineNoRight">320</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+            <label class="lineNoRight">321</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"unevaluatedProperties":&nbsp;false<br>
+            <label class="lineNoRight">322</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+            <label class="lineNoRight">323</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"observedIn":&nbsp;{<br>
+            <label class="lineNoRight">324</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type":&nbsp;"array",<br>
+            <label class="lineNoRight">325</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"minItems":&nbsp;1,<br>
+            <label class="lineNoRight">326</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"items":<br>
+            <label class="lineNoRight">327</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+            <label class="lineNoRight">328</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type":&nbsp;"object",<br>
+            <label class="lineNoRight">329</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"$ref":&nbsp;"#/definitions/baseObservationType",<br>
+            <label class="lineNoRight">330</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"unevaluatedProperties":&nbsp;false<br>
+            <label class="lineNoRight">331</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+            <label class="lineNoRight">332</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"errors":&nbsp;{"minItems":&nbsp;"Empty&nbsp;list&nbsp;of&nbsp;observedIn&nbsp;not&nbsp;allowed"}<br>
+            <label class="lineNoRight">333</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+            <label class="lineNoRight">334</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"conditionSet":&nbsp;{<br>
+            <label class="lineNoRight">335</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type":&nbsp;"object",<br>
+            <label class="lineNoRight">336</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"description":&nbsp;"The&nbsp;condition&nbsp;for&nbsp;which&nbsp;the&nbsp;variant&nbsp;is&nbsp;interpreted.&nbsp;Detailed&nbsp;information&nbsp;about&nbsp;reporting&nbsp;condition&nbsp;is&nbsp;available&nbsp;at&nbsp;https://www.ncbi.nlm.nih.gov/clinvar/docs/faq_submitters/#pheno&nbsp;&nbsp;If&nbsp;multiple&nbsp;conditions&nbsp;are&nbsp;submitted&nbsp;for&nbsp;a&nbsp;variant,&nbsp;this&nbsp;indicates&nbsp;that&nbsp;the&nbsp;variant&nbsp;was&nbsp;interpreted&nbsp;for&nbsp;the&nbsp;combination&nbsp;of&nbsp;conditions&nbsp;in&nbsp;the&nbsp;same&nbsp;individual(s).&nbsp;&nbsp;i.e.&nbsp;this&nbsp;variant&nbsp;causes&nbsp;both&nbsp;condition&nbsp;A&nbsp;and&nbsp;condition&nbsp;B&nbsp;in&nbsp;the&nbsp;same&nbsp;individual.&nbsp;This&nbsp;scenario&nbsp;is&nbsp;most&nbsp;common&nbsp;for&nbsp;a&nbsp;new&nbsp;disease&nbsp;or&nbsp;syndrome&nbsp;that&nbsp;does&nbsp;not&nbsp;yet&nbsp;have&nbsp;a&nbsp;name&nbsp;and&nbsp;is&nbsp;described&nbsp;by&nbsp;several&nbsp;clinical&nbsp;features.&nbsp;&nbsp;If&nbsp;you&nbsp;want&nbsp;to&nbsp;indicate&nbsp;that&nbsp;the&nbsp;variant&nbsp;has&nbsp;been&nbsp;interpreted&nbsp;for&nbsp;more&nbsp;than&nbsp;one&nbsp;condition,&nbsp;please&nbsp;submit&nbsp;these&nbsp;as&nbsp;separate&nbsp;records.&nbsp;i.e.&nbsp;this&nbsp;variant&nbsp;causes&nbsp;condition&nbsp;A&nbsp;in&nbsp;some&nbsp;individuals&nbsp;and&nbsp;causes&nbsp;disease&nbsp;B&nbsp;in&nbsp;other&nbsp;individuals.&nbsp;Provide&nbsp;only&nbsp;one&nbsp;name&nbsp;or&nbsp;identifier&nbsp;for&nbsp;a&nbsp;condition;&nbsp;do&nbsp;not&nbsp;provide&nbsp;multiple&nbsp;names&nbsp;or&nbsp;identifiers&nbsp;for&nbsp;the&nbsp;same&nbsp;condition.",<br>
+            <label class="lineNoRight">337</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"oneOf":&nbsp;[<br>
+            <label class="lineNoRight">338</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+            <label class="lineNoRight">339</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"required":&nbsp;["condition"]<br>
+            <label class="lineNoRight">340</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+            <label class="lineNoRight">341</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+            <label class="lineNoRight">342</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"allOf":&nbsp;[<br>
+            <label class="lineNoRight">343</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"required":&nbsp;["drugResponse"]},<br>
+            <label class="lineNoRight">344</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"not":&nbsp;{&nbsp;"required":&nbsp;["multipleConditionExplanation"]}}<br>
+            <label class="lineNoRight">345</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br>
+            <label class="lineNoRight">346</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            <label class="lineNoRight">347</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;],<br>
+            <label class="lineNoRight">348</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"properties":&nbsp;{<br>
+            <label class="lineNoRight">349</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"multipleConditionExplanation":&nbsp;{<br>
+            <label class="lineNoRight">350</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type":&nbsp;"string",<br>
+            <label class="lineNoRight">351</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"enum":&nbsp;[<br>
+            <label class="lineNoRight">352</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Novel&nbsp;disease",<br>
+            <label class="lineNoRight">353</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Uncertain",<br>
+            <label class="lineNoRight">354</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Co-occurring"<br>
+            <label class="lineNoRight">355</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;],<br>
+            <label class="lineNoRight">356</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"description":&nbsp;"Variants&nbsp;in&nbsp;ClinVar&nbsp;are&nbsp;typically&nbsp;classified&nbsp;for&nbsp;a&nbsp;single&nbsp;condition&nbsp;(disease&nbsp;or&nbsp;drug&nbsp;response).&nbsp;If&nbsp;more&nbsp;than&nbsp;one&nbsp;condition&nbsp;is&nbsp;provided&nbsp;&nbsp;in&nbsp;the&nbsp;conditionSet,&nbsp;this&nbsp;field&nbsp;is&nbsp;required&nbsp;and&nbsp;explains&nbsp;why&nbsp;multiple&nbsp;conditions&nbsp;are&nbsp;valid.&nbsp;Options&nbsp;are&nbsp;\"Novel&nbsp;disease\"&nbsp;when&nbsp;a&nbsp;new&nbsp;disease&nbsp;is&nbsp;unnamed&nbsp;and&nbsp;only&nbsp;described&nbsp;by&nbsp;a&nbsp;set&nbsp;of&nbsp;clinical&nbsp;features&nbsp;(HPO&nbsp;ids);&nbsp;\"Uncertain\"&nbsp;when&nbsp;a&nbsp;variant&nbsp;is&nbsp;classified&nbsp;for&nbsp;several&nbsp;related&nbsp;diseases&nbsp;and&nbsp;it&nbsp;may&nbsp;be&nbsp;uncertain&nbsp;whether&nbsp;the&nbsp;variant&nbsp;causes&nbsp;one&nbsp;or&nbsp;several&nbsp;of&nbsp;them;&nbsp;and&nbsp;\"Co-occurring\"&nbsp;when&nbsp;a&nbsp;variant&nbsp;causes&nbsp;more&nbsp;than&nbsp;one&nbsp;disease&nbsp;in&nbsp;the&nbsp;same&nbsp;individual&nbsp;(this&nbsp;is&nbsp;expected&nbsp;to&nbsp;be&nbsp;rare)."<br>
+            <label class="lineNoRight">357</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+            <label class="lineNoRight">358</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"condition":&nbsp;{<br>
+            <label class="lineNoRight">359</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"description":&nbsp;"The&nbsp;condition&nbsp;must&nbsp;be&nbsp;provided&nbsp;as&nbsp;either&nbsp;a&nbsp;database&nbsp;identifier&nbsp;or&nbsp;a&nbsp;name,&nbsp;but&nbsp;not&nbsp;both.&nbsp;A&nbsp;database&nbsp;identifier&nbsp;is&nbsp;preferred&nbsp;by&nbsp;ClinVar;&nbsp;a&nbsp;name&nbsp;should&nbsp;be&nbsp;provided&nbsp;only&nbsp;if&nbsp;there&nbsp;is&nbsp;no&nbsp;database&nbsp;identifier&nbsp;available.",<br>
+            <label class="lineNoRight">360</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"$ref":&nbsp;"#/definitions/conditionType"<br>
+            <label class="lineNoRight">361</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+            <label class="lineNoRight">362</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"drugResponse":&nbsp;{<br>
+            <label class="lineNoRight">363</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"description":&nbsp;"The&nbsp;drug&nbsp;Response&nbsp;evaluated&nbsp;specified&nbsp;by&nbsp;database&nbsp;ID&nbsp;or&nbsp;drug&nbsp;name,&nbsp;but&nbsp;not&nbsp;both",<br>
+            <label class="lineNoRight">364</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"$ref":&nbsp;"#/definitions/drugResponseType"<br>
+            <label class="lineNoRight">365</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            <label class="lineNoRight">366</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+            <label class="lineNoRight">367</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"additionalProperties":&nbsp;false<br>
+            <label class="lineNoRight">368</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            <label class="lineNoRight">369</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+            <label class="lineNoRight">370</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"unevaluatedProperties":&nbsp;false,<br>
+            <label class="lineNoRight">371</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"if":&nbsp;{<br>
+            <label class="lineNoRight">372</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"properties":&nbsp;{<br>
+            <label class="lineNoRight">373</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"germlineClassification":&nbsp;{<br>
+            <label class="lineNoRight">374</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"properties"&nbsp;:&nbsp;{<br>
+            <label class="lineNoRight">375</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"germlineClassificationDescription":&nbsp;{&nbsp;"const":&nbsp;"drug&nbsp;response"&nbsp;}<br>
+            <label class="lineNoRight">376</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            <label class="lineNoRight">377</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            <label class="lineNoRight">378</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            <label class="lineNoRight">379</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+            <label class="lineNoRight">380</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"then":&nbsp;{<br>
+            <label class="lineNoRight">381</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"properties":&nbsp;{<br>
+            <label class="lineNoRight">382</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"conditionSet":&nbsp;{<br>
+            <label class="lineNoRight">383</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"required":&nbsp;["drugResponse"],<br>
+            <label class="lineNoRight">384</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"errors":&nbsp;{"required":&nbsp;"when&nbsp;germlineClassificationDescription&nbsp;is&nbsp;\"drug&nbsp;response\",&nbsp;conditionSet.drugResponse&nbsp;is&nbsp;a&nbsp;required&nbsp;property"}<br>
+            <label class="lineNoRight">385</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            <label class="lineNoRight">386</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            <label class="lineNoRight">387</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+            <label class="lineNoRight">388</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"else"&nbsp;:&nbsp;{<br>
+            <label class="lineNoRight">389</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"properties":&nbsp;{<br>
+            <label class="lineNoRight">390</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"conditionSet":&nbsp;{<br>
+            <label class="lineNoRight">391</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"required":&nbsp;["condition"],<br>
+            <label class="lineNoRight">392</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"errors":&nbsp;{"required":&nbsp;"conditionSet.drugResponse&nbsp;is&nbsp;allowed&nbsp;only&nbsp;when&nbsp;germlineClassificationDescription&nbsp;is&nbsp;\"drug&nbsp;response\""}<br>
+            <label class="lineNoRight">393</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            <label class="lineNoRight">394</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            <label class="lineNoRight">395</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            <label class="lineNoRight">396</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+            <label class="lineNoRight">397</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"errors":&nbsp;{<br>
+            <label class="lineNoRight">398</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"minItems":&nbsp;"Empty&nbsp;list&nbsp;of&nbsp;germlineSubmission&nbsp;not&nbsp;allowed",<br>
+            <label class="lineNoRight">399</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"maxItems":&nbsp;"no&nbsp;more&nbsp;than&nbsp;10000&nbsp;germlineSubmission&nbsp;allowed"<br>
+            <label class="lineNoRight">400</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            <label class="lineNoRight">401</label>&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+            <label class="lineNoRight">402</label>&nbsp;&nbsp;&nbsp;&nbsp;"oncogenicitySubmission":&nbsp;{<br>
+            <label class="lineNoRight">403</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"title":&nbsp;"ClinVar&nbsp;Submission&nbsp;Set&nbsp;for&nbsp;somatic&nbsp;variants&nbsp;with&nbsp;oncogenicityClassification",<br>
+            <label class="lineNoRight">404</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"description":&nbsp;"A&nbsp;set&nbsp;of&nbsp;somatic&nbsp;variants&nbsp;with&nbsp;oncogenicityClassification",<br>
+            <label class="lineNoRight">405</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type":&nbsp;"array",<br>
+            <label class="lineNoRight">406</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"minItems":&nbsp;1,<br>
+            <label class="lineNoRight">407</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"maxItems":&nbsp;10000,<br>
+            <label class="lineNoRight">408</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"items":<br>
+            <label class="lineNoRight">409</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+            <label class="lineNoRight">410</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type":&nbsp;"object",<br>
+            <label class="lineNoRight">411</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"title":&nbsp;"ClinVar&nbsp;somatic&nbsp;oncogenicity&nbsp;Submission",<br>
+            <label class="lineNoRight">412</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"description":&nbsp;"Submissions&nbsp;to&nbsp;ClinVar&nbsp;are&nbsp;considered&nbsp;'variant-level'&nbsp;(not&nbsp;case-level&nbsp;or&nbsp;patient-specific),&nbsp;because&nbsp;they&nbsp;are&nbsp;focused&nbsp;on&nbsp;the&nbsp;variant&nbsp;or&nbsp;set&nbsp;of&nbsp;variants&nbsp;that&nbsp;was&nbsp;classified.&nbsp;One&nbsp;of&nbsp;variantSet,&nbsp;haplotypeSet,&nbsp;haplotypeSingleVariantSet,&nbsp;phaseUnknownSet,&nbsp;distinctChromosomesSet,&nbsp;diplotypeSet,&nbsp;compoundHeterozygoteSet&nbsp;is&nbsp;required&nbsp;to&nbsp;define&nbsp;the&nbsp;variant&nbsp;or&nbsp;set&nbsp;of&nbsp;variants&nbsp;that&nbsp;was&nbsp;classified.",<br>
+            <label class="lineNoRight">413</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"$ref":&nbsp;"#/definitions/baseSubmissionType",<br>
+            <label class="lineNoRight">414</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"required":&nbsp;[<br>
+            <label class="lineNoRight">415</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"oncogenicityClassification",<br>
+            <label class="lineNoRight">416</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"observedIn",<br>
+            <label class="lineNoRight">417</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"conditionSet"<br>
+            <label class="lineNoRight">418</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;],<br>
+            <label class="lineNoRight">419</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"properties":&nbsp;{<br>
+            <label class="lineNoRight">420</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"oncogenicityClassification":&nbsp;{<br>
+            <label class="lineNoRight">421</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type":&nbsp;"object",<br>
+            <label class="lineNoRight">422</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"description":&nbsp;"Oncogenicity&nbsp;classification",<br>
+            <label class="lineNoRight">423</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"$ref":&nbsp;"#/definitions/baseClassificationType",<br>
+            <label class="lineNoRight">424</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"required":&nbsp;["oncogenicityClassificationDescription"],<br>
+            <label class="lineNoRight">425</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"properties":&nbsp;{<br>
+            <label class="lineNoRight">426</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"oncogenicityClassificationDescription":&nbsp;{<br>
+            <label class="lineNoRight">427</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type":&nbsp;"string",<br>
+            <label class="lineNoRight">428</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"description":&nbsp;"For&nbsp;somatic&nbsp;variants,&nbsp;either&nbsp;“somaticClassificationClinicalImpact”&nbsp;or&nbsp;“oncogenicityClassification”&nbsp;is&nbsp;required.&nbsp;If&nbsp;you&nbsp;have&nbsp;both&nbsp;types&nbsp;of&nbsp;classifications&nbsp;for&nbsp;the&nbsp;same&nbsp;variant&nbsp;and&nbsp;tumor&nbsp;type,&nbsp;provide&nbsp;the&nbsp;classifications&nbsp;on&nbsp;separate&nbsp;entries.&nbsp;",<br>
+            <label class="lineNoRight">429</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"enum":&nbsp;[<br>
+            <label class="lineNoRight">430</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Oncogenic",<br>
+            <label class="lineNoRight">431</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Likely&nbsp;oncogenic",<br>
+            <label class="lineNoRight">432</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Uncertain&nbsp;significance",<br>
+            <label class="lineNoRight">433</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Likely&nbsp;benign",<br>
+            <label class="lineNoRight">434</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Benign"<br>
+            <label class="lineNoRight">435</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br>
+            <label class="lineNoRight">436</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            <label class="lineNoRight">437</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+            <label class="lineNoRight">438</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"unevaluatedProperties":&nbsp;false<br>
+            <label class="lineNoRight">439</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+            <label class="lineNoRight">440</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"observedIn":&nbsp;{<br>
+            <label class="lineNoRight">441</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type":&nbsp;"array",<br>
+            <label class="lineNoRight">442</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"minItems":&nbsp;1,<br>
+            <label class="lineNoRight">443</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"items":<br>
+            <label class="lineNoRight">444</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+            <label class="lineNoRight">445</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"$ref":&nbsp;"#/definitions/baseObservationType",<br>
+            <label class="lineNoRight">446</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"properties":&nbsp;{<br>
+            <label class="lineNoRight">447</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"presenceOfSomaticVariantInNormalTissue":&nbsp;{<br>
+            <label class="lineNoRight">448</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type":&nbsp;"string",<br>
+            <label class="lineNoRight">449</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"description":&nbsp;"Optional.&nbsp;Indicate&nbsp;whether&nbsp;the&nbsp;variant&nbsp;was&nbsp;present&nbsp;or&nbsp;absent&nbsp;in&nbsp;normal&nbsp;tissue,&nbsp;or&nbsp;that&nbsp;normal&nbsp;tissue&nbsp;was&nbsp;not&nbsp;tested.",<br>
+            <label class="lineNoRight">450</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"enum":&nbsp;[<br>
+            <label class="lineNoRight">451</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"present",&nbsp;"absent",&nbsp;"not&nbsp;tested"<br>
+            <label class="lineNoRight">452</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br>
+            <label class="lineNoRight">453</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+            <label class="lineNoRight">454</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"somaticVariantAlleleFraction":&nbsp;{<br>
+            <label class="lineNoRight">455</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type":&nbsp;"number",<br>
+            <label class="lineNoRight">456</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"description":&nbsp;"Optional.&nbsp;Indicate&nbsp;the&nbsp;variant&nbsp;allele&nbsp;fraction&nbsp;(or&nbsp;frequency)&nbsp;observed&nbsp;in&nbsp;this&nbsp;tumor,&nbsp;expressed&nbsp;as&nbsp;a&nbsp;float,&nbsp;e.g.&nbsp;0.2."<br>
+            <label class="lineNoRight">457</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            <label class="lineNoRight">458</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+            <label class="lineNoRight">459</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"unevaluatedProperties":&nbsp;false<br>
+            <label class="lineNoRight">460</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+            <label class="lineNoRight">461</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"errors":&nbsp;{"minItems":&nbsp;"Empty&nbsp;list&nbsp;of&nbsp;observedIn&nbsp;not&nbsp;allowed"}<br>
+            <label class="lineNoRight">462</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+            <label class="lineNoRight">463</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"conditionSet":&nbsp;{<br>
+            <label class="lineNoRight">464</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type":&nbsp;"object",<br>
+            <label class="lineNoRight">465</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"description":&nbsp;"The&nbsp;condition&nbsp;for&nbsp;which&nbsp;the&nbsp;variant&nbsp;is&nbsp;classified.&nbsp;Detailed&nbsp;information&nbsp;about&nbsp;reporting&nbsp;condition&nbsp;is&nbsp;available&nbsp;at&nbsp;https://www.ncbi.nlm.nih.gov/clinvar/docs/faq_submitters/#pheno&nbsp;&nbsp;If&nbsp;multiple&nbsp;conditions&nbsp;are&nbsp;submitted&nbsp;for&nbsp;a&nbsp;variant,&nbsp;this&nbsp;indicates&nbsp;that&nbsp;the&nbsp;variant&nbsp;was&nbsp;interpreted&nbsp;for&nbsp;the&nbsp;combination&nbsp;of&nbsp;conditions&nbsp;in&nbsp;the&nbsp;same&nbsp;individual(s).&nbsp;&nbsp;i.e.&nbsp;this&nbsp;variant&nbsp;causes&nbsp;both&nbsp;condition&nbsp;A&nbsp;and&nbsp;condition&nbsp;B&nbsp;in&nbsp;the&nbsp;same&nbsp;individual.&nbsp;This&nbsp;scenario&nbsp;is&nbsp;most&nbsp;common&nbsp;for&nbsp;a&nbsp;new&nbsp;disease&nbsp;or&nbsp;syndrome&nbsp;that&nbsp;does&nbsp;not&nbsp;yet&nbsp;have&nbsp;a&nbsp;name&nbsp;and&nbsp;is&nbsp;described&nbsp;by&nbsp;several&nbsp;clinical&nbsp;features.&nbsp;&nbsp;If&nbsp;you&nbsp;want&nbsp;to&nbsp;indicate&nbsp;that&nbsp;the&nbsp;variant&nbsp;has&nbsp;been&nbsp;interpreted&nbsp;for&nbsp;more&nbsp;than&nbsp;one&nbsp;condition,&nbsp;please&nbsp;submit&nbsp;these&nbsp;as&nbsp;separate&nbsp;records.&nbsp;i.e.&nbsp;this&nbsp;variant&nbsp;causes&nbsp;condition&nbsp;A&nbsp;in&nbsp;some&nbsp;individuals&nbsp;and&nbsp;causes&nbsp;disease&nbsp;B&nbsp;in&nbsp;other&nbsp;individuals.&nbsp;Provide&nbsp;only&nbsp;one&nbsp;name&nbsp;or&nbsp;identifier&nbsp;for&nbsp;a&nbsp;condition;&nbsp;do&nbsp;not&nbsp;provide&nbsp;multiple&nbsp;names&nbsp;or&nbsp;identifiers&nbsp;for&nbsp;the&nbsp;same&nbsp;condition.",<br>
+            <label class="lineNoRight">466</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"required":&nbsp;["condition"],<br>
+            <label class="lineNoRight">467</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"properties":&nbsp;{<br>
+            <label class="lineNoRight">468</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"condition":&nbsp;{<br>
+            <label class="lineNoRight">469</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"description":&nbsp;"The&nbsp;condition&nbsp;must&nbsp;be&nbsp;provided&nbsp;as&nbsp;either&nbsp;a&nbsp;database&nbsp;identifier&nbsp;or&nbsp;a&nbsp;name,&nbsp;but&nbsp;not&nbsp;both.&nbsp;A&nbsp;database&nbsp;identifier&nbsp;is&nbsp;preferred&nbsp;by&nbsp;ClinVar;&nbsp;a&nbsp;name&nbsp;should&nbsp;be&nbsp;provided&nbsp;only&nbsp;if&nbsp;there&nbsp;is&nbsp;no&nbsp;database&nbsp;identifier&nbsp;available.",<br>
+            <label class="lineNoRight">470</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"$ref":&nbsp;"#/definitions/conditionType"<br>
+            <label class="lineNoRight">471</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            <label class="lineNoRight">472</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+            <label class="lineNoRight">473</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"unevaluatedProperties":&nbsp;false<br>
+            <label class="lineNoRight">474</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            <label class="lineNoRight">475</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+            <label class="lineNoRight">476</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"unevaluatedProperties":&nbsp;false<br>
+            <label class="lineNoRight">477</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+            <label class="lineNoRight">478</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"errors":&nbsp;{<br>
+            <label class="lineNoRight">479</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"minItems":&nbsp;"Empty&nbsp;list&nbsp;of&nbsp;oncogenicitySubmission&nbsp;not&nbsp;allowed",<br>
+            <label class="lineNoRight">480</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"maxItems":&nbsp;"no&nbsp;more&nbsp;than&nbsp;10000&nbsp;oncogenicitySubmission&nbsp;allowed"<br>
+            <label class="lineNoRight">481</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            <label class="lineNoRight">482</label>&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+            <label class="lineNoRight">483</label>&nbsp;&nbsp;&nbsp;&nbsp;"clinicalImpactSubmission":&nbsp;{<br>
+            <label class="lineNoRight">484</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"title":&nbsp;"ClinVar&nbsp;Submission&nbsp;Set&nbsp;for&nbsp;somatic&nbsp;variants&nbsp;with&nbsp;clinicalImpactClassification",<br>
+            <label class="lineNoRight">485</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"description":&nbsp;"A&nbsp;set&nbsp;of&nbsp;somatic&nbsp;variants&nbsp;with&nbsp;clinicalImpactClassification",<br>
+            <label class="lineNoRight">486</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type":&nbsp;"array",<br>
+            <label class="lineNoRight">487</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"minItems":&nbsp;1,<br>
+            <label class="lineNoRight">488</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"maxItems":&nbsp;10000,<br>
+            <label class="lineNoRight">489</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"items":<br>
+            <label class="lineNoRight">490</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+            <label class="lineNoRight">491</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type":&nbsp;"object",<br>
+            <label class="lineNoRight">492</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"title":&nbsp;"ClinVar&nbsp;somatic&nbsp;clinicalImpact&nbsp;Submission",<br>
+            <label class="lineNoRight">493</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"description":&nbsp;"Submissions&nbsp;to&nbsp;ClinVar&nbsp;are&nbsp;considered&nbsp;'variant-level'&nbsp;(not&nbsp;case-level&nbsp;or&nbsp;patient-specific),&nbsp;because&nbsp;they&nbsp;are&nbsp;focused&nbsp;on&nbsp;the&nbsp;variant&nbsp;or&nbsp;set&nbsp;of&nbsp;variants&nbsp;that&nbsp;was&nbsp;classified.&nbsp;One&nbsp;of&nbsp;variantSet,&nbsp;haplotypeSet,&nbsp;haplotypeSingleVariantSet,&nbsp;phaseUnknownSet,&nbsp;distinctChromosomesSet,&nbsp;diplotypeSet,&nbsp;compoundHeterozygoteSet&nbsp;is&nbsp;required&nbsp;to&nbsp;define&nbsp;the&nbsp;variant&nbsp;or&nbsp;set&nbsp;of&nbsp;variants&nbsp;that&nbsp;was&nbsp;classified.",<br>
+            <label class="lineNoRight">494</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"$ref":&nbsp;"#/definitions/baseSubmissionType",<br>
+            <label class="lineNoRight">495</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"required":&nbsp;[<br>
+            <label class="lineNoRight">496</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"clinicalImpactClassification",<br>
+            <label class="lineNoRight">497</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"observedIn",<br>
+            <label class="lineNoRight">498</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"conditionSet"<br>
+            <label class="lineNoRight">499</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;],<br>
+            <label class="lineNoRight">500</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"properties":&nbsp;{<br>
+            <label class="lineNoRight">501</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"clinicalImpactClassification":&nbsp;{<br>
+            <label class="lineNoRight">502</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type":&nbsp;"object",<br>
+            <label class="lineNoRight">503</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"description":&nbsp;"Clinical&nbsp;Impact&nbsp;classification&nbsp;of&nbsp;somatic&nbsp;variants",<br>
+            <label class="lineNoRight">504</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"$ref":&nbsp;"#/definitions/baseClassificationType",<br>
+            <label class="lineNoRight">505</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"required":&nbsp;["clinicalImpactClassificationDescription"],<br>
+            <label class="lineNoRight">506</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"properties":&nbsp;{<br>
+            <label class="lineNoRight">507</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"clinicalImpactClassificationDescription":&nbsp;{<br>
+            <label class="lineNoRight">508</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type":&nbsp;"string",<br>
+            <label class="lineNoRight">509</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"description":&nbsp;"The&nbsp;strength&nbsp;of&nbsp;clincal&nbsp;impact&nbsp;expressed&nbsp;in&nbsp;tiers.",<br>
+            <label class="lineNoRight">510</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"enum":&nbsp;[<br>
+            <label class="lineNoRight">511</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Tier&nbsp;I&nbsp;-&nbsp;Strong",<br>
+            <label class="lineNoRight">512</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Tier&nbsp;II&nbsp;-&nbsp;Potential",<br>
+            <label class="lineNoRight">513</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Tier&nbsp;III&nbsp;-&nbsp;Unknown",<br>
+            <label class="lineNoRight">514</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Tier&nbsp;IV&nbsp;-&nbsp;Benign/Likely&nbsp;benign"<br>
+            <label class="lineNoRight">515</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br>
+            <label class="lineNoRight">516</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+            <label class="lineNoRight">517</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"assertionTypeForClinicalImpact":&nbsp;{<br>
+            <label class="lineNoRight">518</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type":&nbsp;"string",<br>
+            <label class="lineNoRight">519</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"description":&nbsp;"Required&nbsp;for&nbsp;variants&nbsp;with&nbsp;a&nbsp;'Somatic&nbsp;classification&nbsp;of&nbsp;clinical&nbsp;impact'&nbsp;of&nbsp;Tier&nbsp;I&nbsp;or&nbsp;II.&nbsp;&nbsp;Optional&nbsp;for&nbsp;Tier&nbsp;III&nbsp;and&nbsp;IV.",<br>
+            <label class="lineNoRight">520</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"enum":&nbsp;[<br>
+            <label class="lineNoRight">521</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"therapeutic:&nbsp;sensitivity/response",<br>
+            <label class="lineNoRight">522</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"therapeutic:&nbsp;resistance",<br>
+            <label class="lineNoRight">523</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"therapeutic:&nbsp;reduced&nbsp;sensitivity",<br>
+            <label class="lineNoRight">524</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"diagnostic:&nbsp;supports&nbsp;diagnosis",<br>
+            <label class="lineNoRight">525</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"diagnostic:&nbsp;excludes&nbsp;diagnosis",<br>
+            <label class="lineNoRight">526</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"prognostic:&nbsp;better&nbsp;outcome",<br>
+            <label class="lineNoRight">527</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"prognostic:&nbsp;poor&nbsp;outcome"<br>
+            <label class="lineNoRight">528</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br>
+            <label class="lineNoRight">529</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+            <label class="lineNoRight">530</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"drugForTherapeuticAssertion":&nbsp;{<br>
+            <label class="lineNoRight">531</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type":&nbsp;"string",<br>
+            <label class="lineNoRight">532</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"description":&nbsp;"Required&nbsp;for&nbsp;variants&nbsp;with&nbsp;a&nbsp;'Somatic&nbsp;classification&nbsp;of&nbsp;clinical&nbsp;impact'&nbsp;and&nbsp;therapeutic&nbsp;assertion&nbsp;type.&nbsp;&nbsp;Do&nbsp;not&nbsp;fill&nbsp;in&nbsp;this&nbsp;column&nbsp;for&nbsp;diagnostic&nbsp;or&nbsp;prognostic&nbsp;assertion&nbsp;types.&nbsp;May&nbsp;be&nbsp;the&nbsp;name&nbsp;of&nbsp;a&nbsp;specific&nbsp;drug,&nbsp;e.g.&nbsp;ruxolitinib,&nbsp;or&nbsp;a&nbsp;drug&nbsp;class,&nbsp;e.g.&nbsp;JAK&nbsp;inhibitors.&nbsp;Multiple&nbsp;terms&nbsp;are&nbsp;allowed&nbsp;only&nbsp;to&nbsp;represent&nbsp;combination&nbsp;therapies,&nbsp;e.g.&nbsp;cisplatin&nbsp;and&nbsp;vinorelbine&nbsp;for&nbsp;non-small&nbsp;cell&nbsp;lung&nbsp;cancer.&nbsp;Separate&nbsp;multiple&nbsp;terms&nbsp;with&nbsp;a&nbsp;semi-colon."<br>
+            <label class="lineNoRight">533</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            <label class="lineNoRight">534</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+            <label class="lineNoRight">535</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"unevaluatedProperties":&nbsp;false<br>
+            <label class="lineNoRight">536</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+            <label class="lineNoRight">537</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"observedIn":&nbsp;{<br>
+            <label class="lineNoRight">538</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type":&nbsp;"array",<br>
+            <label class="lineNoRight">539</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"minItems":&nbsp;1,<br>
+            <label class="lineNoRight">540</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"items":<br>
+            <label class="lineNoRight">541</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+            <label class="lineNoRight">542</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"$ref":&nbsp;"#/definitions/baseObservationType",<br>
+            <label class="lineNoRight">543</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"properties":&nbsp;{<br>
+            <label class="lineNoRight">544</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"presenceOfSomaticVariantInNormalTissue":&nbsp;{<br>
+            <label class="lineNoRight">545</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type":&nbsp;"string",<br>
+            <label class="lineNoRight">546</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"description":&nbsp;"Optional.&nbsp;Indicate&nbsp;whether&nbsp;the&nbsp;variant&nbsp;was&nbsp;present&nbsp;or&nbsp;absent&nbsp;in&nbsp;normal&nbsp;tissue,&nbsp;or&nbsp;that&nbsp;normal&nbsp;tissue&nbsp;was&nbsp;not&nbsp;tested.",<br>
+            <label class="lineNoRight">547</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"enum":&nbsp;[<br>
+            <label class="lineNoRight">548</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"present",&nbsp;"absent",&nbsp;"not&nbsp;tested"<br>
+            <label class="lineNoRight">549</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br>
+            <label class="lineNoRight">550</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+            <label class="lineNoRight">551</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"somaticVariantAlleleFraction":&nbsp;{<br>
+            <label class="lineNoRight">552</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type":&nbsp;"number",<br>
+            <label class="lineNoRight">553</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"description":&nbsp;"Optional.&nbsp;Indicate&nbsp;the&nbsp;variant&nbsp;allele&nbsp;fraction&nbsp;(or&nbsp;frequency)&nbsp;observed&nbsp;in&nbsp;this&nbsp;tumor,&nbsp;expressed&nbsp;as&nbsp;a&nbsp;float,&nbsp;e.g.&nbsp;0.2."<br>
+            <label class="lineNoRight">554</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            <label class="lineNoRight">555</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+            <label class="lineNoRight">556</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"unevaluatedProperties":&nbsp;false<br>
+            <label class="lineNoRight">557</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+            <label class="lineNoRight">558</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"errors":&nbsp;{"minItems":&nbsp;"Empty&nbsp;list&nbsp;of&nbsp;observedIn&nbsp;not&nbsp;allowed"}<br>
+            <label class="lineNoRight">559</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+            <label class="lineNoRight">560</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"conditionSet":&nbsp;{<br>
+            <label class="lineNoRight">561</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type":&nbsp;"object",<br>
+            <label class="lineNoRight">562</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"description":&nbsp;"The&nbsp;condition&nbsp;for&nbsp;which&nbsp;the&nbsp;variant&nbsp;is&nbsp;classified.&nbsp;Detailed&nbsp;information&nbsp;about&nbsp;reporting&nbsp;condition&nbsp;is&nbsp;available&nbsp;at&nbsp;https://www.ncbi.nlm.nih.gov/clinvar/docs/faq_submitters/#pheno&nbsp;&nbsp;If&nbsp;multiple&nbsp;conditions&nbsp;are&nbsp;submitted&nbsp;for&nbsp;a&nbsp;variant,&nbsp;this&nbsp;indicates&nbsp;that&nbsp;the&nbsp;variant&nbsp;was&nbsp;interpreted&nbsp;for&nbsp;the&nbsp;combination&nbsp;of&nbsp;conditions&nbsp;in&nbsp;the&nbsp;same&nbsp;individual(s).&nbsp;&nbsp;i.e.&nbsp;this&nbsp;variant&nbsp;causes&nbsp;both&nbsp;condition&nbsp;A&nbsp;and&nbsp;condition&nbsp;B&nbsp;in&nbsp;the&nbsp;same&nbsp;individual.&nbsp;This&nbsp;scenario&nbsp;is&nbsp;most&nbsp;common&nbsp;for&nbsp;a&nbsp;new&nbsp;disease&nbsp;or&nbsp;syndrome&nbsp;that&nbsp;does&nbsp;not&nbsp;yet&nbsp;have&nbsp;a&nbsp;name&nbsp;and&nbsp;is&nbsp;described&nbsp;by&nbsp;several&nbsp;clinical&nbsp;features.&nbsp;&nbsp;If&nbsp;you&nbsp;want&nbsp;to&nbsp;indicate&nbsp;that&nbsp;the&nbsp;variant&nbsp;has&nbsp;been&nbsp;interpreted&nbsp;for&nbsp;more&nbsp;than&nbsp;one&nbsp;condition,&nbsp;please&nbsp;submit&nbsp;these&nbsp;as&nbsp;separate&nbsp;records.&nbsp;i.e.&nbsp;this&nbsp;variant&nbsp;causes&nbsp;condition&nbsp;A&nbsp;in&nbsp;some&nbsp;individuals&nbsp;and&nbsp;causes&nbsp;disease&nbsp;B&nbsp;in&nbsp;other&nbsp;individuals.&nbsp;Provide&nbsp;only&nbsp;one&nbsp;name&nbsp;or&nbsp;identifier&nbsp;for&nbsp;a&nbsp;condition;&nbsp;do&nbsp;not&nbsp;provide&nbsp;multiple&nbsp;names&nbsp;or&nbsp;identifiers&nbsp;for&nbsp;the&nbsp;same&nbsp;condition.",<br>
+            <label class="lineNoRight">563</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"required":&nbsp;["condition"],<br>
+            <label class="lineNoRight">564</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"properties":&nbsp;{<br>
+            <label class="lineNoRight">565</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"condition":&nbsp;{<br>
+            <label class="lineNoRight">566</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"description":&nbsp;"The&nbsp;condition&nbsp;must&nbsp;be&nbsp;provided&nbsp;as&nbsp;either&nbsp;a&nbsp;database&nbsp;identifier&nbsp;or&nbsp;a&nbsp;name,&nbsp;but&nbsp;not&nbsp;both.&nbsp;A&nbsp;database&nbsp;identifier&nbsp;is&nbsp;preferred&nbsp;by&nbsp;ClinVar;&nbsp;a&nbsp;name&nbsp;should&nbsp;be&nbsp;provided&nbsp;only&nbsp;if&nbsp;there&nbsp;is&nbsp;no&nbsp;database&nbsp;identifier&nbsp;available.",<br>
+            <label class="lineNoRight">567</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"$ref":&nbsp;"#/definitions/conditionType"<br>
+            <label class="lineNoRight">568</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            <label class="lineNoRight">569</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+            <label class="lineNoRight">570</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"additionalProperties":&nbsp;false<br>
+            <label class="lineNoRight">571</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            <label class="lineNoRight">572</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+            <label class="lineNoRight">573</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"unevaluatedProperties":&nbsp;false<br>
+            <label class="lineNoRight">574</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+            <label class="lineNoRight">575</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"errors":&nbsp;{<br>
+            <label class="lineNoRight">576</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"minItems":&nbsp;"Empty&nbsp;list&nbsp;of&nbsp;clinicalImpactSubmission&nbsp;not&nbsp;allowed",<br>
+            <label class="lineNoRight">577</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"maxItems":&nbsp;"no&nbsp;more&nbsp;than&nbsp;10000&nbsp;clinicalImpactSubmission&nbsp;allowed"<br>
+            <label class="lineNoRight">578</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></span>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
