@@ -15,7 +15,7 @@ Highlights of differences between submission set objects:
 | ---------------------------------------------------------- | -------------------------------------------- | -------------------------------------------- | -------------------------------------------- |
 |Observation| |presenceOfSomaticVariantInNormalTissue <br> somaticVariantAlleleFraction|presenceOfSomaticVariantInNormalTissue <br> somaticVariantAlleleFraction|
 |Conditions|drug response| | |
-|Classification|germlineClassification <br> modeOfInheritance <br> customAssertionScore <br> explanationOfDrugResponse <br> explanationOfOtherGermlineClassification <br /> <br /> *All these properties use the term "germlineClassification" instead of "clinical significance" (The term used in 'clinvarSubmission' object) |clinicalImpactClassification|oncogenicityClassification|
+|Classification|germlineClassification <br> modeOfInheritance <br> customAssertionScore <br> explanationOfDrugResponse <br> explanationOfOtherGermlineClassification <br /> <br /> *All these properties use the term "germlineClassification" instead of "clinicalSignificance" (The term used in 'clinvarSubmission' object) |clinicalImpactClassification|oncogenicityClassification|
 
 Differences between current and proposed schema: [api_submission_schema_diff.html](api_schema_diff.html)
 
