@@ -6,7 +6,10 @@ We released changes to the ClinVar XML files and our submission spreadsheet temp
 To help file submitters prepare for this change, we are making the updated spreadsheet templates available for review with a [note explaining changes](submission_templates/README.md).
 ([SubmissionTemplate.xlsx](submission_templates/SubmissionTemplate.xlsx), [SubmissionTemplateLite.xlsx](submission_templates/SubmissionTemplateLite.xlsx) and [SubmissionTemplateSomatic.xlsx](submission_templates/SubmissionTemplateSomatic.xlsx))
 
-Submission of somatic variants through the API, the submission wizard and SCV update forms will be added later in 2024.
+We plan to support the submission of somatic variants though the API around May 15 2024. 
+The Submission API test endpoint will support somatic variants from April 11 2024 for testing; details can be found [here](submission_api_schema/README.md).
+
+Submission of somatic variants through the submission wizard and SCV update forms will be added later in 2024.
 
 To help our XML users prepare for this change, we are providing documentation before we release this feature. The documentation includes:
 - a preview of the updated XSDs for both [RCV](xsds_preview/clinvar_public.xsd) and [VCV](xsds_preview/variation_archive.xsd) XMLs
@@ -14,7 +17,7 @@ To help our XML users prepare for this change, we are providing documentation be
 - [sample XMLs](sample_xmls/) for both RCV and VCV
 - [sample variation web page and search snapshots](sample_web_snapshots/)
 - [sample_tab_delimited](sample_tab_delimited/) for tab-delimited FTP files
-- [submission api schema](submission_api_schema/) for API schmea
+- [submission api schema](submission_api_schema/) for API schema
 - a [note](ClassificationOnClinVar.md) explaining Classification on ClinVar aggregated records
 - a [note](ReviewStatus.md) explaining Review Status on ClinVar records.
 - a [note](FTPSiteXmlChanges.md) showing the preview of FTP folder structure and filenames for XML files.

@@ -5,9 +5,11 @@ ClinVar's current Submission API schema is [submission_api_schema.json](submissi
 We plan to introduce some changes to the ClinVar Submission API schema to improve support for submission of somatic variants through the API.
 <br />[Preview of proposed API submission Schema to support Somatic Variant Classifications](submission_api_schema_proposed.json).
 
+We anticipate to update test endpoint, https://submit.ncbi.nlm.nih.gov/apitest/v1/submissions, to use the new proposed schema on April 11<sup>th</sup> 2024 and the production endpoint,  https://submit.ncbi.nlm.nih.gov/api/v1/submissions, around May 15<sup>th</sup> 2024. 
+<br />If you have any comments or suggestions for changes to the schema, please contact us at clinvar@ncbi.nlm.nih.gov as possible before May 15 so that we have time to make updates, if necessary.
 
 Similar to the somatic spreadsheet submission template, the proposed schema offers two types of classification for somatic variants: "oncogenicityClassification" and "clinicalImpactClassification".  More information about the types of classifications in ClinVar is available on our website: https://www.ncbi.nlm.nih.gov/clinvar/docs/clinsig/. Consequently, three new submission set objects are introduced: "oncogenicitySubmission" and "clinicalImpactSubmission" for somatic variants and "germlineSubmission" for germline variants. 
-<br />Note: We plan to deprecate the "clinvarSubmission" submission set object in the future. Though this proposed schema remains backward compatible with the "clinvarSubmission", we strongly recommend transitioning to the equivalent "germlineSubmission".
+<br />*Note*: We plan to deprecate the "clinvarSubmission" submission set object in the future. Though this proposed schema remains backward compatible with the "clinvarSubmission", we strongly recommend transitioning to the equivalent "germlineSubmission".
 
 
 Highlights of differences between submission set objects:
