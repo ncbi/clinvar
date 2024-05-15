@@ -453,7 +453,7 @@
                 },
                 "somaticVariantAlleleFraction": {
                   "type": "number",
-                  "description": "Optional. Indicate the variant allele fraction (or frequency) observed in this tumor, expressed as a float, e.g. 0.2."
+                  "description": "Optional. Indicate the variant allele fraction (or frequency) observed in this tumor, expressed as a percentage, e.g. 20."
                 }
               },
               "unevaluatedProperties": false
