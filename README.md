@@ -6,8 +6,7 @@ We released changes to the ClinVar XML files and our submission spreadsheet temp
 To help file submitters prepare for this change, we are making the updated spreadsheet templates available for review with a [note explaining changes](submission_templates/README.md).
 ([SubmissionTemplate.xlsx](submission_templates/SubmissionTemplate.xlsx), [SubmissionTemplateLite.xlsx](submission_templates/SubmissionTemplateLite.xlsx) and [SubmissionTemplateSomatic.xlsx](submission_templates/SubmissionTemplateSomatic.xlsx))
 
-We plan to support the submission of somatic variants though the API around May 15 2024. 
-The Submission API test endpoint will support somatic variants from April 11 2024 for testing; details can be found [here](submission_api_schema/README.md).
+The production endpoint for the Submission API supports submission of somatic variants as of May 15 2024; the test endpoint was made available on April 11 2024. Details can be found [in the README for the API schema](submission_api_schema/README.md).
 
 Submission of somatic variants through the submission wizard and SCV update forms will be added later in 2024.
 
