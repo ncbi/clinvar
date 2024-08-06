@@ -550,7 +550,7 @@
                 },
                 "somaticVariantAlleleFraction": {
                   "type": "number",
-                  "description": "Optional. Indicate the variant allele fraction (or frequency) observed in this tumor, expressed as a float, e.g. 0.2."
+                  "description": "Optional. Indicate the variant allele fraction (or frequency) observed in this tumor, expressed as a percentage, e.g. 20."
                 }
               },
               "unevaluatedProperties": false
@@ -814,6 +814,13 @@
             "Translocation",
             "Complex"
           ]
+        },
+        "alternateDesignations": {
+          "type": "array",
+           "items": {
+               "type": "string",
+               "description": "Optional. Alternate, common, or legacy names for the variant. This is most important for variants that have legacy names that cannot be automatically calculated from current data, such as \"deltaF508\" or names that use old numbering systems. While you can provide other valid HGVS expressions in this column, such as the p. description, and protein changes like V600E, it is not necessary because ClinVar calculates protein changes and other valid HGVS expressions for genomic DNA, cDNA, and protein automatically. Examples of useful alternate names include: deltaF508 - common name for NM_000492.3:c.1521_1523delCTT; Z allele - common name for NM_001127701.1:c.1096G>A; 3120G->A - legacy name for NM_000492.3:c.2988G>A."
+           }
         }
       },
       "additionalProperties": false,
