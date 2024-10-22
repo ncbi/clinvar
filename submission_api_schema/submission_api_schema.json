@@ -1367,7 +1367,7 @@
         },
         "comment": {
           "type": "string",
-          "description": "Optional, but highly encouraged. Free text describing the rationale for the classification."
+          "description": "Optional, but highly encouraged. Free text describing the rationale for the classification. The comment should include the detailed evidence for the classification, although it should not contain personally identifiable information (PII). It may also include the evidence codes used, e.g. codes from the ACMG guidelines, although the codes alone are insufficient. See VCV000163461 (https://www.ncbi.nlm.nih.gov/clinvar/variation/163461/) for several examples of useful comments on classification."
         },
         "dateLastEvaluated": {
           "type": "string",
