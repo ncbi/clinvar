@@ -1,0 +1,238 @@
+<ClinVarSet ID="176653013">
+  <RecordStatus>current</RecordStatus>
+  <Title>NM_006295.3(VARS1):c.2590_2592delinsTGA (p.Ser864Ter) AND Neurodevelopmental disorder with microcephaly, seizures, and cortical atrophy</Title>
+  <ReferenceClinVarAssertion ID="7926206" DateLastUpdated="2024-02-14" DateCreated="2024-02-04">
+    <ClinVarAccession Acc="RCV003493393" Version="1" Type="RCV" DateUpdated="2024-02-14" DateCreated="2024-02-04" />
+    <RecordStatus>current</RecordStatus>
+    <Classifications>
+      <GermlineClassification>
+        <ReviewStatus>no assertion criteria provided</ReviewStatus>
+        <Description DateLastEvaluated="2023-07-10" SubmissionCount="1">Likely pathogenic</Description>
+      </GermlineClassification>
+    </Classifications>
+    <Assertion Type="variation to disease" />
+    <ObservedIn>
+      <Sample>
+        <Origin>maternal</Origin>
+        <Species TaxonomyId="9606">human</Species>
+        <AffectedStatus>yes</AffectedStatus>
+      </Sample>
+      <Method>
+        <MethodType>clinical testing</MethodType>
+      </Method>
+      <Method>
+        <Purpose>Discovery</Purpose>
+        <Description>RNAseq</Description>
+        <MethodType>research</MethodType>
+      </Method>
+      <ObservedData ID="145553606">
+        <Attribute integerValue="1" Type="VariantAlleles" />
+      </ObservedData>
+      <ObservedData ID="145553606">
+        <Attribute Type="Description">not provided</Attribute>
+      </ObservedData>
+      <ObservedData ID="145553606">
+        <Attribute integerValue="1" Type="CompoundHeterozygote" />
+      </ObservedData>
+    </ObservedIn>
+    <MeasureSet Type="Variant" ID="2691776" Acc="VCV002691776" Version="1">
+      <Measure Type="Indel" ID="2852798">
+        <Name>
+          <ElementValue Type="Preferred">NM_006295.3(VARS1):c.2590_2592delinsTGA (p.Ser864Ter)</ElementValue>
+        </Name>
+        <Name>
+          <ElementValue Type="Alternate">p.S864*</ElementValue>
+        </Name>
+        <CanonicalSPDI>NC_000006.12:31781075:GCT:TCA</CanonicalSPDI>
+        <AttributeSet>
+          <Attribute Accession="NM_006295" Version="3" Change="c.2590_2592delinsTGA" Type="HGVS, coding, RefSeq" MANESelect="true">NM_006295.3:c.2590_2592delinsTGA</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Accession="NG_028229" Version="1" Change="g.19858_19860delinsTGA" Type="HGVS, genomic, RefSeqGene">NG_028229.1:g.19858_19860delinsTGA</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Accession="NC_000006" Version="12" Change="g.31781076_31781078delinsTCA" Type="HGVS, genomic, top level" integerValue="38">NC_000006.12:g.31781076_31781078delinsTCA</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Accession="NC_000006" Version="11" Change="g.31748853_31748855delinsTCA" Type="HGVS, genomic, top level, previous" integerValue="37">NC_000006.11:g.31748853_31748855delinsTCA</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Accession="NP_006286" Version="1" Change="p.Ser864Ter" Type="HGVS, protein, RefSeq">NP_006286.1:p.Ser864Ter</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="MolecularConsequence">nonsense</Attribute>
+          <XRef ID="SO:0001587" DB="Sequence Ontology" />
+          <XRef ID="NM_006295.3:c.2590_2592delinsTGA" DB="RefSeq" />
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="ProteinChange1LetterCode">S864*</Attribute>
+        </AttributeSet>
+        <CytogeneticLocation>6p21.33</CytogeneticLocation>
+        <SequenceLocation Assembly="GRCh38" AssemblyAccessionVersion="GCF_000001405.38" AssemblyStatus="current" Chr="6" Accession="NC_000006.12" start="31781076" stop="31781078" display_start="31781076" display_stop="31781078" variantLength="3" positionVCF="31781076" referenceAlleleVCF="GCT" alternateAlleleVCF="TCA" />
+        <SequenceLocation Assembly="GRCh37" AssemblyAccessionVersion="GCF_000001405.25" AssemblyStatus="previous" Chr="6" Accession="NC_000006.11" start="31748853" stop="31748855" display_start="31748853" display_stop="31748855" variantLength="3" positionVCF="31748853" referenceAlleleVCF="GCT" alternateAlleleVCF="TCA" />
+        <MeasureRelationship Type="within single gene">
+          <Name>
+            <ElementValue Type="Preferred">valyl-tRNA synthetase 1</ElementValue>
+          </Name>
+          <Symbol>
+            <ElementValue Type="Preferred">VARS1</ElementValue>
+          </Symbol>
+          <SequenceLocation Assembly="GRCh38" AssemblyAccessionVersion="GCF_000001405.38" AssemblyStatus="current" Chr="6" Accession="NC_000006.12" start="31777518" stop="31795752" display_start="31777518" display_stop="31795752" Strand="-" />
+          <SequenceLocation Assembly="GRCh38" AssemblyAccessionVersion="GCF_000001405.38" AssemblyStatus="current" Chr="6" Accession="NT_113891.3" start="3254760" stop="3272992" display_start="3254760" display_stop="3272992" Strand="-" />
+          <SequenceLocation Assembly="GRCh38" AssemblyAccessionVersion="GCF_000001405.38" AssemblyStatus="current" Chr="6" Accession="NT_167244.2" start="3110129" stop="3128363" display_start="3110129" display_stop="3128363" Strand="-" />
+          <SequenceLocation Assembly="GRCh38" AssemblyAccessionVersion="GCF_000001405.38" AssemblyStatus="current" Chr="6" Accession="NT_167245.2" start="3025292" stop="3043526" display_start="3025292" display_stop="3043526" Strand="-" />
+          <SequenceLocation Assembly="GRCh38" AssemblyAccessionVersion="GCF_000001405.38" AssemblyStatus="current" Chr="6" Accession="NT_167247.2" start="3119407" stop="3137641" display_start="3119407" display_stop="3137641" Strand="-" />
+          <SequenceLocation Assembly="GRCh38" AssemblyAccessionVersion="GCF_000001405.38" AssemblyStatus="current" Chr="6" Accession="NT_167248.2" start="3047436" stop="3051579" display_start="3047436" display_stop="3051579" Strand="-" />
+          <SequenceLocation Assembly="GRCh38" AssemblyAccessionVersion="GCF_000001405.38" AssemblyStatus="current" Chr="6" Accession="NT_167249.2" start="3076809" stop="3094270" display_start="3076809" display_stop="3094270" Strand="-" />
+          <SequenceLocation Assembly="GRCh37" AssemblyAccessionVersion="GCF_000001405.25" AssemblyStatus="previous" Chr="6" Accession="NC_000006.11" start="31745294" stop="31763711" display_start="31745294" display_stop="31763711" variantLength="18418" Strand="-" />
+          <XRef ID="7407" DB="Gene" />
+          <XRef Type="MIM" ID="192150" DB="OMIM" />
+          <XRef ID="HGNC:12651" DB="HGNC" />
+        </MeasureRelationship>
+      </Measure>
+      <Name>
+        <ElementValue Type="Preferred">NM_006295.3(VARS1):c.2590_2592delinsTGA (p.Ser864Ter)</ElementValue>
+      </Name>
+    </MeasureSet>
+    <TraitSet Type="Disease" ID="39762">
+      <Trait ID="38412" Type="Disease">
+        <Name>
+          <ElementValue Type="Preferred">Neurodevelopmental disorder with microcephaly, seizures, and cortical atrophy</ElementValue>
+          <XRef ID="MONDO:0060621" DB="MONDO" />
+        </Name>
+        <Symbol>
+          <ElementValue Type="Alternate">NDMSCA</ElementValue>
+          <XRef Type="MIM" ID="617802" DB="OMIM" />
+        </Symbol>
+        <XRef ID="MONDO:0060621" DB="MONDO" />
+        <XRef ID="C4540493" DB="MedGen" />
+        <XRef Type="MIM" ID="617802" DB="OMIM" />
+      </Trait>
+    </TraitSet>
+  </ReferenceClinVarAssertion>
+  <ClinVarAssertion ID="7918613" SubmissionName="SUB14135341">
+    <ClinVarSubmissionID localKey="95ca91e5-caf5-4797-b997-8eca4a7490bb_2" localKeyIsSubmitted="1" submittedAssembly="GRCh38" submitter="Undiagnosed Diseases Network, NIH" submitterDate="2024-01-19" />
+    <ClinVarAccession Acc="SCV004242223" Version="1" Type="SCV" OrgID="505999" OrganizationCategory="consortium" OrgType="primary" DateUpdated="2024-02-04" DateCreated="2024-02-04" />
+    <RecordStatus>current</RecordStatus>
+    <Classification DateLastEvaluated="2023-07-10">
+      <ReviewStatus>no assertion criteria provided</ReviewStatus>
+      <GermlineClassification>Likely pathogenic</GermlineClassification>
+    </Classification>
+    <Assertion Type="variation to disease" />
+    <ExternalID DB="Undiagnosed Diseases Network" ID="95ca91e5-caf5-4797-b997-8eca4a7490bb_2" />
+    <ObservedIn>
+      <Sample>
+        <Origin>maternal</Origin>
+        <Tissue>Blood</Tissue>
+        <Species TaxonomyId="9606">human</Species>
+        <Age Type="minimum" age_unit="years">0</Age>
+        <Age Type="maximum" age_unit="years">9</Age>
+        <AffectedStatus>yes</AffectedStatus>
+        <Gender>female</Gender>
+      </Sample>
+      <Method>
+        <MethodType>clinical testing</MethodType>
+      </Method>
+      <ObservedData>
+        <Attribute Type="VariantAlleles" integerValue="1" />
+      </ObservedData>
+      <ObservedData>
+        <Attribute Type="CompoundHeterozygote" integerValue="1" />
+      </ObservedData>
+      <TraitSet Type="Finding">
+        <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+          <XRef DB="HP" ID="HP:0008071" />
+        </Trait>
+        <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+          <XRef DB="HP" ID="HP:0011410" />
+        </Trait>
+        <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+          <XRef DB="HP" ID="HP:0011451" />
+        </Trait>
+        <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+          <XRef DB="HP" ID="HP:0000252" />
+        </Trait>
+        <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+          <XRef DB="HP" ID="HP:0000639" />
+        </Trait>
+        <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+          <XRef DB="HP" ID="HP:0000666" />
+        </Trait>
+        <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+          <XRef DB="HP" ID="HP:0000974" />
+        </Trait>
+        <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+          <XRef DB="HP" ID="HP:0001250" />
+        </Trait>
+        <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+          <XRef DB="HP" ID="HP:0001263" />
+        </Trait>
+        <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+          <XRef DB="HP" ID="HP:0001332" />
+        </Trait>
+        <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+          <XRef DB="HP" ID="HP:0001382" />
+        </Trait>
+        <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+          <XRef DB="HP" ID="HP:0001508" />
+        </Trait>
+        <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+          <XRef DB="HP" ID="HP:0002169" />
+        </Trait>
+        <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+          <XRef DB="HP" ID="HP:0008067" />
+        </Trait>
+        <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+          <XRef DB="HP" ID="HP:0011097" />
+        </Trait>
+        <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+          <XRef DB="HP" ID="HP:0011451" />
+        </Trait>
+      </TraitSet>
+    </ObservedIn>
+    <ObservedIn Type="Functional">
+      <Sample>
+        <Origin>maternal</Origin>
+        <Species TaxonomyId="9606">human</Species>
+        <AffectedStatus>yes</AffectedStatus>
+      </Sample>
+      <Method>
+        <Citation>
+          <ID Source="PubMed">33001864</ID>
+        </Citation>
+        <Description>not provided</Description>
+        <MethodType>in vivo</MethodType>
+        <AssayType>RNAseq</AssayType>
+        <MolecularPhenotypeMeasured>transcripts</MolecularPhenotypeMeasured>
+      </Method>
+      <FunctionalData>
+        <FunctionalEffect>functionally abnormal</FunctionalEffect>
+        <FunctionalConsequence>NMD_triggering_variant</FunctionalConsequence>
+        <XRef DB="Sequence Ontology" ID="SO:0002319" URL="http://www.sequenceontology.org/browser/current_svn/term/SO:0002319" />
+        <FunctionalConsequenceComment>RNAseq showed decreased level of expression with skewing to the alternate allele, supporting NMD</FunctionalConsequenceComment>
+        <Result>Nonsense-mediated decay</Result>
+      </FunctionalData>
+    </ObservedIn>
+    <MeasureSet Type="Variant">
+      <Measure Type="Variation">
+        <Name>
+          <ElementValue Type="Alternate">p.S864*</ElementValue>
+        </Name>
+        <AttributeSet>
+          <Attribute Type="HGVS">NM_006295.3:c.2590_2592delinsTGA</Attribute>
+        </AttributeSet>
+        <MeasureRelationship Type="variant in gene">
+          <Symbol>
+            <ElementValue Type="Preferred">VARS1</ElementValue>
+          </Symbol>
+        </MeasureRelationship>
+      </Measure>
+    </MeasureSet>
+    <TraitSet Type="Disease">
+      <Trait Type="Disease">
+        <XRef DB="OMIM" ID="617802" Type="MIM" />
+      </Trait>
+    </TraitSet>
+    <StudyName>Undiagnosed Diseases Network (NIH), UDN</StudyName>
+  </ClinVarAssertion>
+</ClinVarSet>

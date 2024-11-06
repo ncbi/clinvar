@@ -1,0 +1,183 @@
+<VariationArchive VariationID="2687784" VariationName="NM_005445.4(SMC3):c.2535+1G&gt;A" VariationType="single nucleotide variant" Accession="VCV002687784" Version="1" RecordType="classified" NumberOfSubmissions="1" NumberOfSubmitters="1" DateLastUpdated="2024-06-23" DateCreated="2024-02-04" MostRecentSubmission="2024-02-04">
+  <RecordStatus>current</RecordStatus>
+  <Species>Homo sapiens</Species>
+  <ClassifiedRecord>
+    <SimpleAllele AlleleID="2848823" VariationID="2687784">
+      <GeneList>
+        <Gene Symbol="SMC3" FullName="structural maintenance of chromosomes 3" GeneID="9126" HGNC_ID="HGNC:2468" Source="submitted" RelationshipType="within single gene">
+          <Location>
+            <CytogeneticLocation>10q25.2</CytogeneticLocation>
+            <SequenceLocation Assembly="GRCh38" AssemblyAccessionVersion="GCF_000001405.38" AssemblyStatus="current" Chr="10" Accession="NC_000010.11" start="110567695" stop="110606048" display_start="110567695" display_stop="110606048" Strand="+" />
+            <SequenceLocation Assembly="GRCh37" AssemblyAccessionVersion="GCF_000001405.25" AssemblyStatus="previous" Chr="10" Accession="NC_000010.10" start="112327448" stop="112364391" display_start="112327448" display_stop="112364391" Strand="+" />
+          </Location>
+          <OMIM>606062</OMIM>
+        </Gene>
+      </GeneList>
+      <Name>NM_005445.4(SMC3):c.2535+1G&gt;A</Name>
+      <CanonicalSPDI>NC_000010.11:110600546:G:A</CanonicalSPDI>
+      <VariantType>single nucleotide variant</VariantType>
+      <Location>
+        <CytogeneticLocation>10q25.2</CytogeneticLocation>
+        <SequenceLocation Assembly="GRCh38" AssemblyAccessionVersion="GCF_000001405.38" forDisplay="true" AssemblyStatus="current" Chr="10" Accession="NC_000010.11" start="110600547" stop="110600547" display_start="110600547" display_stop="110600547" variantLength="1" positionVCF="110600547" referenceAlleleVCF="G" alternateAlleleVCF="A" />
+        <SequenceLocation Assembly="GRCh37" AssemblyAccessionVersion="GCF_000001405.25" AssemblyStatus="previous" Chr="10" Accession="NC_000010.10" start="112360305" stop="112360305" display_start="112360305" display_stop="112360305" variantLength="1" positionVCF="112360305" referenceAlleleVCF="G" alternateAlleleVCF="A" />
+      </Location>
+      <HGVSlist>
+        <HGVS Assembly="GRCh37" Type="genomic, top-level">
+          <NucleotideExpression sequenceAccessionVersion="NC_000010.10" sequenceAccession="NC_000010" sequenceVersion="10" change="g.112360305G&gt;A" Assembly="GRCh37">
+            <Expression>NC_000010.10:g.112360305G&gt;A</Expression>
+          </NucleotideExpression>
+        </HGVS>
+        <HGVS Assembly="GRCh38" Type="genomic, top-level">
+          <NucleotideExpression sequenceAccessionVersion="NC_000010.11" sequenceAccession="NC_000010" sequenceVersion="11" change="g.110600547G&gt;A" Assembly="GRCh38">
+            <Expression>NC_000010.11:g.110600547G&gt;A</Expression>
+          </NucleotideExpression>
+        </HGVS>
+        <HGVS Type="genomic">
+          <NucleotideExpression sequenceAccessionVersion="NG_012217.1" sequenceAccession="NG_012217" sequenceVersion="1" change="g.37857G&gt;A">
+            <Expression>NG_012217.1:g.37857G&gt;A</Expression>
+          </NucleotideExpression>
+        </HGVS>
+        <HGVS Type="coding">
+          <NucleotideExpression sequenceAccessionVersion="NM_005445.4" sequenceAccession="NM_005445" sequenceVersion="4" change="c.2535+1G&gt;A" MANESelect="true">
+            <Expression>NM_005445.4:c.2535+1G&gt;A</Expression>
+          </NucleotideExpression>
+          <MolecularConsequence ID="SO:0001575" Type="splice donor variant" DB="SO" />
+        </HGVS>
+        <HGVS Type="genomic">
+          <NucleotideExpression sequenceAccessionVersion="LRG_774" sequenceAccession="LRG_774">
+            <Expression>LRG_774:g.37857G&gt;A</Expression>
+          </NucleotideExpression>
+        </HGVS>
+      </HGVSlist>
+    </SimpleAllele>
+    <RCVList>
+      <RCVAccession Title="NM_005445.4(SMC3):c.2535+1G&gt;A AND Cornelia de Lange syndrome 3" Accession="RCV003485954" Version="2">
+        <ClassifiedConditionList TraitSetID="1269">
+          <ClassifiedCondition DB="MedGen" ID="C1853099">Cornelia de Lange syndrome 3</ClassifiedCondition>
+        </ClassifiedConditionList>
+        <RCVClassifications>
+          <NoClassification>
+            <ReviewStatus>no classification provided</ReviewStatus>
+            <Description SubmissionCount="1">evidence_only</Description>
+          </NoClassification>
+        </RCVClassifications>
+      </RCVAccession>
+    </RCVList>
+    <Classifications>
+      <NoClassification Type="evidence_only" NumberOfSubmissions="1" NumberOfSubmitters="1" DateCreated="2024-02-04" MostRecentSubmission="2024-02-04">
+        <ReviewStatus>no classification provided</ReviewStatus>
+        <Description>evidence_only</Description>
+        <ConditionList>
+          <TraitSet ID="1269" Type="Disease">
+            <Trait ID="846" Type="Disease">
+              <Name>
+                <ElementValue Type="Preferred">Cornelia de Lange syndrome 3</ElementValue>
+                <XRef ID="MONDO:0012555" DB="MONDO" />
+              </Name>
+              <Name>
+                <ElementValue Type="Alternate">CORNELIA DE LANGE SYNDROME 3 WITH OR WITHOUT MIDLINE BRAIN DEFECTS</ElementValue>
+                <XRef Type="MIM" ID="610759" DB="OMIM" />
+              </Name>
+              <Symbol>
+                <ElementValue Type="Preferred">CDLS3</ElementValue>
+                <XRef Type="MIM" ID="610759" DB="OMIM" />
+              </Symbol>
+              <AttributeSet>
+                <Attribute Type="public definition">Cornelia de Lange syndrome (CdLS) encompasses a spectrum of findings from mild to severe. Severe (classic) CdLS is characterized by distinctive facial features, growth restriction (prenatal onset; &lt;5th centile throughout life), hypertrichosis, and upper-limb reduction defects that range from subtle phalangeal abnormalities to oligodactyly (missing digits). Craniofacial features include synophrys, highly arched and/or thick eyebrows, long eyelashes, short nasal bridge with anteverted nares, small widely spaced teeth, and microcephaly. Individuals with a milder phenotype have less severe growth, cognitive, and limb involvement, but often have facial features consistent with CdLS. Across the CdLS spectrum IQ ranges from below 30 to 102 (mean: 53). Many individuals demonstrate autistic and self-destructive tendencies. Other frequent findings include cardiac septal defects, gastrointestinal dysfunction, hearing loss, myopia, and cryptorchidism or hypoplastic genitalia.</Attribute>
+                <XRef ID="NBK1104" DB="GeneReviews" />
+              </AttributeSet>
+              <AttributeSet>
+                <Attribute Type="GARD id" integerValue="15499" />
+                <XRef ID="15499" DB="Office of Rare Diseases" />
+              </AttributeSet>
+              <Citation Type="review" Abbrev="GeneReviews">
+                <ID Source="PubMed">20301283</ID>
+                <ID Source="BookShelf">NBK1104</ID>
+              </Citation>
+              <XRef ID="199" DB="Orphanet" />
+              <XRef ID="C1853099" DB="MedGen" />
+              <XRef ID="MONDO:0012555" DB="MONDO" />
+              <XRef Type="MIM" ID="610759" DB="OMIM" />
+            </Trait>
+          </TraitSet>
+        </ConditionList>
+      </NoClassification>
+    </Classifications>
+    <ClinicalAssertionList>
+      <ClinicalAssertion ID="7906206" SubmissionDate="2024-01-22" DateLastUpdated="2024-02-04" DateCreated="2024-02-04">
+        <ClinVarSubmissionID localKey="SUB14160220" submittedAssembly="GRCh37" title="SUB14160220" />
+        <ClinVarAccession Accession="SCV004231899" DateUpdated="2024-02-04" DateCreated="2024-02-04" Type="SCV" Version="1" SubmitterName="Pediatric Research Institute, Henan Children’s Hospital" OrgID="509416" OrganizationCategory="laboratory" />
+        <RecordStatus>current</RecordStatus>
+        <Classification>
+          <ReviewStatus>no classification provided</ReviewStatus>
+          <NoClassification>evidence_only</NoClassification>
+        </Classification>
+        <Assertion>no classification</Assertion>
+        <ObservedInList>
+          <ObservedIn Type="Functional">
+            <Sample>
+              <Origin>not applicable</Origin>
+              <CellLine>MCF-7, 293T</CellLine>
+              <Species TaxonomyId="9606">human</Species>
+              <AffectedStatus>not applicable</AffectedStatus>
+            </Sample>
+            <Method>
+              <Description>In vitro minigene splicing assays was conducted to elucidate the impact of splicing.</Description>
+              <MethodType>in vitro</MethodType>
+              <AssayType>Mini-gene/in vitro splicing assay</AssayType>
+              <MolecularPhenotypeMeasured>splicing</MolecularPhenotypeMeasured>
+            </Method>
+            <FunctionalData>
+              <FunctionalEffect>functionally abnormal</FunctionalEffect>
+              <FunctionalConsequence>effect on RNA splicing</FunctionalConsequence>
+              <XRef DB="Variation Ontology" ID="0362" URL="http://purl.obolibrary.org/obo/VariO_0362" />
+              <Result>exon-skip at Exon 22</Result>
+            </FunctionalData>
+          </ObservedIn>
+        </ObservedInList>
+        <SimpleAllele>
+          <GeneList>
+            <Gene Symbol="SMC3">
+              <Name>structural maintenance of chromosomes 3</Name>
+            </Gene>
+          </GeneList>
+          <VariantType>Variation</VariantType>
+          <Location>
+            <GeneLocation>NM_005445.4:intron 22</GeneLocation>
+          </Location>
+          <AttributeSet>
+            <Attribute Type="HGVS">NM_005445.4:c.2535+1G&gt;A</Attribute>
+          </AttributeSet>
+        </SimpleAllele>
+        <TraitSet Type="Disease">
+          <Trait Type="Disease">
+            <XRef DB="OMIM" ID="610759" />
+          </Trait>
+        </TraitSet>
+        <SubmissionNameList>
+          <SubmissionName>SUB14160220</SubmissionName>
+        </SubmissionNameList>
+      </ClinicalAssertion>
+    </ClinicalAssertionList>
+    <TraitMappingList>
+      <TraitMapping ClinicalAssertionID="7906206" TraitType="Disease" MappingType="XRef" MappingValue="610759" MappingRef="OMIM">
+        <MedGen CUI="C1853099" Name="Cornelia de Lange syndrome 3" />
+      </TraitMapping>
+    </TraitMappingList>
+    <StrengthMappingList>
+      <StrengthMapping>
+        <Source>
+          <Name>ClinGen Expert Panel</Name>
+          <OrgID>509268</OrgID>
+        </Source>
+        <AccessionList>
+          <Accession>SCV004231899</Accession>
+        </AccessionList> 
+        <FunctionalEvidenceStrength>
+          <Strength>PVS1_Strong+PS2_Moderate+PM2_Supporting</Strength>
+          <Comment></Comment>
+        </FunctionalEvidenceStrength>
+      </StrengthMapping>
+    </StrengthMappingList>
+  </ClassifiedRecord>
+</VariationArchive>

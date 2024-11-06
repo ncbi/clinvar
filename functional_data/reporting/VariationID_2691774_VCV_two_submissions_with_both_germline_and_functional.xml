@@ -1,0 +1,465 @@
+<VariationArchive VariationID="2691774" VariationName="NM_001383.6(DPH1):c.749+39G&gt;A" VariationType="single nucleotide variant" Accession="VCV002691774" Version="2" RecordType="classified" NumberOfSubmissions="2" NumberOfSubmitters="2" DateLastUpdated="2024-05-12" DateCreated="2024-02-04" MostRecentSubmission="2024-05-01">
+  <RecordStatus>current</RecordStatus>
+  <Species>Homo sapiens</Species>
+  <ClassifiedRecord>
+    <SimpleAllele AlleleID="2852796" VariationID="2691774">
+      <GeneList>
+        <Gene Symbol="DPH1" FullName="diphthamide biosynthesis 1" GeneID="1801" HGNC_ID="HGNC:3003" Source="submitted" RelationshipType="within single gene">
+          <Location>
+            <CytogeneticLocation>17p13.3</CytogeneticLocation>
+            <SequenceLocation Assembly="GRCh38" AssemblyAccessionVersion="GCF_000001405.38" AssemblyStatus="current" Chr="17" Accession="NC_000017.11" start="2030112" stop="2043898" display_start="2030112" display_stop="2043898" Strand="+" />
+            <SequenceLocation Assembly="GRCh37" AssemblyAccessionVersion="GCF_000001405.25" AssemblyStatus="previous" Chr="17" Accession="NC_000017.10" start="1933430" stop="1946724" display_start="1933430" display_stop="1946724" Strand="+" />
+          </Location>
+          <OMIM>603527</OMIM>
+        </Gene>
+      </GeneList>
+      <Name>NM_001383.6(DPH1):c.749+39G&gt;A</Name>
+      <CanonicalSPDI>NC_000017.11:2039861:G:A</CanonicalSPDI>
+      <VariantType>single nucleotide variant</VariantType>
+      <Location>
+        <CytogeneticLocation>17p13.3</CytogeneticLocation>
+        <SequenceLocation Assembly="GRCh38" AssemblyAccessionVersion="GCF_000001405.38" forDisplay="true" AssemblyStatus="current" Chr="17" Accession="NC_000017.11" start="2039862" stop="2039862" display_start="2039862" display_stop="2039862" variantLength="1" positionVCF="2039862" referenceAlleleVCF="G" alternateAlleleVCF="A" />
+        <SequenceLocation Assembly="GRCh37" AssemblyAccessionVersion="GCF_000001405.25" AssemblyStatus="previous" Chr="17" Accession="NC_000017.10" start="1943156" stop="1943156" display_start="1943156" display_stop="1943156" variantLength="1" positionVCF="1943156" referenceAlleleVCF="G" alternateAlleleVCF="A" />
+      </Location>
+      <HGVSlist>
+        <HGVS Assembly="GRCh37" Type="genomic, top-level">
+          <NucleotideExpression sequenceAccessionVersion="NC_000017.10" sequenceAccession="NC_000017" sequenceVersion="10" change="g.1943156G&gt;A" Assembly="GRCh37">
+            <Expression>NC_000017.10:g.1943156G&gt;A</Expression>
+          </NucleotideExpression>
+        </HGVS>
+        <HGVS Assembly="GRCh38" Type="genomic, top-level">
+          <NucleotideExpression sequenceAccessionVersion="NC_000017.11" sequenceAccession="NC_000017" sequenceVersion="11" change="g.2039862G&gt;A" Assembly="GRCh38">
+            <Expression>NC_000017.11:g.2039862G&gt;A</Expression>
+          </NucleotideExpression>
+        </HGVS>
+        <HGVS Type="genomic">
+          <NucleotideExpression sequenceAccessionVersion="NG_051946.1" sequenceAccession="NG_051946" sequenceVersion="1" change="g.14751G&gt;A">
+            <Expression>NG_051946.1:g.14751G&gt;A</Expression>
+          </NucleotideExpression>
+        </HGVS>
+        <HGVS Type="coding">
+          <NucleotideExpression sequenceAccessionVersion="NM_001346574.1" sequenceAccession="NM_001346574" sequenceVersion="1" change="c.764+39G&gt;A">
+            <Expression>NM_001346574.1:c.764+39G&gt;A</Expression>
+          </NucleotideExpression>
+          <MolecularConsequence ID="SO:0001627" Type="intron variant" DB="SO" />
+        </HGVS>
+        <HGVS Type="coding">
+          <NucleotideExpression sequenceAccessionVersion="NM_001346575.1" sequenceAccession="NM_001346575" sequenceVersion="1" change="c.731+39G&gt;A">
+            <Expression>NM_001346575.1:c.731+39G&gt;A</Expression>
+          </NucleotideExpression>
+          <MolecularConsequence ID="SO:0001627" Type="intron variant" DB="SO" />
+        </HGVS>
+        <HGVS Type="coding">
+          <NucleotideExpression sequenceAccessionVersion="NM_001383.6" sequenceAccession="NM_001383" sequenceVersion="6" change="c.749+39G&gt;A" MANESelect="true">
+            <Expression>NM_001383.6:c.749+39G&gt;A</Expression>
+          </NucleotideExpression>
+          <MolecularConsequence ID="SO:0001627" Type="intron variant" DB="SO" />
+        </HGVS>
+        <HGVS Type="coding">
+          <NucleotideExpression sequenceAccessionVersion="NM_001346576.2" sequenceAccession="NM_001346576" sequenceVersion="2" change="c.344+39G&gt;A">
+            <Expression>NM_001346576.2:c.344+39G&gt;A</Expression>
+          </NucleotideExpression>
+          <MolecularConsequence ID="SO:0001627" Type="intron variant" DB="SO" />
+        </HGVS>
+      </HGVSlist>
+    </SimpleAllele>
+    <RCVList>
+      <RCVAccession Title="NM_001383.6(DPH1):c.749+39G&gt;A AND Developmental delay with short stature, dysmorphic facial features, and sparse hair 1" Accession="RCV003493391" Version="2">
+        <ClassifiedConditionList TraitSetID="82706">
+          <ClassifiedCondition DB="MedGen" ID="CN323360">Developmental delay with short stature, dysmorphic facial features, and sparse hair 1</ClassifiedCondition>
+        </ClassifiedConditionList>
+        <RCVClassifications>
+          <GermlineClassification>
+            <ReviewStatus>no assertion criteria provided</ReviewStatus>
+            <Description DateLastEvaluated="2024-04-01" SubmissionCount="2">Conflicting interpretations of pathogenicity</Description>
+          </GermlineClassification>
+        </RCVClassifications>
+      </RCVAccession>
+    </RCVList>
+    <Classifications>
+      <GermlineClassification DateLastEvaluated="2024-04-01" NumberOfSubmissions="2" NumberOfSubmitters="2" DateCreated="2024-02-04" MostRecentSubmission="2024-05-01">
+        <ReviewStatus>no assertion criteria provided</ReviewStatus>
+        <Description>Conflicting classifications of pathogenicity</Description>
+        <Explanation DataSource="ClinVar" Type="public">Pathogenic(1); Uncertain significance(1)</Explanation>
+        <Comment DataSource="ClinVar" Type="public">Pathogenic(1); Uncertain significance(1)</Comment>
+        <DescriptionHistory Dated="2024-04-28">
+          <Description>Uncertain significance</Description>
+        </DescriptionHistory>
+        <ConditionList>
+          <TraitSet ID="82706" Type="Disease">
+            <Trait ID="67135" Type="Disease">
+              <Name>
+                <ElementValue Type="Alternate">LOUCKS-INNES SYNDROME</ElementValue>
+                <XRef Type="MIM" ID="616901" DB="OMIM" />
+              </Name>
+              <Name>
+                <ElementValue Type="Preferred">Developmental delay with short stature, dysmorphic facial features, and sparse hair 1</ElementValue>
+                <XRef ID="MONDO:0800438" DB="MONDO" />
+              </Name>
+              <Symbol>
+                <ElementValue Type="Alternate">DEDSSH1</ElementValue>
+                <XRef Type="MIM" ID="616901" DB="OMIM" />
+              </Symbol>
+              <XRef ID="CN323360" DB="MedGen" />
+              <XRef ID="MONDO:0800438" DB="MONDO" />
+              <XRef Type="MIM" ID="616901" DB="OMIM" />
+            </Trait>
+          </TraitSet>
+        </ConditionList>
+      </GermlineClassification>
+    </Classifications>
+    <ClinicalAssertionList>
+      <ClinicalAssertion ID="7918605" SubmissionDate="2024-01-19" DateLastUpdated="2024-02-04" DateCreated="2024-02-04">
+        <ClinVarSubmissionID localKey="b4d46948-48e6-4338-9c9e-5d2ab775ebb6_1" localKeyIsSubmitted="1" submittedAssembly="GRCh38" />
+        <ClinVarAccession Accession="SCV004242215" DateUpdated="2024-02-04" DateCreated="2024-02-04" Type="SCV" Version="1" SubmitterName="Undiagnosed Diseases Network, NIH" OrgID="505999" OrganizationCategory="consortium" OrgAbbreviation="UDN" />
+        <RecordStatus>current</RecordStatus>
+        <Classification DateLastEvaluated="2022-11-07">
+          <ReviewStatus>no assertion criteria provided</ReviewStatus>
+          <GermlineClassification>Uncertain significance</GermlineClassification>
+        </Classification>
+        <Assertion>variation to disease</Assertion>
+        <ObservedInList>
+          <ObservedIn>
+            <Sample>
+              <Origin>biparental</Origin>
+              <Tissue>Blood</Tissue>
+              <Species TaxonomyId="9606">human</Species>
+              <Age Type="minimum" age_unit="years">10</Age>
+              <Age Type="maximum" age_unit="years">19</Age>
+              <AffectedStatus>yes</AffectedStatus>
+              <Gender>female</Gender>
+              <FamilyData NumFamiliesWithSegregationObserved="1" NumFamiliesWithVariant="1">
+                <FamilyHistory>yes</FamilyHistory>
+              </FamilyData>
+            </Sample>
+            <Method>
+              <MethodType>clinical testing</MethodType>
+            </Method>
+            <ObservedData>
+              <Attribute Type="VariantAlleles" integerValue="2" />
+            </ObservedData>
+            <ObservedData>
+              <Attribute Type="Homozygote" integerValue="2" />
+            </ObservedData>
+            <TraitSet Type="Finding">
+              <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+                <XRef DB="HP" ID="HP:0002033" />
+              </Trait>
+              <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+                <XRef DB="HP" ID="HP:0012188" />
+              </Trait>
+              <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+                <XRef DB="HP" ID="HP:0030369" />
+              </Trait>
+              <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+                <XRef DB="HP" ID="HP:0000303" />
+              </Trait>
+              <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+                <XRef DB="HP" ID="HP:0000322" />
+              </Trait>
+              <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+                <XRef DB="HP" ID="HP:0000358" />
+              </Trait>
+              <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+                <XRef DB="HP" ID="HP:0000365" />
+              </Trait>
+              <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+                <XRef DB="HP" ID="HP:0000369" />
+              </Trait>
+              <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+                <XRef DB="HP" ID="HP:0000402" />
+              </Trait>
+              <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+                <XRef DB="HP" ID="HP:0000414" />
+              </Trait>
+              <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+                <XRef DB="HP" ID="HP:0000430" />
+              </Trait>
+              <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+                <XRef DB="HP" ID="HP:0000504" />
+              </Trait>
+              <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+                <XRef DB="HP" ID="HP:0000582" />
+              </Trait>
+              <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+                <XRef DB="HP" ID="HP:0000666" />
+              </Trait>
+              <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+                <XRef DB="HP" ID="HP:0000687" />
+              </Trait>
+              <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+                <XRef DB="HP" ID="HP:0000954" />
+              </Trait>
+              <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+                <XRef DB="HP" ID="HP:0000969" />
+              </Trait>
+              <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+                <XRef DB="HP" ID="HP:0001182" />
+              </Trait>
+              <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+                <XRef DB="HP" ID="HP:0001249" />
+              </Trait>
+              <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+                <XRef DB="HP" ID="HP:0001250" />
+              </Trait>
+              <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+                <XRef DB="HP" ID="HP:0001263" />
+              </Trait>
+              <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+                <XRef DB="HP" ID="HP:0001638" />
+              </Trait>
+              <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+                <XRef DB="HP" ID="HP:0002019" />
+              </Trait>
+              <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+                <XRef DB="HP" ID="HP:0004322" />
+              </Trait>
+              <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+                <XRef DB="HP" ID="HP:0006149" />
+              </Trait>
+              <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+                <XRef DB="HP" ID="HP:0009372" />
+              </Trait>
+              <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+                <XRef DB="HP" ID="HP:0010722" />
+              </Trait>
+              <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+                <XRef DB="HP" ID="HP:0030031" />
+              </Trait>
+              <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+                <XRef DB="HP" ID="HP:0030807" />
+              </Trait>
+              <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+                <XRef DB="HP" ID="HP:0100021" />
+              </Trait>
+            </TraitSet>
+          </ObservedIn>
+          <ObservedIn Type="Functional">
+            <Sample>
+              <Origin>germline</Origin>
+              <Species TaxonomyId="9606">human</Species>
+              <AffectedStatus>yes</AffectedStatus>
+            </Sample>
+            <Method>
+              <Citation>
+                <ID Source="PubMed">33001864</ID>
+              </Citation>
+              <Description>RNA from whole blood and skin fibroblasts was quantified. The sequencing data were processed with a pipeline adapted from one developed by the GTEx Consortium, and aberrant expression was detected with the Detection of RNA Outlier Pipeline (DROP) using the default, recommended settings.</Description>
+              <MethodType>in vivo</MethodType>
+              <AssayType>RNAseq</AssayType>
+              <MolecularPhenotypeMeasured>gene expression</MolecularPhenotypeMeasured>
+            </Method>
+            <FunctionalData>
+              <FunctionalEffect>functionally abnormal</FunctionalEffect>
+              <FunctionalConsequence>decreased_gene_product_level</FunctionalConsequence>
+              <XRef DB="Sequence Ontology" ID="SO:0002316" URL="http://www.sequenceontology.org/browser/current_svn/term/SO:0002316" />
+              <FunctionalConsequenceComment>RNAseq showed significant decrease in expression.</FunctionalConsequenceComment>
+              <Result>Decreased expression</Result>
+            </FunctionalData>
+          </ObservedIn>
+        </ObservedInList>
+        <SimpleAllele>
+          <GeneList>
+            <Gene Symbol="DPH1" />
+          </GeneList>
+          <VariantType>Variation</VariantType>
+          <AttributeSet>
+            <Attribute Type="HGVS">NM_001383.3:c.764+39G&gt;A</Attribute>
+          </AttributeSet>
+        </SimpleAllele>
+        <TraitSet Type="Disease">
+          <Trait Type="Disease">
+            <XRef DB="OMIM" ID="616901" Type="MIM" />
+          </Trait>
+        </TraitSet>
+        <StudyName>Undiagnosed Diseases Network (NIH), UDN</StudyName>
+        <SubmissionNameList>
+          <SubmissionName>SUB14135341</SubmissionName>
+        </SubmissionNameList>
+      </ClinicalAssertion>
+      <ClinicalAssertion ID="9059033" SubmissionDate="2024-04-19" DateLastUpdated="2024-05-01" DateCreated="2024-05-01">
+        <ClinVarSubmissionID localKey="SUB14351902" submittedAssembly="GRCh38" title="SUB14351902" />
+        <ClinVarAccession Accession="SCV004808387" DateUpdated="2024-05-01" DateCreated="2024-05-01" Type="SCV" Version="1" SubmitterName="Daryl Scott Lab, Baylor College of Medicine" OrgID="505993" OrganizationCategory="laboratory" />
+        <RecordStatus>current</RecordStatus>
+        <Classification DateLastEvaluated="2024-04-01">
+          <ReviewStatus>no assertion criteria provided</ReviewStatus>
+          <GermlineClassification>Pathogenic</GermlineClassification>
+        </Classification>
+        <Assertion>variation to disease</Assertion>
+        <AttributeSet>
+          <Attribute Type="ModeOfInheritance">Autosomal recessive inheritance</Attribute>
+        </AttributeSet>
+        <ObservedInList>
+          <ObservedIn>
+            <Sample>
+              <Origin>biparental</Origin>
+              <Ethnicity>African American</Ethnicity>
+              <GeographicOrigin>United States</GeographicOrigin>
+              <Species TaxonomyId="9606">human</Species>
+              <AffectedStatus>yes</AffectedStatus>
+              <Gender>mixed</Gender>
+              <FamilyData NumFamiliesWithVariant="1" />
+            </Sample>
+            <Method>
+              <MethodType>clinical testing</MethodType>
+            </Method>
+            <ObservedData>
+              <Attribute Type="VariantAlleles" integerValue="2" />
+            </ObservedData>
+            <ObservedData>
+              <Attribute Type="Homozygote" integerValue="2" />
+            </ObservedData>
+          </ObservedIn>
+          <ObservedIn Type="Functional">
+            <Sample>
+              <Origin>not applicable</Origin>
+              <CellLine>Fibroblasts</CellLine>
+              <Species TaxonomyId="9606">human</Species>
+              <AffectedStatus>not applicable</AffectedStatus>
+              <Gender>female</Gender>
+            </Sample>
+            <Method>
+              <Citation>
+                <ID Source="PubMed">33001864</ID>
+              </Citation>
+              <Description>not provided</Description>
+              <MethodType>in vitro</MethodType>
+              <AssayType>RNAseq</AssayType>
+              <MolecularPhenotypeMeasured>gene expression, splicing</MolecularPhenotypeMeasured>
+            </Method>
+            <FunctionalData>
+              <FunctionalEffect>functionally abnormal</FunctionalEffect>
+              <FunctionalConsequence>Overall loss-of-function</FunctionalConsequence>
+              <XRef DB="Functional Epilepsy Nomenclature for Ion Channels" ID="FENICS-0141" URL="-" />
+              <FunctionalConsequenceComment>This result suggests that this variant leads to loss-of-function probably due to abnormal splicing triggering non-sense mediated decay.</FunctionalConsequenceComment>
+              <Result>RNAseq on fibroblasts showed abnormal splicing and severely decreased expression.</Result>
+            </FunctionalData>
+          </ObservedIn>
+        </ObservedInList>
+        <SimpleAllele>
+          <GeneList>
+            <Gene Symbol="DPH1">
+              <Name>diphthamide biosynthesis 1</Name>
+            </Gene>
+          </GeneList>
+          <VariantType>Variation</VariantType>
+          <Location>
+            <GeneLocation>NM_001383.6:intron 7</GeneLocation>
+          </Location>
+          <OtherNameList>
+            <Name Type="SubmitterVariantId">Fine-LubinskyVariant</Name>
+          </OtherNameList>
+          <AttributeSet>
+            <Attribute Type="HGVS">NM_001383.6:c.749+39G&gt;A</Attribute>
+          </AttributeSet>
+        </SimpleAllele>
+        <TraitSet Type="Disease">
+          <Trait Type="Disease">
+            <XRef DB="OMIM" ID="616901" />
+          </Trait>
+        </TraitSet>
+        <SubmissionNameList>
+          <SubmissionName>SUB14351902</SubmissionName>
+        </SubmissionNameList>
+      </ClinicalAssertion>
+    </ClinicalAssertionList>
+    <TraitMappingList>
+      <TraitMapping ClinicalAssertionID="7918605" TraitType="Finding" MappingType="XRef" MappingValue="HP:0000365" MappingRef="HP">
+        <MedGen CUI="C1384666" Name="Hearing impairment" />
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="7918605" TraitType="Finding" MappingType="XRef" MappingValue="HP:0001638" MappingRef="HP">
+        <MedGen CUI="C0878544" Name="Cardiomyopathy" />
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="7918605" TraitType="Finding" MappingType="XRef" MappingValue="HP:0000582" MappingRef="HP">
+        <MedGen CUI="C0423109" Name="Upslanted palpebral fissure" />
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="7918605" TraitType="Disease" MappingType="XRef" MappingValue="616901" MappingRef="OMIM">
+        <MedGen CUI="CN323360" Name="Developmental delay with short stature, dysmorphic facial features, and sparse hair 1" />
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="7918605" TraitType="Finding" MappingType="XRef" MappingValue="HP:0009372" MappingRef="HP">
+        <MedGen CUI="C1832702" Name="Type A2 brachydactyly" />
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="7918605" TraitType="Finding" MappingType="XRef" MappingValue="HP:0000430" MappingRef="HP">
+        <MedGen CUI="C1834055" Name="Underdeveloped nasal alae" />
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="7918605" TraitType="Finding" MappingType="XRef" MappingValue="HP:0001182" MappingRef="HP">
+        <MedGen CUI="C0426886" Name="Tapered finger" />
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="7918605" TraitType="Finding" MappingType="XRef" MappingValue="HP:0001263" MappingRef="HP">
+        <MedGen CUI="C0557874" Name="Global developmental delay" />
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="7918605" TraitType="Finding" MappingType="XRef" MappingValue="HP:0030031" MappingRef="HP">
+        <MedGen CUI="C4022667" Name="Small toe" />
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="7918605" TraitType="Finding" MappingType="XRef" MappingValue="HP:0000954" MappingRef="HP">
+        <MedGen CUI="C0424731" Name="Single transverse palmar crease" />
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="9059033" TraitType="Disease" MappingType="XRef" MappingValue="616901" MappingRef="OMIM">
+        <MedGen CUI="CN323360" Name="Developmental delay with short stature, dysmorphic facial features, and sparse hair 1" />
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="7918605" TraitType="Finding" MappingType="XRef" MappingValue="HP:0000322" MappingRef="HP">
+        <MedGen CUI="C1861324" Name="Short philtrum" />
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="7918605" TraitType="Finding" MappingType="XRef" MappingValue="HP:0006149" MappingRef="HP">
+        <MedGen CUI="C1850855" Name="Increased laxity of fingers" />
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="7918605" TraitType="Finding" MappingType="XRef" MappingValue="HP:0001249" MappingRef="HP">
+        <MedGen CUI="C3714756" Name="Intellectual disability" />
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="7918605" TraitType="Finding" MappingType="XRef" MappingValue="HP:0000504" MappingRef="HP">
+        <MedGen CUI="C4025846" Name="Abnormality of vision" />
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="7918605" TraitType="Finding" MappingType="XRef" MappingValue="HP:0002033" MappingRef="HP">
+        <MedGen CUI="C1837142" Name="Poor suck" />
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="7918605" TraitType="Finding" MappingType="XRef" MappingValue="HP:0030807" MappingRef="HP">
+        <MedGen CUI="C1610609" Name="Abnormal nail growth" />
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="7918605" TraitType="Finding" MappingType="XRef" MappingValue="HP:0000687" MappingRef="HP">
+        <MedGen CUI="C1844813" Name="Widely spaced teeth" />
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="7918605" TraitType="Finding" MappingType="XRef" MappingValue="HP:0000303" MappingRef="HP">
+        <MedGen CUI="C0399526" Name="Mandibular prognathia" />
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="7918605" TraitType="Finding" MappingType="XRef" MappingValue="HP:0000369" MappingRef="HP">
+        <MedGen CUI="C0239234" Name="Low-set ears" />
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="7918605" TraitType="Finding" MappingType="XRef" MappingValue="HP:0004322" MappingRef="HP">
+        <MedGen CUI="C0349588" Name="Short stature" />
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="7918605" TraitType="Finding" MappingType="XRef" MappingValue="HP:0001250" MappingRef="HP">
+        <MedGen CUI="C0036572" Name="Seizure" />
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="7918605" TraitType="Finding" MappingType="XRef" MappingValue="HP:0010722" MappingRef="HP">
+        <MedGen CUI="C1168239" Name="Asymmetry of the ears" />
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="7918605" TraitType="Finding" MappingType="XRef" MappingValue="HP:0000358" MappingRef="HP">
+        <MedGen CUI="C0431478" Name="Posteriorly rotated ears" />
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="7918605" TraitType="Finding" MappingType="XRef" MappingValue="HP:0030369" MappingRef="HP">
+        <MedGen CUI="C4072908" Name="Induced vaginal delivery" />
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="7918605" TraitType="Finding" MappingType="XRef" MappingValue="HP:0000666" MappingRef="HP">
+        <MedGen CUI="C0271385" Name="Horizontal nystagmus" />
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="7918605" TraitType="Finding" MappingType="XRef" MappingValue="HP:0100021" MappingRef="HP">
+        <MedGen CUI="C0007789" Name="Cerebral palsy" />
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="7918605" TraitType="Finding" MappingType="XRef" MappingValue="HP:0002019" MappingRef="HP">
+        <MedGen CUI="C0009806" Name="Constipation" />
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="7918605" TraitType="Finding" MappingType="XRef" MappingValue="HP:0012188" MappingRef="HP">
+        <MedGen CUI="C0020450" Name="Hyperemesis gravidarum" />
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="7918605" TraitType="Finding" MappingType="XRef" MappingValue="HP:0000969" MappingRef="HP">
+        <MedGen CUI="C0013604" Name="Edema" />
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="7918605" TraitType="Finding" MappingType="XRef" MappingValue="HP:0000402" MappingRef="HP">
+        <MedGen CUI="C0395837" Name="Stenosis of the external auditory canal" />
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="7918605" TraitType="Finding" MappingType="XRef" MappingValue="HP:0000414" MappingRef="HP">
+        <MedGen CUI="C0240543" Name="Bulbous nose" />
+      </TraitMapping>
+    </TraitMappingList>
+  </ClassifiedRecord>
+</VariationArchive>

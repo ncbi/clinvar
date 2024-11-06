@@ -1,0 +1,71 @@
+{
+    "submissionName": "my_oncogenicity_submission",
+    "assertionCriteria": {
+        "db": "PubMed",
+        "id": "36063163"
+    },
+    "behalfOrgID": 20000,
+    "oncogenicitySubmission": [
+    {
+        "recordStatus": "novel",
+        "oncogenicityClassification": {
+            "oncogenicityClassificationDescription": "Benign",
+            "dateLastEvaluated": "2020-04-28",
+            "comment": "This comment explains the rationale for classifying this variant as Benign for breast cancer.",
+            "citation": [{
+                "db": "PubMed",
+                "id": "21084639"
+            }]
+        },
+        "observedIn": [
+            {
+                "alleleOrigin": "somatic",
+                "affectedStatus": "yes",
+                "collectionMethod": "clinical testing",
+                "numberOfIndividuals": 24,
+                "presenceOfSomaticVariantInNormalTissue": "not tested"
+            }
+        ],
+        "variantSet": {
+            "variant": [{
+                "hgvs":"NM_000314.8:c.700C>T"
+            }]
+        },
+        "conditionSet": {
+            "condition": [
+                {
+                    "db": "MedGen",
+                    "id": "C0007134"
+                }
+            ]
+        }
+    },
+    {
+        "recordStatus": "novel",  
+        "oncogenicityClassification": {
+             "oncogenicityClassificationDescription": "Oncogenic",
+             "dateLastEvaluated": "2018-04-28",
+             "comment": "This comment explains the rationale for classifying this variant as oncogenic for breast cancer."
+        },      
+        "observedIn":[{
+            "alleleOrigin": "somatic",
+            "affectedStatus": "yes",
+            "collectionMethod": "clinical testing",
+            "numberOfIndividuals": 1,
+            "presenceOfSomaticVariantInNormalTissue": "present",
+            "somaticVariantAlleleFraction": 20
+        }],
+       "variantSet": {
+           "variant": [{
+             "hgvs":"NM_004333.6:c.1012A>G",
+             "gene":[ {
+                 "id":2
+           }]
+       }]},
+       "conditionSet": {
+           "condition": [{
+                "name": "breast cancer"
+             }]
+       }
+  }]
+}

@@ -1,0 +1,52 @@
+{
+  "clinvarSubmissionReleaseStatus": "hold until published",  
+  "assertionCriteria":{
+          "db": "PubMed",
+          "id":  "25741868"
+  },
+  "clinvarSubmission":[{
+  "recordStatus": "novel",  
+    "clinicalSignificance": {
+         "clinicalSignificanceDescription": "Pathogenic",
+         "dateLastEvaluated": "2018-04-28",
+         "comment": "This comment explains the rationale for classifying this PDE6B variant as pathogenic for Retinitis pigmentosa-40.",
+         "citation":  [{
+                "db": "PubMed",
+                "id": "PMID:11295882"
+
+            },
+            {
+                "db": "PubMed",
+                "id": "PMID:1363786"
+
+            },
+            {
+                "url": "https://yourdatabaselink.org"
+            }],
+  "modeOfInheritance":"Autosomal dominant inheritance"
+         },      
+      "observedIn":[ {
+            "alleleOrigin": "germline",
+            "affectedStatus": "yes",
+             "collectionMethod": "clinical testing",
+             "numberOfIndividuals": 1
+        }],
+   "variantSet": {
+       "variant": [{
+         "hgvs":"NM_000283.3:c.3645A>T",
+         "gene":[ {
+             "id":2
+       }]
+   }]},
+   "conditionSet": {
+       "condition": [{
+            "db": "OMIM",
+            "id": "613801"
+         }]
+    
+   }
+  
+
+}
+]
+}

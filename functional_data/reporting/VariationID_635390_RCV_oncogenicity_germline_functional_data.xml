@@ -1,0 +1,337 @@
+<ClinVarSet ID="216332773">
+  <RecordStatus>current</RecordStatus>
+  <Title>NM_000546.6(TP53):c.672G&gt;T (p.Glu224Asp) AND not provided</Title>
+  <ReferenceClinVarAssertion ID="1810714" DateLastUpdated="2024-08-11" DateCreated="2019-07-06">
+    <ClinVarAccession Acc="RCV000786831" Version="1" Type="RCV" DateUpdated="2024-08-11" DateCreated="2019-07-06" />
+    <RecordStatus>current</RecordStatus>
+    <Classifications>
+      <NoClassification>
+        <ReviewStatus>no classification provided</ReviewStatus>
+        <Description SubmissionCount="1">evidence_only</Description>
+      </NoClassification>
+    </Classifications>
+    <Assertion Type="no classification" />
+    <MeasureSet Type="Variant" ID="635390" Acc="VCV000635390" Version="6">
+      <Measure Type="single nucleotide variant" ID="623214">
+        <Name>
+          <ElementValue Type="Preferred">NM_000546.6(TP53):c.672G&gt;T (p.Glu224Asp)</ElementValue>
+        </Name>
+        <CanonicalSPDI>NC_000017.11:7674858:C:A</CanonicalSPDI>
+        <AttributeSet>
+          <Attribute Accession="LRG_321t1" Type="HGVS, coding, LRG">LRG_321t1:c.672G&gt;T</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Accession="NM_001276697" Version="3" Change="c.195G&gt;T" Type="HGVS, coding, RefSeq">NM_001276697.3:c.195G&gt;T</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Accession="NM_001276698" Version="3" Change="c.195G&gt;T" Type="HGVS, coding, RefSeq">NM_001276698.3:c.195G&gt;T</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Accession="NM_001276699" Version="3" Change="c.195G&gt;T" Type="HGVS, coding, RefSeq">NM_001276699.3:c.195G&gt;T</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Accession="NM_001126115" Version="2" Change="c.276G&gt;T" Type="HGVS, coding, RefSeq">NM_001126115.2:c.276G&gt;T</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Accession="NM_001126116" Version="2" Change="c.276G&gt;T" Type="HGVS, coding, RefSeq">NM_001126116.2:c.276G&gt;T</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Accession="NM_001126117" Version="2" Change="c.276G&gt;T" Type="HGVS, coding, RefSeq">NM_001126117.2:c.276G&gt;T</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Accession="NM_001126118" Version="2" Change="c.555G&gt;T" Type="HGVS, coding, RefSeq">NM_001126118.2:c.555G&gt;T</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Accession="NM_001276695" Version="3" Change="c.555G&gt;T" Type="HGVS, coding, RefSeq">NM_001276695.3:c.555G&gt;T</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Accession="NM_001276696" Version="3" Change="c.555G&gt;T" Type="HGVS, coding, RefSeq">NM_001276696.3:c.555G&gt;T</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Accession="NM_001276760" Version="3" Change="c.555G&gt;T" Type="HGVS, coding, RefSeq">NM_001276760.3:c.555G&gt;T</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Accession="NM_001276761" Version="3" Change="c.555G&gt;T" Type="HGVS, coding, RefSeq">NM_001276761.3:c.555G&gt;T</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Accession="NM_000546" Version="6" Change="c.672G&gt;T" Type="HGVS, coding, RefSeq" MANESelect="true">NM_000546.6:c.672G&gt;T</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Accession="NM_001126112" Version="3" Change="c.672G&gt;T" Type="HGVS, coding, RefSeq">NM_001126112.3:c.672G&gt;T</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Accession="NM_001126113" Version="3" Change="c.672G&gt;T" Type="HGVS, coding, RefSeq">NM_001126113.3:c.672G&gt;T</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Accession="NM_001126114" Version="3" Change="c.672G&gt;T" Type="HGVS, coding, RefSeq">NM_001126114.3:c.672G&gt;T</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Accession="LRG_321" Type="HGVS, genomic, LRG">LRG_321:g.17692G&gt;T</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Accession="NG_017013" Version="2" Change="g.17692G&gt;T" Type="HGVS, genomic, RefSeqGene">NG_017013.2:g.17692G&gt;T</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Accession="NC_000017" Version="11" Change="g.7674859C&gt;A" Type="HGVS, genomic, top level" integerValue="38">NC_000017.11:g.7674859C&gt;A</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Accession="NC_000017" Version="10" Change="g.7578177C&gt;A" Type="HGVS, genomic, top level, previous" integerValue="37">NC_000017.10:g.7578177C&gt;A</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Accession="NM_000546" Version="5" Change="c.672G&gt;T" Type="HGVS, previous">NM_000546.5:c.672G&gt;T</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="HGVS, protein" />
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Accession="LRG_321p1" Change="p.Glu224Asp" Type="HGVS, protein">LRG_321p1:p.Glu224Asp</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Accession="NP_001119590" Version="1" Change="p.Glu185Asp" Type="HGVS, protein, RefSeq">NP_001119590.1:p.Glu185Asp</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Accession="NP_001263624" Version="1" Change="p.Glu185Asp" Type="HGVS, protein, RefSeq">NP_001263624.1:p.Glu185Asp</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Accession="NP_001263625" Version="1" Change="p.Glu185Asp" Type="HGVS, protein, RefSeq">NP_001263625.1:p.Glu185Asp</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Accession="NP_001263689" Version="1" Change="p.Glu185Asp" Type="HGVS, protein, RefSeq">NP_001263689.1:p.Glu185Asp</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Accession="NP_001263690" Version="1" Change="p.Glu185Asp" Type="HGVS, protein, RefSeq">NP_001263690.1:p.Glu185Asp</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Accession="NP_000537" Version="3" Change="p.Glu224Asp" Type="HGVS, protein, RefSeq">NP_000537.3:p.Glu224Asp</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Accession="NP_000537" Version="3" Change="p.Glu224Asp" Type="HGVS, protein, RefSeq">NP_000537.3:p.Glu224Asp</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Accession="NP_001119584" Version="1" Change="p.Glu224Asp" Type="HGVS, protein, RefSeq">NP_001119584.1:p.Glu224Asp</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Accession="NP_001119585" Version="1" Change="p.Glu224Asp" Type="HGVS, protein, RefSeq">NP_001119585.1:p.Glu224Asp</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Accession="NP_001119586" Version="1" Change="p.Glu224Asp" Type="HGVS, protein, RefSeq">NP_001119586.1:p.Glu224Asp</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Accession="NP_001263626" Version="1" Change="p.Glu65Asp" Type="HGVS, protein, RefSeq">NP_001263626.1:p.Glu65Asp</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Accession="NP_001263627" Version="1" Change="p.Glu65Asp" Type="HGVS, protein, RefSeq">NP_001263627.1:p.Glu65Asp</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Accession="NP_001263628" Version="1" Change="p.Glu65Asp" Type="HGVS, protein, RefSeq">NP_001263628.1:p.Glu65Asp</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Accession="NP_001119587" Version="1" Change="p.Glu92Asp" Type="HGVS, protein, RefSeq">NP_001119587.1:p.Glu92Asp</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Accession="NP_001119588" Version="1" Change="p.Glu92Asp" Type="HGVS, protein, RefSeq">NP_001119588.1:p.Glu92Asp</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Accession="NP_001119589" Version="1" Change="p.Glu92Asp" Type="HGVS, protein, RefSeq">NP_001119589.1:p.Glu92Asp</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="MolecularConsequence">missense variant</Attribute>
+          <XRef ID="SO:0001583" DB="Sequence Ontology" />
+          <XRef ID="NM_000546.6:c.672G&gt;T" DB="RefSeq" />
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="MolecularConsequence">missense variant</Attribute>
+          <XRef ID="SO:0001583" DB="Sequence Ontology" />
+          <XRef ID="NM_001126112.3:c.672G&gt;T" DB="RefSeq" />
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="MolecularConsequence">missense variant</Attribute>
+          <XRef ID="SO:0001583" DB="Sequence Ontology" />
+          <XRef ID="NM_001126113.3:c.672G&gt;T" DB="RefSeq" />
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="MolecularConsequence">missense variant</Attribute>
+          <XRef ID="SO:0001583" DB="Sequence Ontology" />
+          <XRef ID="NM_001126114.3:c.672G&gt;T" DB="RefSeq" />
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="MolecularConsequence">missense variant</Attribute>
+          <XRef ID="SO:0001583" DB="Sequence Ontology" />
+          <XRef ID="NM_001126115.2:c.276G&gt;T" DB="RefSeq" />
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="MolecularConsequence">missense variant</Attribute>
+          <XRef ID="SO:0001583" DB="Sequence Ontology" />
+          <XRef ID="NM_001126116.2:c.276G&gt;T" DB="RefSeq" />
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="MolecularConsequence">missense variant</Attribute>
+          <XRef ID="SO:0001583" DB="Sequence Ontology" />
+          <XRef ID="NM_001126117.2:c.276G&gt;T" DB="RefSeq" />
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="MolecularConsequence">missense variant</Attribute>
+          <XRef ID="SO:0001583" DB="Sequence Ontology" />
+          <XRef ID="NM_001126118.2:c.555G&gt;T" DB="RefSeq" />
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="MolecularConsequence">missense variant</Attribute>
+          <XRef ID="SO:0001583" DB="Sequence Ontology" />
+          <XRef ID="NM_001276695.3:c.555G&gt;T" DB="RefSeq" />
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="MolecularConsequence">missense variant</Attribute>
+          <XRef ID="SO:0001583" DB="Sequence Ontology" />
+          <XRef ID="NM_001276696.3:c.555G&gt;T" DB="RefSeq" />
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="MolecularConsequence">missense variant</Attribute>
+          <XRef ID="SO:0001583" DB="Sequence Ontology" />
+          <XRef ID="NM_001276697.3:c.195G&gt;T" DB="RefSeq" />
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="MolecularConsequence">missense variant</Attribute>
+          <XRef ID="SO:0001583" DB="Sequence Ontology" />
+          <XRef ID="NM_001276698.3:c.195G&gt;T" DB="RefSeq" />
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="MolecularConsequence">missense variant</Attribute>
+          <XRef ID="SO:0001583" DB="Sequence Ontology" />
+          <XRef ID="NM_001276699.3:c.195G&gt;T" DB="RefSeq" />
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="MolecularConsequence">missense variant</Attribute>
+          <XRef ID="SO:0001583" DB="Sequence Ontology" />
+          <XRef ID="NM_001276760.3:c.555G&gt;T" DB="RefSeq" />
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="MolecularConsequence">missense variant</Attribute>
+          <XRef ID="SO:0001583" DB="Sequence Ontology" />
+          <XRef ID="NM_001276761.3:c.555G&gt;T" DB="RefSeq" />
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="ProteinChange1LetterCode">E185D</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="ProteinChange1LetterCode">E224D</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="ProteinChange1LetterCode">E65D</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="ProteinChange1LetterCode">E92D</Attribute>
+        </AttributeSet>
+        <AlleleFrequencyList>
+          <AlleleFrequency Value="0.00000" Source="The Genome Aggregation Database (gnomAD), exomes" />
+        </AlleleFrequencyList>
+        <CytogeneticLocation>17p13.1</CytogeneticLocation>
+        <SequenceLocation Assembly="GRCh38" AssemblyAccessionVersion="GCF_000001405.38" AssemblyStatus="current" Chr="17" Accession="NC_000017.11" start="7674859" stop="7674859" display_start="7674859" display_stop="7674859" variantLength="1" positionVCF="7674859" referenceAlleleVCF="C" alternateAlleleVCF="A" />
+        <SequenceLocation Assembly="GRCh37" AssemblyAccessionVersion="GCF_000001405.25" AssemblyStatus="previous" Chr="17" Accession="NC_000017.10" start="7578177" stop="7578177" display_start="7578177" display_stop="7578177" variantLength="1" positionVCF="7578177" referenceAlleleVCF="C" alternateAlleleVCF="A" />
+        <MeasureRelationship Type="within single gene">
+          <Name>
+            <ElementValue Type="Preferred">tumor protein p53</ElementValue>
+          </Name>
+          <Symbol>
+            <ElementValue Type="Preferred">TP53</ElementValue>
+          </Symbol>
+          <AttributeSet>
+            <Attribute dateValue="2021-11-10" Type="Haploinsufficiency">Sufficient evidence for dosage pathogenicity</Attribute>
+            <Citation>
+              <URL>https://www.ncbi.nlm.nih.gov/projects/dbvar/ISCA/isca_gene.cgi?sym=TP53</URL>
+            </Citation>
+          </AttributeSet>
+          <AttributeSet>
+            <Attribute dateValue="2021-11-10" Type="Triplosensitivity">No evidence available</Attribute>
+            <Citation>
+              <URL>https://www.ncbi.nlm.nih.gov/projects/dbvar/ISCA/isca_gene.cgi?sym=TP53</URL>
+            </Citation>
+          </AttributeSet>
+          <SequenceLocation Assembly="GRCh38" AssemblyAccessionVersion="GCF_000001405.38" AssemblyStatus="current" Chr="17" Accession="NC_000017.11" start="7668421" stop="7687490" display_start="7668421" display_stop="7687490" Strand="-" />
+          <SequenceLocation Assembly="GRCh37" AssemblyAccessionVersion="GCF_000001405.25" AssemblyStatus="previous" Chr="17" Accession="NC_000017.10" start="7571719" stop="7590867" display_start="7571719" display_stop="7590867" variantLength="19149" Strand="-" />
+          <XRef ID="7157" DB="Gene" />
+          <XRef Type="MIM" ID="191170" DB="OMIM" />
+          <XRef ID="HGNC:11998" DB="HGNC" />
+          <Comment DataSource="NCBI curation" Type="public">This gene is cited in the ACMG recommendations of 2013 (PubMed 23788249) for reporting incidental findings in exons.</Comment>
+          <Comment DataSource="NCBI curation" Type="public">This gene is cited in the ACMG recommendations of 2016 (PubMed 27854360) for reporting incidental findings in exons.</Comment>
+          <Comment DataSource="ClinVar" Type="public">This gene is cited in the ACMG recommendations of 2021 (SF v3.0; PubMed 34012068) for reporting secondary findings in clinical exome and genome sequencing.</Comment>
+          <Comment DataSource="ClinVar" Type="public">This gene is cited in the ACMG recommendations of 2022 (SF v3.1; PubMed 35802134) for reporting secondary findings in clinical exome and genome sequencing.</Comment>
+        </MeasureRelationship>
+        <XRef ID="CA397839776" DB="MutSpliceDB: a database of splice sites variants effects on splicing, NIH" />
+        <XRef Type="rs" ID="267605076" DB="dbSNP" />
+      </Measure>
+      <Name>
+        <ElementValue Type="Preferred">NM_000546.6(TP53):c.672G&gt;T (p.Glu224Asp)</ElementValue>
+      </Name>
+    </MeasureSet>
+    <TraitSet Type="Disease" ID="9460">
+      <Trait ID="17556" Type="Disease">
+        <Name>
+          <ElementValue Type="Preferred">not provided</ElementValue>
+          <XRef ID="13DG0619" DB="Center for Genomic Medicine, King Faisal Specialist Hospital and Research Center" />
+        </Name>
+        <Name>
+          <ElementValue Type="Alternate">none provided</ElementValue>
+        </Name>
+        <AttributeSet>
+          <Attribute Type="public definition">The term 'not provided' is registered in MedGen to support identification of submissions to ClinVar for which no condition was named when assessing the variant. 'not provided' differs from 'not specified', which is used when a variant is asserted to be benign, likely benign, or of uncertain significance for conditions that have not been specified.</Attribute>
+        </AttributeSet>
+        <XRef ID="C3661900" DB="MedGen" />
+      </Trait>
+    </TraitSet>
+  </ReferenceClinVarAssertion>
+  <ClinVarAssertion ID="1810619" SubmissionName="SUB6524125">
+    <ClinVarSubmissionID localKey="CA397839776" localKeyIsSubmitted="1" submittedAssembly="GRCh37" submitter="MutSpliceDB: a database of splice sites variants effects on splicing, NIH" submitterDate="2019-11-07" />
+    <ClinVarAccession Acc="SCV000925725" Version="2" Type="SCV" OrgID="506814" OrganizationCategory="resource" OrgType="primary" DateUpdated="2019-07-06" DateCreated="2019-07-06" />
+    <RecordStatus>current</RecordStatus>
+    <Classification>
+      <ReviewStatus>no classification provided</ReviewStatus>
+      <NoClassification>not provided</NoClassification>
+    </Classification>
+    <Assertion Type="no classification" />
+    <ExternalID DB="MutSpliceDB: a database of splice sites variants effects on splicing" ID="CA397839776" />
+    <ObservedIn Type="Functional">
+      <Sample>
+        <Origin>not applicable</Origin>
+        <CellLine>RERF-LC-KJ</CellLine>
+        <Species TaxonomyId="9606">human</Species>
+        <AffectedStatus>not applicable</AffectedStatus>
+      </Sample>
+      <Method>
+        <Citation>
+          <URL>https://brb.nci.nih.gov/cgi-bin/splicing/splicing_evidence.cgi?caid=CA397839776</URL>
+        </Citation>
+        <Description>Based on review of RNA-seq data in sample with variant.</Description>
+        <MethodType>in vitro</MethodType>
+        <AssayType>Next-generation exome sequencing</AssayType>
+        <MolecularPhenotypeMeasured>splicing</MolecularPhenotypeMeasured>
+      </Method>
+      <FunctionalData>
+        <FunctionalEffect>functionally abnormal</FunctionalEffect>
+        <FunctionalConsequence>sequence_variant_affecting_splicing</FunctionalConsequence>
+        <XRef DB="Sequence Ontology" ID="SO:1000071" URL="http://www.sequenceontology.org/browser/current_svn/term/SO:1000071" />
+        <FunctionalConsequenceComment>Intron inclusion between exons 6 &amp; 7, based on review of RNA-seq in RERF-LC-KJ cancer cell line which has TP53 NM_000546.5:c.672G&gt;T variant.</FunctionalConsequenceComment>
+        <Result>Intron inclusion between exons 6 and 7</Result>
+      </FunctionalData>
+    </ObservedIn>
+    <MeasureSet Type="Variant">
+      <Measure Type="Variation">
+        <Name>
+          <ElementValue Type="Alternate">NM_000546.5:c.672G&gt;T</ElementValue>
+        </Name>
+        <SequenceLocation Assembly="GRCh37" Chr="17" alternateAllele="A" referenceAllele="C" start="7578177" stop="7578177" variantLength="1" />
+        <MeasureRelationship Type="variant in gene">
+          <Symbol>
+            <ElementValue Type="Preferred">TP53</ElementValue>
+          </Symbol>
+        </MeasureRelationship>
+      </Measure>
+    </MeasureSet>
+    <TraitSet Type="Disease">
+      <Trait Type="Disease">
+        <Name>
+          <ElementValue Type="Preferred">not provided</ElementValue>
+        </Name>
+      </Trait>
+    </TraitSet>
+  </ClinVarAssertion>
+</ClinVarSet>

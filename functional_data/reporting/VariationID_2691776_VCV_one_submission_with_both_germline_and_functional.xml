@@ -1,0 +1,279 @@
+<VariationArchive VariationID="2691776" VariationName="NM_006295.3(VARS1):c.2590_2592delinsTGA (p.Ser864Ter)" VariationType="Indel" Accession="VCV002691776" Version="1" RecordType="classified" NumberOfSubmissions="1" NumberOfSubmitters="1" DateLastUpdated="2024-02-14" DateCreated="2024-02-04" MostRecentSubmission="2024-02-04">
+  <RecordStatus>current</RecordStatus>
+  <Species>Homo sapiens</Species>
+  <ClassifiedRecord>
+    <SimpleAllele AlleleID="2852798" VariationID="2691776">
+      <GeneList>
+        <Gene Symbol="VARS1" FullName="valyl-tRNA synthetase 1" GeneID="7407" HGNC_ID="HGNC:12651" Source="submitted" RelationshipType="within single gene">
+          <Location>
+            <CytogeneticLocation>6p21.33</CytogeneticLocation>
+            <SequenceLocation Assembly="GRCh38" AssemblyAccessionVersion="GCF_000001405.38" AssemblyStatus="current" Chr="6" Accession="NC_000006.12" start="31777518" stop="31795752" display_start="31777518" display_stop="31795752" Strand="-" />
+            <SequenceLocation Assembly="GRCh38" AssemblyAccessionVersion="GCF_000001405.38" AssemblyStatus="current" Chr="6" Accession="NT_113891.3" start="3254760" stop="3272992" display_start="3254760" display_stop="3272992" Strand="-" />
+            <SequenceLocation Assembly="GRCh38" AssemblyAccessionVersion="GCF_000001405.38" AssemblyStatus="current" Chr="6" Accession="NT_167244.2" start="3110129" stop="3128363" display_start="3110129" display_stop="3128363" Strand="-" />
+            <SequenceLocation Assembly="GRCh38" AssemblyAccessionVersion="GCF_000001405.38" AssemblyStatus="current" Chr="6" Accession="NT_167245.2" start="3025292" stop="3043526" display_start="3025292" display_stop="3043526" Strand="-" />
+            <SequenceLocation Assembly="GRCh38" AssemblyAccessionVersion="GCF_000001405.38" AssemblyStatus="current" Chr="6" Accession="NT_167247.2" start="3119407" stop="3137641" display_start="3119407" display_stop="3137641" Strand="-" />
+            <SequenceLocation Assembly="GRCh38" AssemblyAccessionVersion="GCF_000001405.38" AssemblyStatus="current" Chr="6" Accession="NT_167248.2" start="3047436" stop="3051579" display_start="3047436" display_stop="3051579" Strand="-" />
+            <SequenceLocation Assembly="GRCh38" AssemblyAccessionVersion="GCF_000001405.38" AssemblyStatus="current" Chr="6" Accession="NT_167249.2" start="3076809" stop="3094270" display_start="3076809" display_stop="3094270" Strand="-" />
+            <SequenceLocation Assembly="GRCh37" AssemblyAccessionVersion="GCF_000001405.25" AssemblyStatus="previous" Chr="6" Accession="NC_000006.11" start="31745294" stop="31763711" display_start="31745294" display_stop="31763711" Strand="-" />
+          </Location>
+          <OMIM>192150</OMIM>
+        </Gene>
+      </GeneList>
+      <Name>NM_006295.3(VARS1):c.2590_2592delinsTGA (p.Ser864Ter)</Name>
+      <CanonicalSPDI>NC_000006.12:31781075:GCT:TCA</CanonicalSPDI>
+      <VariantType>Indel</VariantType>
+      <Location>
+        <CytogeneticLocation>6p21.33</CytogeneticLocation>
+        <SequenceLocation Assembly="GRCh38" AssemblyAccessionVersion="GCF_000001405.38" forDisplay="true" AssemblyStatus="current" Chr="6" Accession="NC_000006.12" start="31781076" stop="31781078" display_start="31781076" display_stop="31781078" variantLength="3" positionVCF="31781076" referenceAlleleVCF="GCT" alternateAlleleVCF="TCA" />
+        <SequenceLocation Assembly="GRCh37" AssemblyAccessionVersion="GCF_000001405.25" AssemblyStatus="previous" Chr="6" Accession="NC_000006.11" start="31748853" stop="31748855" display_start="31748853" display_stop="31748855" variantLength="3" positionVCF="31748853" referenceAlleleVCF="GCT" alternateAlleleVCF="TCA" />
+      </Location>
+      <OtherNameList>
+        <Name>p.S864*</Name>
+      </OtherNameList>
+      <ProteinChange>S864*</ProteinChange>
+      <HGVSlist>
+        <HGVS Type="coding">
+          <NucleotideExpression sequenceAccessionVersion="NM_006295.3" sequenceAccession="NM_006295" sequenceVersion="3" change="c.2590_2592delinsTGA" MANESelect="true">
+            <Expression>NM_006295.3:c.2590_2592delinsTGA</Expression>
+          </NucleotideExpression>
+          <ProteinExpression sequenceAccessionVersion="NP_006286.1" sequenceAccession="NP_006286" sequenceVersion="1" change="p.Ser864Ter">
+            <Expression>NP_006286.1:p.Ser864Ter</Expression>
+          </ProteinExpression>
+          <MolecularConsequence ID="SO:0001587" Type="nonsense" DB="SO" />
+        </HGVS>
+        <HGVS Assembly="GRCh37" Type="genomic, top-level">
+          <NucleotideExpression sequenceAccessionVersion="NC_000006.11" sequenceAccession="NC_000006" sequenceVersion="11" change="g.31748853_31748855delinsTCA" Assembly="GRCh37">
+            <Expression>NC_000006.11:g.31748853_31748855delinsTCA</Expression>
+          </NucleotideExpression>
+        </HGVS>
+        <HGVS Assembly="GRCh38" Type="genomic, top-level">
+          <NucleotideExpression sequenceAccessionVersion="NC_000006.12" sequenceAccession="NC_000006" sequenceVersion="12" change="g.31781076_31781078delinsTCA" Assembly="GRCh38">
+            <Expression>NC_000006.12:g.31781076_31781078delinsTCA</Expression>
+          </NucleotideExpression>
+        </HGVS>
+        <HGVS Type="genomic">
+          <NucleotideExpression sequenceAccessionVersion="NG_028229.1" sequenceAccession="NG_028229" sequenceVersion="1" change="g.19858_19860delinsTGA">
+            <Expression>NG_028229.1:g.19858_19860delinsTGA</Expression>
+          </NucleotideExpression>
+        </HGVS>
+      </HGVSlist>
+    </SimpleAllele>
+    <RCVList>
+      <RCVAccession Title="NM_006295.3(VARS1):c.2590_2592delinsTGA (p.Ser864Ter) AND Neurodevelopmental disorder with microcephaly, seizures, and cortical atrophy" Accession="RCV003493393" Version="1">
+        <ClassifiedConditionList TraitSetID="39762">
+          <ClassifiedCondition DB="MedGen" ID="C4540493">Neurodevelopmental disorder with microcephaly, seizures, and cortical atrophy</ClassifiedCondition>
+        </ClassifiedConditionList>
+        <RCVClassifications>
+          <GermlineClassification>
+            <ReviewStatus>no assertion criteria provided</ReviewStatus>
+            <Description DateLastEvaluated="2023-07-10" SubmissionCount="1">Likely pathogenic</Description>
+          </GermlineClassification>
+        </RCVClassifications>
+      </RCVAccession>
+    </RCVList>
+    <Classifications>
+      <GermlineClassification DateLastEvaluated="2023-07-10" NumberOfSubmissions="1" NumberOfSubmitters="1" DateCreated="2024-02-04" MostRecentSubmission="2024-02-04">
+        <ReviewStatus>no assertion criteria provided</ReviewStatus>
+        <Description>Likely pathogenic</Description>
+        <ConditionList>
+          <TraitSet ID="39762" Type="Disease">
+            <Trait ID="38412" Type="Disease">
+              <Name>
+                <ElementValue Type="Preferred">Neurodevelopmental disorder with microcephaly, seizures, and cortical atrophy</ElementValue>
+                <XRef ID="MONDO:0060621" DB="MONDO" />
+              </Name>
+              <Symbol>
+                <ElementValue Type="Alternate">NDMSCA</ElementValue>
+                <XRef Type="MIM" ID="617802" DB="OMIM" />
+              </Symbol>
+              <XRef ID="C4540493" DB="MedGen" />
+              <XRef ID="MONDO:0060621" DB="MONDO" />
+              <XRef Type="MIM" ID="617802" DB="OMIM" />
+            </Trait>
+          </TraitSet>
+        </ConditionList>
+      </GermlineClassification>
+    </Classifications>
+    <ClinicalAssertionList>
+      <ClinicalAssertion ID="7918613" SubmissionDate="2024-01-19" DateLastUpdated="2024-02-04" DateCreated="2024-02-04">
+        <ClinVarSubmissionID localKey="95ca91e5-caf5-4797-b997-8eca4a7490bb_2" localKeyIsSubmitted="1" submittedAssembly="GRCh38" />
+        <ClinVarAccession Accession="SCV004242223" DateUpdated="2024-02-04" DateCreated="2024-02-04" Type="SCV" Version="1" SubmitterName="Undiagnosed Diseases Network, NIH" OrgID="505999" OrganizationCategory="consortium" OrgAbbreviation="UDN" />
+        <RecordStatus>current</RecordStatus>
+        <Classification DateLastEvaluated="2023-07-10">
+          <ReviewStatus>no assertion criteria provided</ReviewStatus>
+          <GermlineClassification>Likely pathogenic</GermlineClassification>
+        </Classification>
+        <Assertion>variation to disease</Assertion>
+        <ObservedInList>
+          <ObservedIn>
+            <Sample>
+              <Origin>maternal</Origin>
+              <Tissue>Blood</Tissue>
+              <Species TaxonomyId="9606">human</Species>
+              <Age Type="minimum" age_unit="years">0</Age>
+              <Age Type="maximum" age_unit="years">9</Age>
+              <AffectedStatus>yes</AffectedStatus>
+              <Gender>female</Gender>
+            </Sample>
+            <Method>
+              <MethodType>clinical testing</MethodType>
+            </Method>
+            <ObservedData>
+              <Attribute Type="VariantAlleles" integerValue="1" />
+            </ObservedData>
+            <ObservedData>
+              <Attribute Type="CompoundHeterozygote" integerValue="1" />
+            </ObservedData>
+            <TraitSet Type="Finding">
+              <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+                <XRef DB="HP" ID="HP:0008071" />
+              </Trait>
+              <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+                <XRef DB="HP" ID="HP:0011410" />
+              </Trait>
+              <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+                <XRef DB="HP" ID="HP:0011451" />
+              </Trait>
+              <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+                <XRef DB="HP" ID="HP:0000252" />
+              </Trait>
+              <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+                <XRef DB="HP" ID="HP:0000639" />
+              </Trait>
+              <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+                <XRef DB="HP" ID="HP:0000666" />
+              </Trait>
+              <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+                <XRef DB="HP" ID="HP:0000974" />
+              </Trait>
+              <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+                <XRef DB="HP" ID="HP:0001250" />
+              </Trait>
+              <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+                <XRef DB="HP" ID="HP:0001263" />
+              </Trait>
+              <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+                <XRef DB="HP" ID="HP:0001332" />
+              </Trait>
+              <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+                <XRef DB="HP" ID="HP:0001382" />
+              </Trait>
+              <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+                <XRef DB="HP" ID="HP:0001508" />
+              </Trait>
+              <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+                <XRef DB="HP" ID="HP:0002169" />
+              </Trait>
+              <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+                <XRef DB="HP" ID="HP:0008067" />
+              </Trait>
+              <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+                <XRef DB="HP" ID="HP:0011097" />
+              </Trait>
+              <Trait ClinicalFeaturesAffectedStatus="present" Type="Finding">
+                <XRef DB="HP" ID="HP:0011451" />
+              </Trait>
+            </TraitSet>
+          </ObservedIn>
+          <ObservedIn Type="Functional">
+            <Sample>
+              <Origin>maternal</Origin>
+              <Species TaxonomyId="9606">human</Species>
+              <AffectedStatus>yes</AffectedStatus>
+            </Sample>
+            <Method>
+              <Citation>
+                <ID Source="PubMed">33001864</ID>
+              </Citation>
+              <Description>RNA from whole blood and skin fibroblasts was quantified. The sequencing data were processed with a pipeline adapted from one developed by the GTEx Consortium, and aberrant expression was detected with the Detection of RNA Outlier Pipeline (DROP) using the default, recommended settings.</Description>
+              <MethodType>in vivo</MethodType>
+              <AssayType>RNAseq</AssayType>
+              <MolecularPhenotypeMeasured>gene expression</MolecularPhenotypeMeasured>
+            </Method>
+            <FunctionalData>
+              <FunctionalEffect>functionally abnormal</FunctionalEffect>
+              <FunctionalConsequence>NMD_triggering_variant</FunctionalConsequence>
+              <XRef DB="Sequence Ontology" ID="SO:0002319" URL="http://www.sequenceontology.org/browser/current_svn/term/SO:0002319" />
+              <FunctionalConsequenceComment>RNAseq showed decreased level of expression with skewing to the alternate allele, supporting NMD</FunctionalConsequenceComment>
+              <Result>decreased level of expression</Result>
+            </FunctionalData>
+          </ObservedIn>
+        </ObservedInList>
+        <SimpleAllele>
+          <GeneList>
+            <Gene Symbol="VARS1" />
+          </GeneList>
+          <VariantType>Variation</VariantType>
+          <OtherNameList>
+            <Name>p.S864*</Name>
+          </OtherNameList>
+          <AttributeSet>
+            <Attribute Type="HGVS">NM_006295.3:c.2590_2592delinsTGA</Attribute>
+          </AttributeSet>
+        </SimpleAllele>
+        <TraitSet Type="Disease">
+          <Trait Type="Disease">
+            <XRef DB="OMIM" ID="617802" Type="MIM" />
+          </Trait>
+        </TraitSet>
+        <StudyName>Undiagnosed Diseases Network (NIH), UDN</StudyName>
+        <SubmissionNameList>
+          <SubmissionName>SUB14135341</SubmissionName>
+        </SubmissionNameList>
+      </ClinicalAssertion>
+    </ClinicalAssertionList>
+    <TraitMappingList>
+      <TraitMapping ClinicalAssertionID="7918613" TraitType="Finding" MappingType="XRef" MappingValue="HP:0001250" MappingRef="HP">
+        <MedGen CUI="C0036572" Name="Seizure" />
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="7918613" TraitType="Finding" MappingType="XRef" MappingValue="HP:0001332" MappingRef="HP">
+        <MedGen CUI="C0013421" Name="Dystonic disorder" />
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="7918613" TraitType="Finding" MappingType="XRef" MappingValue="HP:0001508" MappingRef="HP">
+        <MedGen CUI="C2315100" Name="Failure to thrive" />
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="7918613" TraitType="Finding" MappingType="XRef" MappingValue="HP:0008071" MappingRef="HP">
+        <MedGen CUI="C0565599" Name="Maternal hypertension" />
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="7918613" TraitType="Finding" MappingType="XRef" MappingValue="HP:0000974" MappingRef="HP">
+        <MedGen CUI="C0241074" Name="Hyperextensible skin" />
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="7918613" TraitType="Finding" MappingType="XRef" MappingValue="HP:0002169" MappingRef="HP">
+        <MedGen CUI="C0009024" Name="Clonus" />
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="7918613" TraitType="Disease" MappingType="XRef" MappingValue="617802" MappingRef="OMIM">
+        <MedGen CUI="C4540493" Name="Neurodevelopmental disorder with microcephaly, seizures, and cortical atrophy" />
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="7918613" TraitType="Finding" MappingType="XRef" MappingValue="HP:0011451" MappingRef="HP">
+        <MedGen CUI="C2677180" Name="Primary microcephaly" />
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="7918613" TraitType="Finding" MappingType="XRef" MappingValue="HP:0011451" MappingRef="HP">
+        <MedGen CUI="C2677180" Name="Primary microcephaly" />
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="7918613" TraitType="Finding" MappingType="XRef" MappingValue="HP:0011410" MappingRef="HP">
+        <MedGen CUI="C0007876" Name="Caesarian section" />
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="7918613" TraitType="Finding" MappingType="XRef" MappingValue="HP:0000666" MappingRef="HP">
+        <MedGen CUI="C0271385" Name="Horizontal nystagmus" />
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="7918613" TraitType="Finding" MappingType="XRef" MappingValue="HP:0001263" MappingRef="HP">
+        <MedGen CUI="C0557874" Name="Global developmental delay" />
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="7918613" TraitType="Finding" MappingType="XRef" MappingValue="HP:0001382" MappingRef="HP">
+        <MedGen CUI="C1844820" Name="Joint hypermobility" />
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="7918613" TraitType="Finding" MappingType="XRef" MappingValue="HP:0000639" MappingRef="HP">
+        <MedGen CUI="C0028738" Name="Nystagmus" />
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="7918613" TraitType="Finding" MappingType="XRef" MappingValue="HP:0000252" MappingRef="HP">
+        <MedGen CUI="C4551563" Name="Microcephaly" />
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="7918613" TraitType="Finding" MappingType="XRef" MappingValue="HP:0011097" MappingRef="HP">
+        <MedGen CUI="C1527366" Name="Epileptic spasm" />
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="7918613" TraitType="Finding" MappingType="XRef" MappingValue="HP:0008067" MappingRef="HP">
+        <MedGen CUI="C4024736" Name="Abnormally lax or hyperextensible skin" />
+      </TraitMapping>
+    </TraitMappingList>
+  </ClassifiedRecord>
+</VariationArchive>
