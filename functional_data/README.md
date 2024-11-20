@@ -22,11 +22,17 @@ Functional data may be submitted on its own, without a classification. This type
 Example 1: [RNASeq to evaluate the effect of an intronic FAS variant on splicing](submission/SubmissionTemplate_functional_data_with_RNASeq.xlsx)  
 This example represents the result of a single assay performed on a single variant. In this example, the submission is only functional data; it is based data on a public record ([SCV000863424.2](https://www.ncbi.nlm.nih.gov/clinvar/variation/598753/?oq=SCV000863424)) that includes functional data and a classification.
 
+[Web display for example 1](reporting/example_1_VCV_page_mockup.png)
+
 Example 2: [an in vitro assay to measure the effect of a BRCA1 coding variant on cell survival](submission/SubmissionTemplate_functional_data_with_BRCA1.xlsx)  
 This example represents results of a single assay performed on several variants. It is based on data in [a much larger dataset in ClinVar from a MAVE](https://www.ncbi.nlm.nih.gov/clinvar/submitters/506636/).
 
+[Web display for example 2](reporting/example_2_VCV_page_mockup.png)
+
 Example 3: [An animal model (zebrafish) to determine the effect of a PIP5K1C coding variant on development](submission/SubmissionTemplate_functional_data_with_animal_model.xlsx)  
 This example represents the result of two experiments (an in vitro assay and an animal model) performed on a single variant. In this example, the submission is only functional data; it is based data on a public record ([SCV001736859.2](https://www.ncbi.nlm.nih.gov/clinvar/variation/1172539/?oq=SCV001736859.2)) that includes functional data and a classification.
+
+[Web display for example 3](reporting/example_3_VCV_page_mockup.png)
 
 ### Submission of functional data to support a classification
 In some cases, functional data are generated to help a laboratory classify a specific variant. For this case, functional data may be submitted as part of the evidence for a classification that is submitted to ClinVar. We propose to update the full template for germline variants for this scenario.  
