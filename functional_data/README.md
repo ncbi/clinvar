@@ -17,7 +17,9 @@ Initially we will update the Excel spreadsheet templates for submissions of func
 
 ### Submission of functional data only, no classification
 Functional data may be submitted on its own, without a classification. This type of submission is appropriate for any experiment, including MAVEs, where only the functional result is reported and there is not a comprehensive review of evidence to provide a variant classification for disease. We propose [a new template](submission/SubmissionTemplate_functional_data_empty.xlsx)
- for this scenario.  
+for this scenario.  
+
+_Note: these examples show the functional data display towards the end of the variant page. The entire variant page is not shown here._
 
 Example 1: [RNASeq to evaluate the effect of an intronic FAS variant on splicing](submission/SubmissionTemplate_functional_data_with_RNASeq.xlsx)  
 This example represents the result of a single assay performed on a single variant. In this example, the submission is only functional data; it is based data on a public record ([SCV000863424.2](https://www.ncbi.nlm.nih.gov/clinvar/variation/598753/?oq=SCV000863424)) that includes functional data and a classification.
@@ -65,8 +67,8 @@ RCV (variant-disease) XSD: ClinVarRCV
 
 \* A VCV can be mapped to multiple RCVs. Only RCVs with functional data are shown here. RCVs without functional data will have no changes, thus are omitted for clarity.
 
-### Variant, or VCV, pages
-We will also update the VCV web pages; mock-ups that correspond to the examples for submission and XML will be posted soon.
+### Variant or VCV pages
+Examples 1-3 above show the new functional data display that will appear towards the bottom of the related variant or VCV pages. Examples 5-9 show the new xml that incorporates the new functional data format.
 
 ## Strength of the evidence
 
