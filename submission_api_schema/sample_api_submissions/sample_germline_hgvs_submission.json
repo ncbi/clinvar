@@ -8,9 +8,9 @@
         {
             "recordStatus": "novel",
             "germlineClassification": {
-                "germlineClassificationDescription": "Pathogenic",
+                "germlineClassificationDescription": "VUS-low",
                 "dateLastEvaluated": "2018-04-28",
-                "comment": "This comment explains the rationale for classifying this PDE6B variant as pathogenic for Retinitis pigmentosa-40.",
+                "comment": "This comment explains the rationale for classifying this PDE6B variant as VUS-low for Retinitis pigmentosa-40.",
                 "citation":  [
                     {
                         "db": "PubMed",
@@ -19,9 +19,6 @@
                     {
                         "db": "PubMed",
                         "id": "PMID:1363786"
-                    },
-                    {
-                        "url": "https://yourdatabaselink.org"
                     }
                 ],
                 "modeOfInheritance":"Autosomal dominant inheritance"

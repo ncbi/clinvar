@@ -16,6 +16,9 @@
                   },
                   {"not":  {"required": ["germlineSubmission"]},
                    "errors": {"not": "old format clinvarSubmission and new format germlineSubmission cannot appear in a single submission"}
+                  },
+                  {"not":  {"required": ["noClassificationSubmission"]},
+                   "errors": {"not": "old format clinvarSubmission and new format noClassificationSubmission cannot appear in a single submission"}
                   }
               ]
           },
@@ -29,6 +32,15 @@
                   },
                   {"not":  {"required": ["germlineSubmission", "clinicalImpactSubmission"]},
                    "errors": {"not": "germlineSubmission and clinicalImpactSubmission cannot appear in a single submission"}
+                  },
+                  {"not":  {"required": ["germlineSubmission", "noClassificationSubmission"]},
+                   "errors": {"not": "germlineSubmission and noClassificationSubmission cannot appear in a single submission"}
+                  },
+                  {"not":  {"required": ["clinicalImpactSubmission", "noClassificationSubmission"]},
+                   "errors": {"not": "clinicalImpactSubmission and noClassificationSubmission cannot appear in a single submission"}
+                  },
+                  {"not":  {"required": ["oncogenicitySubmission", "noClassificationSubmission"]},
+                   "errors": {"not": "oncogenicitySubmission and noClassificationSubmission cannot appear in a single submission"}
                   }
               ]
          }
@@ -76,7 +88,7 @@
         {
           "type": "object",
           "title": "ClinVar Submission",
-          "$ref": "#/definitions/baseSubmissionType",
+          "$ref": "#/$defs/baseSubmissionType",
           "required": [
             "clinicalSignificance",
             "observedIn",
@@ -89,7 +101,7 @@
               "required": [
                 "clinicalSignificanceDescription"
               ],
-              "$ref": "#/definitions/baseClassificationType",
+              "$ref": "#/$defs/baseClassificationType",
               "properties": {
                 "clinicalSignificanceDescription": {
                   "type": "string",
@@ -180,11 +192,11 @@
                   },
                   "condition": {
                       "description": "The condition must be provided as either a database identifier or a name, but not both. A database identifier is preferred by ClinVar; a name should be provided only if there is no database identifier available.",
-                      "$ref": "#/definitions/conditionType"
+                      "$ref": "#/$defs/conditionType"
                   },
                   "drugResponse": {
                       "description": "The drug Response evaluated specified by database ID or drug name, but not both",
-                      "$ref": "#/definitions/drugResponseType"
+                      "$ref": "#/$defs/drugResponseType"
                   }
               },
               "additionalProperties": false
@@ -195,7 +207,7 @@
               "items":
                 {
                   "type": "object",
-                  "$ref": "#/definitions/baseObservationType",
+                  "$ref": "#/$defs/baseObservationType",
                   "unevaluatedProperties": false
                 },
               "errors": {"minItems": "Empty list of observedIn not allowed"}
@@ -248,13 +260,13 @@
               "germlineClassification",
               "observedIn",
               "conditionSet"
-            ],
-          "$ref": "#/definitions/baseSubmissionType",
+          ],
+          "$ref": "#/$defs/baseSubmissionType",
           "properties": {
                 "germlineClassification": {
                   "type": "object",
                   "description": "Germline classification",
-                  "$ref": "#/definitions/baseClassificationType",
+                  "$ref": "#/$defs/baseClassificationType",
                   "required": ["germlineClassificationDescription"],
                   "properties": {
                     "germlineClassificationDescription": {
@@ -264,6 +276,9 @@
                         "Pathogenic",
                         "Likely pathogenic",
                         "Uncertain significance",
+                        "VUS-high",
+                        "VUS-mid",
+                        "VUS-low",
                         "Likely benign",
                         "Benign",
                         "Pathogenic, low penetrance",
@@ -326,10 +341,20 @@
                   "items":
                   {
                     "type": "object",
-                    "$ref": "#/definitions/baseObservationType",
+                    "$ref": "#/$defs/baseObservationType",
                     "unevaluatedProperties": false
                   },
                   "errors": {"minItems": "Empty list of observedIn not allowed"}
+                },
+                "functionalObservedIn": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                      "type": "object",
+                      "$ref": "#/$defs/functionalDataType",
+                      "unevaluatedProperties": false
+                    },
+                  "errors": {"minItems": "Empty list of functionalObservedIn not allowed"}
                 },
                 "conditionSet": {
                   "type": "object",
@@ -357,11 +382,11 @@
                     },
                     "condition": {
                       "description": "The condition must be provided as either a database identifier or a name, but not both. A database identifier is preferred by ClinVar; a name should be provided only if there is no database identifier available.",
-                      "$ref": "#/definitions/conditionType"
+                      "$ref": "#/$defs/conditionType"
                     },
                     "drugResponse": {
                       "description": "The drug Response evaluated specified by database ID or drug name, but not both",
-                      "$ref": "#/definitions/drugResponseType"
+                      "$ref": "#/$defs/drugResponseType"
                     }
                   },
                   "additionalProperties": false
@@ -399,6 +424,59 @@
             "maxItems": "no more than 10000 germlineSubmission allowed"
         }
     },
+    "noClassificationSubmission": {
+      "title": "Functional data only submissions for genetic variants",
+      "description": "A set of variant submissions without classification",
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 10000,
+      "items":
+        {
+          "type": "object",
+          "title": "No Classification ClinVar Submission",
+          "description": "This can be used to submit functional data for a set of variants.",
+          "required": [
+              "noClassification",
+              "functionalObservedIn",
+              "conditionSet"
+            ],
+          "$ref": "#/$defs/baseSubmissionType",
+          "properties": {
+                "noClassification": {
+                  "type": "string",
+                  "description": "There can be different types of noClassification submissions. For now, only evidence_only is supported.",
+                  "default": "evidence_only"
+                },
+                "functionalObservedIn": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                      "type": "object",
+                      "$ref": "#/$defs/functionalDataType",
+                      "unevaluatedProperties": false
+                    },
+                  "errors": {"minItems": "Empty list of functionalObservedIn not allowed"}
+                },
+                "conditionSet": {
+                  "type": "object",
+                  "description": "The condition for which the variant is studied. Detailed information about reporting condition is available at https://www.ncbi.nlm.nih.gov/clinvar/docs/faq_submitters/#pheno",
+                  "required": ["condition"],
+                  "properties": {
+                    "condition": {
+                      "description": "The condition must be provided as either a database identifier or a name, but not both. A database identifier is preferred by ClinVar; a name should be provided only if there is no database identifier available.",
+                      "$ref": "#/$defs/conditionType"
+                    }
+                  },
+                  "additionalProperties": false
+                }
+          },
+          "unevaluatedProperties": false
+        },
+        "errors": {
+            "minItems": "Empty list of noClassificationSubmission not allowed",
+            "maxItems": "no more than 10000 noClassificationSubmission allowed"
+        }
+    },
     "oncogenicitySubmission": {
       "title": "ClinVar Submission Set for somatic variants with oncogenicityClassification",
       "description": "A set of somatic variants with oncogenicityClassification",
@@ -410,7 +488,7 @@
         "type": "object",
         "title": "ClinVar somatic oncogenicity Submission",
         "description": "Submissions to ClinVar are considered 'variant-level' (not case-level or patient-specific), because they are focused on the variant or set of variants that was classified. One of variantSet, haplotypeSet, haplotypeSingleVariantSet, phaseUnknownSet, distinctChromosomesSet, diplotypeSet, compoundHeterozygoteSet is required to define the variant or set of variants that was classified.",
-        "$ref": "#/definitions/baseSubmissionType",
+        "$ref": "#/$defs/baseSubmissionType",
         "required": [
             "oncogenicityClassification",
             "observedIn",
@@ -420,7 +498,7 @@
           "oncogenicityClassification": {
             "type": "object",
             "description": "Oncogenicity classification",
-            "$ref": "#/definitions/baseClassificationType",
+            "$ref": "#/$defs/baseClassificationType",
             "required": ["oncogenicityClassificationDescription"],
             "properties": {
               "oncogenicityClassificationDescription": {
@@ -442,7 +520,8 @@
             "minItems": 1,
             "items":
             {
-              "$ref": "#/definitions/baseObservationType",
+              "type": "object",
+              "$ref": "#/$defs/baseObservationType",
               "properties": {
                 "presenceOfSomaticVariantInNormalTissue": {
                   "type": "string",
@@ -467,7 +546,7 @@
             "properties": {
               "condition": {
                 "description": "The condition must be provided as either a database identifier or a name, but not both. A database identifier is preferred by ClinVar; a name should be provided only if there is no database identifier available.",
-                "$ref": "#/definitions/conditionType"
+                "$ref": "#/$defs/conditionType"
               }
             },
             "unevaluatedProperties": false
@@ -491,7 +570,7 @@
         "type": "object",
         "title": "ClinVar somatic clinicalImpact Submission",
         "description": "Submissions to ClinVar are considered 'variant-level' (not case-level or patient-specific), because they are focused on the variant or set of variants that was classified. One of variantSet, haplotypeSet, haplotypeSingleVariantSet, phaseUnknownSet, distinctChromosomesSet, diplotypeSet, compoundHeterozygoteSet is required to define the variant or set of variants that was classified.",
-        "$ref": "#/definitions/baseSubmissionType",
+        "$ref": "#/$defs/baseSubmissionType",
         "required": [
               "clinicalImpactClassification",
               "observedIn",
@@ -501,7 +580,7 @@
           "clinicalImpactClassification": {
             "type": "object",
             "description": "Clinical Impact classification of somatic variants",
-            "$ref": "#/definitions/baseClassificationType",
+            "$ref": "#/$defs/baseClassificationType",
             "required": ["clinicalImpactClassificationDescription"],
             "properties": {
               "clinicalImpactClassificationDescription": {
@@ -539,7 +618,8 @@
             "minItems": 1,
             "items":
             {
-              "$ref": "#/definitions/baseObservationType",
+              "type": "object",
+              "$ref": "#/$defs/baseObservationType",
               "properties": {
                 "presenceOfSomaticVariantInNormalTissue": {
                   "type": "string",
@@ -564,7 +644,7 @@
             "properties": {
               "condition": {
                 "description": "The condition must be provided as either a database identifier or a name, but not both. A database identifier is preferred by ClinVar; a name should be provided only if there is no database identifier available.",
-                "$ref": "#/definitions/conditionType"
+                "$ref": "#/$defs/conditionType"
               }
             },
             "additionalProperties": false
@@ -591,7 +671,7 @@
     },
     "assertionCriteria": {
       "type": "object",
-      "description": "\"Assertion criteria\" refers to documentation of the criteria that your organization uses to classify variants. It can be provided as a database identifier, like a PubMed ID, or a file that is submitted to ClinVar, but not both. Only one document may be provided for assertion criteria. These fields are equivalent to the \"Assertion method citation\" column in the spreadsheet. Note that only one single assertion criteria (a citation or an electronic document) may be provided for a submission. This assertion criteria will be applied to all interpretations in the submission.  For assertion criteria submitted as a database identifier, an assertion criteria name will be calculated based on the citation details. For assertion criteria submitted as a file, you may provide an assertion criteria name during file upload on your Organization page in Submission Portal.",
+      "description": "\"Assertion criteria\" refers to documentation of the criteria that your organization uses to classify variants (https://www.ncbi.nlm.nih.gov/clinvar/docs/review_status/#ac). It can be provided as a database identifier, like a PubMed ID, or a file that is submitted to ClinVar, but not both. Only one document may be provided for assertion criteria. These fields are equivalent to the \"Assertion method citation\" column in the spreadsheet. Note that only one single assertion criteria (a citation or an electronic document) may be provided for a submission. This assertion criteria will be applied to all interpretations in the submission.  For assertion criteria submitted as a database identifier, an assertion criteria name will be calculated based on the citation details. For assertion criteria submitted as a file, you may provide an assertion criteria name during file upload on your Organization page in Submission Portal.",
       "properties": {
         "db": {
           "type": "string",
@@ -639,7 +719,7 @@
       "description": "Optional.  When submitting on behalf of another organization, this specifies the other organization's ID"
     }
   },
-  "definitions": {
+  "$defs": {
     "variantType": {
       "type": "object",
       "description": "type of variant",
@@ -849,7 +929,7 @@
           "minItems": 1,
           "maxItems": 1,
           "items": {
-            "$ref": "#/definitions/variantType"
+            "$ref": "#/$defs/variantType"
           },
           "errors": {
             "minItems": "Only allow exact one variant",
@@ -880,7 +960,7 @@
           "minItems": 2,
           "description": "List of variants that make up the haplotype",
           "items": {
-            "$ref": "#/definitions/variantType"
+            "$ref": "#/$defs/variantType"
           },
           "errors": {
             "minItems": "At least two variants are required."
@@ -911,7 +991,7 @@
           "maxItems": 1,
           "description": "The variant that makes up the haplotype",
           "items": {
-            "$ref": "#/definitions/variantType"
+            "$ref": "#/$defs/variantType"
           },
           "errors": {
             "minItems": "Only allow exact one variant",
@@ -938,7 +1018,7 @@
           "minItems": 2,
           "description": "The linked variants with unknown phase",
           "items": {
-            "$ref": "#/definitions/variantType"
+            "$ref": "#/$defs/variantType"
           },
           "errors": {
             "minItems": "At least two variants are required."
@@ -964,7 +1044,7 @@
           "minItems": 2,
           "description": "The linked variants from more than one chromosome",
           "items": {
-            "$ref": "#/definitions/variantType"
+            "$ref": "#/$defs/variantType"
           },
           "errors": {
             "minItems": "At least two variants are required."
@@ -994,10 +1074,10 @@
             "type": "object",
             "properties": {
               "haplotypeSet": {
-                "$ref": "#/definitions/haplotypeSetType"
+                "$ref": "#/$defs/haplotypeSetType"
               },
               "haplotypeSingleVariantSet": {
-                "$ref": "#/definitions/haplotypeSingleVariantSetType"
+                "$ref": "#/$defs/haplotypeSingleVariantSetType"
               }
             },
             "additionalProperties": false
@@ -1035,7 +1115,7 @@
             "type": "object",
             "properties": {
               "variantSet": {
-                "$ref": "#/definitions/variantSetType"
+                "$ref": "#/$defs/variantSetType"
               }
             },
             "additionalProperties": false
@@ -1069,7 +1149,10 @@
                   "type": "string",
                   "description": "The database identifier for the condition.  Formats are:\nOMIM: the six digit OMIM number for the disease (not the gene), e.g. 300957; or the Phenotypic Series number including the PS prefix, e.g. PS200600\nMedGen: the MedGen UID, e.g. 751520.\nOrphanet: the Orphanet ID including the prefix, e.g. ORPHA71290\nMeSH: the MeSH ID, e.g. D009634\nHP: the HPO ID including the prefix, e.g. HP:0000815\nMondo: the Mondo ID including the prefix, e.g. MONDO:0100038\n"
                 },
-                "name": {"type": "string"}
+                "name": {
+                  "type": "string",
+                  "description": "The name of the condition, used only if there is no database identifier available. Provide one name per condition; do not submit multiple names.\n"
+                }
             },
             "additionalProperties": false,
             "oneOf": [
@@ -1113,7 +1196,7 @@
                 },
                 "condition": {
                     "description": "The conditions for which the drug is used  specified by database ID or name, but not both.",
-                    "$ref": "#/definitions/conditionType"
+                    "$ref": "#/$defs/conditionType"
                 }
             },
             "additionalProperties": false,
@@ -1258,6 +1341,193 @@
         }
       }
     },
+    "functionalDataType": {
+      "type": "object",
+      "required": [
+        "collectionMethod",
+        "assayType",
+        "method",
+        "functionalEffect",
+        "functionalConsequence",
+        "result"
+      ],
+      "properties": {
+        "collectionMethod": {
+          "type": "string",
+          "description": "Required. Indicates whether the data were collected with an in vivo or in vitro method. In vivo is appropriate for animal models; in vitro is likely appropriate for all other assays. ",
+          "enum": [
+            "in vivo",
+            "in vitro"
+          ]
+        },
+        "assayType": {
+          "type": "string",
+          "description": "Required. An ID or term from the Experimental Factors Ontology (EFO) for the type of assay, like RNAseq, enzyme assay, or animal model. Enter either the EFO ID, e.g. EFO:0008896, or the EFO term, e.g. RNAseq, but not both ID and term. A list of assay types that ClinVar accepts is available here: https://ftp.ncbi.nlm.nih.gov/pub/clinvar/functional_assay_types.txt"
+        },
+        "molecularPhenotypeMeasured": {
+          "type": "string",
+          "description": "Required, unless the assay type is \"animal model\". A short description of the specific molecular phenotype measured by this assay. We recommend using a standard term for a biological process from the Gene Ontology (GO): https://geneontology.org/"
+        },
+        "method": {
+          "type": "string",
+          "description": "Required. A free text description of your assay, preferably 1-5 sentences."
+        },
+        "methodCitation": {
+          "type": "array",
+          "minItems": 1,
+          "items":
+          {
+            "type": "object",
+            "description": "Optional. PMID, PMC, or DOI, for a citation describing this assay.",
+            "properties": {
+              "db": {
+                "type": "string",
+                "enum": [
+                  "PubMed",
+                  "BookShelf",
+                  "DOI",
+                  "pmc"
+                ]
+              },
+              "id": {
+                "description": "The document identifier.  Formats are: \nPubMed: the PubMed ID, digits only, e.g. 10862036\npmc: the PubMedCentral ID, digits only, e.g. 2746682\nDOI: the full DOI including prefix, forward slash, and suffix, e.g. 10.1038/gim.2015.30\nBookShelf: the Bookshelf ID including the prefix, e.g. NBK1384",
+                "type": "string"
+              }
+            },
+            "additionalProperties": false,
+            "required": ["db","id"]
+          },
+          "errors": {"minItems": "Empty list of method citation is not allowed"}
+        },
+        "scoringRanges": {
+          "type": "array",
+          "description": "Scoring ranges - use these columns if your dataset is large, e.g. a MAVE, and you have curated ranges for the scores from your assay, e.g. non-functional 0-0.24; uncertain 0.25-0.49; functional 0.5-1.0. \nThe labels may be generic (e.g. functional vs non-functional) or more specific to your assay (e.g. normal enzyme activity vs reduced enzyme activity). Labels should be short, for use in a graphic on the ClinVar web display. Use inf to indicate infinity and -inf to indicate negative infinity. \nIf you provide scoring ranges, the result must be within one of the ranges and should not include units. If units are relevant, please include that information in the \"Method\" field.",
+          "items": {
+            "type": "object",
+            "minItems": 2,
+            "maxItems": 5,
+            "properties": {
+              "label": {
+                "description": "The label for a range of scores, e.g. functional; uncertain; non-functional. ",
+                "type": "string"
+              },
+              "range": {
+                "description": "An interval defined by two boundary scores. The boundaries can be inclusive or exclusive. The score is a float, inf, -inf.",
+                "type": "object",
+                "properties": {
+                  "lowerBound": {
+                    "$ref": "#/$defs/floatBoundaryType"
+                  },
+                  "upperBound": {
+                    "$ref": "#/$defs/floatBoundaryType"
+                  }
+                },
+                "required": [
+                  "lowerBound", "upperBound"
+                ]
+              },
+              "required": [
+                "label", "range"
+              ]
+            }
+          }
+        },
+        "species": {
+          "type": "string",
+          "default": "human",
+          "description": "Required if Assay type is animal model. If not filled in, the default is human."
+        },
+        "strainBreed": {
+          "type": "string",
+          "description": "Optional, for animal models."
+        },
+        "cellLine": {
+          "type": "string",
+          "description": "Optional. The name of the cell line used for an in vitro assay, e.g. HEK293. If patient cells were used, indicate that cell type in \"Tissue\"."
+        },
+        "tissue": {
+          "type": "string",
+          "description": "Optional. The tissue type used for an in vitro assay. If the tissue was from a patient, indicate that here, e.g. \"patient's fibroblasts\"."
+        },
+        "sex": {
+          "type": "string",
+          "description": "Optional. The sex of the patient whose tissue was assayed, or sex of the animal model, if relevant for the result."
+        },
+        "numberOfReplicates": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Optional. The number of replicates for the assay."
+        },
+        "numberOfControls": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Optional. The number of controls that were assayed."
+        },
+        "functionalEffect": {
+          "type": "string",
+          "description": "Required. A high level term for the functional effect of the variant based on this assay. Allowed values are from Sequence Ontology. Enter either the term or the ID but not both",
+          "enum": [
+            "functionally abnormal", "SO:0002218",
+            "function uncertain",	"SO:0002220",
+            "functionally normal", "SO:0002219"
+          ]
+        },
+        "functionalConsequence": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+               "type": "string",
+               "description": "Enter either the SO ID, e.g. SO:0001555, or the EFO term, e.g. decreased_translational_product_level, but not both ID and term. A list of functional consequences that ClinVar accepts is available here: https://ftp.ncbi.nlm.nih.gov/pub/clinvar/functional_consequences.txt If the list doesn't include an appropriate functional consequence for your data, contact us at clinvar@ncbi.nlm.nih.gov before you submit so that we can discuss adding a new SO term."
+          }
+        },
+        "functionalConsequenceComment": {
+          "type": "string",
+          "description": "Optional. A free text comment to provide more information or context for the functional consequence of the variant as determined by this assay."
+        },
+        "result": {
+          "type": "string",
+          "description": "Required. The result of the assay for this variant. The result should be brief, like the numerical measurement from the assay, or a brief statement like \"skipping of exon 5\" or \"50% activity compared to normal\". More detail can be provided in the next column. If scoring ranges are provided, the result must be within one of the ranges and should not include units. If units are relevant, please include that information in the \"Method\" field."
+        },
+        "linkToExternDB": {
+          "type": "string",
+          "description": "Optional. A link to a database where you maintain more information about this dataset, so that a ClinVar user can find more information about the functional assay and the result, e.g. MaveDB."
+        }
+      }
+    },
+    "floatBoundaryType": {
+      "oneOf": [
+        {
+          "type": "object",
+          "description": "Finite boundary: boundary must be a number. isInclusive is required to indicate whether the finite value is included",
+          "required": [
+            "boundary", "isInclusive"
+          ],
+          "properties": {
+            "boundary": {
+              "type": "number"
+            },
+            "isInclusive": {
+              "type": "boolean"
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "description": "Infinite boundary: boundary must be a string, restricted to \"-inf\" or \"inf\". isInclusive is NOT required (and disallowed) because infinity cannot be \"included\"",
+          "required": [
+            "boundary"
+          ],
+          "properties": {
+            "boundary": {
+              "type": "string",
+              "enum": ["-inf", "inf"]
+            }
+          },
+          "additionalProperties": false
+        }
+      ] 
+    },
     "baseSubmissionType": {
       "type": "object",
       "title": "Common fields for differnet types of ClinVar variant submission",
@@ -1296,25 +1566,25 @@
             ]
         },
         "variantSet": {
-          "$ref": "#/definitions/variantSetType"
+          "$ref": "#/$defs/variantSetType"
         },
         "haplotypeSet": {
-          "$ref": "#/definitions/haplotypeSetType"
+          "$ref": "#/$defs/haplotypeSetType"
         },
         "haplotypeSingleVariantSet": {
-          "$ref": "#/definitions/haplotypeSingleVariantSetType"
+          "$ref": "#/$defs/haplotypeSingleVariantSetType"
         },
         "phaseUnknownSet": {
-          "$ref": "#/definitions/phaseUnknownSetType"
+          "$ref": "#/$defs/phaseUnknownSetType"
         },
         "distinctChromosomesSet": {
-          "$ref": "#/definitions/distinctChromosomesSetType"
+          "$ref": "#/$defs/distinctChromosomesSetType"
         },
         "diplotypeSet": {
-          "$ref": "#/definitions/diplotypeSetType"
+          "$ref": "#/$defs/diplotypeSetType"
         },
         "compoundHeterozygoteSet": {
-          "$ref": "#/definitions/compoundHeterozygoteSetType"
+          "$ref": "#/$defs/compoundHeterozygoteSetType"
         }
       }
     },
