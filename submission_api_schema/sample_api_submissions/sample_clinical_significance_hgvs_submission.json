@@ -5,7 +5,8 @@
           "id":  "25741868"
   },
   "clinvarSubmission":[{
-  "recordStatus": "novel",  
+  "recordStatus": "novel",
+  "submittedAssembly": "GRCh38",  
     "clinicalSignificance": {
          "clinicalSignificanceDescription": "Pathogenic",
          "dateLastEvaluated": "2018-04-28",

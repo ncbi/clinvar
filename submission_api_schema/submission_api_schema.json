@@ -720,6 +720,18 @@
     }
   },
   "$defs": {
+    "assemblyType": {
+      "type": "string",
+      "description": "The genome assembly that was used to call the variant.",
+      "enum": [
+        "GRCh38",
+        "hg38",
+        "GRCh37",
+        "hg19",
+        "NCBI36",
+        "hg18"
+      ]
+    },
     "variantType": {
       "type": "object",
       "description": "type of variant",
@@ -737,16 +749,7 @@
               "description": "The alternate allele for the submitted variant.  This is used only for small variants (up to 50 nt.)"
             },
             "assembly": {
-              "type": "string",
-              "description": "The genome assembly that was used to call the variant.",
-              "enum": [
-                "GRCh38",
-                "hg38",
-                "GRCh37",
-                "hg19",
-                "NCBI36",
-                "hg18"
-              ]
+              "$ref": "#/$defs/assemblyType"
             },
             "chromosome": {
               "type": "string",
@@ -1402,13 +1405,13 @@
         "scoringRanges": {
           "type": "array",
           "description": "Scoring ranges - use these columns if your dataset is large, e.g. a MAVE, and you have curated ranges for the scores from your assay, e.g. non-functional 0-0.24; uncertain 0.25-0.49; functional 0.5-1.0. \nThe labels may be generic (e.g. functional vs non-functional) or more specific to your assay (e.g. normal enzyme activity vs reduced enzyme activity). Labels should be short, for use in a graphic on the ClinVar web display. Use inf to indicate infinity and -inf to indicate negative infinity. \nIf you provide scoring ranges, the result must be within one of the ranges and should not include units. If units are relevant, please include that information in the \"Method\" field.",
+          "minItems": 2,
+          "maxItems": 5,
           "items": {
             "type": "object",
-            "minItems": 2,
-            "maxItems": 5,
             "properties": {
               "label": {
-                "description": "The label for a range of scores, e.g. functional; uncertain; non-functional. ",
+                "description": "The label for a range of scores, e.g. functional; uncertain; non-functional.",
                 "type": "string"
               },
               "range": {
@@ -1425,12 +1428,13 @@
                 "required": [
                   "lowerBound", "upperBound"
                 ]
-              },
+              }
+            },
+             "additionalProperties": false,
               "required": [
                 "label", "range"
               ]
             }
-          }
         },
         "species": {
           "type": "string",
@@ -1552,6 +1556,10 @@
         "localID": {
           "type": "string",
           "description": "Optional, but highly recommended. The stable unique identifier your organization uses to identifiy this variant. This identifier will be public so should not include protected health information."
+        },
+        "submittedAssembly": {
+          "$ref": "#/$defs/assemblyType",
+          "description": "The genome assembly used to call the variant. Required for HGVS variants; not needed for chromosomeCoordinates (which includes its own assembly field)."
         },
         "localKey": {
           "type": "string",

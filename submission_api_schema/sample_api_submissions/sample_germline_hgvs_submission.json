@@ -7,6 +7,7 @@
     "germlineSubmission":[
         {
             "recordStatus": "novel",
+            "submittedAssembly": "GRCh38",
             "germlineClassification": {
                 "germlineClassificationDescription": "VUS-low",
                 "dateLastEvaluated": "2018-04-28",

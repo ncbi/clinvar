@@ -8,6 +8,7 @@
     "oncogenicitySubmission": [
     {
         "recordStatus": "novel",
+        "submittedAssembly": "GRCh38",
         "oncogenicityClassification": {
             "oncogenicityClassificationDescription": "Benign",
             "dateLastEvaluated": "2020-04-28",
@@ -42,6 +43,7 @@
     },
     {
         "recordStatus": "novel",  
+        "submittedAssembly": "GRCh38",
         "oncogenicityClassification": {
              "oncogenicityClassificationDescription": "Oncogenic",
              "dateLastEvaluated": "2018-04-28",

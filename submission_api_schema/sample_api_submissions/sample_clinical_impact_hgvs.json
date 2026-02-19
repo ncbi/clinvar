@@ -8,6 +8,7 @@
     "clinicalImpactSubmission": [
     {
         "recordStatus": "novel",
+        "submittedAssembly": "GRCh38",
         "clinicalImpactClassification": {
             "clinicalImpactClassificationDescription": "Tier I - Strong",
             "assertionTypeForClinicalImpact": "therapeutic: sensitivity/response",
@@ -51,7 +52,8 @@
         }
     },
     {
-        "recordStatus": "novel",  
+        "recordStatus": "novel",
+        "submittedAssembly": "GRCh38",  
         "clinicalImpactClassification": {
              "clinicalImpactClassificationDescription": "Tier III - Unknown",
              "dateLastEvaluated": "2018-04-28",
