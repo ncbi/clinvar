@@ -722,14 +722,15 @@
   "$defs": {
     "assemblyType": {
       "type": "string",
-      "description": "The genome assembly that was used to call the variant.",
+      "description": "The genome assembly that was used to call the variant. The value 'not applicable' is only allowed for variants described by HGVS.",
       "enum": [
         "GRCh38",
         "hg38",
         "GRCh37",
         "hg19",
         "NCBI36",
-        "hg18"
+        "hg18",
+        "not applicable"
       ]
     },
     "variantType": {
